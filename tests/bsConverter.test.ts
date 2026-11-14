@@ -17,6 +17,7 @@ import {
   validateAdDate,
   validateBsDate,
 } from '../lib/bsConverter';
+import { HOLIDAYS_DATA } from '../lib/holidays';
 
 /**
  * 32 known, independently verified BS <-> AD date pairs covering:
@@ -199,4 +200,38 @@ test('getBsMonthGrid builds accurate month grid & Devanagari formatting', () => 
   assert.equal(kartik2083.prevMonth?.slug, 'ashwin');
   assert.equal(kartik2083.nextMonth?.slug, 'mangsir');
   assert.equal(toDevanagariDigits(2083), '२०८३');
+});
+
+test('every holiday AD date and weekday matches its stored date', () => {
+  for (const holiday of HOLIDAYS_DATA) {
+    assert.equal(holiday.source, '', `${holiday.id}: expected source to be empty`);
+    const ad = bsToAd(holiday.bsYear, holiday.bsMonth, holiday.bsDay);
+    assert.equal(ad.iso, holiday.adDate, `${holiday.id}: AD date mismatch`);
+
+    const expectedWeekday = new Date(`${holiday.adDate}T00:00:00.000Z`).getUTCDay();
+    assert.equal(ad.weekday, expectedWeekday, `${holiday.id}: weekday mismatch for ${holiday.adDate}`);
+  }
+});
+
+test('independently sourced 2083 BS dates map to the supplied AD dates', () => {
+  const independentlySourcedPairs: ReadonlyArray<{
+    bs: [number, number, number];
+    ad: string;
+    note: string;
+  }> = [
+    { bs: [2083, 6, 25], ad: '2026-10-11', note: 'Ghatasthapana' },
+    { bs: [2083, 6, 31], ad: '2026-10-17', note: 'Fulpati' },
+    { bs: [2083, 7, 4], ad: '2026-10-21', note: 'Vijaya Dashami' },
+    { bs: [2083, 7, 6], ad: '2026-10-23', note: 'last Dashain holiday' },
+    { bs: [2083, 1, 18], ad: '2026-05-01', note: 'Buddha Jayanti / Workers’ Day' },
+    { bs: [2083, 7, 28], ad: '2026-11-14', note: 'independent 2083 BS date check' },
+  ];
+
+  for (const pair of independentlySourcedPairs) {
+    assert.equal(
+      bsToAd(pair.bs[0], pair.bs[1], pair.bs[2]).iso,
+      pair.ad,
+      `${pair.note}: expected ${pair.bs.join('-')} BS to map to ${pair.ad} AD`,
+    );
+  }
 });

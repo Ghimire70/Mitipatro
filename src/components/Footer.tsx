@@ -29,10 +29,10 @@ export const Footer: React.FC<FooterProps> = ({ nowMs, onNavigate }) => {
               MitiPatro
             </a>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-stone-600">
-              An original Bikram Sambat (BS) Nepali calendar and BS-to-AD date reference engineered for Nepal and the global Nepali diaspora. All dates are anchored to Asia/Kathmandu (UTC+05:45) and cross-checked against Government of Nepal Gazette schedules.
+              An independent Bikram Sambat (BS) calendar and BS-to-AD date reference. Today&rsquo;s date uses Asia/Kathmandu (UTC+05:45); holiday listings should be confirmed with the relevant official notice.
             </p>
             <p className="mt-4 text-xs text-stone-500">
-              Verified BS–AD conversion span: 2000–2090 BS (1943–2034 AD).
+              BS–AD conversion range: 2000–2090 BS (1943–2034 AD).
             </p>
           </div>
 

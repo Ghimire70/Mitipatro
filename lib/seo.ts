@@ -335,23 +335,23 @@ function getRouteSeo(pathname: string, baseUrl: string, now: Date): PageSeoData 
   // 7. Static compliance pages
   const staticMap: Record<string, { title: string; desc: string; h1: string }> = {
     '/about': {
-      title: 'About MitiPatro – Methodology & Open Bikram Sambat Data',
-      desc: 'Learn how MitiPatro calculates Bikram Sambat dates accurately using Asia/Kathmandu time and verified Nepal Gazette holiday schedules.',
+      title: 'About MitiPatro – Bikram Sambat Calendar Method',
+      desc: 'See how MitiPatro maps Bikram Sambat dates, describes its calendar data, and handles date and holiday corrections.',
       h1: 'About MitiPatro',
     },
     '/contact': {
-      title: 'Contact MitiPatro – Feedback & Holiday Corrections',
-      desc: 'Get in touch with the MitiPatro editorial team to report calendar discrepancies, regional holiday updates, or accessibility feedback.',
+      title: 'Contact MitiPatro – Report a Date or Holiday Issue',
+      desc: 'Report a BS-to-AD conversion discrepancy, holiday listing correction, regional observance, or accessibility issue by email.',
       h1: 'Contact Us',
     },
     '/privacy': {
       title: 'Privacy Policy – MitiPatro',
-      desc: 'MitiPatro privacy policy covering analytics, Google AdSense cookie disclosures, and data minimization practices.',
+      desc: 'How MitiPatro handles browser-side date conversions, hosting logs, contact email, and cookies if advertising is enabled.',
       h1: 'Privacy Policy',
     },
     '/terms': {
       title: 'Terms of Use – MitiPatro',
-      desc: 'Terms of use and data attribution disclaimers for the MitiPatro Nepali calendar and date converter.',
+      desc: 'Terms for using MitiPatro calendar, BS-to-AD conversion, and holiday listings as general information.',
       h1: 'Terms of Use',
     },
   };

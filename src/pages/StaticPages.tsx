@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { CheckCircle2 } from 'lucide-react';
+import React from 'react';
+
+const CONTACT_EMAIL = 'replace-with-your-email@example.com';
 
 interface StaticPageProps {
   page: 'about' | 'contact' | 'privacy' | 'terms';
@@ -7,30 +8,10 @@ interface StaticPageProps {
 }
 
 export const StaticPages: React.FC<StaticPageProps> = ({ page, onNavigate }) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-  const [formError, setFormError] = useState('');
-
   const handleLink = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
     onNavigate(path);
-  };
-
-  const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!name.trim() || !email.trim() || !message.trim()) {
-      setFormError('Please enter your name, email address, and message.');
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
-      setFormError('Please enter a valid email address.');
-      return;
-    }
-    setFormError('');
-    setSubmitted(true);
   };
 
   return (
@@ -49,24 +30,34 @@ export const StaticPages: React.FC<StaticPageProps> = ({ page, onNavigate }) => 
             About MitiPatro &amp; Calendar Methodology
           </h1>
           <p className="text-base leading-relaxed">
-            MitiPatro is an independent, lightweight Bikram Sambat (BS) Nepali calendar and date conversion utility built for residents of Nepal and the global Nepali diaspora. Our editorial focus is date accuracy, fast page loads, and clear bilingual presentation in English and Devanagari script.
+            MitiPatro is an independent Nepali calendar for looking up Bikram Sambat (BS) dates, their Gregorian (AD) equivalents, monthly calendar grids, and listed festivals and holidays. It supports BS and AD date conversion from 2000 through 2090 BS and presents dates in English and Devanagari.
           </p>
 
           <h2 className="font-display text-2xl font-semibold text-stone-900">
-            How Bikram Sambat Conversion Works
+            Calendar Data and Conversion Method
           </h2>
           <p className="text-sm leading-relaxed">
-            Unlike the Gregorian calendar, Bikram Sambat has no fixed leap-year formula. Each solar month ranges between 29 and 32 days depending on the astronomical moment the Sun enters each zodiacal sign (Sankranti). Consequently, accurate conversion requires a verified lookup table of month lengths anchored to a confirmed epoch.
+            The site uses a stored table of the twelve BS month lengths for each supported year. Conversion counts days from the reference date <strong>1 Baisakh 2000 BS = 14 April 1943 AD</strong>; it does not estimate dates from a repeating leap-year rule or fetch calendar data from a live service.
           </p>
           <p className="text-sm leading-relaxed">
-            MitiPatro anchors all calculations to <strong>1 Baisakh 2000 BS = 14 April 1943 AD</strong>, cross-verified across multiple open-source Bikram Sambat datasets (`nepali-date-converter`, `bikram-sambat`) and Government of Nepal Gazette calendars for 2000–2090 BS.
+            The calendar-data notes in the project identify <code>nepali-date-converter</code>, <code>bikram-sambat</code>, and <code>@sbmdkl/nepali-date-converter</code> as comparison references for the conversion table. Holiday entries are maintained separately. Individual holiday records do not currently include links or notice numbers for their sources, so a displayed holiday should not be treated as independently confirmed by this page.
           </p>
 
           <h2 className="font-display text-2xl font-semibold text-stone-900">
-            Timezone Discipline (Asia/Kathmandu)
+            How We Verify Dates
           </h2>
           <p className="text-sm leading-relaxed">
-            Whether you open MitiPatro from Kathmandu, New York, London, Sydney, or Doha, the &ldquo;Aaja Ko Miti&rdquo; (Today&rsquo;s Date) calculation always resolves strictly in Nepal Standard Time (Asia/Kathmandu, UTC+05:45) rather than your browser&rsquo;s local clock.
+            Conversion checks validate dates against the stored month lengths and reference date, then test BS-to-AD and AD-to-BS round trips across the supported range and against selected comparison dates. These checks help catch calculation and data-entry inconsistencies; they are not a substitute for an official calendar notice.
+          </p>
+          <p className="text-sm leading-relaxed">
+            Holiday dates can be revised or vary by region. The holiday data file contains a general note about Nepal Gazette and Panchanga schedules for 2083 BS, but it does not cite a specific notice for each entry. Please confirm a holiday that affects travel, work, school, or government services with the relevant official announcement. If you find a discrepancy, send us the BS date, its AD equivalent, the entry name, and a link or reference to the source you checked.
+          </p>
+
+          <h2 className="font-display text-2xl font-semibold text-stone-900">
+            Nepal Time
+          </h2>
+          <p className="text-sm leading-relaxed">
+            The Aaja Ko Miti page determines today using the Asia/Kathmandu timezone (Nepal Standard Time, UTC+05:45), rather than the device&rsquo;s local timezone.
           </p>
         </div>
       )}
@@ -77,88 +68,21 @@ export const StaticPages: React.FC<StaticPageProps> = ({ page, onNavigate }) => 
             Contact MitiPatro
           </h1>
           <p className="text-sm leading-relaxed">
-            Spot a regional holiday update, Nepal Gazette amendment, or accessibility issue? Send a note to our editorial desk below.
+            Report a calendar conversion issue, a holiday date or name correction, a regional observance, or an accessibility problem by email. For date reports, include the BS date, the AD date shown, the page URL, and (for holiday changes) the official notice or source reference you used.
           </p>
-
-          {submitted ? (
-            <div className="rounded-xl border border-stone-200 bg-white p-6">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 text-[#14532D]" aria-hidden="true" />
-                <div>
-                  <h2 className="text-base font-semibold text-stone-900">Message recorded</h2>
-                  <p className="mt-1 text-sm text-stone-600">
-                    Thank you, {name}. Your note has been logged for review by our editorial team.
-                  </p>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSubmitted(false);
-                      setName('');
-                      setEmail('');
-                      setMessage('');
-                    }}
-                    className="mt-4 rounded-md border border-stone-300 bg-white px-4 py-2 text-xs font-semibold text-stone-800 hover:bg-stone-50"
-                  >
-                    Send Another Note
-                  </button>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <form
-              onSubmit={handleContactSubmit}
-              noValidate
-              className="space-y-4 rounded-xl border border-stone-200 bg-white p-6"
-            >
-              {formError && (
-                <p role="alert" className="rounded-md bg-[#FEF2F2] px-3 py-2 text-sm text-[#991B1B]">
-                  {formError}
-                </p>
-              )}
-              <div>
-                <label htmlFor="contact-name" className="block text-xs font-medium text-stone-600">
-                  Full Name
-                </label>
-                <input
-                  id="contact-name"
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="mt-1.5 h-11 w-full rounded-md border border-stone-300 px-3 text-sm text-stone-900 focus:border-[#9A3412] focus:outline-none"
-                />
-              </div>
-              <div>
-                <label htmlFor="contact-email" className="block text-xs font-medium text-stone-600">
-                  Email Address
-                </label>
-                <input
-                  id="contact-email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="mt-1.5 h-11 w-full rounded-md border border-stone-300 px-3 text-sm text-stone-900 focus:border-[#9A3412] focus:outline-none"
-                />
-              </div>
-              <div>
-                <label htmlFor="contact-msg" className="block text-xs font-medium text-stone-600">
-                  Message or Holiday Correction
-                </label>
-                <textarea
-                  id="contact-msg"
-                  rows={4}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  className="mt-1.5 w-full rounded-md border border-stone-300 p-3 text-sm text-stone-900 focus:border-[#9A3412] focus:outline-none"
-                />
-              </div>
-              <button
-                type="submit"
-                className="inline-flex min-h-[44px] items-center rounded-md bg-[#9A3412] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#7C2D12]"
+          <div className="rounded-xl border border-stone-200 bg-white p-6">
+            <p className="text-sm text-stone-700">
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="font-semibold text-[#9A3412] hover:underline"
               >
-                Submit Feedback
-              </button>
-            </form>
-          )}
+                {CONTACT_EMAIL}
+              </a>
+            </p>
+            <p className="mt-3 text-xs leading-relaxed text-stone-500">
+              Replace this placeholder with an email address you monitor before publishing. The link opens your email app; this site does not store or submit a contact form.
+            </p>
+          </div>
         </div>
       )}
 
@@ -168,19 +92,32 @@ export const StaticPages: React.FC<StaticPageProps> = ({ page, onNavigate }) => 
             Privacy Policy
           </h1>
           <p>
-            MitiPatro respects your privacy. All BS-to-AD date conversions and monthly calendar views run locally without requiring user registration or personal accounts.
+            MitiPatro does not require an account. Date conversion is performed by the site code in your browser; the site does not ask you to submit the dates you convert. The server still receives the page request needed to return the calendar.
           </p>
           <h2 className="font-display text-xl font-semibold text-stone-900">
-            Advertising &amp; Third-Party Cookies (Google AdSense)
+            Contact Email
           </h2>
           <p>
-            To keep MitiPatro free to use, we reserve display ad placements for Google AdSense. Third-party vendors, including Google, may use cookies to serve ads based on a user&rsquo;s prior visits to this website or other websites. Users may opt out of personalized advertising by visiting Google&rsquo;s Ad Settings.
+            Selecting the contact link opens your email application. The message and any address you provide are handled by your email provider and the recipient, not submitted to a MitiPatro contact database.
           </p>
           <h2 className="font-display text-xl font-semibold text-stone-900">
-            Server Logs &amp; Contact Information
+            Server and Hosting Logs
           </h2>
           <p>
-            Standard HTTP request logs are used solely to ensure uptime and prevent abuse. Information voluntarily submitted through our Contact form is used only to respond to your inquiry.
+            The hosting provider may process request details such as IP address, requested URL, user agent, and request time in its operational or security logs. Retention and access to those logs depend on the hosting provider and its settings.
+          </p>
+          <h2 className="font-display text-xl font-semibold text-stone-900">
+            Cookies and Advertising
+          </h2>
+          <p>
+            Ad slots are disabled unless the site operator enables them and configures an AdSense client ID. If Google AdSense is enabled, Google and its partners may use cookies or similar technologies to deliver, measure, and personalize ads, subject to your region, consent choices, and Google&rsquo;s policies. You can review or change Google ad personalization settings at{' '}
+            <a href="https://adssettings.google.com" className="text-[#9A3412] hover:underline">
+              Google Ad Settings
+            </a>
+            . MitiPatro does not currently describe a separate analytics service.
+          </p>
+          <p>
+            This policy may need updating if the site adds analytics, a server-side contact form, or other third-party services.
           </p>
         </div>
       )}
@@ -191,13 +128,19 @@ export const StaticPages: React.FC<StaticPageProps> = ({ page, onNavigate }) => 
             Terms of Use
           </h1>
           <p>
-            By accessing MitiPatro, you agree to use the calendar, converter, and holiday reference materials for informational and personal planning purposes.
+            MitiPatro provides Bikram Sambat calendar views, date conversions, and holiday listings for general information. The pages are not legal, financial, employment, travel, or official government advice.
           </p>
           <h2 className="font-display text-xl font-semibold text-stone-900">
-            Data Accuracy &amp; Official Gazette Notices
+            Date and Holiday Data
           </h2>
           <p>
-            While we verify all Bikram Sambat month lengths (2000–2090 BS) and public holidays against open-source datasets and Government of Nepal Gazette schedules, official public holidays may occasionally be amended by Government of Nepal announcements. Always confirm time-critical legal or banking closures with the relevant authority.
+            BS-to-AD conversion uses the site&rsquo;s stored month-length table and the reference date 1 Baisakh 2000 BS = 14 April 1943 AD. Holiday records may be incomplete, region-specific, or changed by later announcements; individual entries do not all include a cited official notice. Confirm dates that affect a decision with the relevant Government of Nepal office or other responsible authority.
+          </p>
+          <h2 className="font-display text-xl font-semibold text-stone-900">
+            Use of the Site
+          </h2>
+          <p>
+            You may use the calendar and converter for personal reference. Do not rely on this site as the sole source for time-critical closures, deadlines, or official observances. MitiPatro is independent and is not affiliated with or endorsed by the Government of Nepal.
           </p>
         </div>
       )}

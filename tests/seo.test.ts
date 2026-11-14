@@ -10,6 +10,7 @@ import {
   isNoindexSiteEnabled,
 } from '../lib/siteConfig';
 import { render } from '../src/entry-server';
+import { getHolidaysForYear } from '../lib/holidays';
 
 const SAMPLE_NOW_MS = new Date('2026-11-14T06:15:00.000Z').getTime(); // Kartik 28, 2083 BS
 const ORIGIN = 'https://mitipatro.com';
@@ -47,6 +48,18 @@ test('ads stay disabled unless both the flag and AdSense client ID are configure
     getAdSettings({ ADS_ENABLED: 'true', ADSENSE_CLIENT_ID: ' ca-pub-test ' }),
     { enabled: true, clientId: 'ca-pub-test' },
   );
+});
+
+test('women-only holiday entries are not classified as general public holidays', () => {
+  const restrictedHolidays = getHolidaysForYear(2083).filter((holiday) => holiday.type === 'women_only');
+  assert.deepEqual(
+    restrictedHolidays.map((holiday) => holiday.nameEn),
+    ['Haritalika Teej', 'International Women’s Day'],
+  );
+  assert.ok(restrictedHolidays.every((holiday) => !holiday.isPublicHoliday));
+
+  const holidaysPage = render('/holidays/2083', ORIGIN, SAMPLE_NOW_MS);
+  assert.ok(holidaysPage.includes('Women-only Holiday'));
 });
 
 test('indexable routes (core + 2082/2083 BS) emit robots "index, follow"', () => {
@@ -145,4 +158,22 @@ test('SSR renderToString produces full body HTML (grid, holidays, FAQs) for all 
   const converterText = textOnly(render('/date-converter', ORIGIN, SAMPLE_NOW_MS));
   assert.ok(converterText.includes('BS to AD &amp; AD to BS Date Converter'), 'Missing H1 in Converter SSR HTML');
   assert.ok(converterText.includes('1 Baisakh 2083'), 'Missing reference table in Converter SSR HTML');
+});
+
+test('static policy pages explain date verification, contact, privacy, and terms without false form claims', () => {
+  const about = render('/about', ORIGIN, SAMPLE_NOW_MS);
+  assert.ok(about.includes('How We Verify Dates'));
+  assert.ok(about.includes('does not cite a specific notice for each entry'));
+
+  const contact = render('/contact', ORIGIN, SAMPLE_NOW_MS);
+  assert.ok(contact.includes('mailto:replace-with-your-email@example.com'));
+  assert.ok(contact.includes('does not store or submit a contact form'));
+  assert.ok(!contact.includes('Message recorded'));
+
+  const privacy = render('/privacy', ORIGIN, SAMPLE_NOW_MS);
+  assert.ok(privacy.includes('Cookies and Advertising'));
+  assert.ok(privacy.includes('If Google AdSense is enabled'));
+
+  const terms = render('/terms', ORIGIN, SAMPLE_NOW_MS);
+  assert.ok(terms.includes('not affiliated with or endorsed by the Government of Nepal'));
 });

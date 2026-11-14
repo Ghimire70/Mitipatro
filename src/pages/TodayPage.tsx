@@ -92,7 +92,11 @@ export const TodayPage: React.FC<TodayPageProps> = ({ faqs, nowMs, onNavigate })
             <div className="space-y-1">
               {holidaysToday.map((h) => (
                 <p key={h.id} className="text-sm font-semibold text-[#9A3412]">
-                  {h.nameEn} ({h.nameNe}) — {h.isPublicHoliday ? 'Public Holiday in Nepal' : 'Cultural Observance'}
+                  {h.nameEn} ({h.nameNe}) — {h.type === 'women_only'
+                    ? 'Women-only Holiday'
+                    : h.isPublicHoliday
+                      ? 'Public Holiday in Nepal'
+                      : 'Cultural Observance'}
                 </p>
               ))}
             </div>

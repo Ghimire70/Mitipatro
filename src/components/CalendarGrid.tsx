@@ -339,7 +339,11 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
             <div className="space-y-1">
               {selectedHolidays.map((h) => (
                 <p key={h.id} className="font-medium text-[#9A3412]">
-                  {h.nameEn} ({h.nameNe}) · {h.isPublicHoliday ? 'Public Holiday' : 'Observance'}
+                  {h.nameEn} ({h.nameNe}) · {h.type === 'women_only'
+                    ? 'Women-only Holiday'
+                    : h.isPublicHoliday
+                      ? 'Public Holiday'
+                      : 'Observance'}
                 </p>
               ))}
             </div>

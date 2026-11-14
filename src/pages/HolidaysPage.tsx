@@ -18,6 +18,7 @@ const TYPE_LABEL: Record<HolidayType, string> = {
   civic: 'Civic Day',
   regional: 'Regional',
   women: 'Women’s Holiday',
+  women_only: 'Women-only Holiday',
 };
 
 export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNavigate }) => {
@@ -188,7 +189,9 @@ export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNaviga
                       {TYPE_LABEL[h.type]}
                     </td>
                     <td className="px-4 py-3.5 text-xs whitespace-nowrap">
-                      {h.isPublicHoliday ? (
+                      {h.type === 'women_only' ? (
+                        <span className="font-semibold text-stone-700">Women-only Holiday</span>
+                      ) : h.isPublicHoliday ? (
                         <span className="font-semibold text-[#9A3412]">Public Holiday</span>
                       ) : (
                         <span className="text-stone-500">Observance</span>
