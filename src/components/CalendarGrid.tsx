@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { ChevronLeft, ChevronRight, Calendar as CalendarIcon } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Calendar as CalendarIcon, Sparkles } from 'lucide-react';
 import {
   BS_MONTHS,
   PUBLISHED_BS_YEARS,
@@ -335,24 +335,35 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
           </div>
         </div>
 
-        <div className="text-xs text-stone-600">
-          {selectedHolidays.length > 0 ? (
-            <div className="space-y-1">
-              {selectedHolidays.map((h) => (
-                <p key={h.id} className="font-medium text-[#9A3412]">
-                  {h.nameEn} ({h.nameNe}) · {h.type === 'women_only'
-                    ? 'Women-only Holiday'
-                    : h.isPublicHoliday
-                      ? 'Public Holiday'
-                      : 'Observance'}
-                </p>
-              ))}
-            </div>
-          ) : selectedCell.isSaturday ? (
-            <p className="font-medium text-[#9A3412]">Saturday is commonly observed as the weekly rest day.</p>
-          ) : (
-            <p className="text-stone-500">No holiday is listed in our calendar for this day.</p>
-          )}
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3 text-xs text-stone-600">
+          <div>
+            {selectedHolidays.length > 0 ? (
+              <div className="space-y-1">
+                {selectedHolidays.map((h) => (
+                  <p key={h.id} className="font-medium text-[#9A3412]">
+                    {h.nameEn} ({h.nameNe}) · {h.type === 'women_only'
+                      ? 'Women-only Holiday'
+                      : h.isPublicHoliday
+                        ? 'Public Holiday'
+                        : 'Observance'}
+                  </p>
+                ))}
+              </div>
+            ) : selectedCell.isSaturday ? (
+              <p className="font-medium text-[#9A3412]">Saturday is commonly observed as the weekly rest day.</p>
+            ) : (
+              <p className="text-stone-500">No holiday is listed in our calendar for this day.</p>
+            )}
+          </div>
+
+          <a
+            href="/rashifal"
+            onClick={(e) => handleLink(e, '/rashifal')}
+            className="inline-flex items-center gap-1.5 font-semibold text-[#9A3412] hover:underline whitespace-nowrap self-start sm:self-auto sm:border-l sm:border-stone-200 sm:pl-3"
+          >
+            <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
+            राशिफल हेर्नुहोस्
+          </a>
         </div>
       </div>
 

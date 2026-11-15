@@ -14,6 +14,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
     { label: 'Today', path: '/aaja-ko-miti' },
     { label: `Calendar ${CURRENT_BS_YEAR}`, path: `/calendar/${CURRENT_BS_YEAR}` },
     { label: 'Holidays', path: `/holidays/${CURRENT_BS_YEAR}` },
+    { label: 'Rashifal', path: '/rashifal' },
     { label: 'About', path: '/about' },
     { label: 'Contact', path: '/contact' },
   ];
@@ -46,7 +47,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
             const isActive =
               currentPath === item.path ||
               (item.path.startsWith('/calendar/') && currentPath.startsWith('/calendar/')) ||
-              (item.path.startsWith('/holidays/') && currentPath.startsWith('/holidays/'));
+              (item.path.startsWith('/holidays/') && currentPath.startsWith('/holidays/')) ||
+              (item.path === '/rashifal' && currentPath.startsWith('/rashifal'));
             return (
               <a
                 key={item.path}

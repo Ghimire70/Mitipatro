@@ -9,6 +9,7 @@ import { DateConverter } from '../components/DateConverter';
 import { AdSlot } from '../components/AdSlot';
 import { FaqSection } from '../components/FaqSection';
 import { HolidayReferenceNote } from '../components/HolidayReferenceNote';
+import { RasifalSection } from '../components/RasifalSection';
 
 interface HomePageProps {
   faqs: FaqItem[];
@@ -74,6 +75,13 @@ export const HomePage: React.FC<HomePageProps> = ({ faqs, nowMs, onNavigate }) =
             >
               View Aaja Ko Miti
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+            <a
+              href="/rashifal"
+              onClick={(e) => handleLink(e, '/rashifal')}
+              className="inline-flex min-h-[44px] items-center rounded-md border border-stone-300 bg-white px-4 py-2.5 text-sm font-semibold text-stone-800 transition-colors hover:bg-stone-50 whitespace-nowrap shrink-0"
+            >
+              आजको राशिफल
             </a>
             <a
               href={`/holidays/${CURRENT_BS_YEAR}`}
@@ -197,6 +205,11 @@ export const HomePage: React.FC<HomePageProps> = ({ faqs, nowMs, onNavigate }) =
 
           <AdSlot variant="rectangle" />
         </aside>
+      </div>
+
+      {/* Daily Rashifal Feature Section */}
+      <div className="mt-12">
+        <RasifalSection nowMs={nowMs} onNavigate={onNavigate} />
       </div>
 
       {/* Browse Multi-Year Calendars */}

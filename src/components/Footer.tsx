@@ -47,6 +47,11 @@ export const Footer: React.FC<FooterProps> = ({ nowMs, onNavigate }) => {
                 </a>
               </li>
               <li>
+                <a href="/rashifal" onClick={(e) => handleLink(e, '/rashifal')} className="hover:text-[#9A3412] hover:underline">
+                  Rashifal (Horoscope)
+                </a>
+              </li>
+              <li>
                 <a href="/date-converter" onClick={(e) => handleLink(e, '/date-converter')} className="hover:text-[#9A3412] hover:underline">
                   BS to AD Converter
                 </a>

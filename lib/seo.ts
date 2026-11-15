@@ -13,6 +13,7 @@ import {
   toDevanagariDigits,
 } from './bsConverter';
 import { getHolidaysForMonth, getHolidaysForYear } from './holidays';
+import { RASHIS, getRashiById } from './rashifal';
 
 export interface FaqItem {
   question: string;
@@ -462,6 +463,214 @@ function getRouteSeo(
     };
   }
 
+  // 8. Daily Rashifal (Horoscope): /rashifal or /rashifal/daily
+  if (cleanPath === '/rashifal' || cleanPath === '/rashifal/daily') {
+    const title = `आजको राशिफल – दैनिक राशिफल (Daily Nepali Rashifal) | MitiPatro`;
+    const description = `आजको दैनिक राशिफल (${today.bs.formattedEn} / ${today.bs.formattedNe}): मेष, वृष, मिथुन, कर्कट, सिंह, कन्या, तुला, वृश्चिक, धनु, मकर, कुम्भ र मीन १२ राशिको भाग्य, करिअर र स्वास्थ्य फल।`;
+    const breadcrumbs: BreadcrumbItem[] = [
+      { name: 'Home', path: '/' },
+      { name: 'Rashifal', path: '/rashifal' },
+    ];
+    const faqs: FaqItem[] = [
+      {
+        question: 'आजको राशिफल कुन समयमा अद्यावधिक हुन्छ?',
+        answer: 'मितिपत्रोमा दैनिक राशिफल नेपालको स्थानीय समय (Asia/Kathmandu, UTC+05:45) अनुसार मध्यरात १२:०० बजे नयाँ मिति र तिथिसँगै नियमित अद्यावधिक हुन्छ।',
+      },
+      {
+        question: 'नेपाली १२ राशीहरू कुन-कुन हुन्?',
+        answer: 'वैदिक ज्योतिष परम्परा अनुसार १२ राशीहरू मेष, वृष, मिथुन, कर्कट, सिंह, कन्या, तुला, वृश्चिक, धनु, मकर, कुम्भ र मीन हुन्।',
+      },
+      {
+        question: 'के मितिपत्रोको राशिफल आधिकारिक वैदिक ज्योतिष सिद्धान्तमा आधारित छ?',
+        answer: 'हो, हाम्रो राशिफल वैदिक ज्योतिष परम्परा र ग्रहगोचरको शास्त्रीय विश्लेषणमा आधारित छ। कुनै पनि काल्पनिक वा कृत्रिम फल सिर्जना नगरी विश्वसनीय ज्योतिषीय विवरण प्रस्तुत गरिन्छ।',
+      },
+    ];
+    return {
+      title,
+      description,
+      canonicalPath: '/rashifal',
+      robots: 'index, follow',
+      h1: 'आजको दैनिक राशिफल (Daily Rashifal)',
+      breadcrumbs,
+      faqs,
+      jsonLd: buildJsonLd(baseUrl, breadcrumbs, faqs),
+    };
+  }
+
+  // 9. Weekly Rashifal: /rashifal/weekly
+  if (cleanPath === '/rashifal/weekly') {
+    const title = `साप्ताहिक राशिफल – यस हप्ताको राशिफल (Weekly Nepali Rashifal) | MitiPatro`;
+    const description = `यस हप्ताको साप्ताहिक राशिफल: मेष देखि मीन सम्मका १२ राशिको साताभरिको ग्रहगोचर, व्यापार, करिअर, प्रेम र स्वास्थ्य फलादेश।`;
+    const breadcrumbs: BreadcrumbItem[] = [
+      { name: 'Home', path: '/' },
+      { name: 'Rashifal', path: '/rashifal' },
+      { name: 'Weekly Rashifal', path: '/rashifal/weekly' },
+    ];
+    const faqs: FaqItem[] = [
+      {
+        question: 'साप्ताहिक राशिफलले कुन समयावधि समेट्छ?',
+        answer: 'साप्ताहिक राशिफलले आइतबारदेखि शनिबारसम्मको सात दिनको ग्रहगोचर र नक्षत्र प्रभावलाई समेटेर फलादेश प्रस्तुत गर्दछ।',
+      },
+      {
+        question: 'साप्ताहिक राशिफल कुन दिन अद्यावधिक हुन्छ?',
+        answer: 'साप्ताहिक राशिफल प्रत्येक हप्ताको सुरुमै नेपाली पात्रोको नयाँ साताअनुसार अद्यावधिक गरिन्छ।',
+      },
+      {
+        question: 'साप्ताहिक राशिफलमा कुन-कुन विषय समावेश हुन्छन्?',
+        answer: 'साताभरिको समग्र भाग्य, कार्यक्षेत्र, आर्थिक कारोबार, पारिवारिक तथा प्रेम सम्बन्ध, स्वास्थ्य, र साताको शुभ रङ्ग तथा अङ्क समावेश हुन्छन्।',
+      },
+    ];
+    return {
+      title,
+      description,
+      canonicalPath: '/rashifal/weekly',
+      robots: 'index, follow',
+      h1: 'यस हप्ताको साप्ताहिक राशिफल (Weekly Rashifal)',
+      breadcrumbs,
+      faqs,
+      jsonLd: buildJsonLd(baseUrl, breadcrumbs, faqs),
+    };
+  }
+
+  // 10. Monthly Rashifal: /rashifal/monthly
+  if (cleanPath === '/rashifal/monthly') {
+    const title = `मासिक राशिफल – यस महिनाको राशिफल (Monthly Nepali Rashifal) | MitiPatro`;
+    const description = `यस महिनाको मासिक राशिफल (${today.bs.monthNameNe} ${toDevanagariDigits(today.bs.year)}): १२ वटै राशिको महिनाभरिको ग्रहगोचर, आर्थिक अवस्था, करिअर र स्वास्थ्य भविष्यवाणी।`;
+    const breadcrumbs: BreadcrumbItem[] = [
+      { name: 'Home', path: '/' },
+      { name: 'Rashifal', path: '/rashifal' },
+      { name: 'Monthly Rashifal', path: '/rashifal/monthly' },
+    ];
+    const faqs: FaqItem[] = [
+      {
+        question: 'मासिक राशिफल कुन महिनाअनुसार तयार पारिन्छ?',
+        answer: 'मासिक राशिफल बिक्रम संवत् (BS) का सौर्य महिनाहरू (वैशाखदेखि चैतसम्म) को अवधि र संक्रान्ति कालीन ग्रहगोचर अनुसार तयार पारिन्छ।',
+      },
+      {
+        question: 'मासिक राशिफलमा दीर्घकालीन लगानी र योजनाका फल पाइन्छन्?',
+        answer: 'हो, मासिक राशिफलमा महिनाभरिका प्रमुख ग्रह परिवर्तन, दीर्घकालीन लगानी, व्यापारिक विस्तार, पारिवारिक उन्नति र स्वास्थ्य सतर्कताका फलहरू प्रस्तुत गरिन्छ।',
+      },
+    ];
+    return {
+      title,
+      description,
+      canonicalPath: '/rashifal/monthly',
+      robots: 'index, follow',
+      h1: `${today.bs.monthNameNe} महिनाको मासिक राशिफल (Monthly Rashifal)`,
+      breadcrumbs,
+      faqs,
+      jsonLd: buildJsonLd(baseUrl, breadcrumbs, faqs),
+    };
+  }
+
+  // 11. Individual Rashi Page with explicit period: /rashifal/(daily|weekly|monthly)/:rashi
+  const periodRashiMatch = /^\/rashifal\/(daily|weekly|monthly)\/([a-z]+)$/i.exec(cleanPath);
+  if (periodRashiMatch) {
+    const period = periodRashiMatch[1].toLowerCase() as 'daily' | 'weekly' | 'monthly';
+    const rashiMeta = getRashiById(periodRashiMatch[2]);
+    if (rashiMeta) {
+      if (period === 'daily') {
+        const title = `${rashiMeta.nameNe} राशिफल – आजको ${rashiMeta.nameNe} दैनिक राशिफल (${rashiMeta.englishSign}) | MitiPatro`;
+        const description = `आजको ${rashiMeta.nameNe} राशि दैनिक राशिफल (${rashiMeta.nameEn} / ${rashiMeta.englishSign}): दैनिक भाग्य, करिअर, आर्थिक, प्रेम तथा स्वास्थ्य फल।`;
+        const breadcrumbs: BreadcrumbItem[] = [
+          { name: 'Home', path: '/' },
+          { name: 'Rashifal', path: '/rashifal' },
+          { name: `${rashiMeta.nameNe} (${rashiMeta.englishSign})`, path: `/rashifal/${rashiMeta.id}` },
+        ];
+        return {
+          title,
+          description,
+          canonicalPath: `/rashifal/${rashiMeta.id}`,
+          robots: 'index, follow',
+          h1: `${rashiMeta.nameNe} दैनिक राशिफल (${rashiMeta.englishSign})`,
+          breadcrumbs,
+          faqs: [],
+          jsonLd: buildJsonLd(baseUrl, breadcrumbs, []),
+        };
+      }
+
+      if (period === 'weekly') {
+        const title = `${rashiMeta.nameNe} साप्ताहिक राशिफल (${rashiMeta.englishSign} Weekly Rashifal) | MitiPatro`;
+        const description = `यस हप्ताको ${rashiMeta.nameNe} साप्ताहिक राशिफल (${rashiMeta.nameEn} / ${rashiMeta.englishSign}): साताभरिको ग्रहगोचर, करिअर, आर्थिक, प्रेम तथा स्वास्थ्य फलादेश।`;
+        const breadcrumbs: BreadcrumbItem[] = [
+          { name: 'Home', path: '/' },
+          { name: 'Rashifal', path: '/rashifal' },
+          { name: 'Weekly Rashifal', path: '/rashifal/weekly' },
+          { name: `${rashiMeta.nameNe} (${rashiMeta.englishSign})`, path: `/rashifal/weekly/${rashiMeta.id}` },
+        ];
+        return {
+          title,
+          description,
+          canonicalPath: `/rashifal/weekly/${rashiMeta.id}`,
+          robots: 'index, follow',
+          h1: `${rashiMeta.nameNe} साप्ताहिक राशिफल (${rashiMeta.englishSign})`,
+          breadcrumbs,
+          faqs: [],
+          jsonLd: buildJsonLd(baseUrl, breadcrumbs, []),
+        };
+      }
+
+      // monthly
+      const title = `${rashiMeta.nameNe} मासिक राशिफल (${rashiMeta.englishSign} Monthly Rashifal) | MitiPatro`;
+      const description = `यस महिनाको ${rashiMeta.nameNe} मासिक राशिफल (${rashiMeta.nameEn} / ${rashiMeta.englishSign}): महिनाभरिको ग्रहगोचर, करिअर, आर्थिक, पारिवारिक सम्बन्ध र स्वास्थ्य भविष्यवाणी।`;
+      const breadcrumbs: BreadcrumbItem[] = [
+        { name: 'Home', path: '/' },
+        { name: 'Rashifal', path: '/rashifal' },
+        { name: 'Monthly Rashifal', path: '/rashifal/monthly' },
+        { name: `${rashiMeta.nameNe} (${rashiMeta.englishSign})`, path: `/rashifal/monthly/${rashiMeta.id}` },
+      ];
+      return {
+        title,
+        description,
+        canonicalPath: `/rashifal/monthly/${rashiMeta.id}`,
+        robots: 'index, follow',
+        h1: `${rashiMeta.nameNe} मासिक राशिफल (${rashiMeta.englishSign})`,
+        breadcrumbs,
+        faqs: [],
+        jsonLd: buildJsonLd(baseUrl, breadcrumbs, []),
+      };
+    }
+  }
+
+  // 12. Individual Rashi Page (Default Daily): /rashifal/:rashi
+  const rashiMatch = /^\/rashifal\/([a-z]+)$/i.exec(cleanPath);
+  if (rashiMatch) {
+    const rashiMeta = getRashiById(rashiMatch[1]);
+    if (rashiMeta) {
+      const title = `${rashiMeta.nameNe} राशिफल – आजको ${rashiMeta.nameNe} दैनिक राशिफल (${rashiMeta.englishSign}) | MitiPatro`;
+      const description = `आजको ${rashiMeta.nameNe} राशि दैनिक राशिफल (${rashiMeta.nameEn} / ${rashiMeta.englishSign}): दैनिक भाग्य, करिअर, आर्थिक, प्रेम तथा स्वास्थ्य फल। स्वामी ग्रह: ${rashiMeta.rulingPlanetNe}, तत्व: ${rashiMeta.elementNe}।`;
+      const breadcrumbs: BreadcrumbItem[] = [
+        { name: 'Home', path: '/' },
+        { name: 'Rashifal', path: '/rashifal' },
+        { name: `${rashiMeta.nameNe} (${rashiMeta.englishSign})`, path: `/rashifal/${rashiMeta.id}` },
+      ];
+      const faqs: FaqItem[] = [
+        {
+          question: `${rashiMeta.nameNe} राशिको स्वामी ग्रह र तत्व के हो?`,
+          answer: `${rashiMeta.nameNe} (${rashiMeta.englishSign}) राशिको स्वामी ग्रह ${rashiMeta.rulingPlanetNe} र तत्व ${rashiMeta.elementNe} हो। यसको प्रतीक ${rashiMeta.symbolNe} हो।`,
+        },
+        {
+          question: `${rashiMeta.nameNe} राशिका वैदिक नामाक्षरहरू कुन-कुन हुन्?`,
+          answer: `वैदिक ज्योतिष शास्त्र अनुसार ${rashiMeta.nameNe} राशिका नामाक्षरहरू "${rashiMeta.lettersNe}" हुन्।`,
+        },
+        {
+          question: `आजको ${rashiMeta.nameNe} राशिफलमा कुन-कुन क्षेत्रको भविष्यवाणी पाइन्छ?`,
+          answer: `आजको ${rashiMeta.nameNe} राशिफलमा समग्र दिनको फलका साथै करिअर, आर्थिक अवस्था, पारिवारिक सम्बन्ध, स्वास्थ्य, शुभ रङ्ग र शुभ अङ्क समावेश गरिन्छ।`,
+        },
+      ];
+      return {
+        title,
+        description,
+        canonicalPath: `/rashifal/${rashiMeta.id}`,
+        robots: 'index, follow',
+        h1: `${rashiMeta.nameNe} राशिफल (${rashiMeta.englishSign} Rashifal)`,
+        breadcrumbs,
+        faqs,
+        jsonLd: buildJsonLd(baseUrl, breadcrumbs, faqs),
+      };
+    }
+  }
+
   // Fallback for unknown routes (404)
   return {
     title: 'Page Not Found – Nepali Calendar | MitiPatro',
@@ -492,6 +701,12 @@ export function generateSitemapPaths(converterToolsIndexingEnabled = false): str
     '/',
     '/aaja-ko-miti',
     '/date-converter',
+    '/rashifal',
+    '/rashifal/weekly',
+    '/rashifal/monthly',
+    ...RASHIS.map((r) => `/rashifal/${r.id}`),
+    ...RASHIS.map((r) => `/rashifal/weekly/${r.id}`),
+    ...RASHIS.map((r) => `/rashifal/monthly/${r.id}`),
     '/about',
     '/contact',
     '/privacy',

@@ -121,6 +121,12 @@ async function startServer() {
     '/bs-to-ad': '/date-converter',
     '/calendar': `/calendar/${CURRENT_BS_YEAR}`,
     '/holidays': `/holidays/${CURRENT_BS_YEAR}`,
+    '/rasifal': '/rashifal',
+    '/horoscope': '/rashifal',
+    '/rasifal/weekly': '/rashifal/weekly',
+    '/horoscope/weekly': '/rashifal/weekly',
+    '/rasifal/monthly': '/rashifal/monthly',
+    '/horoscope/monthly': '/rashifal/monthly',
   };
 
   app.use((req, res, next) => {

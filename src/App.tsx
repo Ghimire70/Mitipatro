@@ -15,6 +15,8 @@ import { ConverterPage } from './pages/ConverterPage';
 import { ConverterToolsPage } from './pages/ConverterToolsPage';
 import { HolidaysPage } from './pages/HolidaysPage';
 import { StaticPages } from './pages/StaticPages';
+import { RashifalPage } from './pages/RashifalPage';
+import { getRashiById } from '../lib/rashifal';
 
 function normalizePath(pathname: string): string {
   if (!pathname || pathname === '/') return '/';
@@ -95,6 +97,46 @@ export default function App({
     }
     if (currentPath === '/date-converter') {
       return <ConverterPage faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
+    }
+    if (currentPath === '/rashifal' || currentPath === '/rashifal/daily') {
+      return <RashifalPage initialPeriod="daily" faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
+    }
+    if (currentPath === '/rashifal/weekly') {
+      return <RashifalPage initialPeriod="weekly" faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
+    }
+    if (currentPath === '/rashifal/monthly') {
+      return <RashifalPage initialPeriod="monthly" faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
+    }
+    const periodRashiMatch = /^\/rashifal\/(daily|weekly|monthly)\/([a-z]+)$/i.exec(currentPath);
+    if (periodRashiMatch) {
+      const p = periodRashiMatch[1].toLowerCase() as 'daily' | 'weekly' | 'monthly';
+      const rashiMeta = getRashiById(periodRashiMatch[2]);
+      if (rashiMeta) {
+        return (
+          <RashifalPage
+            initialPeriod={p}
+            rashiFilter={rashiMeta.id}
+            faqs={seo.faqs}
+            nowMs={nowMs}
+            onNavigate={navigate}
+          />
+        );
+      }
+    }
+    const rashiMatch = /^\/rashifal\/([a-z]+)$/i.exec(currentPath);
+    if (rashiMatch) {
+      const rashiMeta = getRashiById(rashiMatch[1]);
+      if (rashiMeta) {
+        return (
+          <RashifalPage
+            initialPeriod="daily"
+            rashiFilter={rashiMeta.id}
+            faqs={seo.faqs}
+            nowMs={nowMs}
+            onNavigate={navigate}
+          />
+        );
+      }
     }
     if (converterTool) {
       return (
