@@ -9,6 +9,7 @@ import {
   getAdSettings,
   getGoogleSiteVerificationTag,
   getSiteUrl,
+  isConverterToolsIndexingEnabled,
   isNoindexSiteEnabled,
 } from '../lib/siteConfig';
 import { render } from '../src/entry-server';
@@ -86,6 +87,38 @@ test('NOINDEX_SITE defaults on and can be disabled for launch', () => {
   assert.equal(liveSeo.robots, 'index, follow');
   assert.match(generateRobotsTxt(ORIGIN, true), /Disallow: \//);
   assert.match(generateRobotsTxt(ORIGIN, false), /Allow: \//);
+});
+
+test('converter tools default to noindex and enter the sitemap only when enabled', () => {
+  const toolRoutes = ['/bs-date-difference', '/bs-age-calculator', '/nepali-numbers'];
+  const titles = new Set<string>();
+  assert.equal(isConverterToolsIndexingEnabled({}), false);
+  assert.equal(isConverterToolsIndexingEnabled({ CONVERTER_TOOLS_INDEXING_ENABLED: 'true' }), true);
+  assert.equal(isConverterToolsIndexingEnabled({ CONVERTER_TOOLS_INDEXING_ENABLED: 'yes' }), false);
+
+  for (const route of toolRoutes) {
+    const disabledSeo = getSeoForRoute(route, ORIGIN, new Date(SAMPLE_NOW_MS), false);
+    assert.equal(disabledSeo.robots, 'noindex, follow');
+    assert.ok(disabledSeo.title.length > 0);
+    assert.ok(disabledSeo.description.length > 0);
+    assert.ok(disabledSeo.h1.length > 0);
+    titles.add(disabledSeo.title);
+    assert.ok(disabledSeo.jsonLd.length > 0);
+    assert.ok(!generateSitemapPaths().includes(route));
+
+    const enabledSeo = getSeoForRoute(route, ORIGIN, new Date(SAMPLE_NOW_MS), false, true);
+    assert.equal(enabledSeo.robots, 'index, follow');
+    assert.equal(enabledSeo.canonicalPath, route);
+    assert.ok(generateSitemapPaths(true).includes(route));
+    assert.ok(generateSitemapXml(ORIGIN, new Date(SAMPLE_NOW_MS), true).includes(
+      `<loc>${ORIGIN}${route}</loc>`,
+    ));
+
+    const sitewideNoindexSeo = getSeoForRoute(route, ORIGIN, new Date(SAMPLE_NOW_MS), true, true);
+    assert.equal(sitewideNoindexSeo.robots, 'noindex, nofollow');
+  }
+  assert.equal(titles.size, toolRoutes.length, 'Converter tool pages must have unique titles');
+  assert.ok(toolRoutes.every((route) => !generateSitemapXml(ORIGIN).includes(`<loc>${ORIGIN}${route}</loc>`)));
 });
 
 test('ads stay disabled unless both the flag and AdSense client ID are configured', () => {
@@ -206,6 +239,31 @@ test('SSR renderToString produces full body HTML (grid, holidays, FAQs) for all 
   const converterText = textOnly(render('/date-converter', ORIGIN, SAMPLE_NOW_MS));
   assert.ok(converterText.includes('BS to AD &amp; AD to BS Date Converter'), 'Missing H1 in Converter SSR HTML');
   assert.ok(converterText.includes('1 Baisakh 2083'), 'Missing reference table in Converter SSR HTML');
+
+  const converterToolRoutes = [
+    ['/bs-date-difference', 'BS Date Difference Calculator'],
+    ['/bs-age-calculator', 'BS Age Calculator'],
+    ['/nepali-numbers', 'Nepali Digit and Number-to-Words Converter'],
+  ] as const;
+  for (const [route, heading] of converterToolRoutes) {
+    const toolHtml = render(route, ORIGIN, SAMPLE_NOW_MS, false);
+    assert.ok(toolHtml.includes(`<h1 class="font-display`), `Missing H1 for ${route}`);
+    assert.ok(toolHtml.includes(heading), `Missing page heading for ${route}`);
+  }
+
+  const enabledToolHtml = render(
+    '/bs-date-difference',
+    ORIGIN,
+    SAMPLE_NOW_MS,
+    false,
+    false,
+    '',
+    '',
+    true,
+  );
+  assert.ok(enabledToolHtml.includes('elapsed'));
+
+  assert.ok(render('/nepali-numbers', ORIGIN, SAMPLE_NOW_MS).includes('Devanagari digits'));
 });
 
 test('static policy pages explain date verification, contact, privacy, and terms without false form claims', () => {

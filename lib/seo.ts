@@ -76,7 +76,12 @@ export function buildJsonLd(
   return [...schemas, ...extraSchemas];
 }
 
-function getRouteSeo(pathname: string, baseUrl: string, now: Date): PageSeoData {
+function getRouteSeo(
+  pathname: string,
+  baseUrl: string,
+  now: Date,
+  converterToolsIndexingEnabled: boolean,
+): PageSeoData {
   const cleanPath = pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
   const today = getTodayNepal(now);
 
@@ -190,6 +195,89 @@ function getRouteSeo(pathname: string, baseUrl: string, now: Date): PageSeoData 
           '@context': 'https://schema.org',
           '@type': 'WebApplication',
           name: 'MitiPatro BS to AD Date Converter',
+          applicationCategory: 'UtilitiesApplication',
+          operatingSystem: 'All',
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        },
+      ]),
+    };
+  }
+
+  const converterToolPages: Record<string, {
+    title: string;
+    description: string;
+    h1: string;
+    name: string;
+    faqs: FaqItem[];
+  }> = {
+    '/bs-date-difference': {
+      title: 'BS Date Difference Calculator (2000–2090 BS) | MitiPatro',
+      description: 'Find the elapsed number of days between two Bikram Sambat dates in the supported 2000–2090 BS range.',
+      h1: 'BS Date Difference Calculator',
+      name: 'MitiPatro BS Date Difference Calculator',
+      faqs: [
+        {
+          question: 'How does the BS date difference calculator count days?',
+          answer: 'It converts both selected BS dates with the site’s existing date converter and reports elapsed days. The starting date is not counted as an elapsed day.',
+        },
+        {
+          question: 'Which Bikram Sambat years can I compare?',
+          answer: 'This tool accepts dates in the supported range, 2000–2090 BS. Dates outside that range are not processed.',
+        },
+      ],
+    },
+    '/bs-age-calculator': {
+      title: 'BS Age Calculator – Calculate Age in Bikram Sambat | MitiPatro',
+      description: 'Calculate completed years, months, and days between two Bikram Sambat dates in the supported 2000–2090 BS range.',
+      h1: 'BS Age Calculator',
+      name: 'MitiPatro BS Age Calculator',
+      faqs: [
+        {
+          question: 'How is age shown in the BS age calculator?',
+          answer: 'The result uses completed Bikram Sambat years, months, and days. If a month has no matching anniversary day, its last day is used for that month anniversary.',
+        },
+        {
+          question: 'What date range does the BS age calculator accept?',
+          answer: 'Both dates must be in the supported range, 2000–2090 BS, and the birth date cannot be after the as-of date.',
+        },
+      ],
+    },
+    '/nepali-numbers': {
+      title: 'Nepali Number Converter – Devanagari Digits and Words | MitiPatro',
+      description: 'Convert whole numbers between Arabic and Devanagari digits and display a Nepali word form, from 0 to 999,999,999.',
+      h1: 'Nepali Digit and Number-to-Words Converter',
+      name: 'MitiPatro Nepali Number Converter',
+      faqs: [
+        {
+          question: 'Can I enter either Arabic or Devanagari digits?',
+          answer: 'Yes. Enter a whole number using either digit set; the tool displays both digit forms and a Nepali word form.',
+        },
+        {
+          question: 'What number range is supported?',
+          answer: 'The tool accepts whole numbers from 0 to 999,999,999. Decimal and negative values are not accepted.',
+        },
+      ],
+    },
+  };
+  const converterTool = converterToolPages[cleanPath];
+  if (converterTool) {
+    const breadcrumbs: BreadcrumbItem[] = [
+      { name: 'Home', path: '/' },
+      { name: converterTool.h1, path: cleanPath },
+    ];
+    return {
+      title: converterTool.title,
+      description: converterTool.description,
+      canonicalPath: cleanPath,
+      robots: converterToolsIndexingEnabled ? 'index, follow' : 'noindex, follow',
+      h1: converterTool.h1,
+      breadcrumbs,
+      faqs: converterTool.faqs,
+      jsonLd: buildJsonLd(baseUrl, breadcrumbs, converterTool.faqs, [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'WebApplication',
+          name: converterTool.name,
           applicationCategory: 'UtilitiesApplication',
           operatingSystem: 'All',
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
@@ -393,12 +481,13 @@ export function getSeoForRoute(
   baseUrl = 'http://localhost:3000',
   now = new Date(),
   noindexSite = true,
+  converterToolsIndexingEnabled = false,
 ): PageSeoData {
-  const seo = getRouteSeo(pathname, baseUrl, now);
+  const seo = getRouteSeo(pathname, baseUrl, now, converterToolsIndexingEnabled);
   return noindexSite ? { ...seo, robots: 'noindex, nofollow' } : seo;
 }
 
-export function generateSitemapPaths(): string[] {
+export function generateSitemapPaths(converterToolsIndexingEnabled = false): string[] {
   const paths = [
     '/',
     '/aaja-ko-miti',
@@ -416,6 +505,10 @@ export function generateSitemapPaths(): string[] {
     for (const m of BS_MONTHS) {
       paths.push(`/calendar/${year}/${m.slug}`);
     }
+  }
+
+  if (converterToolsIndexingEnabled) {
+    paths.push('/bs-date-difference', '/bs-age-calculator', '/nepali-numbers');
   }
 
   return paths;

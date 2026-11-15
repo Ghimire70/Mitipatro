@@ -26,7 +26,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
   };
 
   return (
-    <header className="border-b border-stone-200 bg-[#FBF9F5]">
+    <header className="print-hidden border-b border-stone-200 bg-[#FBF9F5]">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-8 px-4 py-4 sm:px-6 lg:px-8">
         {/* Zone 1: Brand wordmark only */}
         <a

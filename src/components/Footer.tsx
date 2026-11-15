@@ -17,7 +17,7 @@ export const Footer: React.FC<FooterProps> = ({ nowMs, onNavigate }) => {
   };
 
   return (
-    <footer className="mt-16 border-t border-stone-200 bg-[#F3EFE6]/70">
+    <footer className="print-hidden mt-16 border-t border-stone-200 bg-[#F3EFE6]/70">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
@@ -49,6 +49,21 @@ export const Footer: React.FC<FooterProps> = ({ nowMs, onNavigate }) => {
               <li>
                 <a href="/date-converter" onClick={(e) => handleLink(e, '/date-converter')} className="hover:text-[#9A3412] hover:underline">
                   BS to AD Converter
+                </a>
+              </li>
+              <li>
+                <a href="/bs-date-difference" onClick={(e) => handleLink(e, '/bs-date-difference')} className="hover:text-[#9A3412] hover:underline">
+                  BS Date Difference
+                </a>
+              </li>
+              <li>
+                <a href="/bs-age-calculator" onClick={(e) => handleLink(e, '/bs-age-calculator')} className="hover:text-[#9A3412] hover:underline">
+                  BS Age Calculator
+                </a>
+              </li>
+              <li>
+                <a href="/nepali-numbers" onClick={(e) => handleLink(e, '/nepali-numbers')} className="hover:text-[#9A3412] hover:underline">
+                  Nepali Number Converter
                 </a>
               </li>
               {PUBLISHED_BS_YEARS.map((yr) => (

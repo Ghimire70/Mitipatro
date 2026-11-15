@@ -10,9 +10,13 @@ function escapeXml(value: string): string {
     .replace(/'/g, '&apos;');
 }
 
-export function generateSitemapXml(siteUrl = getSiteUrl(), now = new Date()): string {
+export function generateSitemapXml(
+  siteUrl = getSiteUrl(),
+  now = new Date(),
+  converterToolsIndexingEnabled = false,
+): string {
   const todayIso = now.toISOString().split('T')[0];
-  const urls = generateSitemapPaths()
+  const urls = generateSitemapPaths(converterToolsIndexingEnabled)
     .map((route) => {
       const priority =
         route === '/' ? '1.0' : route === '/aaja-ko-miti' || route === '/date-converter' ? '0.9' : '0.8';

@@ -30,3 +30,68 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+@page {
+  size: A4 landscape;
+  margin: 10mm;
+}
+
+@media print {
+  html,
+  body {
+    min-height: 0 !important;
+    background: #fff !important;
+  }
+
+  .app-shell {
+    display: block !important;
+    min-height: 0 !important;
+    background: #fff !important;
+  }
+
+  .app-shell > header,
+  .app-shell > footer,
+  .print-hidden {
+    display: none !important;
+  }
+
+  .app-shell > main {
+    display: block !important;
+  }
+
+  .print-month-page {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  .print-month-layout {
+    display: block !important;
+    margin-top: 12px !important;
+  }
+
+  .print-calendar {
+    width: 100%;
+  }
+
+  .print-calendar > section {
+    border-color: #888 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .print-calendar [role='columnheader'] {
+    padding-block: 4px !important;
+    color: #222 !important;
+  }
+
+  .print-calendar [role='gridcell'] {
+    min-height: 58px !important;
+    padding: 4px !important;
+    break-inside: avoid;
+    background: #fff !important;
+    color: #111 !important;
+    cursor: default !important;
+  }
+}

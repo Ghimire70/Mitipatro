@@ -60,6 +60,10 @@ export function isNoindexSiteEnabled(env: NodeJS.ProcessEnv = process.env): bool
   return value === undefined || value.trim().toLowerCase() !== 'false';
 }
 
+export function isConverterToolsIndexingEnabled(env: NodeJS.ProcessEnv = process.env): boolean {
+  return env.CONVERTER_TOOLS_INDEXING_ENABLED?.trim().toLowerCase() === 'true';
+}
+
 export function getAdSettings(env: NodeJS.ProcessEnv = process.env): {
   enabled: boolean;
   clientId: string;

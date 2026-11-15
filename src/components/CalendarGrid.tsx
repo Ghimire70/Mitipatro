@@ -95,7 +95,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="print-hidden flex flex-wrap items-center gap-2">
           {showYearMonthControls && (
             <>
               <label htmlFor="cal-year-select" className="sr-only">
@@ -317,7 +317,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
       {/* Selected Day Detail Bar */}
       <div
         aria-live="polite"
-        className="flex flex-col gap-3 bg-[#FBF9F5] px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6"
+        className="print-hidden flex flex-col gap-3 bg-[#FBF9F5] px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6"
       >
         <div className="flex items-start gap-3">
           <CalendarIcon className="mt-0.5 h-5 w-5 shrink-0 text-[#9A3412]" aria-hidden="true" />

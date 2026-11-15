@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { CURRENT_BS_YEAR, PUBLISHED_BS_YEARS } from '../lib/bsData';
 import { getBsMonthBySlug } from '../lib/bsConverter';
 import { getSeoForRoute } from '../lib/seo';
+import type { ConverterToolSlug } from '../lib/converterTools';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { SeoHeadSync } from './components/JsonLd';
@@ -11,12 +12,26 @@ import { TodayPage } from './pages/TodayPage';
 import { YearPage } from './pages/YearPage';
 import { MonthPage } from './pages/MonthPage';
 import { ConverterPage } from './pages/ConverterPage';
+import { ConverterToolsPage } from './pages/ConverterToolsPage';
 import { HolidaysPage } from './pages/HolidaysPage';
 import { StaticPages } from './pages/StaticPages';
 
 function normalizePath(pathname: string): string {
   if (!pathname || pathname === '/') return '/';
   return pathname.replace(/\/+$/, '') || '/';
+}
+
+function getConverterToolSlug(pathname: string): ConverterToolSlug | null {
+  switch (pathname) {
+    case '/bs-date-difference':
+      return 'bs-date-difference';
+    case '/bs-age-calculator':
+      return 'bs-age-calculator';
+    case '/nepali-numbers':
+      return 'nepali-numbers';
+    default:
+      return null;
+  }
 }
 
 export interface AppProps {
@@ -27,6 +42,7 @@ export interface AppProps {
   adsEnabled?: boolean;
   adsenseClientId?: string;
   googleSiteVerification?: string;
+  converterToolsIndexingEnabled?: boolean;
 }
 
 export default function App({
@@ -37,6 +53,7 @@ export default function App({
   adsEnabled = false,
   adsenseClientId = '',
   googleSiteVerification = '',
+  converterToolsIndexingEnabled = false,
 }: AppProps = {}) {
   const [currentPath, setCurrentPath] = useState<string>(() =>
     normalizePath(initialPath ?? (typeof window !== 'undefined' ? window.location.pathname : '/')),
@@ -64,11 +81,12 @@ export default function App({
     initialOrigin ?? (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000');
   const referenceDate = useMemo(() => new Date(nowMs), [nowMs]);
   const seo = useMemo(
-    () => getSeoForRoute(currentPath, baseUrl, referenceDate, noindexSite),
-    [currentPath, baseUrl, referenceDate, noindexSite],
+    () => getSeoForRoute(currentPath, baseUrl, referenceDate, noindexSite, converterToolsIndexingEnabled),
+    [currentPath, baseUrl, referenceDate, noindexSite, converterToolsIndexingEnabled],
   );
 
   const renderPage = () => {
+    const converterTool = getConverterToolSlug(currentPath);
     if (currentPath === '/') {
       return <HomePage faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
     }
@@ -77,6 +95,17 @@ export default function App({
     }
     if (currentPath === '/date-converter') {
       return <ConverterPage faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
+    }
+    if (converterTool) {
+      return (
+        <ConverterToolsPage
+          key={converterTool}
+          tool={converterTool}
+          faqs={seo.faqs}
+          nowMs={nowMs}
+          onNavigate={navigate}
+        />
+      );
     }
     if (
       currentPath === '/about' ||
@@ -155,7 +184,7 @@ export default function App({
 
   return (
     <AdSettingsContext.Provider value={{ enabled: adsEnabled, clientId: adsenseClientId }}>
-      <div className="flex min-h-screen flex-col bg-[#FBF9F5] text-[#1C1917]">
+      <div className="app-shell flex min-h-screen flex-col bg-[#FBF9F5] text-[#1C1917]">
         <SeoHeadSync
           seo={seo}
           baseUrl={baseUrl}

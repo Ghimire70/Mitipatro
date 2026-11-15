@@ -9,6 +9,7 @@ export function render(
   adsEnabled = false,
   adsenseClientId = '',
   googleSiteVerification = '',
+  converterToolsIndexingEnabled = false,
 ): string {
   return renderToString(
     <App
@@ -19,6 +20,7 @@ export function render(
       adsEnabled={adsEnabled}
       adsenseClientId={adsenseClientId}
       googleSiteVerification={googleSiteVerification}
+      converterToolsIndexingEnabled={converterToolsIndexingEnabled}
     />,
   );
 }

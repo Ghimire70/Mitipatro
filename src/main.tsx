@@ -19,6 +19,7 @@ const appElement = (
     adsEnabled={ssrData?.adsEnabled}
     adsenseClientId={ssrData?.adsenseClientId}
     googleSiteVerification={ssrData?.googleSiteVerification}
+    converterToolsIndexingEnabled={ssrData?.converterToolsIndexingEnabled}
   />
 );
 

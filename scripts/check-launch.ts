@@ -1,7 +1,12 @@
 import { render } from '../src/entry-server';
 import { generateSitemapPaths, getSeoForRoute } from '../lib/seo';
 import { generateSitemapXml } from '../lib/sitemap';
-import { buildCanonicalUrl, getSiteUrl, isNoindexSiteEnabled } from '../lib/siteConfig';
+import {
+  buildCanonicalUrl,
+  getSiteUrl,
+  isConverterToolsIndexingEnabled,
+  isNoindexSiteEnabled,
+} from '../lib/siteConfig';
 
 interface LaunchCheck {
   label: string;
@@ -11,12 +16,13 @@ interface LaunchCheck {
 
 const siteUrl = getSiteUrl(process.env, true);
 const siteHost = new URL(siteUrl).hostname.toLowerCase();
-const sitemapPaths = generateSitemapPaths();
+const converterToolsIndexingEnabled = isConverterToolsIndexingEnabled();
+const sitemapPaths = generateSitemapPaths(converterToolsIndexingEnabled);
 const canonicalUrls = sitemapPaths.map((route) => {
-  const seo = getSeoForRoute(route, siteUrl, new Date(), false);
+  const seo = getSeoForRoute(route, siteUrl, new Date(), false, converterToolsIndexingEnabled);
   return buildCanonicalUrl(seo.canonicalPath, siteUrl);
 });
-const sitemapXml = generateSitemapXml(siteUrl);
+const sitemapXml = generateSitemapXml(siteUrl, new Date(), converterToolsIndexingEnabled);
 const sitemapUrls = [...sitemapXml.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
 const contactHtml = render('/contact', siteUrl, Date.now(), false);
 const checks: LaunchCheck[] = [

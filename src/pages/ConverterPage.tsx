@@ -49,6 +49,41 @@ export const ConverterPage: React.FC<ConverterPageProps> = ({ faqs, nowMs, onNav
         <DateConverter nowMs={nowMs} onNavigate={onNavigate} />
       </div>
 
+      <section aria-labelledby="more-bs-tools" className="mt-8">
+        <h2 id="more-bs-tools" className="font-display text-xl font-semibold text-stone-900">
+          More BS date tools
+        </h2>
+        <div className="mt-3 grid gap-3 sm:grid-cols-3">
+          {[
+            {
+              href: '/bs-date-difference',
+              title: 'BS Date Difference',
+              description: 'Count elapsed days between two BS dates.',
+            },
+            {
+              href: '/bs-age-calculator',
+              title: 'BS Age Calculator',
+              description: 'Show age as completed BS years, months, and days.',
+            },
+            {
+              href: '/nepali-numbers',
+              title: 'Nepali Number Converter',
+              description: 'Convert Arabic and Devanagari digits and show words.',
+            },
+          ].map((tool) => (
+            <a
+              key={tool.href}
+              href={tool.href}
+              onClick={(event) => handleLink(event, tool.href)}
+              className="rounded-lg border border-stone-200 bg-white p-4 hover:border-[#9A3412]/50 hover:shadow-xs"
+            >
+              <span className="block text-sm font-semibold text-stone-900">{tool.title}</span>
+              <span className="mt-1 block text-xs leading-relaxed text-stone-600">{tool.description}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <div className="mt-8">
         <AdSlot variant="leaderboard" />
       </div>
