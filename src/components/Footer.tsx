@@ -29,7 +29,7 @@ export const Footer: React.FC<FooterProps> = ({ nowMs, onNavigate }) => {
               MitiPatro
             </a>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-stone-600">
-              An independent Bikram Sambat (BS) calendar and BS-to-AD date reference. Today&rsquo;s date uses Asia/Kathmandu (UTC+05:45); holiday listings should be confirmed with the relevant official notice.
+              An independent Bikram Sambat (BS) calendar and BS-to-AD date reference. Today&rsquo;s date uses Asia/Kathmandu (UTC+05:45); holiday listings are for reference and should be checked against government notices.
             </p>
             <p className="mt-4 text-xs text-stone-500">
               BS–AD conversion range: 2000–2090 BS (1943–2034 AD).

@@ -1,16 +1,7 @@
 /**
- * Official Nepal Public Holidays & Major Observances Schema
- *
- * Data policy:
- * - Fixed solar/civic holidays (New Year, Republic Day, Constitution Day,
- *   Maghe Sankranti, Democracy Day, etc.) are deterministic in BS.
- * - Lunar-dependent holidays (Dashain, Tihar, Chhath, Lhosar, Shivaratri,
- *   Holi, Teej, Buddha Jayanti) for 2083 BS are cross-checked against
- *   published 2083 BS Nepal Gazette / Panchanga schedules.
- * - For future years (2084–2085 BS) where the Nepal Gazette has not yet
- *   finalized lunar holiday notices, only deterministic fixed holidays are
- *   marked as confirmed public holidays; lunar dates are explicitly flagged
- *   as pending gazette notice rather than guessed.
+ * Reference list of holidays and observances. Per-entry source fields are
+ * empty until a specific source is recorded; later-year lunar observances
+ * are omitted rather than assigned dates without a source.
  */
 
 export type HolidayType = 'national' | 'cultural' | 'civic' | 'regional' | 'women' | 'women_only';
@@ -242,7 +233,7 @@ export const HOLIDAYS_DATA: readonly HolidayRecord[] = [
     nameNe: 'हरितालिका तीज',
     type: 'women_only',
     isPublicHoliday: false,
-    noteEn: 'Gazetted holiday for women employees nationwide.',
+    noteEn: 'A women-focused observance.',
   },
   {
     id: '2083-06-03',

@@ -18,6 +18,7 @@ const appElement = (
     noindexSite={ssrData?.noindexSite}
     adsEnabled={ssrData?.adsEnabled}
     adsenseClientId={ssrData?.adsenseClientId}
+    googleSiteVerification={ssrData?.googleSiteVerification}
   />
 );
 

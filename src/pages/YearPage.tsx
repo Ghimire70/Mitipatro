@@ -11,6 +11,7 @@ import { getHolidaysForMonth, getHolidaysForYear } from '../../lib/holidays';
 import type { FaqItem } from '../../lib/seo';
 import { AdSlot } from '../components/AdSlot';
 import { FaqSection } from '../components/FaqSection';
+import { HolidayReferenceNote } from '../components/HolidayReferenceNote';
 
 interface YearPageProps {
   year: number;
@@ -51,8 +52,11 @@ export const YearPage: React.FC<YearPageProps> = ({ year, faqs, nowMs, onNavigat
           </h1>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-stone-600">
             Bikram Sambat {year} ({toDevanagariDigits(year)}) spans {totalDays} days from{' '}
-            {startAd.formattedEn} to {endAd.formattedEn}, with {publicHolidayCount} gazetted public holidays listed. Select any month below to inspect daily BS–AD equivalents and festivals.
+            {startAd.formattedEn} to {endAd.formattedEn}, with {publicHolidayCount} entries marked as public holidays. Select any month below to inspect daily BS–AD dates and festivals.
           </p>
+          <div className="mt-3">
+            <HolidayReferenceNote />
+          </div>
         </div>
 
         {/* Year Switcher */}

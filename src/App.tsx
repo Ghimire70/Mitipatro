@@ -26,6 +26,7 @@ export interface AppProps {
   noindexSite?: boolean;
   adsEnabled?: boolean;
   adsenseClientId?: string;
+  googleSiteVerification?: string;
 }
 
 export default function App({
@@ -35,6 +36,7 @@ export default function App({
   noindexSite = true,
   adsEnabled = false,
   adsenseClientId = '',
+  googleSiteVerification = '',
 }: AppProps = {}) {
   const [currentPath, setCurrentPath] = useState<string>(() =>
     normalizePath(initialPath ?? (typeof window !== 'undefined' ? window.location.pathname : '/')),
@@ -154,7 +156,11 @@ export default function App({
   return (
     <AdSettingsContext.Provider value={{ enabled: adsEnabled, clientId: adsenseClientId }}>
       <div className="flex min-h-screen flex-col bg-[#FBF9F5] text-[#1C1917]">
-        <SeoHeadSync seo={seo} baseUrl={baseUrl} />
+        <SeoHeadSync
+          seo={seo}
+          baseUrl={baseUrl}
+          googleSiteVerification={googleSiteVerification}
+        />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-[#9A3412] focus:shadow"

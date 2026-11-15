@@ -6,6 +6,7 @@ import type { FaqItem } from '../../lib/seo';
 import { CalendarGrid } from '../components/CalendarGrid';
 import { AdSlot } from '../components/AdSlot';
 import { FaqSection } from '../components/FaqSection';
+import { HolidayReferenceNote } from '../components/HolidayReferenceNote';
 
 interface MonthPageProps {
   year: number;
@@ -57,13 +58,16 @@ export const MonthPage: React.FC<MonthPageProps> = ({ year, month, faqs, nowMs, 
           {firstAd.formattedEn}, and concludes on {lastAd.weekdayEn}, {lastAd.formattedEn}, spanning{' '}
           {grid.totalDays} days during {grid.monthMeta.seasonEn}.{' '}
           {publicCount > 0
-            ? `This month includes ${publicCount} gazetted public holiday days${
+            ? `This month has ${publicCount} entries marked as public holidays${
                 holidays.length > 0
                   ? `, including ${holidays.slice(0, 3).map((h) => h.nameEn).join(', ')}`
                   : ''
               }.`
-            : 'Weekly Saturday holidays apply throughout this month.'}
+            : 'Saturday is commonly observed as the weekly rest day.'}
         </p>
+        <div className="mt-3">
+          <HolidayReferenceNote />
+        </div>
       </header>
 
       <div className="mt-6">

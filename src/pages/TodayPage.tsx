@@ -5,6 +5,7 @@ import { getHolidaysForDate } from '../../lib/holidays';
 import type { FaqItem } from '../../lib/seo';
 import { AdSlot } from '../components/AdSlot';
 import { FaqSection } from '../components/FaqSection';
+import { HolidayReferenceNote } from '../components/HolidayReferenceNote';
 
 interface TodayPageProps {
   faqs: FaqItem[];
@@ -45,7 +46,7 @@ export const TodayPage: React.FC<TodayPageProps> = ({ faqs, nowMs, onNavigate })
         Aaja Ko Miti — {today.bs.formattedEn}
       </h1>
       <p className="mt-2 max-w-2xl text-sm leading-relaxed text-stone-600">
-        Live Nepali date today calculated strictly in Nepal Standard Time (Asia/Kathmandu, UTC+05:45), accurate for users in Nepal as well as the Nepali diaspora in the US, UK, Australia, and Gulf countries.
+        Today&rsquo;s Nepali date is calculated using Nepal Standard Time (Asia/Kathmandu, UTC+05:45), wherever you access the site.
       </p>
 
       {/* Primary Today Card */}
@@ -89,24 +90,27 @@ export const TodayPage: React.FC<TodayPageProps> = ({ faqs, nowMs, onNavigate })
         {/* Today's Holiday / Working Day Status */}
         <div className="mt-8 border-t border-stone-200 pt-5">
           {holidaysToday.length > 0 ? (
-            <div className="space-y-1">
-              {holidaysToday.map((h) => (
-                <p key={h.id} className="text-sm font-semibold text-[#9A3412]">
-                  {h.nameEn} ({h.nameNe}) — {h.type === 'women_only'
-                    ? 'Women-only Holiday'
-                    : h.isPublicHoliday
-                      ? 'Public Holiday in Nepal'
-                      : 'Cultural Observance'}
-                </p>
-              ))}
+            <div className="space-y-2">
+              <div className="space-y-1">
+                {holidaysToday.map((h) => (
+                  <p key={h.id} className="text-sm font-semibold text-[#9A3412]">
+                    {h.nameEn} ({h.nameNe}) — {h.type === 'women_only'
+                      ? 'Women-only Holiday'
+                      : h.isPublicHoliday
+                        ? 'Listed as a Public Holiday'
+                        : 'Observance'}
+                  </p>
+                ))}
+              </div>
+              <HolidayReferenceNote />
             </div>
           ) : today.weekday.isHoliday ? (
             <p className="text-sm font-semibold text-[#9A3412]">
-              Weekly Public Holiday in Nepal (Saturday / शनिबार)
+              Saturday is commonly observed as the weekly rest day (शनिबार).
             </p>
           ) : (
             <p className="text-sm text-stone-600">
-              Regular working day in Nepal. No national gazetted holiday today.
+              No holiday is listed in our calendar for this day.
             </p>
           )}
         </div>

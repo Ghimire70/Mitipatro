@@ -5,6 +5,7 @@ import { getHolidaysForYear, type HolidayType } from '../../lib/holidays';
 import type { FaqItem } from '../../lib/seo';
 import { AdSlot } from '../components/AdSlot';
 import { FaqSection } from '../components/FaqSection';
+import { HolidayReferenceNote } from '../components/HolidayReferenceNote';
 
 interface HolidaysPageProps {
   year: number;
@@ -52,11 +53,14 @@ export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNaviga
       <div className="mt-4 flex flex-col gap-4 border-b border-stone-200 pb-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h1 className="font-display text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl">
-            Public Holidays in Nepal – {year} BS
+            Holidays and Observances in Nepal – {year} BS
           </h1>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-stone-600">
-            Verified Bikram Sambat {year} ({toDevanagariDigits(year)}) public holidays and major festivals with exact Gregorian (AD) equivalents. Currently showing {publicCount} gazetted holidays (excluding weekly Saturdays).
+            Bikram Sambat {year} ({toDevanagariDigits(year)}) holiday and observance entries with Gregorian (AD) dates generated using the supported conversion table. Showing {publicCount} entries marked as public holidays.
           </p>
+          <div className="mt-3">
+            <HolidayReferenceNote />
+          </div>
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
@@ -80,7 +84,7 @@ export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNaviga
 
       {year > 2083 && (
         <div className="mt-6 rounded-lg border border-stone-200 bg-[#F3EFE6]/70 px-4 py-3 text-sm text-stone-700">
-          Note: Only deterministic fixed solar and civic holidays are listed for {year} BS. Lunar festival dates (Dashain, Tihar, Lhosar, Shivaratri, Holi) will be added once the Government of Nepal publishes the official {year} BS Nepal Gazette notice.
+          Note: Only some fixed-date observances are currently listed for {year} BS. Lunar festival entries (Dashain, Tihar, Lhosar, Shivaratri, Holi) are not currently included.
         </div>
       )}
 

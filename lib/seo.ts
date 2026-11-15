@@ -99,7 +99,7 @@ function getRouteSeo(pathname: string, baseUrl: string, now: Date): PageSeoData 
       },
       {
         question: `How many public holidays are in ${today.bs.monthNameEn} ${today.bs.year} BS?`,
-        answer: `There are ${publicCount} gazetted public holiday days in ${today.bs.monthNameEn} ${today.bs.year} BS, in addition to weekly Saturday holidays.`,
+        answer: `Our records mark ${publicCount} days as public holidays in ${today.bs.monthNameEn} ${today.bs.year} BS. Saturday is commonly observed as the weekly rest day.`,
       },
     ];
     return {
@@ -158,7 +158,7 @@ function getRouteSeo(pathname: string, baseUrl: string, now: Date): PageSeoData 
   // 3. Date Converter: /date-converter
   if (cleanPath === '/date-converter') {
     const title = `BS to AD & AD to BS Date Converter (2000–2090 BS) | MitiPatro`;
-    const description = `Convert Bikram Sambat (BS) dates to Gregorian (AD) and AD to BS accurately between 2000 and 2090 BS using verified official month lengths.`;
+    const description = `Convert Bikram Sambat (BS) and Gregorian (AD) dates using the stored month-length table. The supported BS range is 2000-2090 BS.`;
     const breadcrumbs: BreadcrumbItem[] = [
       { name: 'Home', path: '/' },
       { name: 'Date Converter', path: '/date-converter' },
@@ -166,15 +166,15 @@ function getRouteSeo(pathname: string, baseUrl: string, now: Date): PageSeoData 
     const faqs: FaqItem[] = [
       {
         question: 'How does the BS to AD date converter work?',
-        answer: 'Because Bikram Sambat month lengths vary between 29 and 32 days each year, conversion counts exact days from a verified anchor (1 Baisakh 2000 BS = 14 April 1943 AD) using a lookup table of official month lengths.',
+        answer: 'The converter uses a stored table of Bikram Sambat month lengths and counts days from its anchor: 1 Baisakh 2000 BS = 14 April 1943 AD.',
       },
       {
         question: 'Which years are supported by this Bikram Sambat converter?',
-        answer: 'The converter supports 2000 BS to 2090 BS (April 14, 1943 AD to April 13, 2034 AD), cross-verified across multiple open-source references and Nepal calendar records.',
+        answer: 'The supported range is 2000-2090 BS (April 14, 1943 AD to April 13, 2034 AD). Tests cover selected published date pairs and date-conversion round trips.',
       },
       {
         question: 'Why does Nepali New Year (1 Baisakh) fall on April 13 or 14?',
-        answer: 'Bikram Sambat is a solar-sidereal calendar anchored to Mesha Sankranti, when the Sun enters Aries. Due to Gregorian leap years and sidereal precession, 1 Baisakh lands around April 13 or 14.',
+        answer: 'The stored Bikram Sambat month lengths map 1 Baisakh to dates around April 13 or 14 in the Gregorian calendar.',
       },
     ];
     return {
@@ -230,7 +230,7 @@ function getRouteSeo(pathname: string, baseUrl: string, now: Date): PageSeoData 
           question: `Which festivals or holidays occur in ${monthMeta.en} ${year} BS?`,
           answer: holidays.length > 0
             ? `Notable observances in ${monthMeta.en} ${year} BS include ${holidayNames}.`
-            : `No national gazetted holidays are listed for ${monthMeta.en} ${year} BS yet; weekly Saturday holidays apply throughout the month.`,
+            : `No holiday entries are listed for ${monthMeta.en} ${year} BS. Saturday is commonly observed as the weekly rest day.`,
         },
       ];
       return {
@@ -275,7 +275,7 @@ function getRouteSeo(pathname: string, baseUrl: string, now: Date): PageSeoData 
         },
         {
           question: `Where can I see public holidays for ${year} BS?`,
-          answer: `Visit our dedicated Public Holidays ${year} BS page for all confirmed national, cultural, and civic holidays with their English and Nepali names.`,
+          answer: `Visit our Holidays and Observances ${year} BS page for the entries currently listed, with their English and Nepali names.`,
         },
       ];
       return {
@@ -299,8 +299,8 @@ function getRouteSeo(pathname: string, baseUrl: string, now: Date): PageSeoData 
       const isIndexable = (INDEXABLE_BS_YEARS as readonly number[]).includes(year);
       const holidays = getHolidaysForYear(year);
       const publicCount = holidays.filter((h) => h.isPublicHoliday).length;
-      const title = `Public Holidays Nepal ${year} BS – Official Festival & Civic List | MitiPatro`;
-      const description = `Official public holidays and major festivals in Nepal for ${year} BS (${publicCount} gazetted holidays listed). Includes BS dates, AD equivalents, and Nepali names.`;
+      const title = `Nepal Holidays and Observances ${year} BS | MitiPatro`;
+      const description = `Holiday and observance entries for ${year} BS, with BS dates, Gregorian equivalents, and Nepali names. Listed dates are for reference.`;
       const breadcrumbs: BreadcrumbItem[] = [
         { name: 'Home', path: '/' },
         { name: `Public Holidays ${year}`, path: `/holidays/${year}` },
@@ -308,15 +308,15 @@ function getRouteSeo(pathname: string, baseUrl: string, now: Date): PageSeoData 
       const faqs: FaqItem[] = [
         {
           question: `How many public holidays are listed for ${year} BS in Nepal?`,
-          answer: `Currently ${publicCount} gazetted public holidays are documented for ${year} BS on MitiPatro, excluding weekly Saturday holidays.`,
+          answer: `MitiPatro currently has ${publicCount} entries marked as public holidays for ${year} BS, excluding weekly Saturday observances.`,
         },
         {
           question: `Are Saturdays public holidays in Nepal?`,
-          answer: 'Yes. Saturday (Shanibar) is the official weekly weekend holiday across government offices, banks, and schools in Nepal.',
+          answer: 'Saturday (Shanibar) is commonly observed as the weekly rest day.',
         },
         {
-          question: `How are Nepal public holiday dates verified?`,
-          answer: 'Holiday dates are compiled from Government of Nepal Gazette notices and cross-checked against Nepal Panchanga Nirnayak Samiti lunar-solar calendars.',
+          question: `Where should I confirm Nepal holiday dates?`,
+          answer: 'Holiday dates on MitiPatro are for reference. Please confirm them with the relevant Government of Nepal official notice.',
         },
       ];
       return {
@@ -324,7 +324,7 @@ function getRouteSeo(pathname: string, baseUrl: string, now: Date): PageSeoData 
         description,
         canonicalPath: `/holidays/${year}`,
         robots: isIndexable ? 'index, follow' : 'noindex, follow',
-        h1: `Public Holidays in Nepal – ${year} BS`,
+        h1: `Holidays and Observances in Nepal – ${year} BS`,
         breadcrumbs,
         faqs,
         jsonLd: buildJsonLd(baseUrl, breadcrumbs, faqs),
@@ -409,7 +409,7 @@ export function generateSitemapPaths(): string[] {
     '/terms',
   ];
 
-  // Only include complete, verified years (2082–2083 BS). Thin years (2084–2085 BS) are excluded until official holidays are published.
+  // Include only the selected years whose calendar pages are currently eligible for indexing.
   for (const year of INDEXABLE_BS_YEARS) {
     paths.push(`/calendar/${year}`);
     paths.push(`/holidays/${year}`);

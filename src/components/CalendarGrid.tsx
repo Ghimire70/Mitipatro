@@ -12,6 +12,7 @@ import {
   type CalendarCellData,
 } from '../../lib/bsConverter';
 import { getHolidaysForDate, getHolidaysForMonth } from '../../lib/holidays';
+import { HolidayReferenceNote } from './HolidayReferenceNote';
 
 interface CalendarGridProps {
   bsYear: number;
@@ -348,9 +349,9 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
               ))}
             </div>
           ) : selectedCell.isSaturday ? (
-            <p className="font-medium text-[#9A3412]">Weekly Holiday (Saturday / शनिबार)</p>
+            <p className="font-medium text-[#9A3412]">Saturday is commonly observed as the weekly rest day.</p>
           ) : (
-            <p className="text-stone-500">Regular working day in Nepal</p>
+            <p className="text-stone-500">No holiday is listed in our calendar for this day.</p>
           )}
         </div>
       </div>
@@ -361,6 +362,9 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
           <h3 className="text-xs font-semibold uppercase tracking-widest text-stone-500">
             Holidays &amp; Observances in {grid.monthMeta.en} {bsYear}
           </h3>
+          <div className="mt-2">
+            <HolidayReferenceNote />
+          </div>
           <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
             {monthHolidays.map((h) => (
               <li

@@ -8,6 +8,7 @@ export function render(
   noindexSite = true,
   adsEnabled = false,
   adsenseClientId = '',
+  googleSiteVerification = '',
 ): string {
   return renderToString(
     <App
@@ -17,6 +18,7 @@ export function render(
       noindexSite={noindexSite}
       adsEnabled={adsEnabled}
       adsenseClientId={adsenseClientId}
+      googleSiteVerification={googleSiteVerification}
     />,
   );
 }

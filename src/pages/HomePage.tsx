@@ -8,6 +8,7 @@ import { CalendarGrid } from '../components/CalendarGrid';
 import { DateConverter } from '../components/DateConverter';
 import { AdSlot } from '../components/AdSlot';
 import { FaqSection } from '../components/FaqSection';
+import { HolidayReferenceNote } from '../components/HolidayReferenceNote';
 
 interface HomePageProps {
   faqs: FaqItem[];
@@ -189,6 +190,9 @@ export const HomePage: React.FC<HomePageProps> = ({ faqs, nowMs, onNavigate }) =
                 );
               })}
             </ul>
+            <div className="mt-3">
+              <HolidayReferenceNote />
+            </div>
           </section>
 
           <AdSlot variant="rectangle" />
@@ -201,7 +205,7 @@ export const HomePage: React.FC<HomePageProps> = ({ faqs, nowMs, onNavigate }) =
           Browse Nepali Calendars by Year
         </h2>
         <p className="mt-2 max-w-2xl text-sm text-stone-600">
-          Each annual edition includes verified 12-month day counts, Gregorian overlaps, and confirmed Nepal public holidays.
+          Each annual edition shows its stored month lengths, corresponding Gregorian dates, and holiday listings for reference.
         </p>
         <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {PUBLISHED_BS_YEARS.map((yr) => {

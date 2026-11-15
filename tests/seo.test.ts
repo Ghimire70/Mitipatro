@@ -4,8 +4,10 @@ import { generateSitemapPaths, getSeoForRoute } from '../lib/seo';
 import { generateSitemapXml } from '../lib/sitemap';
 import {
   buildCanonicalUrl,
+  getCanonicalHostRedirect,
   generateRobotsTxt,
   getAdSettings,
+  getGoogleSiteVerificationTag,
   getSiteUrl,
   isNoindexSiteEnabled,
 } from '../lib/siteConfig';
@@ -25,6 +27,52 @@ test('SITE_URL is used for canonical URLs and sitemap entries', () => {
   assert.ok(sitemap.includes('<loc>https://calendar.example/</loc>'));
   assert.ok(sitemap.includes(`<loc>${canonicalUrl}</loc>`));
   assert.ok(!sitemap.includes('https://mitipatro.com'));
+});
+
+test('SITE_URL normalizes trailing slashes, production HTTPS, and www hosts', () => {
+  assert.equal(getSiteUrl({ SITE_URL: 'https://example.com.np/' }), 'https://example.com.np');
+  assert.equal(
+    getSiteUrl({ SITE_URL: 'http://www.example.com.np/' }, true),
+    'https://example.com.np',
+  );
+  assert.equal(getSiteUrl({ SITE_URL: 'http://localhost:3000/' }, true), 'https://localhost:3000');
+});
+
+test('canonical host redirects apply only to production custom-domain requests', () => {
+  const siteUrl = 'https://example.com.np';
+  assert.equal(
+    getCanonicalHostRedirect('www.example.com.np', 'https', '/calendar/2083?month=1', siteUrl, true),
+    'https://example.com.np/calendar/2083?month=1',
+  );
+  assert.equal(
+    getCanonicalHostRedirect('preview.example.net', 'https', '/today', siteUrl, true),
+    'https://example.com.np/today',
+  );
+  assert.equal(
+    getCanonicalHostRedirect('example.com.np', 'http', '/about', siteUrl, true),
+    'https://example.com.np/about',
+  );
+  assert.equal(
+    getCanonicalHostRedirect('www.example.com.np', 'https', '/', siteUrl, false),
+    null,
+  );
+  assert.equal(
+    getCanonicalHostRedirect('localhost:3000', 'http', '/', 'http://localhost:3000', true),
+    null,
+  );
+  assert.equal(
+    getCanonicalHostRedirect('test.vercel.app', 'https', '/', 'https://test.vercel.app', true),
+    null,
+  );
+});
+
+test('Google Search Console verification tag is optional and home-only', () => {
+  assert.equal(getGoogleSiteVerificationTag('/', undefined), '');
+  assert.equal(getGoogleSiteVerificationTag('/about', 'token'), '');
+  assert.equal(
+    getGoogleSiteVerificationTag('/', ' token&value '),
+    '<meta name="google-site-verification" content="token&amp;value" />',
+  );
 });
 
 test('NOINDEX_SITE defaults on and can be disabled for launch', () => {
@@ -162,18 +210,37 @@ test('SSR renderToString produces full body HTML (grid, holidays, FAQs) for all 
 
 test('static policy pages explain date verification, contact, privacy, and terms without false form claims', () => {
   const about = render('/about', ORIGIN, SAMPLE_NOW_MS);
-  assert.ok(about.includes('How We Verify Dates'));
-  assert.ok(about.includes('does not cite a specific notice for each entry'));
+  assert.ok(about.includes('How Dates Are Checked'));
+  assert.ok(about.includes('1 Baisakh 2000 BS = 14 April 1943 AD'));
+  assert.ok(about.includes('Asia/Kathmandu'));
+  assert.ok(about.includes('Holiday records currently have empty source fields'));
 
   const contact = render('/contact', ORIGIN, SAMPLE_NOW_MS);
   assert.ok(contact.includes('mailto:replace-with-your-email@example.com'));
-  assert.ok(contact.includes('does not store or submit a contact form'));
+  assert.ok(contact.includes('Response time is not guaranteed'));
   assert.ok(!contact.includes('Message recorded'));
 
   const privacy = render('/privacy', ORIGIN, SAMPLE_NOW_MS);
   assert.ok(privacy.includes('Cookies and Advertising'));
-  assert.ok(privacy.includes('If Google AdSense is enabled'));
+  assert.ok(privacy.includes('does not currently provide accounts, analytics'));
+  assert.ok(privacy.includes('ADS_ENABLED=true'));
 
   const terms = render('/terms', ORIGIN, SAMPLE_NOW_MS);
-  assert.ok(terms.includes('not affiliated with or endorsed by the Government of Nepal'));
+  assert.ok(terms.includes('for general reference only'));
+  assert.ok(terms.includes('confirm holidays and any time-sensitive date with the relevant official source'));
+});
+
+test('holiday listings include the reference disclaimer and avoid unsupported certainty claims', () => {
+  const holidayNote = 'Holiday dates are for reference. Please confirm with official government notices.';
+  const home = render('/', ORIGIN, SAMPLE_NOW_MS);
+  const holidays = render('/holidays/2083', ORIGIN, SAMPLE_NOW_MS);
+  const month = render('/calendar/2083/baisakh', ORIGIN, SAMPLE_NOW_MS);
+
+  assert.ok(home.includes(holidayNote));
+  assert.ok(holidays.includes(holidayNote));
+  assert.ok(month.includes(holidayNote));
+  const holidaysText = holidays.replace(/<!--[\s\S]*?-->/g, '');
+  assert.match(holidaysText, /Showing \d+ entries marked as public holidays/);
+  assert.ok(!holidays.includes('gazetted'));
+  assert.ok(!holidays.includes('Verified Bikram Sambat'));
 });

@@ -12,7 +12,7 @@ interface ConverterPageProps {
 }
 
 const REFERENCE_ANCHORS = [
-  { bsYear: 2000, note: 'Primary verified anchor epoch' },
+  { bsYear: 2000, note: 'Conversion anchor' },
   { bsYear: 2080, note: '2023–2024 AD' },
   { bsYear: 2081, note: '2024–2025 AD (366-day BS year)' },
   { bsYear: 2082, note: '2025–2026 AD' },
@@ -42,7 +42,7 @@ export const ConverterPage: React.FC<ConverterPageProps> = ({ faqs, nowMs, onNav
         BS to AD &amp; AD to BS Date Converter
       </h1>
       <p className="mt-2 max-w-2xl text-sm leading-relaxed text-stone-600">
-        Convert any Bikram Sambat (BS) date between 2000 and 2090 BS to its exact Gregorian (AD) equivalent, or convert AD dates (1943–2034) into Nepali dates with Devanagari formatting.
+        Convert Bikram Sambat (BS) dates in the supported range, 2000-2090 BS, to Gregorian (AD), or convert dates in the corresponding AD range to Nepali dates with Devanagari formatting.
       </p>
 
       <div className="mt-6">
@@ -59,7 +59,7 @@ export const ConverterPage: React.FC<ConverterPageProps> = ({ faqs, nowMs, onNav
           Nepali New Year (1 Baisakh) Reference Dates
         </h2>
         <p className="mt-2 text-sm text-stone-600">
-          Because Bikram Sambat months range from 29 to 32 days based on solar sankranti moments, every conversion counts exact days from 1 Baisakh 2000 BS (April 14, 1943 AD).
+          Conversions use a stored table of BS month lengths and count days from the 1 Baisakh 2000 BS (April 14, 1943 AD) anchor. Tests cover selected published date pairs and conversion round trips within the supported range.
         </p>
 
         <div className="mt-4 overflow-x-auto rounded-xl border border-stone-200 bg-white">

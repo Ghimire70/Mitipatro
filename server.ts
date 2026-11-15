@@ -8,8 +8,10 @@ import { getSeoForRoute } from './lib/seo';
 import { generateSitemapXml } from './lib/sitemap';
 import {
   buildCanonicalUrl,
+  getCanonicalHostRedirect,
   generateRobotsTxt,
   getAdSettings,
+  getGoogleSiteVerificationTag,
   getSiteUrl,
   isNoindexSiteEnabled,
 } from './lib/siteConfig';
@@ -19,6 +21,7 @@ const IS_PROD = process.env.NODE_ENV === 'production';
 const SITE_URL = getSiteUrl();
 const NOINDEX_SITE = isNoindexSiteEnabled();
 const AD_SETTINGS = getAdSettings();
+const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION?.trim() ?? '';
 
 function escapeHtml(str: string): string {
   return str
@@ -37,6 +40,7 @@ function injectRouteSeo(
   noindexSite: boolean,
   adsEnabled: boolean,
   adsenseClientId: string,
+  googleSiteVerification: string,
 ): { html: string; status: number } {
   const seo = getSeoForRoute(pathname, origin, new Date(nowMs), noindexSite);
   const canonicalUrl = buildCanonicalUrl(seo.canonicalPath, origin);
@@ -50,6 +54,7 @@ function injectRouteSeo(
   const headExtras = `
     <link rel="canonical" href="${escapeHtml(canonicalUrl)}" />
     <meta property="og:url" content="${escapeHtml(canonicalUrl)}" />
+    ${getGoogleSiteVerificationTag(pathname, googleSiteVerification)}
     ${jsonLdScripts}
   `;
 
@@ -60,6 +65,7 @@ function injectRouteSeo(
     noindexSite,
     adsEnabled,
     adsenseClientId,
+    googleSiteVerification,
   }).replace(/</g, '\\u003c');
 
   const finalHtml = html
@@ -108,6 +114,17 @@ async function startServer() {
   };
 
   app.use((req, res, next) => {
+    const canonicalRedirect = getCanonicalHostRedirect(
+      req.get('host') ?? '',
+      req.protocol,
+      req.originalUrl,
+      SITE_URL,
+      IS_PROD,
+    );
+    if (canonicalRedirect) {
+      return res.redirect(301, canonicalRedirect);
+    }
+
     const cleanPath = req.path === '/' ? '/' : req.path.replace(/\/+$/, '');
     if (req.path.length > 1 && req.path.endsWith('/')) {
       return res.redirect(301, cleanPath);
@@ -158,6 +175,7 @@ async function startServer() {
         noindexSite: boolean,
         adsEnabled: boolean,
         adsenseClientId: string,
+        googleSiteVerification: string,
       ) => string;
 
       if (vite) {
@@ -180,6 +198,7 @@ async function startServer() {
         NOINDEX_SITE,
         AD_SETTINGS.enabled,
         AD_SETTINGS.clientId,
+        GOOGLE_SITE_VERIFICATION,
       );
       const rendered = injectRouteSeo(
         html,
@@ -190,6 +209,7 @@ async function startServer() {
         NOINDEX_SITE,
         AD_SETTINGS.enabled,
         AD_SETTINGS.clientId,
+        GOOGLE_SITE_VERIFICATION,
       );
       res.status(rendered.status).set({ 'Content-Type': 'text/html; charset=utf-8' }).end(rendered.html);
     } catch (err) {
