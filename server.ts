@@ -15,6 +15,7 @@ import {
   getSiteUrl,
   isConverterToolsIndexingEnabled,
   isNoindexSiteEnabled,
+  isRashifalIndexingEnabled,
 } from './lib/siteConfig';
 
 const PORT = 3000;
@@ -24,6 +25,7 @@ const NOINDEX_SITE = isNoindexSiteEnabled();
 const AD_SETTINGS = getAdSettings();
 const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION?.trim() ?? '';
 const CONVERTER_TOOLS_INDEXING_ENABLED = isConverterToolsIndexingEnabled();
+const RASHIFAL_INDEXING_ENABLED = isRashifalIndexingEnabled();
 
 function escapeHtml(str: string): string {
   return str
@@ -44,6 +46,7 @@ function injectRouteSeo(
   adsenseClientId: string,
   googleSiteVerification: string,
   converterToolsIndexingEnabled: boolean,
+  rashifalIndexingEnabled: boolean,
 ): { html: string; status: number } {
   const seo = getSeoForRoute(
     pathname,
@@ -51,6 +54,7 @@ function injectRouteSeo(
     new Date(nowMs),
     noindexSite,
     converterToolsIndexingEnabled,
+    rashifalIndexingEnabled,
   );
   const canonicalUrl = buildCanonicalUrl(seo.canonicalPath, origin);
   const jsonLdScripts = seo.jsonLd
@@ -76,6 +80,7 @@ function injectRouteSeo(
     adsenseClientId,
     googleSiteVerification,
     converterToolsIndexingEnabled,
+    rashifalIndexingEnabled,
   }).replace(/</g, '\\u003c');
 
   const finalHtml = html
@@ -122,6 +127,7 @@ async function startServer() {
     '/calendar': `/calendar/${CURRENT_BS_YEAR}`,
     '/holidays': `/holidays/${CURRENT_BS_YEAR}`,
     '/rasifal': '/rashifal',
+    '/rashifal/daily': '/rashifal',
     '/horoscope': '/rashifal',
     '/rasifal/weekly': '/rashifal/weekly',
     '/horoscope/weekly': '/rashifal/weekly',
@@ -160,7 +166,12 @@ async function startServer() {
   app.get('/sitemap.xml', (req, res) => {
     res
       .type('application/xml')
-      .send(generateSitemapXml(SITE_URL, new Date(), CONVERTER_TOOLS_INDEXING_ENABLED));
+      .send(generateSitemapXml(
+        SITE_URL,
+        new Date(),
+        CONVERTER_TOOLS_INDEXING_ENABLED,
+        RASHIFAL_INDEXING_ENABLED,
+      ));
   });
 
   let vite: Awaited<ReturnType<typeof createViteServer>> | null = null;
@@ -193,6 +204,7 @@ async function startServer() {
         adsenseClientId: string,
         googleSiteVerification: string,
         converterToolsIndexingEnabled: boolean,
+        rashifalIndexingEnabled: boolean,
       ) => string;
 
       if (vite) {
@@ -217,6 +229,7 @@ async function startServer() {
         AD_SETTINGS.clientId,
         GOOGLE_SITE_VERIFICATION,
         CONVERTER_TOOLS_INDEXING_ENABLED,
+        RASHIFAL_INDEXING_ENABLED,
       );
       const rendered = injectRouteSeo(
         html,
@@ -229,6 +242,7 @@ async function startServer() {
         AD_SETTINGS.clientId,
         GOOGLE_SITE_VERIFICATION,
         CONVERTER_TOOLS_INDEXING_ENABLED,
+        RASHIFAL_INDEXING_ENABLED,
       );
       res.status(rendered.status).set({ 'Content-Type': 'text/html; charset=utf-8' }).end(rendered.html);
     } catch (err) {

@@ -15,9 +15,17 @@ interface MonthPageProps {
   faqs: FaqItem[];
   nowMs?: number;
   onNavigate: (path: string) => void;
+  rashifalIndexingEnabled?: boolean;
 }
 
-export const MonthPage: React.FC<MonthPageProps> = ({ year, month, faqs, nowMs, onNavigate }) => {
+export const MonthPage: React.FC<MonthPageProps> = ({
+  year,
+  month,
+  faqs,
+  nowMs,
+  onNavigate,
+  rashifalIndexingEnabled = false,
+}) => {
   const grid = useMemo(() => getBsMonthGrid(year, month), [year, month]);
   const firstAd = useMemo(() => bsToAd(year, month, 1), [year, month]);
   const lastAd = useMemo(() => bsToAd(year, month, grid.totalDays), [year, month, grid.totalDays]);
@@ -91,7 +99,13 @@ export const MonthPage: React.FC<MonthPageProps> = ({ year, month, faqs, nowMs, 
       <div className="print-month-layout mt-8 grid grid-cols-1 gap-8 lg:grid-cols-12">
         <div className="print-calendar-container lg:col-span-8">
           <div className="print-calendar">
-            <CalendarGrid bsYear={year} bsMonth={month} nowMs={nowMs} onNavigate={onNavigate} />
+            <CalendarGrid
+              bsYear={year}
+              bsMonth={month}
+              nowMs={nowMs}
+              onNavigate={onNavigate}
+              rashifalIndexingEnabled={rashifalIndexingEnabled}
+            />
           </div>
         </div>
 

@@ -64,6 +64,10 @@ export function isConverterToolsIndexingEnabled(env: NodeJS.ProcessEnv = process
   return env.CONVERTER_TOOLS_INDEXING_ENABLED?.trim().toLowerCase() === 'true';
 }
 
+export function isRashifalIndexingEnabled(env: NodeJS.ProcessEnv = process.env): boolean {
+  return env.RASHIFAL_INDEXING_ENABLED?.trim().toLowerCase() === 'true';
+}
+
 export function getAdSettings(env: NodeJS.ProcessEnv = process.env): {
   enabled: boolean;
   clientId: string;

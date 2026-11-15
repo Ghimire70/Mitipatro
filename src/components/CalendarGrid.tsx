@@ -20,6 +20,7 @@ interface CalendarGridProps {
   nowMs?: number;
   onNavigate?: (path: string) => void;
   showYearMonthControls?: boolean;
+  rashifalIndexingEnabled?: boolean;
 }
 
 export const CalendarGrid: React.FC<CalendarGridProps> = ({
@@ -28,6 +29,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
   nowMs,
   onNavigate,
   showYearMonthControls = true,
+  rashifalIndexingEnabled = false,
 }) => {
   const today = useMemo(() => getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined), [nowMs]);
   const grid = useMemo(() => getBsMonthGrid(bsYear, bsMonth), [bsYear, bsMonth]);
@@ -356,14 +358,16 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
             )}
           </div>
 
-          <a
-            href="/rashifal"
-            onClick={(e) => handleLink(e, '/rashifal')}
-            className="inline-flex items-center gap-1.5 font-semibold text-[#9A3412] hover:underline whitespace-nowrap self-start sm:self-auto sm:border-l sm:border-stone-200 sm:pl-3"
-          >
-            <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
-            राशिफल हेर्नुहोस्
-          </a>
+          {rashifalIndexingEnabled && (
+            <a
+              href="/rashifal"
+              onClick={(e) => handleLink(e, '/rashifal')}
+              className="inline-flex items-center gap-1.5 font-semibold text-[#9A3412] hover:underline whitespace-nowrap self-start sm:self-auto sm:border-l sm:border-stone-200 sm:pl-3"
+            >
+              <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
+              राशिफल हेर्नुहोस्
+            </a>
+          )}
         </div>
       </div>
 

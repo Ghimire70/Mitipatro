@@ -11,6 +11,7 @@ import {
   getSiteUrl,
   isConverterToolsIndexingEnabled,
   isNoindexSiteEnabled,
+  isRashifalIndexingEnabled,
 } from '../lib/siteConfig';
 import { render } from '../src/entry-server';
 import { getHolidaysForYear } from '../lib/holidays';
@@ -119,6 +120,72 @@ test('converter tools default to noindex and enter the sitemap only when enabled
   }
   assert.equal(titles.size, toolRoutes.length, 'Converter tool pages must have unique titles');
   assert.ok(toolRoutes.every((route) => !generateSitemapXml(ORIGIN).includes(`<loc>${ORIGIN}${route}</loc>`)));
+});
+
+test('Rashifal defaults to noindex and hidden links, and can be enabled for publication', () => {
+  const rashifalRoutes = [
+    '/rashifal',
+    '/rashifal/daily',
+    '/rashifal/weekly',
+    '/rashifal/monthly',
+    '/rashifal/mesha',
+    '/rashifal/weekly/mesha',
+    '/rashifal/monthly/mesha',
+  ];
+
+  assert.equal(isRashifalIndexingEnabled({}), false);
+  assert.equal(isRashifalIndexingEnabled({ RASHIFAL_INDEXING_ENABLED: 'true' }), true);
+  assert.equal(isRashifalIndexingEnabled({ RASHIFAL_INDEXING_ENABLED: 'yes' }), false);
+
+  for (const route of rashifalRoutes) {
+    assert.equal(
+      getSeoForRoute(route, ORIGIN, new Date(SAMPLE_NOW_MS), false).robots,
+      'noindex, follow',
+      `${route} should be noindex while the gate is disabled`,
+    );
+    assert.equal(
+      getSeoForRoute(route, ORIGIN, new Date(SAMPLE_NOW_MS), false, false, true).robots,
+      'index, follow',
+      `${route} should be indexable while the gate is enabled`,
+    );
+  }
+
+  assert.ok(!generateSitemapPaths().some((path) => path.startsWith('/rashifal')));
+  assert.ok(!generateSitemapXml(ORIGIN, new Date(SAMPLE_NOW_MS)).includes('/rashifal'));
+  assert.ok(generateSitemapPaths(false, true).includes('/rashifal/monthly/meen'));
+  assert.ok(
+    generateSitemapXml(ORIGIN, new Date(SAMPLE_NOW_MS), false, true).includes(
+      `<loc>${ORIGIN}/rashifal/monthly/meen</loc>`,
+    ),
+  );
+
+  const hiddenHome = render('/', ORIGIN, SAMPLE_NOW_MS, false);
+  const hiddenToday = render('/aaja-ko-miti', ORIGIN, SAMPLE_NOW_MS, false);
+  const hiddenCalendar = render('/calendar/2083/baisakh', ORIGIN, SAMPLE_NOW_MS, false);
+  for (const html of [hiddenHome, hiddenToday, hiddenCalendar]) {
+    assert.ok(!html.includes('href="/rashifal"'));
+  }
+  assert.ok(!hiddenHome.includes('Rashifal (Horoscope)'));
+  assert.ok(!hiddenHome.includes('दैनिक राशिफल'));
+
+  const visibleHome = render('/', ORIGIN, SAMPLE_NOW_MS, false, false, '', '', false, true);
+  const visibleToday = render('/aaja-ko-miti', ORIGIN, SAMPLE_NOW_MS, false, false, '', '', false, true);
+  const visibleCalendar = render(
+    '/calendar/2083/baisakh',
+    ORIGIN,
+    SAMPLE_NOW_MS,
+    false,
+    false,
+    '',
+    '',
+    false,
+    true,
+  );
+  for (const html of [visibleHome, visibleToday, visibleCalendar]) {
+    assert.ok(html.includes('href="/rashifal"'));
+  }
+  assert.ok(visibleHome.includes('Rashifal (Horoscope)'));
+  assert.ok(visibleHome.includes('दैनिक राशिफल'));
 });
 
 test('ads stay disabled unless both the flag and AdSense client ID are configured', () => {

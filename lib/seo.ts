@@ -691,22 +691,24 @@ export function getSeoForRoute(
   now = new Date(),
   noindexSite = true,
   converterToolsIndexingEnabled = false,
+  rashifalIndexingEnabled = false,
 ): PageSeoData {
   const seo = getRouteSeo(pathname, baseUrl, now, converterToolsIndexingEnabled);
-  return noindexSite ? { ...seo, robots: 'noindex, nofollow' } : seo;
+  if (noindexSite) return { ...seo, robots: 'noindex, nofollow' };
+  if (pathname === '/rashifal' || pathname.startsWith('/rashifal/')) {
+    return { ...seo, robots: rashifalIndexingEnabled ? seo.robots : 'noindex, follow' };
+  }
+  return seo;
 }
 
-export function generateSitemapPaths(converterToolsIndexingEnabled = false): string[] {
+export function generateSitemapPaths(
+  converterToolsIndexingEnabled = false,
+  rashifalIndexingEnabled = false,
+): string[] {
   const paths = [
     '/',
     '/aaja-ko-miti',
     '/date-converter',
-    '/rashifal',
-    '/rashifal/weekly',
-    '/rashifal/monthly',
-    ...RASHIS.map((r) => `/rashifal/${r.id}`),
-    ...RASHIS.map((r) => `/rashifal/weekly/${r.id}`),
-    ...RASHIS.map((r) => `/rashifal/monthly/${r.id}`),
     '/about',
     '/contact',
     '/privacy',
@@ -724,6 +726,17 @@ export function generateSitemapPaths(converterToolsIndexingEnabled = false): str
 
   if (converterToolsIndexingEnabled) {
     paths.push('/bs-date-difference', '/bs-age-calculator', '/nepali-numbers');
+  }
+
+  if (rashifalIndexingEnabled) {
+    paths.push(
+      '/rashifal',
+      '/rashifal/weekly',
+      '/rashifal/monthly',
+      ...RASHIS.map((r) => `/rashifal/${r.id}`),
+      ...RASHIS.map((r) => `/rashifal/weekly/${r.id}`),
+      ...RASHIS.map((r) => `/rashifal/monthly/${r.id}`),
+    );
   }
 
   return paths;

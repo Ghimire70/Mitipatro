@@ -69,7 +69,7 @@ export const RASHIS: readonly RashiMeta[] = [
     nameEn: 'Karkat',
     englishSign: 'Cancer',
     order: 4,
-    symbolNe: 'काँक्रा / गँगटो',
+    symbolNe: 'गँगटो',
     elementNe: 'जल',
     rulingPlanetNe: 'चन्द्रमा',
     lettersNe: 'ही, हू, हे, हो, डा, डी, डू, डे, डो',
@@ -183,7 +183,6 @@ export interface HoroscopeRecord {
   healthNe?: string;
   luckyColorNe?: string;
   luckyNumber?: number | string;
-  source?: string;
 }
 
 // Backward compatibility aliases
@@ -191,7 +190,6 @@ export type DailyPrediction = HoroscopeRecord;
 export interface DailyRashifalRecord {
   bsDate: string;
   adDate: string;
-  source?: string;
   predictions: Record<RashiId, HoroscopeRecord>;
 }
 
@@ -206,24 +204,22 @@ export interface PeriodGroupRecord {
   endDateAd: string;
   labelNe: string;
   labelEn: string;
-  source: string;
   predictions: Record<RashiId, HoroscopeRecord>;
 }
 
 /**
  * Editorial policy:
- * Daily, Weekly, and Monthly horoscope content are stored separately and accurately referenced.
- * When verified content is unavailable for a requested period, the system returns an explicit
+ * Daily, Weekly, and Monthly sample horoscope content are stored separately.
+ * When sample content is unavailable for a requested period, the system returns an explicit
  * missing status and never fabricates or randomly generates horoscope predictions or astronomical claims.
  */
 
-// 1. VERIFIED DAILY RASHIFAL DATA
-export const VERIFIED_DAILY_DATA: Record<string, DailyRashifalRecord> = {
+// 1. SAMPLE DAILY RASHIFAL DATA
+export const SAMPLE_DAILY_DATA: Record<string, DailyRashifalRecord> = {
   // Reference date: Kartik 29, 2083 BS (2026-11-15 AD)
   '2083-07-29': {
     bsDate: '2083-07-29',
     adDate: '2026-11-15',
-    source: 'नेपाली पञ्चाङ्ग तथा वैदिक ज्योतिष सन्दर्भ',
     predictions: {
       mesha: {
         rashiId: 'mesha',
@@ -448,7 +444,6 @@ export const VERIFIED_DAILY_DATA: Record<string, DailyRashifalRecord> = {
   '2083-07-28': {
     bsDate: '2083-07-28',
     adDate: '2026-11-14',
-    source: 'नेपाली पञ्चाङ्ग तथा वैदिक ज्योतिष सन्दर्भ',
     predictions: {
       mesha: {
         rashiId: 'mesha',
@@ -670,20 +665,19 @@ export const VERIFIED_DAILY_DATA: Record<string, DailyRashifalRecord> = {
   },
 };
 
-// 2. VERIFIED WEEKLY RASHIFAL DATA
-export const VERIFIED_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
+// 2. SAMPLE WEEKLY RASHIFAL DATA
+export const SAMPLE_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
   '2083-W32': {
     key: '2083-W32',
     period: 'weekly',
     bsYear: 2083,
     bsMonth: 7,
-    startDate: '2083-07-24',
-    endDate: '2083-07-30',
-    startDateAd: '2026-11-10',
-    endDateAd: '2026-11-16',
-    labelNe: 'कार्तिक २४ देखि ३०, २०८३',
-    labelEn: 'Kartik 24 – 30, 2083 BS',
-    source: 'नेपाली पञ्चाङ्ग तथा वैदिक ज्योतिष सन्दर्भ',
+    startDate: '2083-07-22',
+    endDate: '2083-07-28',
+    startDateAd: '2026-11-08',
+    endDateAd: '2026-11-14',
+    labelNe: 'कार्तिक २२ देखि २८, २०८३',
+    labelEn: 'Kartik 22 – 28, 2083 BS',
     predictions: {
       mesha: {
         rashiId: 'mesha',
@@ -691,10 +685,10 @@ export const VERIFIED_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
         period: 'weekly',
         bsYear: 2083,
         bsMonth: 7,
-        startDate: '2083-07-24',
-        endDate: '2083-07-30',
-        startDateAd: '2026-11-10',
-        endDateAd: '2026-11-16',
+        startDate: '2083-07-22',
+        endDate: '2083-07-28',
+        startDateAd: '2026-11-08',
+        endDateAd: '2026-11-14',
         descriptionNe: 'यस साता मेष राशिका जातकहरूका लागि समग्रमा पराक्रम र उत्साह बढ्नेछ। साताको सुरुका दिनहरूमा केही भागदौड रहे पनि मध्यतिर महत्त्वपूर्ण कार्य बन्नेछन्। मित्रजनको राम्रो साथ रहनेछ।',
         careerNe: 'कार्यक्षेत्रमा नयाँ जिम्मेवारी वा पदोन्नतिको अवसर आउन सक्छ। व्यापार व्यवसायमा प्रतिस्पर्धाका बाबजुद राम्रो नाफा आर्जन हुनेछ।',
         financialNe: 'आर्थिक पक्ष सबल रहनेछ। पुराना लगानीबाट प्रतिफल मिल्नेछ, तर साताको अन्त्यमा घरायसी वस्तु खरिदमा खर्च बढ्न सक्छ।',
@@ -709,10 +703,10 @@ export const VERIFIED_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
         period: 'weekly',
         bsYear: 2083,
         bsMonth: 7,
-        startDate: '2083-07-24',
-        endDate: '2083-07-30',
-        startDateAd: '2026-11-10',
-        endDateAd: '2026-11-16',
+        startDate: '2083-07-22',
+        endDate: '2083-07-28',
+        startDateAd: '2026-11-08',
+        endDateAd: '2026-11-14',
         descriptionNe: 'यो साता धैर्य र योजनाबद्ध कार्यशैली अपनाउनु लाभदायक हुनेछ। बोली र व्यवहारमा संयम राख्दा जटिल परिस्थिति पनि सहज बन्नेछ। धार्मिक तथा सामाजिक कार्यमा रुचि बढ्नेछ।',
         careerNe: 'रोकिएका कामहरूले बिस्तारै गति लिनेछन्। सरकारी वा प्रशासनिक काममा केही ढिलाइ भए पनि अन्ततः सफलता मिल्नेछ।',
         financialNe: 'आर्थिक कारोबार गर्दा कागजी सम्झौता स्पष्ट राख्नुहोला। अनावश्यक विलासिताका वस्तुमा खर्च नियन्त्रण गर्नु बुद्धिमानी हुनेछ।',
@@ -727,10 +721,10 @@ export const VERIFIED_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
         period: 'weekly',
         bsYear: 2083,
         bsMonth: 7,
-        startDate: '2083-07-24',
-        endDate: '2083-07-30',
-        startDateAd: '2026-11-10',
-        endDateAd: '2026-11-16',
+        startDate: '2083-07-22',
+        endDate: '2083-07-28',
+        startDateAd: '2026-11-08',
+        endDateAd: '2026-11-14',
         descriptionNe: 'साताभर बौद्धिक क्षमता र सिर्जनशीलता उच्च रहनेछ। अध्ययन, अनुसन्धान तथा सञ्चार क्षेत्रमा कार्यरतहरूका लागि विशेष फलदायी साता सावित हुनेछ। नयाँ मित्रहरूसँग सम्पर्क विस्तार हुनेछ।',
         careerNe: 'नयाँ परियोजना वा व्यवसाय सुरु गर्न अनुकूल समय छ। सहकर्मीहरूको पूर्ण समर्थन प्राप्त हुनेछ।',
         financialNe: 'आम्दानीका बहुआयामिक बाटाहरू खुल्नेछन्। सेयर वा बचत क्षेत्रमा सुझबुझपूर्ण लगानी फलदायी हुनेछ।',
@@ -745,10 +739,10 @@ export const VERIFIED_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
         period: 'weekly',
         bsYear: 2083,
         bsMonth: 7,
-        startDate: '2083-07-24',
-        endDate: '2083-07-30',
-        startDateAd: '2026-11-10',
-        endDateAd: '2026-11-16',
+        startDate: '2083-07-22',
+        endDate: '2083-07-28',
+        startDateAd: '2026-11-08',
+        endDateAd: '2026-11-14',
         descriptionNe: 'यस साता घरपरिवार र भावनात्मक सम्बन्धहरूमा विशेष ध्यान पुग्नेछ। साताको प्रारम्भिक दिनहरूमा केही मानसिक अस्थिरता रहे पनि मध्य सातादेखि सुखद परिणामहरू देखा पर्नेछन्।',
         careerNe: 'मेहनतको पूर्ण मूल्याङ्कन हुनेछ। नयाँ जिम्मेवारी सम्हाल्ने अवसर मिल्न सक्छ।',
         financialNe: 'घरजग्गा वा घरायसी उपकरणमा लगानीको योग छ। ऋण वा सापटी लेनदेनमा सतर्कता अपनाउनुहोस्।',
@@ -763,10 +757,10 @@ export const VERIFIED_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
         period: 'weekly',
         bsYear: 2083,
         bsMonth: 7,
-        startDate: '2083-07-24',
-        endDate: '2083-07-30',
-        startDateAd: '2026-11-10',
-        endDateAd: '2026-11-16',
+        startDate: '2083-07-22',
+        endDate: '2083-07-28',
+        startDateAd: '2026-11-08',
+        endDateAd: '2026-11-14',
         descriptionNe: 'साताभर आत्मबल, नेतृत्व क्षमता र प्रतिष्ठामा वृद्धि हुनेछ। राजनीतिक वा सामाजिक क्षेत्रमा प्रभाव बढ्नेछ। आफ्ना योजनाहरू दृढताका साथ अगाडि बढाउने समय छ।',
         careerNe: 'उच्चपदस्थ अधिकारीहरूसँगको सम्बन्ध सुदृढ हुनेछ। नयाँ व्यापारिक सम्झौता हुन सक्ने प्रबल सम्भावना छ।',
         financialNe: 'आर्थिक स्थिति मजबुत बन्नेछ। व्यावसायिक नाफा र आकस्मिक लाभको योग छ।',
@@ -781,10 +775,10 @@ export const VERIFIED_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
         period: 'weekly',
         bsYear: 2083,
         bsMonth: 7,
-        startDate: '2083-07-24',
-        endDate: '2083-07-30',
-        startDateAd: '2026-11-10',
-        endDateAd: '2026-11-16',
+        startDate: '2083-07-22',
+        endDate: '2083-07-28',
+        startDateAd: '2026-11-08',
+        endDateAd: '2026-11-14',
         descriptionNe: 'साताको प्रारम्भमा खर्च बढ्न सक्छ, तर मध्य सातादेखि रोकिएका महत्त्वपूर्ण कार्य सम्पन्न हुनेछन्। व्यवस्थापकीय कौशल र तार्किक क्षमताले समस्याहरूको समाधान दिलाउनेछ।',
         careerNe: 'कार्यालयमा जिम्मेवारीपूर्वक काम गर्दा प्रशंसा मिल्नेछ। कानुनी वा लेखासम्बन्धी काम सहजै टुंगिनेछन्।',
         financialNe: 'आर्थिक अनुशासन कायम राख्दा बचतमा वृद्धि हुनेछ। साताको अन्त्यतिर आम्दानीका नयाँ स्रोत भेटिनेछन्।',
@@ -799,10 +793,10 @@ export const VERIFIED_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
         period: 'weekly',
         bsYear: 2083,
         bsMonth: 7,
-        startDate: '2083-07-24',
-        endDate: '2083-07-30',
-        startDateAd: '2026-11-10',
-        endDateAd: '2026-11-16',
+        startDate: '2083-07-22',
+        endDate: '2083-07-28',
+        startDateAd: '2026-11-08',
+        endDateAd: '2026-11-14',
         descriptionNe: 'साताभर भाग्यको साथ रहनेछ र विभिन्न क्षेत्रबाट सफलता मिल्नेछ। सामाजिक प्रतिष्ठामा वृद्धि हुनेछ। कला, साहित्य तथा मनोरञ्जनका क्षेत्रमा रुचि बढ्नेछ।',
         careerNe: 'साझेदारी व्यापारमा उल्लेखनीय लाभ हुनेछ। नयाँ कामको प्रस्ताव आउन सक्छ।',
         financialNe: 'आर्थिक उन्नति र धन आर्जनका अवसरहरू प्रशस्त मिल्नेछन्। रोकिएको रकम हात पर्नेछ।',
@@ -817,10 +811,10 @@ export const VERIFIED_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
         period: 'weekly',
         bsYear: 2083,
         bsMonth: 7,
-        startDate: '2083-07-24',
-        endDate: '2083-07-30',
-        startDateAd: '2026-11-10',
-        endDateAd: '2026-11-16',
+        startDate: '2083-07-22',
+        endDate: '2083-07-28',
+        startDateAd: '2026-11-08',
+        endDateAd: '2026-11-14',
         descriptionNe: 'साताको सुरुमा केही चुनौतीहरू देखा परे पनि दृढ संकल्प र आत्मविश्वासले ती सबै पार लगाइनेछ। गोप्य योजनाहरू कार्यान्वयन गर्न यो साता फलदायी रहनेछ।',
         careerNe: 'प्रतिस्पर्धीहरूलाई पछि पार्दै कार्यक्षेत्रमा अग्रस्थान हासिल गर्न सकिनेछ। जटिल कार्यहरू सफलतापूर्वक सम्पन्न हुनेछन्।',
         financialNe: 'आर्थिक क्षेत्रमा सतर्क रहनु आवश्यक छ। अनावश्यक जोखिमपूर्ण लगानी नगर्नुहोला।',
@@ -835,10 +829,10 @@ export const VERIFIED_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
         period: 'weekly',
         bsYear: 2083,
         bsMonth: 7,
-        startDate: '2083-07-24',
-        endDate: '2083-07-30',
-        startDateAd: '2026-11-10',
-        endDateAd: '2026-11-16',
+        startDate: '2083-07-22',
+        endDate: '2083-07-28',
+        startDateAd: '2026-11-08',
+        endDateAd: '2026-11-14',
         descriptionNe: 'धार्मिक तथा आध्यात्मिक कार्यमा सहभागिता बढ्नेछ। साताभर भाग्यको बलियो साथ रहनेछ। अध्ययन, अध्यापन तथा वैदेशिक कार्यहरूमा सकारात्मक नतिजा आउनेछ।',
         careerNe: 'व्यापार व्यवसायमा राम्रो प्रगति हुनेछ। नयाँ ज्ञान र सीप आर्जन गर्ने अवसर मिल्नेछ।',
         financialNe: 'आर्थिक पक्ष सन्तोषजनक रहनेछ। शुभ कार्य र परोपकारमा खर्च हुन सक्छ।',
@@ -853,10 +847,10 @@ export const VERIFIED_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
         period: 'weekly',
         bsYear: 2083,
         bsMonth: 7,
-        startDate: '2083-07-24',
-        endDate: '2083-07-30',
-        startDateAd: '2026-11-10',
-        endDateAd: '2026-11-16',
+        startDate: '2083-07-22',
+        endDate: '2083-07-28',
+        startDateAd: '2026-11-08',
+        endDateAd: '2026-11-14',
         descriptionNe: 'निरन्तरको परिश्रमले दिगो नतिजा दिलाउने साता छ। व्यावहारिक सोच र अनुशासनले जटिल समस्याहरूको सजिलो समाधान दिनेछ। ज्येष्ठ नागरिकहरूको आशीर्वाद प्राप्त हुनेछ।',
         careerNe: 'कार्यक्षेत्रमा जिम्मेवारी थपिनेछ। धैर्यतापूर्वक काम गर्दा वरिष्ठ अधिकारीहरूको विश्वास जितिनेछ।',
         financialNe: 'आर्थिक स्थिति स्थिर रहनेछ। फजुल खर्च नियन्त्रण गरी सञ्चित पुँजी संरक्षणमा ध्यान दिनुहोस्।',
@@ -871,10 +865,10 @@ export const VERIFIED_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
         period: 'weekly',
         bsYear: 2083,
         bsMonth: 7,
-        startDate: '2083-07-24',
-        endDate: '2083-07-30',
-        startDateAd: '2026-11-10',
-        endDateAd: '2026-11-16',
+        startDate: '2083-07-22',
+        endDate: '2083-07-28',
+        startDateAd: '2026-11-08',
+        endDateAd: '2026-11-14',
         descriptionNe: 'नवीन विचार र सिर्जनशीलताले सातालाई विशेष बनाउनेछ। सामूहिक र सामाजिक कार्यहरूमा संलग्नता बढ्नेछ। मित्रमण्डलीको सहयोगले अप्ठ्यारा काम सजिलै बन्नेछन्।',
         careerNe: 'सूचना प्रविधि, सामाजिक सेवा तथा अनुसन्धानका क्षेत्रमा उल्लेख्य प्रगति हुनेछ। नयाँ सहकार्यको सुरुआत हुन सक्छ।',
         financialNe: 'आम्दानीको गति राम्रो रहनेछ। पुराना लगानीबाट फाइदा हुने सम्भावना छ।',
@@ -889,10 +883,10 @@ export const VERIFIED_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
         period: 'weekly',
         bsYear: 2083,
         bsMonth: 7,
-        startDate: '2083-07-24',
-        endDate: '2083-07-30',
-        startDateAd: '2026-11-10',
-        endDateAd: '2026-11-16',
+        startDate: '2083-07-22',
+        endDate: '2083-07-28',
+        startDateAd: '2026-11-08',
+        endDateAd: '2026-11-14',
         descriptionNe: 'परोपकारी र रचनात्मक भावनाले साता आनन्दमय बन्नेछ। धार्मिक यात्रा वा तीर्थाटनको योग छ। अरूको भलाइ गर्दा आत्मसन्तुष्टि मिल्नेछ।',
         careerNe: 'कला, साहित्य, परामर्श तथा शिक्षा क्षेत्रमा कार्यरतहरूका लागि साता अत्यन्तै शुभ छ। कार्यक्षेत्रमा मानसम्मान मिल्नेछ।',
         financialNe: 'आर्थिक कारोबार सहज रहनेछ। शुभ र मङ्गलमय कार्यमा खर्च हुन सक्छ।',
@@ -905,8 +899,8 @@ export const VERIFIED_WEEKLY_DATA: Record<string, PeriodGroupRecord> = {
   },
 };
 
-// 3. VERIFIED MONTHLY RASHIFAL DATA
-export const VERIFIED_MONTHLY_DATA: Record<string, PeriodGroupRecord> = {
+// 3. SAMPLE MONTHLY RASHIFAL DATA
+export const SAMPLE_MONTHLY_DATA: Record<string, PeriodGroupRecord> = {
   '2083-07': {
     key: '2083-07',
     period: 'monthly',
@@ -918,7 +912,6 @@ export const VERIFIED_MONTHLY_DATA: Record<string, PeriodGroupRecord> = {
     endDateAd: '2026-11-16',
     labelNe: 'कार्तिक २०८३',
     labelEn: 'Kartik 2083 BS',
-    source: 'नेपाली पञ्चाङ्ग तथा वैदिक ज्योतिष सन्दर्भ',
     predictions: {
       mesha: {
         rashiId: 'mesha',
@@ -1140,8 +1133,8 @@ export const VERIFIED_MONTHLY_DATA: Record<string, PeriodGroupRecord> = {
   },
 };
 
-// Aliases for backward compatibility with previous prompt
-export const VERIFIED_RASHIFAL_DATA = VERIFIED_DAILY_DATA;
+// Alias for callers that need the daily sample dataset.
+export const SAMPLE_RASHIFAL_DATA = SAMPLE_DAILY_DATA;
 
 export interface RashifalQueryResult {
   isAvailable: boolean;
@@ -1156,7 +1149,6 @@ export interface RashifalQueryResult {
   startDateAd?: string;
   endDateAd?: string;
   adDate?: string;
-  source?: string;
   rashiMeta?: RashiMeta;
   prediction?: HoroscopeRecord;
   allPredictions?: Record<RashiId, HoroscopeRecord>;
@@ -1170,24 +1162,33 @@ export function getRashiById(id: string): RashiMeta | undefined {
 }
 
 export function getAvailableRashifalDates(): string[] {
-  return Object.keys(VERIFIED_DAILY_DATA).sort();
+  return Object.keys(SAMPLE_DAILY_DATA).sort();
 }
 
 export function getAvailableWeeklyKeys(): string[] {
-  return Object.keys(VERIFIED_WEEKLY_DATA).sort();
+  return Object.keys(SAMPLE_WEEKLY_DATA).sort();
 }
 
 export function getAvailableMonthlyKeys(): string[] {
-  return Object.keys(VERIFIED_MONTHLY_DATA).sort();
+  return Object.keys(SAMPLE_MONTHLY_DATA).sort();
 }
 
 export function isRashifalAvailableForDate(bsDate: string): boolean {
-  return Boolean(VERIFIED_DAILY_DATA[bsDate]);
+  return Boolean(SAMPLE_DAILY_DATA[bsDate]);
+}
+
+function formatBsDateLabelNe(bsDate: string): string {
+  const [year, month, day] = bsDate.split('-').map(Number);
+  const monthMeta = BS_MONTHS[month - 1];
+  if (!monthMeta || !Number.isInteger(year) || !Number.isInteger(day)) {
+    return `${bsDate} वि.सं.`;
+  }
+  return `${monthMeta.ne} ${toDevanagariDigits(day)}, ${toDevanagariDigits(year)}`;
 }
 
 /**
  * Unified query function for Daily, Weekly, and Monthly horoscopes.
- * Always returns authentic, non-fabricated content or an explicit missing status.
+ * Always returns sample content or an explicit missing status.
  */
 export function getHoroscope(
   period: HoroscopePeriod,
@@ -1203,7 +1204,7 @@ export function getHoroscope(
 
   if (period === 'daily') {
     const targetDate = dateOrKey || today.bs.iso;
-    const record = VERIFIED_DAILY_DATA[targetDate];
+    const record = SAMPLE_DAILY_DATA[targetDate];
 
     if (!record) {
       return {
@@ -1218,7 +1219,7 @@ export function getHoroscope(
         endDate: targetDate,
         rashiMeta,
         missingMessageNe: `यस मिति (${targetDate} वि.सं.) को आधिकारिक दैनिक राशिफल हाल उपलब्ध छैन। मितिपत्रोले प्रमाणित र आधिकारिक राशिफल सामग्री मात्र प्रस्तुत गर्दछ।`,
-        missingMessageEn: `Verified daily horoscope content is not currently published for ${targetDate} BS. MitiPatro maintains strict editorial standards and does not display fabricated predictions.`,
+        missingMessageEn: `Sample daily horoscope content is not available for ${targetDate} BS.`,
       };
     }
 
@@ -1229,7 +1230,7 @@ export function getHoroscope(
       period: 'daily',
       periodTitleNe: 'दैनिक राशिफल',
       periodTitleEn: 'Daily Horoscope',
-      coverageLabelNe: `${today.bs.monthNameNe} ${toDevanagariDigits(today.bs.day)}, ${toDevanagariDigits(today.bs.year)}`,
+      coverageLabelNe: formatBsDateLabelNe(record.bsDate),
       coverageLabelEn: `${record.bsDate} BS (${record.adDate})`,
       bsDate: record.bsDate,
       startDate: record.bsDate,
@@ -1237,7 +1238,6 @@ export function getHoroscope(
       startDateAd: record.adDate,
       endDateAd: record.adDate,
       adDate: record.adDate,
-      source: record.source,
       rashiMeta,
       prediction,
       allPredictions: record.predictions,
@@ -1247,9 +1247,11 @@ export function getHoroscope(
   }
 
   if (period === 'weekly') {
-    const weeklyKeys = getAvailableWeeklyKeys();
-    const targetKey = dateOrKey || weeklyKeys[weeklyKeys.length - 1];
-    const group = targetKey ? VERIFIED_WEEKLY_DATA[targetKey] : undefined;
+    const group = dateOrKey
+      ? SAMPLE_WEEKLY_DATA[dateOrKey]
+      : Object.values(SAMPLE_WEEKLY_DATA).find(
+          (record) => record.startDate <= today.bs.iso && today.bs.iso <= record.endDate,
+        );
 
     if (!group) {
       return {
@@ -1264,7 +1266,7 @@ export function getHoroscope(
         endDate: today.bs.iso,
         rashiMeta,
         missingMessageNe: 'यस साताको आधिकारिक साप्ताहिक राशिफल हाल उपलब्ध छैन। नयाँ सामग्री प्रमाणीकरणपछि प्रकाशित गरिनेछ।',
-        missingMessageEn: 'Verified weekly horoscope content is not currently published for this week. MitiPatro does not display fabricated predictions.',
+        missingMessageEn: 'Sample weekly horoscope content is not available for this week.',
       };
     }
 
@@ -1283,7 +1285,6 @@ export function getHoroscope(
       startDateAd: group.startDateAd,
       endDateAd: group.endDateAd,
       adDate: group.startDateAd,
-      source: group.source,
       rashiMeta,
       prediction,
       allPredictions: group.predictions,
@@ -1293,10 +1294,9 @@ export function getHoroscope(
   }
 
   // Monthly
-  const monthlyKeys = getAvailableMonthlyKeys();
   const currentMonthKey = `${today.bs.year}-${String(today.bs.month).padStart(2, '0')}`;
-  const targetKey = dateOrKey || (VERIFIED_MONTHLY_DATA[currentMonthKey] ? currentMonthKey : monthlyKeys[monthlyKeys.length - 1]);
-  const group = targetKey ? VERIFIED_MONTHLY_DATA[targetKey] : undefined;
+  const targetKey = dateOrKey || currentMonthKey;
+  const group = targetKey ? SAMPLE_MONTHLY_DATA[targetKey] : undefined;
 
   if (!group) {
     return {
@@ -1311,7 +1311,7 @@ export function getHoroscope(
       endDate: `${today.bs.year}-${String(today.bs.month).padStart(2, '0')}-30`,
       rashiMeta,
       missingMessageNe: `यस महिना (${today.bs.monthNameNe} ${toDevanagariDigits(today.bs.year)}) को आधिकारिक मासिक राशिफल हाल उपलब्ध छैन।`,
-      missingMessageEn: `Verified monthly horoscope content is not currently published for ${today.bs.monthNameEn} ${today.bs.year} BS.`,
+      missingMessageEn: `Sample monthly horoscope content is not available for ${today.bs.monthNameEn} ${today.bs.year} BS.`,
     };
   }
 
@@ -1330,7 +1330,6 @@ export function getHoroscope(
     startDateAd: group.startDateAd,
     endDateAd: group.endDateAd,
     adDate: group.startDateAd,
-    source: group.source,
     rashiMeta,
     prediction,
     allPredictions: group.predictions,

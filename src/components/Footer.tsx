@@ -6,9 +6,14 @@ import { getTodayNepal } from '../../lib/bsConverter';
 interface FooterProps {
   nowMs?: number;
   onNavigate: (path: string) => void;
+  rashifalIndexingEnabled?: boolean;
 }
 
-export const Footer: React.FC<FooterProps> = ({ nowMs, onNavigate }) => {
+export const Footer: React.FC<FooterProps> = ({
+  nowMs,
+  onNavigate,
+  rashifalIndexingEnabled = false,
+}) => {
   const copyrightYear = getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined).ad.year;
   const handleLink = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
@@ -46,11 +51,13 @@ export const Footer: React.FC<FooterProps> = ({ nowMs, onNavigate }) => {
                   Aaja Ko Miti (Today)
                 </a>
               </li>
-              <li>
-                <a href="/rashifal" onClick={(e) => handleLink(e, '/rashifal')} className="hover:text-[#9A3412] hover:underline">
-                  Rashifal (Horoscope)
-                </a>
-              </li>
+              {rashifalIndexingEnabled && (
+                <li>
+                  <a href="/rashifal" onClick={(e) => handleLink(e, '/rashifal')} className="hover:text-[#9A3412] hover:underline">
+                    Rashifal (Horoscope)
+                  </a>
+                </li>
+              )}
               <li>
                 <a href="/date-converter" onClick={(e) => handleLink(e, '/date-converter')} className="hover:text-[#9A3412] hover:underline">
                   BS to AD Converter

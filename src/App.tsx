@@ -45,6 +45,7 @@ export interface AppProps {
   adsenseClientId?: string;
   googleSiteVerification?: string;
   converterToolsIndexingEnabled?: boolean;
+  rashifalIndexingEnabled?: boolean;
 }
 
 export default function App({
@@ -56,6 +57,7 @@ export default function App({
   adsenseClientId = '',
   googleSiteVerification = '',
   converterToolsIndexingEnabled = false,
+  rashifalIndexingEnabled = false,
 }: AppProps = {}) {
   const [currentPath, setCurrentPath] = useState<string>(() =>
     normalizePath(initialPath ?? (typeof window !== 'undefined' ? window.location.pathname : '/')),
@@ -83,17 +85,38 @@ export default function App({
     initialOrigin ?? (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000');
   const referenceDate = useMemo(() => new Date(nowMs), [nowMs]);
   const seo = useMemo(
-    () => getSeoForRoute(currentPath, baseUrl, referenceDate, noindexSite, converterToolsIndexingEnabled),
-    [currentPath, baseUrl, referenceDate, noindexSite, converterToolsIndexingEnabled],
+    () => getSeoForRoute(
+      currentPath,
+      baseUrl,
+      referenceDate,
+      noindexSite,
+      converterToolsIndexingEnabled,
+      rashifalIndexingEnabled,
+    ),
+    [currentPath, baseUrl, referenceDate, noindexSite, converterToolsIndexingEnabled, rashifalIndexingEnabled],
   );
 
   const renderPage = () => {
     const converterTool = getConverterToolSlug(currentPath);
     if (currentPath === '/') {
-      return <HomePage faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
+      return (
+        <HomePage
+          faqs={seo.faqs}
+          nowMs={nowMs}
+          onNavigate={navigate}
+          rashifalIndexingEnabled={rashifalIndexingEnabled}
+        />
+      );
     }
     if (currentPath === '/aaja-ko-miti') {
-      return <TodayPage faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
+      return (
+        <TodayPage
+          faqs={seo.faqs}
+          nowMs={nowMs}
+          onNavigate={navigate}
+          rashifalIndexingEnabled={rashifalIndexingEnabled}
+        />
+      );
     }
     if (currentPath === '/date-converter') {
       return <ConverterPage faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
@@ -171,6 +194,7 @@ export default function App({
             faqs={seo.faqs}
             nowMs={nowMs}
             onNavigate={navigate}
+            rashifalIndexingEnabled={rashifalIndexingEnabled}
           />
         );
       }
@@ -180,7 +204,14 @@ export default function App({
     if (yearMatch) {
       const year = Number(yearMatch[1]);
       if ((PUBLISHED_BS_YEARS as readonly number[]).includes(year)) {
-        return <YearPage year={year} faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
+        return (
+          <YearPage
+            year={year}
+            faqs={seo.faqs}
+            nowMs={nowMs}
+            onNavigate={navigate}
+          />
+        );
       }
     }
 
@@ -238,11 +269,19 @@ export default function App({
         >
           Skip to main content
         </a>
-        <Header currentPath={currentPath} onNavigate={navigate} />
+        <Header
+          currentPath={currentPath}
+          onNavigate={navigate}
+          rashifalIndexingEnabled={rashifalIndexingEnabled}
+        />
         <main id="main-content" className="flex-1">
           {renderPage()}
         </main>
-        <Footer nowMs={nowMs} onNavigate={navigate} />
+        <Footer
+          nowMs={nowMs}
+          onNavigate={navigate}
+          rashifalIndexingEnabled={rashifalIndexingEnabled}
+        />
       </div>
     </AdSettingsContext.Provider>
   );

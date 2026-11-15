@@ -15,7 +15,7 @@ import {
   type RashiId,
   type HoroscopeRecord,
 } from '../lib/rashifal';
-import { getTodayNepal } from '../lib/bsConverter';
+import { bsToAd, getTodayNepal } from '../lib/bsConverter';
 import { generateSitemapPaths, getSeoForRoute } from '../lib/seo';
 import { render } from '../src/entry-server';
 
@@ -56,6 +56,7 @@ test('twelve Vedic Rashis are correctly defined in canonical order with accurate
     assert.ok(rashi.symbolNe.length > 0, `Missing symbol for ${rashi.id}`);
     assert.ok(rashi.lettersNe.length > 0, `Missing letters for ${rashi.id}`);
   });
+  assert.equal(getRashiById('karkat')?.symbolNe, 'गँगटो');
 });
 
 test('getRashiById looks up Rashis accurately with case and whitespace trimming', () => {
@@ -65,9 +66,9 @@ test('getRashiById looks up Rashis accurately with case and whitespace trimming'
   assert.equal(getRashiById('invalid-rashi'), undefined);
 });
 
-test('daily horoscope data architecture separates predictions from UI and provides verified predictions', () => {
+test('daily horoscope data architecture separates sample predictions from UI', () => {
   const dates = getAvailableRashifalDates();
-  assert.ok(dates.length > 0, 'Must have at least one verified date');
+  assert.ok(dates.length > 0, 'Must have at least one sample date');
 
   for (const date of dates) {
     const result = getDailyRashifal(date);
@@ -93,14 +94,16 @@ test('daily horoscope data architecture separates predictions from UI and provid
 
 test('weekly horoscope content clearly identifies coverage dates for all twelve Rashis', () => {
   const weeklyKeys = getAvailableWeeklyKeys();
-  assert.ok(weeklyKeys.length > 0, 'Must have verified weekly horoscope content');
+  assert.ok(weeklyKeys.length > 0, 'Must have sample weekly horoscope content');
 
-  const weeklyResult = getWeeklyRashifal();
+  const weeklyResult = getWeeklyRashifal(undefined, undefined, SAMPLE_NOW_MS);
   assert.equal(weeklyResult.isAvailable, true);
   assert.equal(weeklyResult.period, 'weekly');
-  assert.ok(weeklyResult.coverageLabelNe.includes('कार्तिक'), 'Coverage label must identify Bikram Sambat month');
+  assert.equal(weeklyResult.coverageLabelNe, 'कार्तिक २२ देखि २८, २०८३');
   assert.ok(weeklyResult.startDate, 'Weekly horoscope must have a start date');
   assert.ok(weeklyResult.endDate, 'Weekly horoscope must have an end date');
+  assert.equal(bsToAd(2083, 7, 22).weekdayEn, 'Sunday');
+  assert.equal(bsToAd(2083, 7, 28).weekdayEn, 'Saturday');
   assert.ok(weeklyResult.allPredictions, 'Must provide all predictions for weekly period');
   const allWeekly = weeklyResult.allPredictions;
 
@@ -109,6 +112,8 @@ test('weekly horoscope content clearly identifies coverage dates for all twelve 
     assert.ok(pred, `Missing weekly prediction for ${rashi.id}`);
     assert.equal(pred.period, 'weekly');
     assert.equal(pred.rashiId, rashi.id);
+    assert.equal(pred.startDate, weeklyResult.startDate);
+    assert.equal(pred.endDate, weeklyResult.endDate);
     assert.ok(pred.descriptionNe.length > 20, `Weekly description too short for ${rashi.id}`);
     assert.ok(pred.careerNe, `Missing weekly career prediction for ${rashi.id}`);
     assert.ok(pred.financialNe, `Missing weekly financial prediction for ${rashi.id}`);
@@ -121,7 +126,7 @@ test('weekly horoscope content clearly identifies coverage dates for all twelve 
 
 test('monthly horoscope content clearly identifies Bikram Sambat month and year for all twelve Rashis', () => {
   const monthlyKeys = getAvailableMonthlyKeys();
-  assert.ok(monthlyKeys.length > 0, 'Must have verified monthly horoscope content');
+  assert.ok(monthlyKeys.length > 0, 'Must have sample monthly horoscope content');
 
   const monthlyResult = getMonthlyRashifal(2083, 7);
   assert.equal(monthlyResult.isAvailable, true);
@@ -153,8 +158,8 @@ test('monthly horoscope content clearly identifies Bikram Sambat month and year 
 test('every Rashi has distinct, non-reused predictions across Daily, Weekly, and Monthly periods', () => {
   for (const rashi of RASHIS) {
     const daily = getHoroscope('daily', { rashiId: rashi.id, dateOrKey: '2083-07-29' });
-    const weekly = getHoroscope('weekly', { rashiId: rashi.id });
-    const monthly = getHoroscope('monthly', { rashiId: rashi.id });
+    const weekly = getHoroscope('weekly', { rashiId: rashi.id, nowMs: SAMPLE_NOW_MS });
+    const monthly = getHoroscope('monthly', { rashiId: rashi.id, nowMs: SAMPLE_NOW_MS });
 
     assert.ok(daily.prediction, `Missing daily prediction for ${rashi.id}`);
     assert.ok(weekly.prediction, `Missing weekly prediction for ${rashi.id}`);
@@ -172,6 +177,25 @@ test('every Rashi has distinct, non-reused predictions across Daily, Weekly, and
       `Weekly and monthly descriptions must be distinct for ${rashi.id}`,
     );
   }
+});
+
+test('daily coverage uses the selected record date, and current unavailable periods do not fall back', () => {
+  const previousDailyRecord = getDailyRashifal('2083-07-28');
+  assert.equal(previousDailyRecord.isAvailable, true);
+  assert.equal(previousDailyRecord.coverageLabelNe, 'कार्तिक २८, २०८३');
+
+  const nextWeek = getWeeklyRashifal(undefined, undefined, new Date('2026-11-15T06:15:00.000Z').getTime());
+  assert.equal(nextWeek.isAvailable, false);
+  assert.equal(nextWeek.allPredictions, undefined);
+
+  const laterMonth = getMonthlyRashifal(
+    undefined,
+    undefined,
+    undefined,
+    new Date('2026-12-01T06:15:00.000Z').getTime(),
+  );
+  assert.equal(laterMonth.isAvailable, false);
+  assert.equal(laterMonth.allPredictions, undefined);
 });
 
 test('non-fabricated fallback behavior: requests for unverified dates or periods return explicit missing status', () => {
@@ -211,35 +235,35 @@ test('SEO metadata for daily, weekly, and monthly periods generates valid tags a
   const now = new Date(SAMPLE_NOW_MS);
 
   // Main Daily, Weekly, and Monthly Pages
-  const dailySeo = getSeoForRoute('/rashifal', ORIGIN, now, false);
+  const dailySeo = getSeoForRoute('/rashifal', ORIGIN, now, false, false, true);
   assert.equal(dailySeo.robots, 'index, follow');
   assert.equal(dailySeo.canonicalPath, '/rashifal');
   assert.ok(dailySeo.title.includes('दैनिक राशिफल'));
 
-  const weeklySeo = getSeoForRoute('/rashifal/weekly', ORIGIN, now, false);
+  const weeklySeo = getSeoForRoute('/rashifal/weekly', ORIGIN, now, false, false, true);
   assert.equal(weeklySeo.robots, 'index, follow');
   assert.equal(weeklySeo.canonicalPath, '/rashifal/weekly');
   assert.ok(weeklySeo.title.includes('साप्ताहिक राशिफल'));
 
-  const monthlySeo = getSeoForRoute('/rashifal/monthly', ORIGIN, now, false);
+  const monthlySeo = getSeoForRoute('/rashifal/monthly', ORIGIN, now, false, false, true);
   assert.equal(monthlySeo.robots, 'index, follow');
   assert.equal(monthlySeo.canonicalPath, '/rashifal/monthly');
   assert.ok(monthlySeo.title.includes('मासिक राशिफल'));
 
   // Single Rashi pages across all three periods
   for (const rashi of RASHIS) {
-    const dailyRashiSeo = getSeoForRoute(`/rashifal/${rashi.id}`, ORIGIN, now, false);
+    const dailyRashiSeo = getSeoForRoute(`/rashifal/${rashi.id}`, ORIGIN, now, false, false, true);
     assert.equal(dailyRashiSeo.robots, 'index, follow');
     assert.equal(dailyRashiSeo.canonicalPath, `/rashifal/${rashi.id}`);
     assert.ok(dailyRashiSeo.title.includes(rashi.nameNe));
 
-    const weeklyRashiSeo = getSeoForRoute(`/rashifal/weekly/${rashi.id}`, ORIGIN, now, false);
+    const weeklyRashiSeo = getSeoForRoute(`/rashifal/weekly/${rashi.id}`, ORIGIN, now, false, false, true);
     assert.equal(weeklyRashiSeo.robots, 'index, follow');
     assert.equal(weeklyRashiSeo.canonicalPath, `/rashifal/weekly/${rashi.id}`);
     assert.ok(weeklyRashiSeo.title.includes('साप्ताहिक'));
     assert.ok(weeklyRashiSeo.title.includes(rashi.nameNe));
 
-    const monthlyRashiSeo = getSeoForRoute(`/rashifal/monthly/${rashi.id}`, ORIGIN, now, false);
+    const monthlyRashiSeo = getSeoForRoute(`/rashifal/monthly/${rashi.id}`, ORIGIN, now, false, false, true);
     assert.equal(monthlyRashiSeo.robots, 'index, follow');
     assert.equal(monthlyRashiSeo.canonicalPath, `/rashifal/monthly/${rashi.id}`);
     assert.ok(monthlyRashiSeo.title.includes('मासिक'));
@@ -253,7 +277,7 @@ test('SEO metadata for daily, weekly, and monthly periods generates valid tags a
 });
 
 test('sitemap includes daily, weekly, monthly, and all individual Rashi URLs', () => {
-  const paths = generateSitemapPaths();
+  const paths = generateSitemapPaths(false, true);
   assert.ok(paths.includes('/rashifal'), 'Sitemap must include /rashifal');
   assert.ok(paths.includes('/rashifal/weekly'), 'Sitemap must include /rashifal/weekly');
   assert.ok(paths.includes('/rashifal/monthly'), 'Sitemap must include /rashifal/monthly');
@@ -268,6 +292,9 @@ test('sitemap includes daily, weekly, monthly, and all individual Rashi URLs', (
 test('SSR renderToString produces full body HTML with tabs and predictions for Daily, Weekly, and Monthly', () => {
   // 1. Daily SSR
   const dailyHtml = render('/rashifal', ORIGIN, SAMPLE_NOW_MS);
+  assert.ok(dailyHtml.includes('Sample content for development, not published predictions.'));
+  const removedAttribution = ['नेपाली पञ्चाङ्ग तथा वैदिक ज्योतिष', 'सन्दर्भ'].join(' ');
+  assert.ok(!dailyHtml.includes(removedAttribution));
   assert.ok(dailyHtml.includes('दैनिक राशिफल'), 'Missing Daily heading in SSR');
   assert.ok(dailyHtml.includes('साप्ताहिक राशिफल'), 'Missing Weekly tab in SSR');
   assert.ok(dailyHtml.includes('मासिक राशिफल'), 'Missing Monthly tab in SSR');
@@ -276,7 +303,7 @@ test('SSR renderToString produces full body HTML with tabs and predictions for D
   // 2. Weekly SSR
   const weeklyHtml = render('/rashifal/weekly', ORIGIN, SAMPLE_NOW_MS);
   assert.ok(weeklyHtml.includes('साप्ताहिक राशिफल'), 'Missing Weekly heading in SSR');
-  assert.ok(weeklyHtml.includes('कार्तिक २४ देखि ३०, २०८३'), 'Missing weekly coverage in SSR');
+  assert.ok(weeklyHtml.includes('कार्तिक २२ देखि २८, २०८३'), 'Missing weekly coverage in SSR');
 
   // 3. Monthly SSR
   const monthlyHtml = render('/rashifal/monthly', ORIGIN, SAMPLE_NOW_MS);
@@ -295,8 +322,15 @@ test('SSR renderToString produces full body HTML with tabs and predictions for D
   assert.ok(meshaMonthlyHtml.includes('मासिक राशिफल'), 'Missing Monthly heading in Rashi SSR');
 
   // 6. Homepage Rasifal section SSR
-  const homeHtml = render('/', ORIGIN, SAMPLE_NOW_MS);
+  const homeHtml = render('/', ORIGIN, SAMPLE_NOW_MS, false, false, '', '', false, true);
   assert.ok(homeHtml.includes('दैनिक राशिफल'), 'Missing Daily tab in Home Rasifal section');
   assert.ok(homeHtml.includes('साप्ताहिक राशिफल'), 'Missing Weekly tab in Home Rasifal section');
   assert.ok(homeHtml.includes('मासिक राशिफल'), 'Missing Monthly tab in Home Rasifal section');
+
+  const unavailableDailyHtml = render(
+    '/rashifal',
+    ORIGIN,
+    new Date('2026-11-16T06:15:00.000Z').getTime(),
+  );
+  assert.ok(unavailableDailyHtml.includes('2083-07-30 BS'));
 });

@@ -20,6 +20,7 @@ const appElement = (
     adsenseClientId={ssrData?.adsenseClientId}
     googleSiteVerification={ssrData?.googleSiteVerification}
     converterToolsIndexingEnabled={ssrData?.converterToolsIndexingEnabled}
+    rashifalIndexingEnabled={ssrData?.rashifalIndexingEnabled}
   />
 );
 

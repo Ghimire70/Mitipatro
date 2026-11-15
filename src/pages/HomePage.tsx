@@ -15,9 +15,15 @@ interface HomePageProps {
   faqs: FaqItem[];
   nowMs?: number;
   onNavigate: (path: string) => void;
+  rashifalIndexingEnabled?: boolean;
 }
 
-export const HomePage: React.FC<HomePageProps> = ({ faqs, nowMs, onNavigate }) => {
+export const HomePage: React.FC<HomePageProps> = ({
+  faqs,
+  nowMs,
+  onNavigate,
+  rashifalIndexingEnabled = false,
+}) => {
   const today = useMemo(() => getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined), [nowMs]);
   const yearHolidays = useMemo(() => getHolidaysForYear(today.bs.year), [today.bs.year]);
 
@@ -76,13 +82,15 @@ export const HomePage: React.FC<HomePageProps> = ({ faqs, nowMs, onNavigate }) =
               View Aaja Ko Miti
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
-            <a
-              href="/rashifal"
-              onClick={(e) => handleLink(e, '/rashifal')}
-              className="inline-flex min-h-[44px] items-center rounded-md border border-stone-300 bg-white px-4 py-2.5 text-sm font-semibold text-stone-800 transition-colors hover:bg-stone-50 whitespace-nowrap shrink-0"
-            >
-              आजको राशिफल
-            </a>
+            {rashifalIndexingEnabled && (
+              <a
+                href="/rashifal"
+                onClick={(e) => handleLink(e, '/rashifal')}
+                className="inline-flex min-h-[44px] items-center rounded-md border border-stone-300 bg-white px-4 py-2.5 text-sm font-semibold text-stone-800 transition-colors hover:bg-stone-50 whitespace-nowrap shrink-0"
+              >
+                आजको राशिफल
+              </a>
+            )}
             <a
               href={`/holidays/${CURRENT_BS_YEAR}`}
               onClick={(e) => handleLink(e, `/holidays/${CURRENT_BS_YEAR}`)}
@@ -107,6 +115,7 @@ export const HomePage: React.FC<HomePageProps> = ({ faqs, nowMs, onNavigate }) =
             bsMonth={today.bs.month}
             nowMs={nowMs}
             onNavigate={onNavigate}
+            rashifalIndexingEnabled={rashifalIndexingEnabled}
           />
 
           {/* Quick 12-Month Navigation Strip */}
@@ -208,9 +217,11 @@ export const HomePage: React.FC<HomePageProps> = ({ faqs, nowMs, onNavigate }) =
       </div>
 
       {/* Daily Rashifal Feature Section */}
-      <div className="mt-12">
-        <RasifalSection nowMs={nowMs} onNavigate={onNavigate} />
-      </div>
+      {rashifalIndexingEnabled && (
+        <div className="mt-12">
+          <RasifalSection nowMs={nowMs} onNavigate={onNavigate} />
+        </div>
+      )}
 
       {/* Browse Multi-Year Calendars */}
       <section aria-labelledby="years-browse-heading" className="mt-12 border-t border-stone-200 pt-10">

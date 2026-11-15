@@ -5,16 +5,21 @@ import { CURRENT_BS_YEAR } from '../../lib/bsData';
 interface HeaderProps {
   currentPath: string;
   onNavigate: (path: string) => void;
+  rashifalIndexingEnabled?: boolean;
 }
 
-export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
+export const Header: React.FC<HeaderProps> = ({
+  currentPath,
+  onNavigate,
+  rashifalIndexingEnabled = false,
+}) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
     { label: 'Today', path: '/aaja-ko-miti' },
     { label: `Calendar ${CURRENT_BS_YEAR}`, path: `/calendar/${CURRENT_BS_YEAR}` },
     { label: 'Holidays', path: `/holidays/${CURRENT_BS_YEAR}` },
-    { label: 'Rashifal', path: '/rashifal' },
+    ...(rashifalIndexingEnabled ? [{ label: 'Rashifal', path: '/rashifal' }] : []),
     { label: 'About', path: '/about' },
     { label: 'Contact', path: '/contact' },
   ];

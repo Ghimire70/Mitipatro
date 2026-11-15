@@ -11,9 +11,15 @@ interface TodayPageProps {
   faqs: FaqItem[];
   nowMs?: number;
   onNavigate: (path: string) => void;
+  rashifalIndexingEnabled?: boolean;
 }
 
-export const TodayPage: React.FC<TodayPageProps> = ({ faqs, nowMs, onNavigate }) => {
+export const TodayPage: React.FC<TodayPageProps> = ({
+  faqs,
+  nowMs,
+  onNavigate,
+  rashifalIndexingEnabled = false,
+}) => {
   const [today, setToday] = useState(() => getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined));
 
   useEffect(() => {
@@ -124,14 +130,16 @@ export const TodayPage: React.FC<TodayPageProps> = ({ faqs, nowMs, onNavigate })
             <Calendar className="h-4 w-4" aria-hidden="true" />
             Open {today.bs.monthNameEn} {today.bs.year} Calendar
           </a>
-          <a
-            href="/rashifal"
-            onClick={(e) => handleLink(e, '/rashifal')}
-            className="inline-flex min-h-[44px] items-center gap-2 rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-semibold text-stone-800 hover:bg-stone-50"
-          >
-            <Sparkles className="h-4 w-4 text-[#9A3412]" aria-hidden="true" />
-            आजको राशिफल हेर्नुहोस्
-          </a>
+          {rashifalIndexingEnabled && (
+            <a
+              href="/rashifal"
+              onClick={(e) => handleLink(e, '/rashifal')}
+              className="inline-flex min-h-[44px] items-center gap-2 rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-semibold text-stone-800 hover:bg-stone-50"
+            >
+              <Sparkles className="h-4 w-4 text-[#9A3412]" aria-hidden="true" />
+              आजको राशिफल हेर्नुहोस्
+            </a>
+          )}
           <a
             href="/date-converter"
             onClick={(e) => handleLink(e, '/date-converter')}

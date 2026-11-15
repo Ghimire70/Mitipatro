@@ -58,13 +58,7 @@ export const RashifalPage: React.FC<RashifalPageProps> = ({
 
   const availableDailyDates = useMemo(() => getAvailableRashifalDates(), []);
   
-  // Default date is today's BS date if available, or latest available date
-  const defaultDailyDate = useMemo(() => {
-    if (availableDailyDates.includes(today.bs.iso)) {
-      return today.bs.iso;
-    }
-    return availableDailyDates[availableDailyDates.length - 1] || today.bs.iso;
-  }, [availableDailyDates, today.bs.iso]);
+  const defaultDailyDate = today.bs.iso;
 
   const [selectedDate, setSelectedDate] = useState<string>(defaultDailyDate);
 
@@ -212,6 +206,12 @@ export const RashifalPage: React.FC<RashifalPageProps> = ({
             <p className="mt-2 text-base text-stone-600 max-w-2xl">
               नेपालको आधिकारिक समय (Asia/Kathmandu, UTC+05:45) अनुसार Bikram Sambat पात्रोसँग
               आबद्ध {rashifalResult.periodTitleNe} फलादेश।
+            </p>
+            <p
+              role="note"
+              className="mt-3 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-sm font-medium text-amber-950"
+            >
+              Sample content for development, not published predictions.
             </p>
           </div>
 
@@ -644,15 +644,6 @@ export const RashifalPage: React.FC<RashifalPageProps> = ({
             </div>
           )}
 
-          {/* Editorial & Source Reference Note */}
-          <div className="mt-8 rounded-lg border border-stone-200 bg-[#FBF9F5] p-4 text-xs text-stone-600 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-            <p>
-              <strong>स्रोत तथा सन्दर्भ:</strong> {rashifalResult.source || 'नेपाली पञ्चाङ्ग तथा वैदिक ज्योतिष सन्दर्भ'}
-            </p>
-            <p className="text-stone-500">
-              प्रस्तुत राशिफल सामान्य मार्गदर्शनका लागि हो।
-            </p>
-          </div>
         </div>
       )}
 

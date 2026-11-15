@@ -10,6 +10,7 @@ export function render(
   adsenseClientId = '',
   googleSiteVerification = '',
   converterToolsIndexingEnabled = false,
+  rashifalIndexingEnabled = false,
 ): string {
   return renderToString(
     <App
@@ -21,6 +22,7 @@ export function render(
       adsenseClientId={adsenseClientId}
       googleSiteVerification={googleSiteVerification}
       converterToolsIndexingEnabled={converterToolsIndexingEnabled}
+      rashifalIndexingEnabled={rashifalIndexingEnabled}
     />,
   );
 }
