@@ -15,7 +15,12 @@ Working rules
 - Do not commit. Do not claim anything is official or fully validated.
 
 Status (update after each stage)
-- Stages 1 to 7 committed. Stage 7 element assertions pending.
-- Open todo rows: 2 yoga (2026-11-09, 2026-11-10), 3 karana (2025-07-23, 2025-04-08, 2026-09-28), 2 panchang placeholders, 2026-03-16 nakshatra (informational).
-- All reference data comes from one website (vedicmarga.com, Kathmandu, NPT, 3-minute tolerance). A printed Nepali patro check is still needed.
-- Stage 8 (transits, retrograde, nodes) not accepted; unaudited work exists in the round-botany worktree and must not be merged.
+- Stages 1 to 7 are committed.
+- Stage 8 modules (planetaryTransitions, retrograde, lunarNodes) are committed on branch stage8-salvage (commit e7b45f5) with internal tests only, not validated against any external source, and are not accepted.
+- The round-botany worktree is retired; a backup zip is on the Desktop.
+- Open items:
+  - Stage 7 element assertions (tithi, nakshatra, yoga, karana values at sunrise are printed but not asserted).
+  - Stage 8 independent references (Saturn retrograde dates, planet ingress dates, Rahu sign and entry date, the mean-node source).
+  - 8 todo rows (2 yoga, 3 karana, 2 panchang placeholders, 1 nakshatra).
+  - Printed-patro checkpoint.
+- All reference data comes from one website (vedicmarga.com, Kathmandu, NPT, 3-minute tolerance).
