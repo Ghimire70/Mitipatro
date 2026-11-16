@@ -82,6 +82,7 @@ function getRouteSeo(
   baseUrl: string,
   now: Date,
   converterToolsIndexingEnabled: boolean,
+  panchangIndexingEnabled = false,
 ): PageSeoData {
   const cleanPath = pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
   const today = getTodayNepal(now);
@@ -463,6 +464,40 @@ function getRouteSeo(
     };
   }
 
+  // Panchang page: /panchang
+  if (cleanPath === '/panchang') {
+    const title = 'नेपाली पात्रो – दैनिक पञ्चाङ्ग (Daily Nepali Panchang) | MitiPatro';
+    const description = `दैनिक पञ्चाङ्ग: वाग्मती प्रदेश, काठमाडौं (Asia/Kathmandu, UTC+05:45) को सूर्योदय समयानुसार तिथि, नक्षत्र, योग र करण। नेपालको स्थानीय पात्रोसँग मिलाउनु अघि कम्प्युट गरिएको परिणामको रूपमा प्रयोग गर्नुहोला।`;
+    const breadcrumbs: BreadcrumbItem[] = [
+      { name: 'Home', path: '/' },
+      { name: 'Panchang', path: '/panchang' },
+    ];
+    const faqs: FaqItem[] = [
+      {
+        question: 'दैनिक पञ्चाङ्ग के हो?',
+        answer: 'पञ्चाङ्ग नेपाली पात्रोको एक दैनिक खगोलशास्त्रीय विवरण हो, जसमा तिथि, नक्षत्र, योग र करण समावेश हुन्छन्।',
+      },
+      {
+        question: 'यस पृष्ठको पञ्चाङ्ग कुन समय र स्थानको आधारमा गणना गरिएको छ?',
+        answer: 'यस पृष्ठको सूर्योदय, सूर्यास्त, तिथि, नक्षत्र, योग र करण काठमाडौं (२७.७१७२° उत्तर, ८५.३२४०° पूर्व) को Asia/Kathmandu (UTC+०५:४५) समयका आधारमा गणना गरिएको छ।',
+      },
+      {
+        question: 'के यो आधिकारिक नेपाली पात्रो हो?',
+        answer: 'होइन, यो कम्प्युट गर्ने परिणाम हो। धार्मिक वा उत्सवको मिति निश्चित गर्नु अघि कृपया स्थानीय पात्रो वा अधिकारिक स्रोतसँग पुष्टि गर्नुहोला।',
+      },
+    ];
+    return {
+      title,
+      description,
+      canonicalPath: '/panchang',
+      robots: panchangIndexingEnabled ? 'index, follow' : 'noindex, follow',
+      h1: 'नेपाली पात्रो – दैनिक पञ्चाङ्ग (Daily Panchang)',
+      breadcrumbs,
+      faqs,
+      jsonLd: buildJsonLd(baseUrl, breadcrumbs, faqs),
+    };
+  }
+
   // 8. Daily Rashifal (Horoscope): /rashifal or /rashifal/daily
   if (cleanPath === '/rashifal' || cleanPath === '/rashifal/daily') {
     const title = `आजको राशिफल – दैनिक राशिफल (Daily Nepali Rashifal) | MitiPatro`;
@@ -692,11 +727,21 @@ export function getSeoForRoute(
   noindexSite = true,
   converterToolsIndexingEnabled = false,
   rashifalIndexingEnabled = false,
+  panchangIndexingEnabled = false,
 ): PageSeoData {
-  const seo = getRouteSeo(pathname, baseUrl, now, converterToolsIndexingEnabled);
+  const seo = getRouteSeo(
+    pathname,
+    baseUrl,
+    now,
+    converterToolsIndexingEnabled,
+    panchangIndexingEnabled,
+  );
   if (noindexSite) return { ...seo, robots: 'noindex, nofollow' };
   if (pathname === '/rashifal' || pathname.startsWith('/rashifal/')) {
     return { ...seo, robots: rashifalIndexingEnabled ? seo.robots : 'noindex, follow' };
+  }
+  if (pathname === '/panchang') {
+    return { ...seo, robots: panchangIndexingEnabled ? seo.robots : 'noindex, follow' };
   }
   return seo;
 }
@@ -704,6 +749,7 @@ export function getSeoForRoute(
 export function generateSitemapPaths(
   converterToolsIndexingEnabled = false,
   rashifalIndexingEnabled = false,
+  panchangIndexingEnabled = false,
 ): string[] {
   const paths = [
     '/',
@@ -722,6 +768,11 @@ export function generateSitemapPaths(
     for (const m of BS_MONTHS) {
       paths.push(`/calendar/${year}/${m.slug}`);
     }
+  }
+
+  // Panchang page: indexed only when explicitly enabled.
+  if (panchangIndexingEnabled) {
+    paths.push('/panchang');
   }
 
   if (converterToolsIndexingEnabled) {

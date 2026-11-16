@@ -15,9 +15,14 @@ export function generateSitemapXml(
   now = new Date(),
   converterToolsIndexingEnabled = false,
   rashifalIndexingEnabled = false,
+  panchangIndexingEnabled = false,
 ): string {
   const todayIso = now.toISOString().split('T')[0];
-  const urls = generateSitemapPaths(converterToolsIndexingEnabled, rashifalIndexingEnabled)
+  const urls = generateSitemapPaths(
+    converterToolsIndexingEnabled,
+    rashifalIndexingEnabled,
+    panchangIndexingEnabled,
+  )
     .map((route) => {
       const priority =
         route === '/' ? '1.0' : route === '/aaja-ko-miti' || route === '/date-converter' ? '0.9' : '0.8';

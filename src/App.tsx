@@ -15,6 +15,7 @@ import { ConverterPage } from './pages/ConverterPage';
 import { ConverterToolsPage } from './pages/ConverterToolsPage';
 import { HolidaysPage } from './pages/HolidaysPage';
 import { StaticPages } from './pages/StaticPages';
+import { PanchangPage } from './pages/PanchangPage';
 import { RashifalPage } from './pages/RashifalPage';
 import { getRashiById } from '../lib/rashifal';
 
@@ -46,6 +47,7 @@ export interface AppProps {
   googleSiteVerification?: string;
   converterToolsIndexingEnabled?: boolean;
   rashifalIndexingEnabled?: boolean;
+  panchangIndexingEnabled?: boolean;
 }
 
 export default function App({
@@ -58,6 +60,7 @@ export default function App({
   googleSiteVerification = '',
   converterToolsIndexingEnabled = false,
   rashifalIndexingEnabled = false,
+  panchangIndexingEnabled = false,
 }: AppProps = {}) {
   const [currentPath, setCurrentPath] = useState<string>(() =>
     normalizePath(initialPath ?? (typeof window !== 'undefined' ? window.location.pathname : '/')),
@@ -92,8 +95,9 @@ export default function App({
       noindexSite,
       converterToolsIndexingEnabled,
       rashifalIndexingEnabled,
+      panchangIndexingEnabled,
     ),
-    [currentPath, baseUrl, referenceDate, noindexSite, converterToolsIndexingEnabled, rashifalIndexingEnabled],
+    [currentPath, baseUrl, referenceDate, noindexSite, converterToolsIndexingEnabled, rashifalIndexingEnabled, panchangIndexingEnabled],
   );
 
   const renderPage = () => {
@@ -120,6 +124,15 @@ export default function App({
     }
     if (currentPath === '/date-converter') {
       return <ConverterPage faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
+    }
+    if (currentPath === '/panchang') {
+      return (
+        <PanchangPage
+          faqs={seo.faqs}
+          nowMs={nowMs}
+          onNavigate={navigate}
+        />
+      );
     }
     if (currentPath === '/rashifal' || currentPath === '/rashifal/daily') {
       return <RashifalPage initialPeriod="daily" faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
@@ -273,6 +286,7 @@ export default function App({
           currentPath={currentPath}
           onNavigate={navigate}
           rashifalIndexingEnabled={rashifalIndexingEnabled}
+          panchangIndexingEnabled={panchangIndexingEnabled}
         />
         <main id="main-content" className="flex-1">
           {renderPage()}
@@ -281,6 +295,7 @@ export default function App({
           nowMs={nowMs}
           onNavigate={navigate}
           rashifalIndexingEnabled={rashifalIndexingEnabled}
+          panchangIndexingEnabled={panchangIndexingEnabled}
         />
       </div>
     </AdSettingsContext.Provider>

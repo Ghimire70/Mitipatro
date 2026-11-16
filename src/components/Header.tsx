@@ -6,12 +6,14 @@ interface HeaderProps {
   currentPath: string;
   onNavigate: (path: string) => void;
   rashifalIndexingEnabled?: boolean;
+  panchangIndexingEnabled?: boolean;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   currentPath,
   onNavigate,
   rashifalIndexingEnabled = false,
+  panchangIndexingEnabled = false,
 }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -20,6 +22,7 @@ export const Header: React.FC<HeaderProps> = ({
     { label: `Calendar ${CURRENT_BS_YEAR}`, path: `/calendar/${CURRENT_BS_YEAR}` },
     { label: 'Holidays', path: `/holidays/${CURRENT_BS_YEAR}` },
     ...(rashifalIndexingEnabled ? [{ label: 'Rashifal', path: '/rashifal' }] : []),
+    ...(panchangIndexingEnabled ? [{ label: 'Panchang', path: '/panchang' }] : []),
     { label: 'About', path: '/about' },
     { label: 'Contact', path: '/contact' },
   ];

@@ -12,6 +12,7 @@ import {
   isConverterToolsIndexingEnabled,
   isNoindexSiteEnabled,
   isRashifalIndexingEnabled,
+  isPanchangIndexingEnabled,
 } from '../lib/siteConfig';
 import { render } from '../src/entry-server';
 import { getHolidaysForYear } from '../lib/holidays';
@@ -186,6 +187,43 @@ test('Rashifal defaults to noindex and hidden links, and can be enabled for publ
   }
   assert.ok(visibleHome.includes('Rashifal (Horoscope)'));
   assert.ok(visibleHome.includes('दैनिक राशिफल'));
+});
+
+test('Panchang defaults to noindex and excluded from the sitemap, and can be enabled for publication', () => {
+  assert.equal(isPanchangIndexingEnabled({}), false);
+  assert.equal(isPanchangIndexingEnabled({ PANCHANG_INDEXING_ENABLED: 'true' }), true);
+  assert.equal(isPanchangIndexingEnabled({ PANCHANG_INDEXING_ENABLED: 'yes' }), false);
+
+  const disabledSeo = getSeoForRoute('/panchang', ORIGIN, new Date(SAMPLE_NOW_MS), false);
+  assert.equal(disabledSeo.robots, 'noindex, follow', '/panchang should be noindex while the gate is disabled');
+  assert.ok(disabledSeo.title.length > 0);
+  assert.ok(disabledSeo.description.length > 0);
+  assert.ok(disabledSeo.h1.length > 0);
+  assert.ok(disabledSeo.jsonLd.length > 0);
+  assert.ok(!generateSitemapPaths().includes('/panchang'));
+  assert.ok(!generateSitemapXml(ORIGIN, new Date(SAMPLE_NOW_MS)).includes(`/panchang`));
+
+  const enabledSeo = getSeoForRoute('/panchang', ORIGIN, new Date(SAMPLE_NOW_MS), false, false, false, true);
+  assert.equal(enabledSeo.robots, 'index, follow', '/panchang should be indexable while the gate is enabled');
+  assert.equal(enabledSeo.canonicalPath, '/panchang');
+  assert.ok(generateSitemapPaths(false, false, true).includes('/panchang'));
+  assert.ok(
+    generateSitemapXml(ORIGIN, new Date(SAMPLE_NOW_MS), false, false, true).includes(
+      `<loc>${ORIGIN}/panchang</loc>`,
+    ),
+  );
+
+  const sitewideNoindexSeo = getSeoForRoute('/panchang', ORIGIN, new Date(SAMPLE_NOW_MS), true, false, false, true);
+  assert.equal(sitewideNoindexSeo.robots, 'noindex, nofollow');
+
+  const hiddenHome = render('/', ORIGIN, SAMPLE_NOW_MS, false);
+  assert.ok(!hiddenHome.includes('href="/panchang"'));
+  assert.ok(!hiddenHome.includes('पञ्चाङ्ग'));
+
+  const visibleHome = render('/', ORIGIN, SAMPLE_NOW_MS, false, false, '', '', false, false, true);
+  assert.ok(visibleHome.includes('href="/panchang"'));
+  assert.ok(visibleHome.includes('पञ्चाङ्ग'));
+  assert.ok(visibleHome.includes('Panchang (पञ्चाङ्ग)'));
 });
 
 test('ads stay disabled unless both the flag and AdSense client ID are configured', () => {

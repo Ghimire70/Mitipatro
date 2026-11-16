@@ -16,6 +16,7 @@ import {
   isConverterToolsIndexingEnabled,
   isNoindexSiteEnabled,
   isRashifalIndexingEnabled,
+  isPanchangIndexingEnabled,
 } from './lib/siteConfig';
 
 const PORT = 3000;
@@ -26,6 +27,7 @@ const AD_SETTINGS = getAdSettings();
 const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION?.trim() ?? '';
 const CONVERTER_TOOLS_INDEXING_ENABLED = isConverterToolsIndexingEnabled();
 const RASHIFAL_INDEXING_ENABLED = isRashifalIndexingEnabled();
+const PANCHANG_INDEXING_ENABLED = isPanchangIndexingEnabled();
 
 function escapeHtml(str: string): string {
   return str
@@ -47,6 +49,7 @@ function injectRouteSeo(
   googleSiteVerification: string,
   converterToolsIndexingEnabled: boolean,
   rashifalIndexingEnabled: boolean,
+  panchangIndexingEnabled: boolean,
 ): { html: string; status: number } {
   const seo = getSeoForRoute(
     pathname,
@@ -55,6 +58,7 @@ function injectRouteSeo(
     noindexSite,
     converterToolsIndexingEnabled,
     rashifalIndexingEnabled,
+    panchangIndexingEnabled,
   );
   const canonicalUrl = buildCanonicalUrl(seo.canonicalPath, origin);
   const jsonLdScripts = seo.jsonLd
@@ -81,6 +85,7 @@ function injectRouteSeo(
     googleSiteVerification,
     converterToolsIndexingEnabled,
     rashifalIndexingEnabled,
+    panchangIndexingEnabled,
   }).replace(/</g, '\\u003c');
 
   const finalHtml = html
@@ -171,6 +176,7 @@ async function startServer() {
         new Date(),
         CONVERTER_TOOLS_INDEXING_ENABLED,
         RASHIFAL_INDEXING_ENABLED,
+        PANCHANG_INDEXING_ENABLED,
       ));
   });
 
@@ -205,6 +211,7 @@ async function startServer() {
         googleSiteVerification: string,
         converterToolsIndexingEnabled: boolean,
         rashifalIndexingEnabled: boolean,
+        panchangIndexingEnabled: boolean,
       ) => string;
 
       if (vite) {
@@ -230,6 +237,7 @@ async function startServer() {
         GOOGLE_SITE_VERIFICATION,
         CONVERTER_TOOLS_INDEXING_ENABLED,
         RASHIFAL_INDEXING_ENABLED,
+        PANCHANG_INDEXING_ENABLED,
       );
       const rendered = injectRouteSeo(
         html,
@@ -243,6 +251,7 @@ async function startServer() {
         GOOGLE_SITE_VERIFICATION,
         CONVERTER_TOOLS_INDEXING_ENABLED,
         RASHIFAL_INDEXING_ENABLED,
+        PANCHANG_INDEXING_ENABLED,
       );
       res.status(rendered.status).set({ 'Content-Type': 'text/html; charset=utf-8' }).end(rendered.html);
     } catch (err) {

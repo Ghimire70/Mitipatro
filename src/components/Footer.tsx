@@ -7,12 +7,14 @@ interface FooterProps {
   nowMs?: number;
   onNavigate: (path: string) => void;
   rashifalIndexingEnabled?: boolean;
+  panchangIndexingEnabled?: boolean;
 }
 
 export const Footer: React.FC<FooterProps> = ({
   nowMs,
   onNavigate,
   rashifalIndexingEnabled = false,
+  panchangIndexingEnabled = false,
 }) => {
   const copyrightYear = getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined).ad.year;
   const handleLink = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
@@ -55,6 +57,13 @@ export const Footer: React.FC<FooterProps> = ({
                 <li>
                   <a href="/rashifal" onClick={(e) => handleLink(e, '/rashifal')} className="hover:text-[#9A3412] hover:underline">
                     Rashifal (Horoscope)
+                  </a>
+                </li>
+              )}
+              {panchangIndexingEnabled && (
+                <li>
+                  <a href="/panchang" onClick={(e) => handleLink(e, '/panchang')} className="hover:text-[#9A3412] hover:underline">
+                    Panchang (पञ्चाङ्ग)
                   </a>
                 </li>
               )}

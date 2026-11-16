@@ -11,6 +11,7 @@ export function render(
   googleSiteVerification = '',
   converterToolsIndexingEnabled = false,
   rashifalIndexingEnabled = false,
+  panchangIndexingEnabled = false,
 ): string {
   return renderToString(
     <App
@@ -23,6 +24,7 @@ export function render(
       googleSiteVerification={googleSiteVerification}
       converterToolsIndexingEnabled={converterToolsIndexingEnabled}
       rashifalIndexingEnabled={rashifalIndexingEnabled}
+      panchangIndexingEnabled={panchangIndexingEnabled}
     />,
   );
 }

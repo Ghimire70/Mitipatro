@@ -68,6 +68,10 @@ export function isRashifalIndexingEnabled(env: NodeJS.ProcessEnv = process.env):
   return env.RASHIFAL_INDEXING_ENABLED?.trim().toLowerCase() === 'true';
 }
 
+export function isPanchangIndexingEnabled(env: NodeJS.ProcessEnv = process.env): boolean {
+  return env.PANCHANG_INDEXING_ENABLED?.trim().toLowerCase() === 'true';
+}
+
 export function getAdSettings(env: NodeJS.ProcessEnv = process.env): {
   enabled: boolean;
   clientId: string;
