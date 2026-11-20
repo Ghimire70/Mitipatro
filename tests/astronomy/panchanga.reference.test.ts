@@ -305,17 +305,79 @@ function getExpectedEndNpt(row: PanchangaRefRow, label: string): string {
 }
 
 // ---------------------------------------------------------------------------
-// Known unresolved / todo rows (kept as test.todo, not tuned).
-//
-// 2026-03-16: sunrise = 06:12:29.599 NPT (UTC 00:27:29.599); the Shravana ->
-// Dhanishta nakshatra change occurs at 06:11:20.273 NPT, i.e. 69.326 seconds
-// BEFORE sunrise (|gap| < 10-minute near-sunrise window). The site later showed
-// Dhanishta. Documented here as todo; nakshatra is flagged nearSunrise
-// (beforeSunrise = true) by getDailyPanchanga, but no value is asserted against
-// the page. Formula not changed.
+// 2026-03-16 nakshatra at sunrise — DONE (independent: vedicmarga.com)
+// sunrise = 06:12 NPT; nakshatra at sunrise = Dhanishta (pada 1).
+// Our computation matches: dhanishtha pada 1 at sunrise 06:12:29.599 NPT.
+// ---------------------------------------------------------------------------
+test(
+  'panchanga reference: 2026-03-16 nakshatra at sunrise (independent: vedicmarga.com)',
+  () => {
+    const p = getDailyPanchanga(civilDate('2026-03-16'), MODE);
+    assert.equal(p.nakshatra.name, 'dhanishtha');
+    assert.equal(p.nakshatra.pada, 1);
+  },
+);
+
+// ---------------------------------------------------------------------------
+// 2025-07-23 full element end times — partially DONE (independent: vedicmarga.com)
+// Tithi, nakshatra and yoga match vedicmarga.com; karana does not
+// (computed 15:47 vs published 12:53). Karana assertion kept as test.todo.
 // ---------------------------------------------------------------------------
 test.todo(
-  'PENDING: panchanga 2026-03-16 nakshatra — sunrise 06:12:29.599 NPT; Shravana->Dhanishta change at 06:11:20.273 NPT, 69.326 s before sunrise (within the 10-minute near-sunrise window, beforeSunrise=true). Site later showed Dhanishta. Gap computed from our own sunrise + nakshatra code; not independently validated. Formula not changed.',
+  'panchanga 2025-07-23 karana end — vedicmarga.com says Vishti ends 12:53 NPT, our code computes 15:47 NPT. Measured difference ~2h 54m; not independently reconciled, formula not changed.',
+);
+
+test(
+  'panchanga reference: 2025-07-23 tithi end (independent: vedicmarga.com)',
+  () => {
+    const p = getDailyPanchanga(civilDate('2025-07-23'), MODE);
+    assert.equal(p.tithi.name, 'chaturdashi');
+    assert.equal(p.tithi.paksha, 'krishna');
+    assert.ok(p.tithi.end !== null);
+    const endNpt = p.tithi.end.kathmanduDisplay!;
+    const endTime = /T(\d{2}:\d{2})/.exec(endNpt)?.[1];
+    assert.equal(
+      endTime,
+      '02:44',
+      `tithi end ${endNpt} != 02:44 NPT`,
+    );
+    assert.equal(p.tithi.nextName, 'amavasya');
+  },
+);
+
+test(
+  'panchanga reference: 2025-07-23 nakshatra end (independent: vedicmarga.com)',
+  () => {
+    const p = getDailyPanchanga(civilDate('2025-07-23'), MODE);
+    assert.equal(p.nakshatra.name, 'ardra');
+    assert.equal(p.nakshatra.pada, 2);
+    assert.ok(p.nakshatra.end !== null);
+    const endNpt = p.nakshatra.end.kathmanduDisplay!;
+    const endTime = /T(\d{2}:\d{2})/.exec(endNpt)?.[1];
+    assert.equal(
+      endTime,
+      '18:09',
+      `nakshatra end ${endNpt} != 18:09 NPT`,
+    );
+    assert.equal(p.nakshatra.nextName, 'punarvasu');
+  },
+);
+
+test(
+  'panchanga reference: 2025-07-23 yoga end (independent: vedicmarga.com)',
+  () => {
+    const p = getDailyPanchanga(civilDate('2025-07-23'), MODE);
+    assert.equal(p.yoga.name, 'vyaghata');
+    assert.ok(p.yoga.end !== null);
+    const endNpt = p.yoga.end.kathmanduDisplay!;
+    const endTime = /T(\d{2}:\d{2})/.exec(endNpt)?.[1];
+    assert.equal(
+      endTime,
+      '12:49',
+      `yoga end ${endNpt} != 12:49 NPT`,
+    );
+    assert.equal(p.yoga.nextName, 'harshana');
+  },
 );
 
 // Known unresolved Yoga, Karana and Panchang rows from earlier stages remain as

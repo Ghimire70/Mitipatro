@@ -29,9 +29,13 @@
 //
 // UNRESOLVED ROWS (marked test.todo, NOT tuned to match, NOT counted as passing):
 //
-//   2025-07-23: Vishti until 12:53 (computed ~15:47; need second source to reconcile)
-//   2025-04-08: Vanija until 21:28 then Bava (inconsistent with standard 7-karana cycle)
-//   2026-09-28: Taitila until 19:29 then Vanija (inconsistent with standard 7-karana cycle)
+//   2025-07-23: Vishti until 12:53 (computed ~15:47; root diff ~174 min >> 3 min tolerance)
+//   2025-04-08: Vanija until 21:28 then Bava (root time matches within 0.44 min, but our
+//               "before" karana at 21:08 NPT is Vishti not Vanija; our cycle has an extra
+//               Vishti step that VedicMarga does not)
+//   2026-09-28: Taitila until 19:29 then Vanija (root time matches within 0.05 min, but our
+//               "before" karana at 19:09 NPT is Gara not Taitila; our cycle has Gara where
+//               VedicMarga has Taitila)
 //
 // For the unresolved rows, see the test.todo entries below with explanations.
 
@@ -216,15 +220,19 @@ for (const row of ROWS) {
 // UNRESOLVED ROW DETAILS (documented, not tuned to match):
 //
 // 1. 2025-07-23: VedicMarga says "Vishti until 12:53, then Shakuni upto 02:44 (next day), then Chatushpada"
-//    Our computation places the Vishti→Shakuni transition at ~15:47 NPT, not 12:53 NPT.
-//    Need a second source to reconcile. Not counted as passing.
+//    Our computation places the Vishti→Shakuni transition at ~15:47 NPT, not 12:53 NPT (root diff ~174 min).
+//    At 12:33 NPT (20 min before 12:53) our karana is Vishti (match); at 13:13 NPT (20 min after) our karana
+//    is still Vishti (expected Shakuni — mismatch). Need a second source to reconcile. Not counted as passing.
+//    Our karana end: 15:47 vs VedicMarga: 12:53. Formula not changed.
 //
 // 2. 2025-04-08: VedicMarga says "Vanija until 21:28, then Bava"
-//    In the standard 7-karana cycle, Vanija is followed by Vishti, not Bava.
-//    This looks inconsistent with the approved cycle. Investigating why;
-//    not counted as passing, formula not changed.
+//    Our root finder: transition at ~21:28 NPT matches (diff 0.44 min). But our "before" karana at 21:08 NPT
+//    is Vishti, not Vanija; our "after" karana at 21:48 NPT is Bava (match). Our cycle has Vishti where
+//    VedicMarga has Vanija. In the standard 7-karana cycle, Vanija is followed by Vishti, not Bava.
+//    This looks inconsistent with the approved cycle. Not counted as passing, formula not changed.
 //
 // 3. 2026-09-28: VedicMarga says "Taitila until 19:29, then Vanija"
-//    In the standard 7-karana cycle, Taitila is followed by Gara, not Vanija.
-//    This looks inconsistent with the approved cycle. Investigating why;
-//    not counted as passing, formula not changed.
+//    Our root finder: transition at ~19:29 NPT matches (diff 0.05 min). But our "before" karana at 19:09 NPT
+//    is Gara, not Taitila; our "after" karana at 19:49 NPT is Vanija (match). Our cycle has Gara where
+//    VedicMarga has Taitila. In the standard 7-karana cycle, Taitila is followed by Gara, not Vanija.
+//    This looks inconsistent with the approved cycle. Not counted as passing, formula not changed.

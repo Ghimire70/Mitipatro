@@ -22,11 +22,13 @@
 //   (b) Comparing the computed UTC instant to the published NPT time converted to UTC
 //
 // UNRESOLVED REFERENCES:
-//   - 2026-11-09 Saubhagya->Shobhana at 03:12 NPT
-//   - 2026-11-10 Shobhana->Atiganda at 03:24 NPT
+//   - 2026-11-09 Saubhagya->Shobhana at 03:12 NPT — UNRESOLVED
+//   - 2026-11-10 Shobhana->Atiganda at 03:24 NPT — UNRESOLVED
 //   Both show a 1-yoga index discrepancy between our computation and VedicMarga:
-//     * At Nov 9 02:12 NPT: our sum = 39.3790° (idx 2 = Ayushman), VedicMarga expects Saubhagya (idx 3)
-//     * At Nov 10 02:24 NPT: our sum = 52.8872° (idx 3 = Saubhagya), VedicMarga expects Shobhana (idx 4)
+//     * At Nov 9 ~03:12 NPT: our sum = 39.3790° (idx 2 = Ayushman), VedicMarga expects Saubhagya (idx 3)
+//       Root finder: our change at 03:18 NPT (diff 6.31 min > 3 min tolerance), next = Saubhagya
+//     * At Nov 10 ~03:24 NPT: our sum = 52.8872° (idx 3 = Saubhagya), VedicMarga expects Shobhana (idx 4)
+//       Root finder: our change at 03:12 NPT (diff 11.75 min > 3 min tolerance), next = Shobhana
 //   The discrepancy (~0.2–0.6° below boundary on both dates) may stem from a
 //   different Lahiri ayanamsha value or ephemeris used by VedicMarga's
 //   "Engine 1.11.0" vs our Astronomy Engine (VSOP87/ELP2000-82B) pipeline.
