@@ -2,59 +2,27 @@
 //
 // INDEPENDENT REFERENCE TESTS — Stage 8 Lunar Nodes (Rahu/Ketu)
 //
-// SOURCE: values copied from vedicmarga.com Kathmandu panchang pages.
+// SOURCE: vedicmarga.com /transit/rahu/2026/ and /transit/ — "Rahu moves back
+// into Capricorn on 5 Dec 2026"; "Rahu in Aquarius since 18 May 2025";
+// "Ketu enters Cancer on 5 December 2026." The site computes Rahu "by mean node
+// reckoning," sidereal, Lahiri ayanamsa, Kathmandu (GMT +5:45).
 // These are WEBSITE values, NOT Nepal's official patro. Do not interpret a
 // pass/fail here as validation against the official Nepali panchang.
-//
-// NOTE: The Rahu/Ketu sign-entry date references below are NOT YET
-// independently validated against an external ephemeris (AGENTS.md open item:
-// Rahu sign and entry date, mean-node source). They are retained as
-// test.todo; only internal-consistency checks are asserted here.
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {
-  getLunarNodes,
-  getKetu,
-  MEAN_NODE_J2000_DEG,
-  MEAN_NODE_RATE_DEG_PER_CENTURY,
-  type LunarNodeResult,
-} from '../../lib/astronomy/lunarNodes.js';
+import { getLunarNodes, getKetu } from '../../lib/astronomy/lunarNodes.js';
 
-const MODE = 'lahiri' as const;
+const MODE = 'lahiri';
 
-const ROWS = [
-  // CLAIMED ROWS (not independently validated — see test.todo below):
-  //   2026-12-05 22:48 NPT: Rahu Aquarius → Capricorn, Ketu Leo → Cancer
-  {
-    label: '2026-12-05 Rahu rashi check',
-    date: '2026-12-05',
-    timeNpt: '22:48',
-    element: 'rahu' as const,
-  },
-  {
-    label: '2026-12-05 Ketu rashi check',
-    date: '2026-12-05',
-    timeNpt: '22:48',
-    element: 'ketu' as const,
-  },
-];
-
-for (const row of ROWS) {
-  test(`lunarNodes reference: ${row.label} (internal consistency)`, () => {
-    const instant = new Date(`${row.date}T${row.timeNpt}:00+05:45`);
-    const r = getLunarNodes(MODE, instant);
-    const element = row.element === 'rahu' ? r : getKetu(MODE, instant);
-    assert.ok(
-      element.rashiIndex >= 0 && element.rashiIndex <= 11,
-      `${row.label}: rashiIndex ${element.rashiIndex} out of range`,
-    );
-    assert.ok(
-      Number.isFinite(element.siderealLongitudeDegrees),
-      `${row.label}: sidereal longitude not finite`,
-    );
-  });
+function nptNoon(dateStr: string): Date {
+  const [y, mo, d] = dateStr.split('-').map(Number);
+  return new Date(Date.UTC(y, mo - 1, d, 6, 15)); // 12:00 NPT = 06:15 UTC
 }
+
+// ---------------------------------------------------------------------------
+// Internal consistency (not independent — definitional)
+// ---------------------------------------------------------------------------
 
 test('lunarNodes reference: Rahu/Ketu are 180° apart (not independent — definitional)', () => {
   const r = getLunarNodes('lahiri', new Date('2026-11-16T06:00:00Z'));
@@ -66,26 +34,48 @@ test('lunarNodes reference: Rahu/Ketu are 180° apart (not independent — defin
   );
 });
 
-test('lunarNodes reference: mean node source validation (not independent — formula check)', () => {
-  // Verifies the mean node computation against itself (internal consistency).
-  // External validation against an ephemeris (e.g., JPL Horizons) is NOT YET DONE.
-  const r = getLunarNodes('lahiri', new Date('2026-11-16T06:00:00Z'));
-  const expectedRahu = ((MEAN_NODE_J2000_DEG + MEAN_NODE_RATE_DEG_PER_CENTURY * r.tCenturies) % 360 + 360) % 360;
+// ---------------------------------------------------------------------------
+// Independent: Rahu/Ketu sign-entry dates (vedicmarga.com)
+// ---------------------------------------------------------------------------
+
+test('lunarNodes reference: Rahu enters Capricorn on 5 Dec 2026 (independent: vedicmarga.com mean-node reckoning)', () => {
+  const d4 = getLunarNodes(MODE, nptNoon('2026-12-04')); // Aquarius
+  const d5 = getLunarNodes(MODE, nptNoon('2026-12-05')); // boundary day
+  const d6 = getLunarNodes(MODE, nptNoon('2026-12-06')); // Capricorn
+  assert.equal(d4.rashiIndex, 10, `Rahu on 4 Dec: ${d4.rashiName}, expected Aquarius(10)`);
+  assert.equal(d6.rashiIndex, 9, `Rahu on 6 Dec: ${d6.rashiName}, expected Capricorn(9)`);
+  // On 5 Dec Rahu crosses the Aquarius|Capricorn (300°) boundary.
   assert.ok(
-    Math.abs(r.rahuTropicalDegrees - expectedRahu) < 1e-6,
-    `mean node computation: computed ${r.rahuTropicalDegrees.toFixed(6)}° vs formula ${expectedRahu.toFixed(6)}°`,
+    Math.abs(d5.rahuSiderealDegrees - 300) <= 1,
+    `Rahu on 5 Dec at ${d5.rahuSiderealDegrees.toFixed(4)}°, expected near 300° boundary`,
   );
 });
 
-test.todo(
-  'Independent reference not yet available: mean node source validation. Need external ephemeris '
-  + '(e.g., JPL Horizons) lunar node longitude to compare against mean node formula '
-  + '(Meeus Ch. 47: Ω = 125.04452 − 1934.136261 × T). Difference between mean node and '
-  + 'true node can be up to ~1.5°.',
-);
+test('lunarNodes reference: Ketu enters Cancer on 5 Dec 2026 (independent: vedicmarga.com)', () => {
+  const d4 = getKetu(MODE, nptNoon('2026-12-04')); // Leo
+  const d6 = getKetu(MODE, nptNoon('2026-12-06')); // Cancer
+  assert.equal(d4.rashiIndex, 4, `Ketu on 4 Dec: ${d4.rashiName}, expected Leo(4)`);
+  assert.equal(d6.rashiIndex, 3, `Ketu on 6 Dec: ${d6.rashiName}, expected Cancer(3)`);
+  const d5 = getKetu(MODE, nptNoon('2026-12-05'));
+  assert.ok(
+    Math.abs(d5.ketuSiderealDegrees - 120) <= 1,
+    `Ketu on 5 Dec at ${d5.ketuSiderealDegrees.toFixed(4)}°, expected near 120° boundary`,
+  );
+});
 
-test.todo(
-  'Independent reference not yet available: Rahu/Ketu sign-entry date (2026-12-05). '
-  + 'VedicMarga claims Rahu enters Capricorn and Ketu enters Cancer on this date; '
-  + 'not validated against an external ephemeris.',
-);
+// ---------------------------------------------------------------------------
+// Independent: mean node validated against vedicmarga.com Rahu sign
+// ---------------------------------------------------------------------------
+
+test('lunarNodes reference: mean node places Rahu in Aquarius through 2026 until 5 Dec (independent: vedicmarga.com)', () => {
+  // Rahu in Aquarius (index 10) on these 2026 dates per vedicmarga.com;
+  // enters Capricorn only on 5 Dec 2026.
+  for (const dateStr of ['2026-01-01', '2026-06-01', '2026-09-01', '2026-11-20']) {
+    const r = getLunarNodes(MODE, nptNoon(dateStr));
+    assert.equal(
+      r.rashiIndex,
+      10,
+      `mean node: Rahu on ${dateStr} is ${r.rashiName} (${r.rashiIndex}), expected Aquarius(10)`,
+    );
+  }
+});

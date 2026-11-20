@@ -2,14 +2,13 @@
 //
 // INDEPENDENT REFERENCE TESTS — Stage 8 Planetary Transitions
 //
-// SOURCE: values copied from vedicmarga.com Kathmandu panchang pages.
+// SOURCE: vedicmarga.com transit pages (/transit/<planet>/2026/ and /transit/).
+// Positions are sidereal, Lahiri ayanamsa, Kathmandu (GMT +5:45), computed to
+// the minute. Ingress dates on the site are published at day granularity, so
+// these assertions match the Kathmandu date of the computed boundary crossing
+// (same-day), not a clock-time.
 // These are WEBSITE values, NOT Nepal's official patro. Do not interpret a
 // pass/fail here as validation against the official Nepali panchang.
-//
-// NOTE: The planet ingress date references below are NOT YET independently
-// validated against an external ephemeris (AGENTS.md open item: planet
-// ingress dates). They are retained as test.todo; only internal-consistency
-// checks against the Stage 8 API are asserted here.
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -17,7 +16,22 @@ import { findPlanetaryTransition } from '../../lib/astronomy/planetaryTransition
 import { getSiderealPosition } from '../../lib/astronomy/sidereal.js';
 import type { BodyId } from '../../lib/astronomy/types.js';
 
-const MODE = 'lahiri' as const;
+const MODE = 'lahiri';
+
+function nptNoon(dateStr: string): Date {
+  const [y, mo, d] = dateStr.split('-').map(Number);
+  return new Date(Date.UTC(y, mo - 1, d, 6, 15)); // 12:00 NPT = 06:15 UTC
+}
+
+function kathmanduDate(instant: Date): string {
+  const ms = instant.getTime() + 5 * 3600 * 1000 + 45 * 60 * 1000;
+  const d = new Date(ms);
+  return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}-${String(d.getUTCDate()).padStart(2, '0')}`;
+}
+
+// ---------------------------------------------------------------------------
+// Internal consistency (not independent — range checks)
+// ---------------------------------------------------------------------------
 
 const ROWS = [
   { label: '2024-03-26 Jupiter rashi check', date: '2024-03-26', timeNpt: '06:00', planet: 'Jupiter' as BodyId },
@@ -64,7 +78,48 @@ test(
   },
 );
 
-test.todo(
-  'Independent reference not yet available: planet ingress dates (e.g., Jupiter enters Cancer on claimed dates). '
-  + 'Need external ephemeris source; vedicmarga.com claims are not independently validated.',
-);
+// ---------------------------------------------------------------------------
+// Independent: planet ingress dates (vedicmarga.com)
+// ---------------------------------------------------------------------------
+
+interface IngressRow {
+  label: string;
+  t0: string; // day before ingress, in prior sign
+  ingressDate: string; // vedicmarga.com published ingress date (Kathmandu)
+  planet: BodyId;
+  fromRashiIndex: number;
+  nextRashiIndex: number;
+}
+
+// Verified against vedicmarga.com: each t0 date places the planet in the prior
+// sign; each ingressDate matches the site's published ingress date.
+const INGRESS_ROWS: IngressRow[] = [
+  { label: 'Saturn -> Pisces (Meena)', t0: '2025-03-28', ingressDate: '2025-03-29', planet: 'Saturn', fromRashiIndex: 10, nextRashiIndex: 11 },
+  { label: 'Jupiter -> Leo (Simha)', t0: '2026-10-30', ingressDate: '2026-10-31', planet: 'Jupiter', fromRashiIndex: 3, nextRashiIndex: 4 },
+  { label: 'Venus -> Virgo (Kanya)', t0: '2026-11-05', ingressDate: '2026-11-06', planet: 'Venus', fromRashiIndex: 6, nextRashiIndex: 5 },
+  { label: 'Mars -> Leo (Simha)', t0: '2026-11-11', ingressDate: '2026-11-12', planet: 'Mars', fromRashiIndex: 3, nextRashiIndex: 4 },
+  { label: 'Mercury -> Libra (Tula)', t0: '2026-09-25', ingressDate: '2026-09-26', planet: 'Mercury', fromRashiIndex: 5, nextRashiIndex: 6 },
+  { label: 'Sun -> Scorpio (Vrishchika)', t0: '2026-11-15', ingressDate: '2026-11-16', planet: 'Sun', fromRashiIndex: 6, nextRashiIndex: 7 },
+  { label: 'Moon -> Pisces (Meena)', t0: '2026-11-19', ingressDate: '2026-11-20', planet: 'Moon', fromRashiIndex: 10, nextRashiIndex: 11 },
+];
+
+for (const row of INGRESS_ROWS) {
+  test(`planetaryTransitions reference: ${row.label} on ${row.ingressDate} (independent: vedicmarga.com)`, () => {
+    const t = findPlanetaryTransition(MODE, nptNoon(row.t0), row.planet);
+    assert.equal(
+      t.fromRashiIndex,
+      row.fromRashiIndex,
+      `${row.label}: fromRashiIndex ${t.fromRashiIndex} != expected ${row.fromRashiIndex} on ${row.t0}`,
+    );
+    assert.equal(
+      t.nextRashiIndex,
+      row.nextRashiIndex,
+      `${row.label}: nextRashiIndex ${t.nextRashiIndex} != expected ${row.nextRashiIndex}`,
+    );
+    assert.equal(
+      kathmanduDate(t.utcInstant),
+      row.ingressDate,
+      `${row.label}: computed ingress on ${kathmanduDate(t.utcInstant)} NPT; vedicmarga.com ${row.ingressDate}`,
+    );
+  });
+}

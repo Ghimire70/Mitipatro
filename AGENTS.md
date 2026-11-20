@@ -20,7 +20,11 @@ Status (update after each stage)
 - The round-botany worktree is retired; a backup zip is on the Desktop.
 - Open items:
   - Stage 7 element assertions — DONE: tithi, nakshatra, yoga, karana asserted at sunrise (name, paksha/pada, end within 3 min) against vedicmarga.com reference rows in tests/astronomy/panchanga.reference.test.ts (6 rows, all pass). Stale test.todo stub removed from tests/astronomy/planetaryTransitions.test.ts (file restored to its committed planetary-transition tests).
-  - Stage 8 independent references (Saturn retrograde dates, planet ingress dates, Rahu sign and entry date, the mean-node source).
-  - 8 todo rows (2 yoga, 3 karana, 2 panchang placeholders, 1 nakshatra).
-  - Printed-patro checkpoint.
+  - Stage 8 independent references — DONE against vedicmarga.com (Kathmandu, NPT, Lahiri ayanamsa, day-granularity dates; site says "computed to the minute" but publishes dates only):
+      * Saturn retrograde 2026: Jul 27 – Dec 11 in Pisces (tests/astronomy/retrograde.reference.test.ts, 3 rows pass).
+      * Planet ingress dates: Saturn→Pisces 29 Mar 2025, Jupiter→Leo 31 Oct 2026, Venus→Virgo 6 Nov 2026, Mars→Leo 12 Nov 2026, Mercury→Libra 26 Sep 2026, Sun→Scorpio 16 Nov 2026, Moon→Pisces 20 Nov 2026 (tests/astronomy/planetaryTransitions.reference.test.ts, 7 ingress rows pass).
+      * Rahu sign & entry date: Rahu Aquarius→Capricorn and Ketu Leo→Cancer on 5 Dec 2026 (tests/astronomy/lunarNodes.reference.test.ts).
+      * Mean-node source: mean-node Rahu straddles the 300° Aquarius|Capricorn boundary on 5 Dec 2026 and stays in Aquarius through 20 Nov 2026, matching vedicmarga.com's "by mean node reckoning" (tests/astronomy/lunarNodes.reference.test.ts).
+  - 8 todo rows (2 yoga, 3 karana, 2 panchang placeholders, 1 nakshatra): left as test.todo with documented reasons; not tuned, awaiting independent external data.
+  - Printed-patro checkpoint: printed Nepali patro for 2025-07-23 not yet available; element end times after sunrise cannot be verified against the published source.
 - All reference data comes from one website (vedicmarga.com, Kathmandu, NPT, 3-minute tolerance).
