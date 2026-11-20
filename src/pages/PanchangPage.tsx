@@ -3,17 +3,14 @@ import { AlertTriangle, Calendar, Clock, Moon, Sun, Star } from 'lucide-react';
 import {
   adToBs,
   getTodayNepal,
-  toDevanagariDigits,
   validateAdDate,
 } from '../../lib/bsConverter';
 import type { FaqItem } from '../../lib/seo';
 import {
   getDailyPanchanga,
   type DailyPanchanga,
-  DEFAULT_NEAR_SUNRISE_WINDOW_MINUTES,
 } from '../../lib/astronomy/panchanga.js';
 import { FaqSection } from '../components/FaqSection';
-import { HolidayReferenceNote } from '../components/HolidayReferenceNote';
 
 interface PanchangPageProps {
   faqs?: FaqItem[];
@@ -31,14 +28,28 @@ const DEFAULT_FAQS: FaqItem[] = [
     answer: 'यस पृष्ठको सूर्योदय, सूर्यास्त, तिथि, नक्षत्र, योग र करण काठमाडौं (२७.७१७२° उत्तर, ८५.३२४०° पूर्व) को Asia/Kathmandu (UTC+०५:४५) समयका आधारमा गणना गरिएको छ।',
   },
   {
-    question: 'के यो आधिकारिक नेपाली पात्रो हो?',
-    answer: 'होइन, यो कम्प्युट गरिएको परिणाम हो। धार्मिक वा उत्सवको मिति निश्चित गर्नु अघि कृपया स्थानीय पात्रो वा अधिकारीक स्रोतसँग पुष्टि गर्नुहोला।',
+    question: 'के यो परिणामलाई धार्मिक वा उत्सवको मिति निश्चित गर्न एक्लै प्रयोग गर्न सकिन्छ?',
+    answer: 'धार्मिक वा उत्सवको मिति निश्चित गर्नु अघि कृपया स्थानीय पात्रोसँग पुष्टि गर्नुहोला।',
   },
   {
     question: 'सूर्योदयको समयमा कुन तत्व प्रभावी हुन्छ भनी कसरी थाहा पाइन्छ?',
     answer: 'सूर्यको वास्तविक सूर्योदय क्षणमा कुन तिथि, नक्षत्र, योग र करण प्रभावी छ, त्यसलाई त्यस मितिको तत्व मानिन्छ। सूर्योदयको नजिकै तत्व परिवर्तन भएमा त्यसलाई नजिकको परिवर्तन (near-sunrise) को रूपमा चिन्हित गरिएको छ।',
   },
 ];
+
+function kathmanduNoonDate(year: number, month: number, day: number): Date {
+  // The existing astronomy layer defines Asia/Kathmandu as UTC+05:45
+  // (lib/astronomy/moonTransitions.ts). 12:00 NPT is therefore 06:15 UTC.
+  return new Date(Date.UTC(year, month - 1, day, 6, 15));
+}
+
+function formatKathmanduTime(kathmanduDisplay: string | null | undefined): string {
+  if (!kathmanduDisplay) return '–';
+  // VedicMarga's Kathmandu display was observed at HH:MM; deliberately drop
+  // seconds rather than rounding them.
+  const time = /T(\d{2}:\d{2})/.exec(kathmanduDisplay)?.[1];
+  return time ? `${time} NPT` : '–';
+}
 
 export const PanchangPage: React.FC<PanchangPageProps> = ({
   faqs: passedFaqs,
@@ -61,18 +72,27 @@ export const PanchangPage: React.FC<PanchangPageProps> = ({
     return validateAdDate(y, m, d);
   }, [adYear, adMonth, adDay]);
 
-  const panchanga: DailyPanchanga | null = useMemo(() => {
-    if (!check.valid) return null;
+  const calculation = useMemo(() => {
+    if (!check.valid) {
+      return { panchanga: null as DailyPanchanga | null, error: null as string | null };
+    }
     const y = Number(adYear);
     const m = Number(adMonth);
     const d = Number(adDay);
-    const civilDate = new Date(Date.UTC(y, m - 1, d));
     try {
-      return getDailyPanchanga(civilDate);
+      return {
+        panchanga: getDailyPanchanga(kathmanduNoonDate(y, m, d)),
+        error: null as string | null,
+      };
     } catch {
-      return null;
+      return {
+        panchanga: null as DailyPanchanga | null,
+        error: 'यस मितिका लागि सूर्योदय वा पञ्चाङ्गको परिणाम उपलब्ध भएन।',
+      };
     }
   }, [adYear, adMonth, adDay, check.valid]);
+
+  const panchanga = calculation.panchanga;
 
   const bsDate = useMemo(() => {
     if (!panchanga) return null;
@@ -82,6 +102,10 @@ export const PanchangPage: React.FC<PanchangPageProps> = ({
       return null;
     }
   }, [panchanga, adYear, adMonth, adDay]);
+
+  const selectedAdIso = check.valid
+    ? `${String(adYear).padStart(4, '0')}-${String(adMonth).padStart(2, '0')}-${String(adDay).padStart(2, '0')}`
+    : null;
 
   const handleLink = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
@@ -125,7 +149,7 @@ export const PanchangPage: React.FC<PanchangPageProps> = ({
     if (!el || !el.nearSunrise) return null;
     const dir = el.nearSunrise.beforeSunrise ? 'before' : 'after';
     const abs = Math.abs(el.nearSunrise.minutesFromSunrise);
-    return `सूर्योदयको नजिकै परिवर्तन: ${el.nearSunrise.changeKathmandu} (${dir} ${abs.toFixed(1)} मिनेट)`;
+    return `सूर्योदयको नजिकै परिवर्तन: ${formatKathmanduTime(el.nearSunrise.changeKathmandu)} (${dir} ${abs.toFixed(1)} मिनेट)`;
   };
 
   return (
@@ -147,7 +171,7 @@ export const PanchangPage: React.FC<PanchangPageProps> = ({
             </p>
             <p className="mt-1 flex items-center gap-2 text-sm text-stone-500">
               <Clock className="h-4 w-4 text-stone-400" aria-hidden="true" />
-              <span>ISO: <span className="font-mono text-xs tabular-nums">{today.ad.iso}</span></span>
+              <span>ISO: <span className="font-mono text-xs tabular-nums">{panchanga?.civilDate ?? selectedAdIso ?? '–'}</span></span>
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
@@ -233,80 +257,70 @@ export const PanchangPage: React.FC<PanchangPageProps> = ({
               सूर्योदयको समयमा प्रभावी तत्व (Elements at Sunrise)
             </h2>
             <p className="mt-2 text-sm text-stone-600">
-              काठमाडौंको सूर्योदय: <strong>{panchanga.sunrise.kathmanduDisplay}</strong>
-              &nbsp;·&nbsp; सूर्यास्त: <strong>{panchanga.sunset.kathmanduDisplay}</strong>
+              काठमाडौंको सूर्योदय: <strong>{formatKathmanduTime(panchanga.sunrise.kathmanduDisplay)}</strong>
+              &nbsp;·&nbsp; सूर्यास्त: <strong>{formatKathmanduTime(panchanga.sunset.kathmanduDisplay)}</strong>
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {elementCard(
                 'सूर्योदय (Sunrise)',
                 <Sun className="h-5 w-5 text-[#9A3412]" aria-hidden="true" />,
-                panchanga.sunrise.kathmanduDisplay!,
-                `ISO ${panchanga.sunrise.utcInstant!.toISOString()}`,
+                formatKathmanduTime(panchanga.sunrise.kathmanduDisplay),
+                'काठमाडौं समय',
                 null,
               )}
               {elementCard(
                 'सूर्यास्त (Sunset)',
                 <Moon className="h-5 w-5 text-stone-500" aria-hidden="true" />,
-                panchanga.sunset.kathmanduDisplay!,
-                `ISO ${panchanga.sunset.utcInstant!.toISOString()}`,
+                formatKathmanduTime(panchanga.sunset.kathmanduDisplay),
+                'काठमाडौं समय',
                 null,
               )}
               {elementCard(
                 'तिथि (Tithi)',
                 <Calendar className="h-5 w-5 text-stone-500" aria-hidden="true" />,
                 `${panchanga.tithi.name} (${panchanga.tithi.paksha})`,
-                `तिथि नम्बर ${panchanga.tithi.tithiNumber} &middot; अन्त्य: ${panchanga.tithi.end?.kathmanduDisplay ?? '–'}`,
+                `तिथि नम्बर ${panchanga.tithi.tithiNumber} · अन्त्य: ${formatKathmanduTime(panchanga.tithi.end?.kathmanduDisplay)} · अर्को: ${panchanga.tithi.nextName}`,
                 nearSunriseNote(panchanga.tithi),
               )}
               {elementCard(
                 'नक्षत्र (Nakshatra)',
                 <Star className="h-5 w-5 text-amber-500" aria-hidden="true" />,
-                `${panchanga.nakshatra.name}`,
-                `पाद ${panchanga.nakshatra.pada} &middot; अन्त्य: ${panchanga.nakshatra.end?.kathmanduDisplay ?? '–'}`,
+                `${panchanga.nakshatra.name} (पाद ${panchanga.nakshatra.pada})`,
+                `अन्त्य: ${formatKathmanduTime(panchanga.nakshatra.end?.kathmanduDisplay)} · अर्को: ${panchanga.nakshatra.nextName}`,
                 nearSunriseNote(panchanga.nakshatra),
               )}
               {elementCard(
                 'योग (Yoga)',
                 <Star className="h-5 w-5 text-violet-500" aria-hidden="true" />,
                 panchanga.yoga.name,
-                `अन्त्य: ${panchanga.yoga.end?.kathmanduDisplay ?? '–'}`,
+                `अन्त्य: ${formatKathmanduTime(panchanga.yoga.end?.kathmanduDisplay)} · अर्को: ${panchanga.yoga.nextName}`,
                 nearSunriseNote(panchanga.yoga),
               )}
               {elementCard(
                 'करण (Karana)',
                 <Calendar className="h-5 w-5 text-stone-500" aria-hidden="true" />,
                 panchanga.karana.name,
-                `अन्त्य: ${panchanga.karana.end?.kathmanduDisplay ?? '–'}`,
+                `अन्त्य: ${formatKathmanduTime(panchanga.karana.end?.kathmanduDisplay)} · अर्को: ${panchanga.karana.nextName}`,
                 nearSunriseNote(panchanga.karana),
               )}
-            </div>
-            <div className="mt-6">
-              <HolidayReferenceNote />
             </div>
           </div>
         </section>
       ) : (
         <div className="mt-8 rounded-xl border border-stone-200 bg-white p-6 sm:p-8 shadow-xs text-center">
           <p className="text-sm text-stone-600">
-            मिति छान्नुहोस् र पञ्चाङ्ग हेर्नुहोस्।
+            {calculation.error ?? 'मिति छान्नुहोस् र पञ्चाङ्ग हेर्नुहोस्।'}
           </p>
         </div>
       )}
 
-      {/* Computed-not-official disclaimer */}
       <section aria-labelledby="panchang-disclaimer-heading" className="mt-12">
         <div className="rounded-xl border border-[#9A3412]/30 bg-[#FDF7F2] p-5 sm:p-6">
           <h2 id="panchang-disclaimer-heading" className="font-display text-lg font-semibold text-[#7C2D12]">
             महत्त्वपूर्ण सूचना (Important Disclaimer)
           </h2>
           <p className="mt-2 text-sm text-stone-700 leading-relaxed">
-            यो पृष्ठको पञ्चाङ्ग खगोलशास्त्रीय गणनामा आधारित कम्प्युट गरिएको परिणाम हो। यो{' '}
-            <strong>आधिकारिक नेपाली पात्रो होइन</strong> र नेपाल सरकार वा अधिकारीक ज्योतिष समितिद्वारा प्रमाणित छैन।
-          </p>
-          <p className="mt-2 text-sm text-stone-600">
-            तिथि, नक्षत्र, योग र करणको मिति स्थान, सूर्योदयको परम्परा र पात्रोको पद्धतिअनुसार फरक पर्न सक्छ।
-            धार्मिक, उत्सव वा मुहूर्तको मिति निश्चित गर्नु अघि कृपया स्थानीय पात्रो वा अधिकारीक स्रोतसँग पुष्टि गर्नुहोला।
-            सूर्योदयको १० मिनेटको भित्र तत्व परिवर्तन भएमा त्यसलाई 'नजिकको परिवर्तन' को रूपमा चिन्हित गरिएको छ।
+            Computed values, not Nepal&apos;s official patro. Cross-checked against one website only. Please confirm with an official patro.
           </p>
         </div>
       </section>

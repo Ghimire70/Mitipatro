@@ -19,7 +19,7 @@ Status (update after each stage)
 - Stage 8 modules (planetaryTransitions, retrograde, lunarNodes) are committed on branch stage8-salvage (commit e7b45f5) with internal tests only, not validated against any external source, and are not accepted.
 - The round-botany worktree is retired; a backup zip is on the Desktop.
 - Open items:
-  - Stage 7 element assertions (tithi, nakshatra, yoga, karana values at sunrise are printed but not asserted).
+  - Stage 7 element assertions — DONE: tithi, nakshatra, yoga, karana asserted at sunrise (name, paksha/pada, end within 3 min) against vedicmarga.com reference rows in tests/astronomy/panchanga.reference.test.ts (6 rows, all pass). Stale test.todo stub removed from tests/astronomy/planetaryTransitions.test.ts (file restored to its committed planetary-transition tests).
   - Stage 8 independent references (Saturn retrograde dates, planet ingress dates, Rahu sign and entry date, the mean-node source).
   - 8 todo rows (2 yoga, 3 karana, 2 panchang placeholders, 1 nakshatra).
   - Printed-patro checkpoint.

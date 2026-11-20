@@ -21,6 +21,7 @@ const appElement = (
     googleSiteVerification={ssrData?.googleSiteVerification}
     converterToolsIndexingEnabled={ssrData?.converterToolsIndexingEnabled}
     rashifalIndexingEnabled={ssrData?.rashifalIndexingEnabled}
+    panchangIndexingEnabled={ssrData?.panchangIndexingEnabled}
   />
 );
 
