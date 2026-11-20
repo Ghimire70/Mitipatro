@@ -29,10 +29,17 @@
 //       Root finder: our change at 03:18 NPT (diff 6.31 min > 3 min tolerance), next = Saubhagya
 //     * At Nov 10 ~03:24 NPT: our sum = 52.8872° (idx 3 = Saubhagya), VedicMarga expects Shobhana (idx 4)
 //       Root finder: our change at 03:12 NPT (diff 11.75 min > 3 min tolerance), next = Shobhana
-//   The discrepancy (~0.2–0.6° below boundary on both dates) may stem from a
-//   different Lahiri ayanamsha value or ephemeris used by VedicMarga's
-//   "Engine 1.11.0" vs our Astronomy Engine (VSOP87/ELP2000-82B) pipeline.
-//   No definitive cause has been established. These cases are marked test.todo
+//   Independent cross-check (source other than vedicmarga.com):
+//     * 2026-11-09: Astrovidhi (Kathmandu) says Saubhagya till 03:08; vedicmarga says 03:12.
+//       Names match; times agree within ~4 min. Vedicmarga time is cross-validated.
+//     * 2026-11-10: HinduTone (Kathmandu) says Shobhana till 03:25; vedicmarga says 03:24.
+//       Names match; times agree within ~1 min. Vedicmarga time is cross-validated.
+//   Despite independent confirmation of the vedicmarga times, our code's yoga root
+//   finder produces transitions ~6–12 min off with a 1-yoga index discrepancy. This
+//   may stem from a different Lahiri ayanamsha value or ephemeris used by VedicMarga's
+//   "Engine 1.11.0" vs our Astronomy Engine (VSOP87/ELP2000-82B) pipeline. No
+//   definitive cause has been established. These cases are marked test.todo and MUST
+//   NOT be counted as independently validated. Do not tune the formula to make them pass.
 //   and MUST NOT be counted as independently validated.
 
 import test from 'node:test';
