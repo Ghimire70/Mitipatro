@@ -152,8 +152,8 @@ export const FESTIVAL_RULES: FestivalRule[] = [
     paksha: 'shukla',
     searchStartAd: '2025-09-29',
     searchEndAd: '2025-10-05',
-    expectedAdDate: '2025-10-04',
-    source: 'Ministry of Home Affairs gazette ref 25873 (27 Feb 2025)',
+    expectedAdDate: '2025-10-02',
+    source: 'Nepal Panchanga Nirnayak Bikash Samitee + multiple independent sources (Ashwin 16, 2082 = Oct 2, 2025)',
     scope: 'in-scope',
   },
   {
@@ -163,8 +163,8 @@ export const FESTIVAL_RULES: FestivalRule[] = [
     paksha: 'krishna',
     searchStartAd: '2025-10-15',
     searchEndAd: '2025-10-25',
-    expectedAdDate: '2025-10-20',
-    source: 'Ministry of Home Affairs gazette ref 25873 (27 Feb 2025)',
+    expectedAdDate: '2025-10-19',
+    source: 'Nepal Panchanga Nirnayak Bikash Samitee + multiple independent sources (Kartik 2, 2082 = Oct 19, 2025)',
     scope: 'in-scope',
   },
   {
@@ -220,8 +220,8 @@ export const FESTIVAL_RULES: FestivalRule[] = [
     paksha: 'krishna',
     searchStartAd: '2026-11-01',
     searchEndAd: '2026-11-15',
-    expectedAdDate: '2026-11-08',
-    source: 'Ministry of Home Affairs gazette ref 26242',
+    expectedAdDate: '2026-11-07',
+    source: 'Nepal Panchanga Nirnayak Bikash Samitee + multiple independent sources (Kartik 21, 2083 = Nov 7, 2026)',
     scope: 'in-scope',
   },
   {

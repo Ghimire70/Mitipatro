@@ -10,3 +10,9 @@ coverage/
 .netlify/
 *.tsbuildinfo
 .kilo/
+# Temporary downloaded reference files
+reference-data/downloads/
+
+# Temporary generated files
+reference-data/tmp/
+reference-data/temp/

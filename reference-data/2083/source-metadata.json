@@ -1,0 +1,51 @@
+{
+  "year": 2083,
+  "bsYear": 2083,
+  "adYearRange": "2026-2027",
+  "source": "सूर्यपञ्चाङ्ग (Surya Panchanga)",
+  "documents": {
+    "2083.csv": {
+      "description": "Daily panchanga data — sunrise tithi, nakshatra, yoga, karana for all 366 days of BS 2083",
+      "columns": [
+        "chandra_month", "month", "day", "sunrise", "sunset", "tithi", "tithi_ghadi_pala",
+        "nakhestra", "nakhestra_ghadi_pala", "yog", "yog_ghadi_pala", "karan", "karan_ghadi_pala",
+        "chandrama_rasi", "chandrama_rasi_until", "brihaspati_rasi", "brihaspati_rasi_until"
+      ],
+      "useCase": "Verify computed sunrise tithi/nakshatra/yoga/karana against printed Nepali patro"
+    },
+    "2083 (1).csv": {
+      "description": "Festival/holiday calendar — 180 events with category, scope, and holiday status",
+      "columns": ["month", "day", "event", "event_devanagari", "is_holiday", "category", "scope"],
+      "useCase": "Cross-reference festival dates against Ministry of Home Affairs gazette"
+    },
+    "2083 (2).csv": {
+      "description": "Auspicious dates (muhurta) table — 9 ritual categories for BS 2083",
+      "columns": ["bibaha", "bratabandha", "rudri", "grihaprawes", "griharambha", "agni jurne", "annaprashan", "nwagi khane", "dokan kholne"],
+      "useCase": "Cross-check auspicious dates for rituals (not festival dates)"
+    },
+    "2083.yaml": {
+      "description": "Panchanga muhurta prakaran + samaya suddhi — ritual timing rules from सूर्यपञ्चाङ्ग मुहूर्त प्रकरण",
+      "entries": 35,
+      "useCase": "Reference for ritual timing rules (not festival dates)"
+    },
+    "2083.pdf": {
+      "description": "Printed Nepali Patro for BS 2083",
+      "status": "Not machine-readable — requires OCR or manual transcription",
+      "useCase": "Secondary verification source for festival and muhurta dates"
+    }
+  },
+  "verificationStatus": {
+    "2083.csv": "unverified — pending comparison against Astronomy Engine computation",
+    "2083 (1).csv": "unverified — pending comparison against lib/holidays.ts",
+    "2083 (2).csv": "unverified",
+    "2083.yaml": "unverified",
+    "2083.pdf": "unverified — file not machine-readable"
+  },
+  "notes": [
+    "2083.csv, 2083 (1).csv, 2083 (2).csv, and 2083.yaml appear both in reference-data/ and reference-data/printed-patro/2083/ — duplicates",
+    "Do not modify or delete original reference files",
+    "Do not import printed data into lib/holidays.ts or lib/astronomy/* — use only for comparison",
+    "Do not treat auspicious (muhurta) dates as festival dates",
+    "Do not change astronomical calculations to force agreement with printed references"
+  ]
+}

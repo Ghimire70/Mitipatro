@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { ChevronLeft, ChevronRight, Calendar as CalendarIcon, Sparkles } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Calendar as CalendarIcon, Printer, Sparkles } from 'lucide-react';
 import {
   BS_MONTHS,
   PUBLISHED_BS_YEARS,
@@ -13,6 +13,7 @@ import {
 } from '../../lib/bsConverter';
 import { getHolidaysForDate, getHolidaysForMonth } from '../../lib/holidays';
 import { HolidayReferenceNote } from './HolidayReferenceNote';
+import { getDailyPanchanga } from '../../lib/astronomy/panchanga.js';
 
 interface CalendarGridProps {
   bsYear: number;
@@ -21,6 +22,18 @@ interface CalendarGridProps {
   onNavigate?: (path: string) => void;
   showYearMonthControls?: boolean;
   rashifalIndexingEnabled?: boolean;
+}
+
+interface DayEvent {
+  name: string;
+  isPublicHoliday: boolean;
+}
+
+interface DayElementInfo {
+  tithiName?: string;
+  tithiIndex?: number;
+  paksha?: 'shukla' | 'krishna';
+  nakshatraName?: string;
 }
 
 export const CalendarGrid: React.FC<CalendarGridProps> = ({
@@ -35,7 +48,37 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
   const grid = useMemo(() => getBsMonthGrid(bsYear, bsMonth), [bsYear, bsMonth]);
   const monthHolidays = useMemo(() => getHolidaysForMonth(bsYear, bsMonth), [bsYear, bsMonth]);
 
-  // Default selected cell: today if in this month, otherwise day 1
+  // Build a map of bsDay -> holidays for fast lookup
+  const holidaysByDay = useMemo(() => {
+    const map = new Map<number, DayEvent[]>();
+    for (const h of monthHolidays) {
+      const existing = map.get(h.bsDay) ?? [];
+      map.set(h.bsDay, [...existing, { name: h.nameEn, isPublicHoliday: h.isPublicHoliday }]);
+    }
+    return map;
+  }, [monthHolidays]);
+
+  // Build element info (tithi/nakshatra) for each day in the month
+  const elementsByDay = useMemo(() => {
+    const map = new Map<number, DayElementInfo>();
+    for (const cell of grid.days) {
+      try {
+        const instant = new Date(Date.UTC(cell.adYear, cell.adMonth - 1, cell.adDay, 12, 0, 0, 0));
+        const panch = getDailyPanchanga(instant);
+        map.set(cell.bsDay, {
+          tithiName: panch.tithi.name,
+          tithiIndex: panch.tithi.index,
+          paksha: panch.tithi.paksha,
+          nakshatraName: panch.nakshatra.name,
+        });
+      } catch {
+        // Skip if computation fails for this date
+      }
+    }
+    return map;
+  }, [grid.days]);
+
+  // Default selected day: today if in this month, otherwise day 1
   const defaultSelectedDay =
     today.bs.year === bsYear && today.bs.month === bsMonth ? today.bs.day : 1;
   const [selectedDay, setSelectedDay] = useState<number>(defaultSelectedDay);
@@ -78,8 +121,8 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
 
   return (
     <section
-      aria-label={`${grid.monthMeta.en} ${bsYear} BS Calendar Grid`}
-      className="rounded-xl border border-stone-200 bg-white shadow-xs"
+      aria-label={`Print ${grid.monthMeta.en} ${bsYear} BS calendar`}
+      className={`print-month-page rounded-xl border border-stone-200 bg-white shadow-xs`}
     >
       {/* Top Month Toolbar */}
       <div className="flex flex-col gap-4 border-b border-stone-200 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
@@ -97,7 +140,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
           </p>
         </div>
 
-        <div className="print-hidden flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {showYearMonthControls && (
             <>
               <label htmlFor="cal-year-select" className="sr-only">
@@ -144,8 +187,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
               <a
                 href={`/calendar/${grid.prevMonth.year}/${grid.prevMonth.slug}`}
                 onClick={(e) =>
-                  handleLink(e, `/calendar/${grid.prevMonth!.year}/${grid.prevMonth!.slug}`)
-                }
+                  handleLink(e, `/calendar/${grid.prevMonth!.year}/${grid.prevMonth!.slug}`)}
                 aria-label={`Previous month: ${grid.prevMonth.nameEn} ${grid.prevMonth.year}`}
                 className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-stone-200 bg-white text-stone-700 transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-[#9A3412]"
               >
@@ -164,8 +206,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
               <a
                 href={`/calendar/${grid.nextMonth.year}/${grid.nextMonth.slug}`}
                 onClick={(e) =>
-                  handleLink(e, `/calendar/${grid.nextMonth!.year}/${grid.nextMonth!.slug}`)
-                }
+                  handleLink(e, `/calendar/${grid.nextMonth!.year}/${grid.nextMonth!.slug}`)}
                 aria-label={`Next month: ${grid.nextMonth.nameEn} ${grid.nextMonth.year}`}
                 className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-stone-200 bg-white text-stone-700 transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-[#9A3412]"
               >
@@ -180,6 +221,16 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
               </span>
             )}
           </div>
+
+          {/* Print button */}
+          <button
+            onClick={() => window.print()}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-stone-200 bg-white text-stone-700 transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-[#9A3412]"
+            aria-label="Print calendar"
+          >
+            <Printer className="h-4 w-4" aria-hidden="true" />
+            <span className="sr-only">Print calendar</span>
+          </button>
         </div>
       </div>
 
@@ -211,30 +262,27 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
             <div
               key={`empty-start-${idx}`}
               aria-hidden="true"
-              className="min-h-[68px] bg-stone-50/60 sm:min-h-[88px]"
+              className="min-h-[96px] bg-stone-50/60 sm:min-h-[112px]"
             />
           ))}
 
           {grid.days.map((cell) => {
-            const holidaysOnDay = getHolidaysForDate(cell.bsYear, cell.bsMonth, cell.bsDay);
+            const holidaysOnDay: DayEvent[] = holidaysByDay.get(cell.bsDay) ?? [];
             const hasPublicHoliday = holidaysOnDay.some((h) => h.isPublicHoliday);
             const isToday =
               today.bs.year === cell.bsYear &&
               today.bs.month === cell.bsMonth &&
               today.bs.day === cell.bsDay;
             const isSelected = selectedDay === cell.bsDay;
-            const isRedDay = cell.isSaturday || hasPublicHoliday;
+            const isSaturday = cell.isSaturday;
 
-            const holidayNames = holidaysOnDay.map((h) => h.nameEn).join(', ');
-            const cellAriaLabel = [
-              `${grid.monthMeta.en} ${cell.bsDay}, ${cell.bsYear} BS`,
-              `${cell.adMonthShort} ${cell.adDay}, ${cell.adYear}`,
-              WEEKDAYS[cell.weekday].en,
-              isToday ? 'Today' : '',
-              holidayNames ? `Holiday: ${holidayNames}` : '',
-            ]
-              .filter(Boolean)
-              .join(', ');
+            // Get element info (tithi/nakshatra) for this day
+            const elementInfo = elementsByDay.get(cell.bsDay);
+
+            // Build event list for this day (up to 5 visible, rest collapsed)
+            const eventList = holidaysOnDay.map((h) => h.name);
+            const eventCount = holidaysOnDay.length;
+            const holidayNames = eventList.join(', ');
 
             return (
               <button
@@ -242,9 +290,15 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
                 type="button"
                 role="gridcell"
                 aria-selected={isSelected}
-                aria-label={cellAriaLabel}
+                aria-label={[
+                  `${grid.monthMeta.en} ${cell.bsDay}, ${cell.bsYear} BS`,
+                  `${cell.adMonthShort} ${cell.adDay}, ${cell.adYear}`,
+                  WEEKDAYS[cell.weekday].en,
+                  isToday ? 'Today' : '',
+                  holidayNames ? `Holiday: ${holidayNames}` : '',
+                ].filter(Boolean).join(', ')}
                 onClick={() => setSelectedDay(cell.bsDay)}
-                className={`group relative flex min-h-[68px] flex-col justify-between p-1.5 text-left transition-colors duration-150 sm:min-h-[92px] sm:p-2.5 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-[#9A3412] ${
+                className={`group relative flex flex-col justify-between p-2 sm:p-3 transition-colors duration-150 sm:min-h-[132px] sm:p-3 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-[#9A3412] ${
                   isToday
                     ? 'bg-[#9A3412]/10 ring-1 ring-inset ring-[#9A3412]'
                     : isSelected
@@ -254,48 +308,59 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
                         : 'bg-white hover:bg-[#FBF9F5]'
                 }`}
               >
-                <div className="flex w-full items-start justify-between gap-1">
+                {/* BS Day Number (large, left) */}
+                <div className="flex items-start justify-between gap-1">
                   <span
-                    className={`font-mono text-base font-semibold leading-none tabular-nums sm:text-xl ${
-                      isToday || isRedDay ? 'text-[#9A3412]' : 'text-stone-900'
+                    className={`font-mono text-lg font-semibold leading-none tabular-nums sm:text-xl ${
+                      isToday || isSaturday || hasPublicHoliday ? 'text-[#9A3412]' : 'text-stone-900'
                     }`}
                   >
                     {cell.bsDay}
                   </span>
-                  <span className="text-[11px] font-medium leading-none text-stone-400 tabular-nums sm:text-xs">
+                  <span className="text-[10px] font-medium leading-none text-stone-400 tabular-nums sm:text-xs">
                     {cell.bsDayNe}
                   </span>
                 </div>
 
-                {/* Holiday / Today text label (never color-only!) */}
+                {/* Element info under day number */}
                 <div className="mt-1 flex w-full flex-col gap-0.5">
-                  {isToday && (
-                    <span className="truncate text-[10px] font-semibold tracking-wide text-[#9A3412]">
-                      Today
+                  {/* Festivals / Events first (e.g. Chhath, Teej, Bhai Tika, Rakshyabandhan) */}
+                  {eventList.slice(0, 3).map((eventName, idx) => (
+                    <span
+                      key={idx}
+                      className={`text-[9px] leading-tight ${
+                        hasPublicHoliday ? 'font-semibold text-[#9A3412]' : 'text-stone-600'
+                      }`}
+                      title={eventName}
+                    >
+                      {eventName.length > 18 ? `${eventName.slice(0, 15)}…` : eventName}
+                    </span>
+                  ))}
+                  {eventCount > 5 && (
+                    <span className="text-[9px] font-medium text-stone-500">
+                      +{eventCount - 5} more
                     </span>
                   )}
-                  {holidaysOnDay.length > 0 && (
-                    <>
-                      <span
-                        className={`sm:hidden text-[10px] leading-tight ${
-                          hasPublicHoliday ? 'font-semibold text-[#9A3412]' : 'text-stone-600'
-                        }`}
-                      >
-                        {hasPublicHoliday ? 'Holiday' : 'Event'}
-                      </span>
-                      <span
-                        className={`hidden sm:block truncate text-[11px] leading-tight ${
-                          hasPublicHoliday ? 'font-medium text-[#9A3412]' : 'text-stone-600'
-                        }`}
-                        title={holidayNames}
-                      >
-                        {holidaysOnDay[0].nameEn}
-                      </span>
-                    </>
+                  {eventList.length === 0 && cell.isSaturday && (
+                    <span className="text-[9px] text-stone-400 italic">
+                      Weekly rest
+                    </span>
+                  )}
+                  {/* Tithi info */}
+                  {elementInfo?.tithiName && (
+                    <span
+                      className={`text-[9px] leading-tight ${
+                        hasPublicHoliday ? 'font-semibold text-[#9A3412]' : 'text-stone-600'
+                      }`}
+                      title={`Tithi: ${elementInfo.tithiName} ${elementInfo.paksha}`}
+                    >
+                      {elementInfo.tithiName}
+                    </span>
                   )}
                 </div>
 
-                <div className="mt-auto flex w-full items-center justify-end pt-1">
+                {/* AD Date at bottom right */}
+                <div className="mt-auto flex w-full items-end justify-between pt-1">
                   <span className="font-mono text-[10px] text-stone-500 tabular-nums sm:text-[11px]">
                     {cell.adDay === 1 || cell.bsDay === 1
                       ? `${cell.adMonthShort} ${cell.adDay}`
@@ -310,7 +375,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
             <div
               key={`empty-end-${idx}`}
               aria-hidden="true"
-              className="min-h-[68px] bg-stone-50/60 sm:min-h-[88px]"
+              className="min-h-[96px] bg-stone-50/60 sm:min-h-[112px]"
             />
           ))}
         </div>

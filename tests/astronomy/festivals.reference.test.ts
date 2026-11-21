@@ -21,7 +21,32 @@
 //   'in-scope' rules: assert match (dayDifference === 0)
 //   'unsourced' rules: report only, no assertion (single-day conflicts or
 //     missing printed patro confirmation)
-
+//
+// KNOWN DISCREPANCY — Chhath 2082:
+//   - Gazette date: 2025-10-27 (Kartik 10, 2082)
+//   - Computed sunrise tithi date: 2025-10-28 (Shukla Shashthi at sunrise)
+//   - Kathmandu sunrise on 2025-10-27: Shukla Panchami (tithi 5)
+//   - Shukla Shashthi (tithi 6) begins ~12:05 PM NPT on Oct 27, 2025
+//   - Oct 28, 2025 sunrise: Shukla Shashthi (tithi 6) already in progress
+//
+//   Root cause: Our code uses sunrise-reckoning ("the tithi prevailing at
+//   sunrise defines the civil date"). Chhath is an evening festival
+//   (Sandhya Arghya at sunset); the relevant tithi is Shashthi, which begins
+//   at ~12:05 PM NPT on Oct 27 — after sunrise. Our code therefore computes
+//   Oct 28 (the first day Shashthi is present at sunrise), while the gazette
+//   publishes Oct 27 (the day Shashthi prevails during daylight).
+//   This is a methodological difference in day-reckoning, not a formula error.
+//   No formula, tolerance, or ayanamsha changes are made. The test remains
+//   failing to document the measured difference.
+//
+//   Sources: Nepal Panchanga Nirnayak Bikash Samitee (gazette ref 25873,
+//   27 Feb 2025); multiple independent Kathmandu panchang sources confirming
+//   Oct 27, 2025 as Chhath 2082.
+//
+//   Do not change the expected date to match computation. Do not change the
+//   computation to match the gazette. Keep this test failing to document the
+//   discrepancy.
+//
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { computeAllFestivals, type FestivalResult } from '../../lib/astronomy/festivals.js';
