@@ -135,13 +135,13 @@ export default function App({
       );
     }
     if (currentPath === '/rashifal' || currentPath === '/rashifal/daily') {
-      return <RashifalPage initialPeriod="daily" faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
+      return <RashifalPage faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} rashifalIndexingEnabled={rashifalIndexingEnabled} />;
     }
     if (currentPath === '/rashifal/weekly') {
-      return <RashifalPage initialPeriod="weekly" faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
+      return <RashifalPage faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} rashifalIndexingEnabled={rashifalIndexingEnabled} />;
     }
     if (currentPath === '/rashifal/monthly') {
-      return <RashifalPage initialPeriod="monthly" faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
+      return <RashifalPage faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} rashifalIndexingEnabled={rashifalIndexingEnabled} />;
     }
     const periodRashiMatch = /^\/rashifal\/(daily|weekly|monthly)\/([a-z]+)$/i.exec(currentPath);
     if (periodRashiMatch) {
@@ -150,11 +150,10 @@ export default function App({
       if (rashiMeta) {
         return (
           <RashifalPage
-            initialPeriod={p}
-            rashiFilter={rashiMeta.id}
             faqs={seo.faqs}
             nowMs={nowMs}
             onNavigate={navigate}
+            rashifalIndexingEnabled={rashifalIndexingEnabled}
           />
         );
       }
@@ -165,11 +164,10 @@ export default function App({
       if (rashiMeta) {
         return (
           <RashifalPage
-            initialPeriod="daily"
-            rashiFilter={rashiMeta.id}
             faqs={seo.faqs}
             nowMs={nowMs}
             onNavigate={navigate}
+            rashifalIndexingEnabled={rashifalIndexingEnabled}
           />
         );
       }

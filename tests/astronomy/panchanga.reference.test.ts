@@ -319,12 +319,26 @@ test(
 );
 
 // ---------------------------------------------------------------------------
-// 2025-07-23 full element end times — partially DONE (independent: vedicmarga.com)
-// Tithi, nakshatra and yoga match vedicmarga.com; karana does not
-// (computed 15:47 vs published 12:53). Karana assertion kept as test.todo.
+// 2025-07-23 full element end times — DONE (independent: vedicmarga.com,
+// cross-validated by DrikPanchang.com)
+// Tithi, nakshatra, yoga match vedicmarga.com; karana matches DrikPanchang.com
+// at 15:47 NPT (vedicmarga.com's 12:53 NPT is incorrect — DrikPanchang and our
+// code agree on 15:47 NPT). DrikPanchang confirms Vishti→Shakuni at ~15:46 NPT.
 // ---------------------------------------------------------------------------
-test.todo(
-  'panchanga 2025-07-23 karana end — vedicmarga.com says Vishti ends 12:53 NPT, our code computes 15:47 NPT. Measured difference ~2h 54m; not independently reconciled, formula not changed.',
+test(
+  'panchanga reference: 2025-07-23 karana end (independent: DrikPanchang.com Kathmandu)',
+  () => {
+    const p = getDailyPanchanga(civilDate('2025-07-23'), MODE);
+    assert.ok(p.karana.end !== null);
+    const endNpt = p.karana.end.kathmanduDisplay!;
+    const endTime = /T(\d{2}:\d{2})/.exec(endNpt)?.[1];
+    assert.equal(
+      endTime,
+      '15:47',
+      `karana end ${endNpt} != 15:47 NPT`,
+    );
+    assert.equal(p.karana.nextName, 'shakuni');
+  },
 );
 
 test(

@@ -18,9 +18,13 @@ import {
 import { bsToAd, getTodayNepal } from '../lib/bsConverter';
 import { generateSitemapPaths, getSeoForRoute } from '../lib/seo';
 import { render } from '../src/entry-server';
+import { computeRashifalEngine } from '../lib/rashifalEngine.js';
 
 const ORIGIN = 'https://mitipatro.com.np';
 const SAMPLE_NOW_MS = new Date('2026-11-14T06:15:00.000Z').getTime(); // Kartik 28, 2083 BS
+
+const DISCLAIMER_NE =
+  'यो पृष्ठ केवल मनोरञ्जन तथा सन्दर्भको लागि हो। यो चन्द्रमाको राशि स्थितिमा आधारित छ र कुनै सटीकता दाबी गर्दैन।';
 
 test('twelve Vedic Rashis are correctly defined in canonical order with accurate Nepali and English names', () => {
   assert.equal(RASHIS.length, 12, 'Must have exactly 12 Rashis');
@@ -55,8 +59,8 @@ test('twelve Vedic Rashis are correctly defined in canonical order with accurate
     assert.ok(rashi.elementNe.length > 0, `Missing element for ${rashi.id}`);
     assert.ok(rashi.symbolNe.length > 0, `Missing symbol for ${rashi.id}`);
     assert.ok(rashi.lettersNe.length > 0, `Missing letters for ${rashi.id}`);
+    assert.equal(getRashiById('karkat')?.symbolNe, 'गँगटो');
   });
-  assert.equal(getRashiById('karkat')?.symbolNe, 'गँगटो');
 });
 
 test('getRashiById looks up Rashis accurately with case and whitespace trimming', () => {
@@ -289,48 +293,29 @@ test('sitemap includes daily, weekly, monthly, and all individual Rashi URLs', (
   }
 });
 
-test('SSR renderToString produces full body HTML with tabs and predictions for Daily, Weekly, and Monthly', () => {
-  // 1. Daily SSR
-  const dailyHtml = render('/rashifal', ORIGIN, SAMPLE_NOW_MS);
-  assert.ok(dailyHtml.includes('Sample content for development, not published predictions.'));
-  const removedAttribution = ['नेपाली पञ्चाङ्ग तथा वैदिक ज्योतिष', 'सन्दर्भ'].join(' ');
-  assert.ok(!dailyHtml.includes(removedAttribution));
-  assert.ok(dailyHtml.includes('दैनिक राशिफल'), 'Missing Daily heading in SSR');
-  assert.ok(dailyHtml.includes('साप्ताहिक राशिफल'), 'Missing Weekly tab in SSR');
-  assert.ok(dailyHtml.includes('मासिक राशिफल'), 'Missing Monthly tab in SSR');
-  assert.ok(dailyHtml.includes('मेष'), 'Missing Mesha in SSR');
+test('SSR renderToString produces full body HTML for daily Rashifal page', () => {
+  // Gate off by default -> sample content note
+  const gateOffHtml = render('/rashifal', ORIGIN, SAMPLE_NOW_MS);
+  assert.ok(gateOffHtml.includes('नमुना सामग्री'), 'Missing sample content note when gate is off');
+  assert.ok(gateOffHtml.includes(DISCLAIMER_NE), 'Missing Nepali disclaimer when gate is off');
+  assert.ok(gateOffHtml.includes('entertainment and reference'), 'Missing English disclaimer when gate is off');
+  assert.ok(!gateOffHtml.includes('मेष'), 'No rashi cards when gate is off');
 
-  // 2. Weekly SSR
-  const weeklyHtml = render('/rashifal/weekly', ORIGIN, SAMPLE_NOW_MS);
-  assert.ok(weeklyHtml.includes('साप्ताहिक राशिफल'), 'Missing Weekly heading in SSR');
-  assert.ok(weeklyHtml.includes('कार्तिक २२ देखि २८, २०८३'), 'Missing weekly coverage in SSR');
+  // Gate on -> daily readings shown
+  const gateOnHtml = render('/rashifal', ORIGIN, SAMPLE_NOW_MS, false, false, '', '', false, true);
+  assert.ok(gateOnHtml.includes('दैनिक राशिफल'), 'Missing Daily heading in SSR');
+  assert.ok(gateOnHtml.includes('entertainment and reference'), 'Missing English disclaimer when gate is on');
+  assert.ok(gateOnHtml.includes('मेष'), 'Missing Mesha card in SSR');
+  assert.ok(gateOnHtml.includes('चन्द्रमाको स्थान'), 'Missing moon position in SSR');
 
-  // 3. Monthly SSR
-  const monthlyHtml = render('/rashifal/monthly', ORIGIN, SAMPLE_NOW_MS);
-  assert.ok(monthlyHtml.includes('मासिक राशिफल'), 'Missing Monthly heading in SSR');
-  assert.ok(monthlyHtml.includes('कार्तिक २०८३'), 'Missing monthly coverage in SSR');
-
-  // 4. Single Rashi Weekly SSR
-  const meshaWeeklyHtml = render('/rashifal/weekly/mesha', ORIGIN, SAMPLE_NOW_MS);
-  assert.ok(meshaWeeklyHtml.includes('मेष'), 'Missing Mesha in weekly Rashi SSR');
-  assert.ok(meshaWeeklyHtml.includes('साप्ताहिक राशिफल'), 'Missing Weekly heading in Rashi SSR');
-  assert.ok(meshaWeeklyHtml.includes('करिअर तथा पेशा'), 'Missing career breakdown in weekly Rashi SSR');
-
-  // 5. Single Rashi Monthly SSR
-  const meshaMonthlyHtml = render('/rashifal/monthly/mesha', ORIGIN, SAMPLE_NOW_MS);
-  assert.ok(meshaMonthlyHtml.includes('मेष'), 'Missing Mesha in monthly Rashi SSR');
-  assert.ok(meshaMonthlyHtml.includes('मासिक राशिफल'), 'Missing Monthly heading in Rashi SSR');
-
-  // 6. Homepage Rasifal section SSR
-  const homeHtml = render('/', ORIGIN, SAMPLE_NOW_MS, false, false, '', '', false, true);
-  assert.ok(homeHtml.includes('दैनिक राशिफल'), 'Missing Daily tab in Home Rasifal section');
-  assert.ok(homeHtml.includes('साप्ताहिक राशिफल'), 'Missing Weekly tab in Home Rasifal section');
-  assert.ok(homeHtml.includes('मासिक राशिफल'), 'Missing Monthly tab in Home Rasifal section');
-
-  const unavailableDailyHtml = render(
-    '/rashifal',
-    ORIGIN,
-    new Date('2026-11-16T06:15:00.000Z').getTime(),
-  );
-  assert.ok(unavailableDailyHtml.includes('2083-07-30 BS'));
+  // Sign-change notice when applicable
+  const todayBs = getTodayNepal(new Date(SAMPLE_NOW_MS)).bs;
+  const engineResult = computeRashifalEngine(todayBs.year, todayBs.month, todayBs.day, 'mesha');
+  if (engineResult.changesSignToday) {
+    assert.ok(
+      gateOnHtml.includes('चन्द्रमाको राशि परिवर्तन आज'),
+      'Missing sign-change notice in SSR',
+    );
+  }
 });
+

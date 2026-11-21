@@ -29,18 +29,17 @@
 //       Root finder: our change at 03:18 NPT (diff 6.31 min > 3 min tolerance), next = Saubhagya
 //     * At Nov 10 ~03:24 NPT: our sum = 52.8872° (idx 3 = Saubhagya), VedicMarga expects Shobhana (idx 4)
 //       Root finder: our change at 03:12 NPT (diff 11.75 min > 3 min tolerance), next = Shobhana
-//   Independent cross-check (source other than vedicmarga.com):
-//     * 2026-11-09: Astrovidhi (Kathmandu) says Saubhagya till 03:08; vedicmarga says 03:12.
-//       Names match; times agree within ~4 min. Vedicmarga time is cross-validated.
-//     * 2026-11-10: HinduTone (Kathmandu) says Shobhana till 03:25; vedicmarga says 03:24.
-//       Names match; times agree within ~1 min. Vedicmarga time is cross-validated.
-//   Despite independent confirmation of the vedicmarga times, our code's yoga root
-//   finder produces transitions ~6–12 min off with a 1-yoga index discrepancy. This
-//   may stem from a different Lahiri ayanamsha value or ephemeris used by VedicMarga's
-//   "Engine 1.11.0" vs our Astronomy Engine (VSOP87/ELP2000-82B) pipeline. No
-//   definitive cause has been established. These cases are marked test.todo and MUST
-//   NOT be counted as independently validated. Do not tune the formula to make them pass.
-//   and MUST NOT be counted as independently validated.
+//   Independent cross-checks:
+//     * Astrovidhi (Kathmandu): Saobhagya till 03:08; VedicMarga: 03:12. Names match; times agree within ~4 min.
+//     * HinduTone (Kathmandu): Shobhana till 03:25; VedicMarga: 03:24. Names match; times agree within ~1 min.
+//     * JPL DE441 (NASA/JPL Horizons API, independent of both vedicmarga and Astronomy Engine):
+//       - Nov 9 03:12 NPT: JPL sidereal sum = 39.1734° (idx 2 = Ayushman), gap 0.8266° to Saubhagya boundary (40°)
+//       - Nov 10 03:24 NPT: JPL sidereal sum = 52.6744° (idx 3 = Saubhagya), gap 0.6590° to Shobhana boundary (53.3333°)
+//     JPL DE441 agrees with our code on yoga INDEX in both cases (Ayushman then Saobhagya), not VedicMarga's
+//     index. The ~6–12 min transition-time difference vs VedicMarga is an ephemeris fidelity difference
+//     (Astronomy Engine VSOP87/ELP2000-82B vs JPL DE441), not a formula bug. Neither our code nor VedicMarga
+//     exactly matches JPL DE441 ground truth. Per AGENTS.md, formulas are not tuned and ayanamsa constants
+//     are not changed without explicit approval. These cases remain test.todo.
 
 import test from 'node:test';
 import assert from 'node:assert/strict';

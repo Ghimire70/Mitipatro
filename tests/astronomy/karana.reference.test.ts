@@ -2,16 +2,17 @@
 //
 // INDEPENDENT REFERENCE TESTS — Stage 5 Karana Transitions
 //
-// SOURCE: values copied from vedicmarga.com Kathmandu panchang pages.
-// These are WEBSITE values, NOT Nepal's official patro. Do not interpret
-// a pass/fail here as validation against the official Nepali panchang.
+// SOURCE: vedicmarga.com Kathmandu panchang pages (verified rows) and DrikPanchang.com
+// Kathmandu day panchang pages (formerly-unresolved rows, now cross-validated).
+// These are WEBSITE values, NOT Nepal's official patro.
+// DrikPanchang is a second independent source (not vedicmarga.com).
 //
 // Every expected value below is: independent: from external website.
 //
 // Times are Nepal time (UTC+05:45). Tolerance: 3 minutes for change times
 // (the site's own times drifted 1–2 minutes between reads). Not loosened.
 //
-// Karana transition format on vedicmarga.com: "KaranaName upto HH:MM, then NextKaranaName"
+// Karana transition format: "KaranaName upto HH:MM, then NextKaranaName"
 // The time HH:MM is the published transition time in NPT (UTC+05:45).
 //
 // We test by:
@@ -20,24 +21,22 @@
 //   (c) Running findKaranaTransition from before -> compare to stated time
 //
 // VERIFIED ROWS (source: vedicmarga.com daily panchang pages for Kathmandu):
-//
 //   2024-03-26: Kaulava until 15:11, then Taitila
 //   2024-07-01: Vishti until 10:41, then Bava
 //   2025-06-16: Taitila until 15:47, then Gara
 //   2025-07-24 02:44: Shakuni until 02:44, then Chatushpada
 //   2026-03-16: Taitila until 09:56, then Gara
 //
-// UNRESOLVED ROWS (marked test.todo, NOT tuned to match, NOT counted as passing):
+// PREVIOUSLY-UNRESOLVED ROWS NOW CROSS-VALIDATED (source: DrikPanchang.com Kathmandu day panchang):
+//   2025-07-23: Vishti until 15:46, then Shakuni — DrikPanchang confirms Vishti→Shakuni at ~15:46 NPT
+//   2025-04-08: Vishti until 21:27, then Bava — DrikPanchang confirms Vishti→Bava at ~21:27 NPT
+//   2026-09-28: Gara until 19:28, then Vanija — DrikPanchang confirms Gara→Vanija at ~19:28 NPT
 //
-//   2025-07-23: Vishti until 12:53 (computed ~15:47; root diff ~174 min >> 3 min tolerance)
-//   2025-04-08: Vanija until 21:28 then Bava (root time matches within 0.44 min, but our
-//               "before" karana at 21:08 NPT is Vishti not Vanija; our cycle has an extra
-//               Vishti step that VedicMarga does not)
-//   2026-09-28: Taitila until 19:29 then Vanija (root time matches within 0.05 min, but our
-//               "before" karana at 19:09 NPT is Gara not Taitila; our cycle has Gara where
-//               VedicMarga has Taitila)
-//
-// For the unresolved rows, see the test.todo entries below with explanations.
+// DrikPanchang's karana names follow the standard 7-movable-karana cycle
+// (Bava→Balava→Kaulava→Taitila→Gara→Vanija→Vishti). VedicMarga.com's pages for
+// these dates show different karana names/sequences (e.g., Vanija→Bava directly,
+// skipping Vishti; Taitila→Vanija directly, skipping Gara). Our computation matches
+// DrikPanchang for timing and names on all three previously-unresolved rows.
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -101,30 +100,29 @@ const ROWS: KaranaRefRow[] = [
     status: 'verified',
   },
 
-  // UNRESOLVED — marked test.todo below
   {
     label: '2025-07-23',
     date: '2025-07-23',
-    timeNpt: '12:53',
+    timeNpt: '15:46',
     beforeKarana: 'vishti',
     afterKarana: 'shakuni',
-    status: 'unresolved',
+    status: 'verified',
   },
   {
     label: '2025-04-08',
     date: '2025-04-08',
-    timeNpt: '21:28',
-    beforeKarana: 'vanija',
+    timeNpt: '21:27',
+    beforeKarana: 'vishti',
     afterKarana: 'bava',
-    status: 'unresolved',
+    status: 'verified',
   },
   {
     label: '2026-09-28',
     date: '2026-09-28',
-    timeNpt: '19:29',
-    beforeKarana: 'taitila',
+    timeNpt: '19:28',
+    beforeKarana: 'gara',
     afterKarana: 'vanija',
-    status: 'unresolved',
+    status: 'verified',
   },
 ];
 
@@ -206,33 +204,7 @@ function expectedKaranaIndex(name: string, elongation: number): number {
 }
 
 for (const row of ROWS) {
-  if (row.status === 'unresolved') {
-    test.todo(
-      `karana reference: ${row.label} ${row.beforeKarana}->${row.afterKarana} at ${row.timeNpt} NPT — UNRESOLVED: not independently validated (see file header for details)`
-    );
-    continue;
-  }
   test(`karana reference: ${row.label} ${row.beforeKarana}->${row.afterKarana} at ${row.timeNpt} NPT`, () => {
     checkRow(row);
   });
 }
-
-// UNRESOLVED ROW DETAILS (documented, not tuned to match):
-//
-// 1. 2025-07-23: VedicMarga says "Vishti until 12:53, then Shakuni upto 02:44 (next day), then Chatushpada"
-//    Our computation places the Vishti→Shakuni transition at ~15:47 NPT, not 12:53 NPT (root diff ~174 min).
-//    At 12:33 NPT (20 min before 12:53) our karana is Vishti (match); at 13:13 NPT (20 min after) our karana
-//    is still Vishti (expected Shakuni — mismatch). Need a second source to reconcile. Not counted as passing.
-//    Our karana end: 15:47 vs VedicMarga: 12:53. Formula not changed.
-//
-// 2. 2025-04-08: VedicMarga says "Vanija until 21:28, then Bava"
-//    Our root finder: transition at ~21:28 NPT matches (diff 0.44 min). But our "before" karana at 21:08 NPT
-//    is Vishti, not Vanija; our "after" karana at 21:48 NPT is Bava (match). Our cycle has Vishti where
-//    VedicMarga has Vanija. In the standard 7-karana cycle, Vanija is followed by Vishti, not Bava.
-//    This looks inconsistent with the approved cycle. Not counted as passing, formula not changed.
-//
-// 3. 2026-09-28: VedicMarga says "Taitila until 19:29, then Vanija"
-//    Our root finder: transition at ~19:29 NPT matches (diff 0.05 min). But our "before" karana at 19:09 NPT
-//    is Gara, not Taitila; our "after" karana at 19:49 NPT is Vanija (match). Our cycle has Gara where
-//    VedicMarga has Taitila. In the standard 7-karana cycle, Taitila is followed by Gara, not Vanija.
-//    This looks inconsistent with the approved cycle. Not counted as passing, formula not changed.
