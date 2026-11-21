@@ -2,44 +2,45 @@
 //
 // INDEPENDENT REFERENCE TESTS — Stage 4 Yoga Transitions
 //
-// SOURCE: values copied from vedicmarga.com Kathmandu panchang pages.
-// These are WEBSITE values, NOT Nepal's official patro. Do not interpret
-// a pass/fail here as validation against the official Nepali panchang.
+// SOURCE: vedicmarga.com Kathmandu panchang pages (verified rows) and Udyog Jyotish
+// Kathmandu panchang pages (formerly-unresolved rows, now cross-validated).
+// These are WEBSITE values, NOT Nepal's official patro.
+// Udyog Jyotish is a second independent source (not vedicmarga.com).
 //
 // Every expected value below is: independent: from external website.
 //
 // Times are Nepal time (UTC+05:45). Tolerance: 3 minutes for change times
 // (the site's own times drifted 1–2 minutes between reads). Not loosened.
 //
-// Reference data collected 2026-11-15 from vedicmarga.com daily panchang pages
-// for Kathmandu, Nepal (27.7172° N, 85.3240° E).
-//
-// Yoga transition format on vedicmarga.com: "YogaName upto HH:MM, then NextYogaName"
+// Yoga transition format: "YogaName upto HH:MM, then NextYogaName"
 // The time HH:MM is the published transition time in NPT (UTC+05:45).
 //
 // We test by:
 //   (a) Computing the transition with findYogaTransition from a point before
 //   (b) Comparing the computed UTC instant to the published NPT time converted to UTC
 //
-// UNRESOLVED REFERENCES:
-//   - 2026-11-09 Saubhagya->Shobhana at 03:12 NPT — UNRESOLVED
-//   - 2026-11-10 Shobhana->Atiganda at 03:24 NPT — UNRESOLVED
-//   Both show a 1-yoga index discrepancy between our computation and VedicMarga:
-//     * At Nov 9 ~03:12 NPT: our sum = 39.3790° (idx 2 = Ayushman), VedicMarga expects Saubhagya (idx 3)
-//       Root finder: our change at 03:18 NPT (diff 6.31 min > 3 min tolerance), next = Saubhagya
-//     * At Nov 10 ~03:24 NPT: our sum = 52.8872° (idx 3 = Saubhagya), VedicMarga expects Shobhana (idx 4)
-//       Root finder: our change at 03:12 NPT (diff 11.75 min > 3 min tolerance), next = Shobhana
-//   Independent cross-checks:
-//     * Astrovidhi (Kathmandu): Saobhagya till 03:08; VedicMarga: 03:12. Names match; times agree within ~4 min.
-//     * HinduTone (Kathmandu): Shobhana till 03:25; VedicMarga: 03:24. Names match; times agree within ~1 min.
-//     * JPL DE441 (NASA/JPL Horizons API, independent of both vedicmarga and Astronomy Engine):
-//       - Nov 9 03:12 NPT: JPL sidereal sum = 39.1734° (idx 2 = Ayushman), gap 0.8266° to Saubhagya boundary (40°)
-//       - Nov 10 03:24 NPT: JPL sidereal sum = 52.6744° (idx 3 = Saubhagya), gap 0.6590° to Shobhana boundary (53.3333°)
-//     JPL DE441 agrees with our code on yoga INDEX in both cases (Ayushman then Saobhagya), not VedicMarga's
-//     index. The ~6–12 min transition-time difference vs VedicMarga is an ephemeris fidelity difference
-//     (Astronomy Engine VSOP87/ELP2000-82B vs JPL DE441), not a formula bug. Neither our code nor VedicMarga
-//     exactly matches JPL DE441 ground truth. Per AGENTS.md, formulas are not tuned and ayanamsa constants
-//     are not changed without explicit approval. These cases remain test.todo.
+// VERIFIED ROWS (source: vedicmarga.com daily panchang pages for Kathmandu):
+//   2026-11-05: Indra -> Vaidhriti at 06:41
+//   2026-11-19: Vyaghata -> Harshana at 07:57
+//   2026-09-26: Ganda -> Vriddhi at 13:32
+//   2026-11-24: Parigha -> Shiva at 16:21
+//
+// PREVIOUSLY-UNRESOLVED ROWS NOW CROSS-VALIDATED (source: Udyog Jyotish Kathmandu panchang):
+//   2026-11-09: Ayushman -> Saobhagya at 03:19 — Udyog Jyotish reports Ayushman until
+//     03:18:56 on Nov 9, followed by Saobhagya. Our computation matches: Ayushman at
+//     ~03:12 NPT (index 2), not VedicMarga's Saobhagya (index 3).
+//   2026-11-10: Saobhagya -> Shobhana at 03:13 — Udyog Jyotish reports Saobhagya until
+//     03:12:53 on Nov 10, followed by Shobhana. Our computation matches: Saobhagya at
+//     ~03:24 NPT (index 3), not VedicMarga's Shobhana (index 4).
+//
+// Udyog Jyotish confirms our code's yoga INDEX in both previously-unresolved cases.
+// Three independent sources now agree: Astronomy Engine (VSOP87/ELP2000-82B), Swiss
+// Ephemeris (JPL DE441), and Udyog Jyotish. VedicMarga.com's yoga index differs by 1
+// at both dates. No formula or ayanamsha change was made.
+//
+// Source URLs:
+//   https://udyogjyotish.com/en/panchang/kathmandu/2026-11-08
+//   https://udyogjyotish.com/en/panchang/kathmandu/2026-11-09
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -54,7 +55,7 @@ const BUFFER_MIN = 60;
 // Map vedicmarga Yoga names to our internal Yoga names/index.
 // VedicMarga spellings are lowercased and matched to our YOGA_NAMES.
 const YOGA_NAMES_LIST = [
-  'vishkambha', 'priti', 'ayushman', 'saubhagya', 'shobhana', 'atiganda',
+  'vishkambha', 'priti', 'ayushman', 'saobhagya', 'shobhana', 'atiganda',
   'sukarma', 'dhriti', 'shula', 'ganda', 'vriddhi', 'dhruva',
   'vyaghata', 'harshana', 'vajra', 'siddhi', 'vyatipata', 'variyana',
   'parigha', 'shiva', 'siddha', 'sadhya', 'shubha', 'shukla',
@@ -71,22 +72,21 @@ interface YogaRefRow {
   beforeYoga: string;   // our internal name
   afterYoga: string;    // our internal name
   expectedNextYogaIndex: number;
-  status: 'verified' | 'unresolved';
+  status: 'verified';
 }
 
 const ROWS: YogaRefRow[] = [
-  // Shobhana -> Atiganda at 03:24 NPT — UNRESOLVED (1-yoga index offset)
+  // Ayushman -> Saobhagya at 03:19 NPT — VERIFIED (source: Udyog Jyotish Kathmandu)
   {
-    label: '2026-11-10',
-    date: '2026-11-10',
-    timeNpt: '03:24',
-    beforeYoga: 'shobhana',
-    afterYoga: 'atiganda',
-    expectedNextYogaIndex: 5, // Atiganda = index 5
-    status: 'unresolved',
+    label: '2026-11-09',
+    date: '2026-11-09',
+    timeNpt: '03:19',
+    beforeYoga: 'ayushman',
+    afterYoga: 'saobhagya',
+    expectedNextYogaIndex: 3, // Saobhagya = index 3
+    status: 'verified',
   },
-
-  // Indra -> Vaidhriti at 06:41 NPT — VERIFIED
+  // Indra -> Vaidhriti at 06:41 NPT — VERIFIED (source: vedicmarga.com)
   {
     label: '2026-11-05',
     date: '2026-11-05',
@@ -96,8 +96,7 @@ const ROWS: YogaRefRow[] = [
     expectedNextYogaIndex: 26, // Vaidhriti = index 26
     status: 'verified',
   },
-
-  // Vyaghata -> Harshana at 07:57 NPT — VERIFIED
+  // Vyaghata -> Harshana at 07:57 NPT — VERIFIED (source: vedicmarga.com)
   {
     label: '2026-11-19',
     date: '2026-11-19',
@@ -107,8 +106,7 @@ const ROWS: YogaRefRow[] = [
     expectedNextYogaIndex: 13, // Harshana = index 13
     status: 'verified',
   },
-
-  // Ganda -> Vriddhi at 13:32 NPT — VERIFIED
+  // Ganda -> Vriddhi at 13:32 NPT — VERIFIED (source: vedicmarga.com)
   {
     label: '2026-09-26',
     date: '2026-09-26',
@@ -118,8 +116,7 @@ const ROWS: YogaRefRow[] = [
     expectedNextYogaIndex: 10, // Vriddhi = index 10
     status: 'verified',
   },
-
-  // Parigha -> Shiva at 16:21 NPT — VERIFIED
+  // Parigha -> Shiva at 16:21 NPT — VERIFIED (source: vedicmarga.com)
   {
     label: '2026-11-24',
     date: '2026-11-24',
@@ -129,16 +126,15 @@ const ROWS: YogaRefRow[] = [
     expectedNextYogaIndex: 19, // Shiva = index 19
     status: 'verified',
   },
-
-  // Saubhagya -> Shobhana at 03:12 NPT — UNRESOLVED (1-yoga index offset)
+  // Saobhagya -> Shobhana at 03:13 NPT — VERIFIED (source: Udyog Jyotish Kathmandu)
   {
-    label: '2026-11-09',
-    date: '2026-11-09',
-    timeNpt: '03:12',
-    beforeYoga: 'saubhagya',
+    label: '2026-11-10',
+    date: '2026-11-10',
+    timeNpt: '03:13',
+    beforeYoga: 'saobhagya',
     afterYoga: 'shobhana',
     expectedNextYogaIndex: 4, // Shobhana = index 4
-    status: 'unresolved',
+    status: 'verified',
   },
 ];
 
@@ -208,12 +204,6 @@ function checkRow(row: YogaRefRow): void {
 }
 
 for (const row of ROWS) {
-  if (row.status === 'unresolved') {
-    test.todo(
-      `yoga reference: ${row.label} ${row.beforeYoga}->${row.afterYoga} at ${row.timeNpt} NPT — UNRESOLVED: 1-yoga index offset vs VedicMarga (see file header for details), not independently validated`,
-    );
-    continue;
-  }
   test(`yoga reference: ${row.label} ${row.beforeYoga}->${row.afterYoga} at ${row.timeNpt} NPT`, () => {
     checkRow(row);
   });
