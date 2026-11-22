@@ -13,6 +13,7 @@ import {
   toDevanagariDigits,
 } from './bsConverter';
 import { getHolidaysForMonth, getHolidaysForYear } from './holidays';
+import { getEventsForYear } from './eventService';
 import { RASHIS, getRashiById } from './rashifal';
 
 export interface FaqItem {
@@ -83,9 +84,39 @@ function getRouteSeo(
   now: Date,
   converterToolsIndexingEnabled: boolean,
   panchangIndexingEnabled = false,
+  rashifalIndexingEnabled = false,
 ): PageSeoData {
   const cleanPath = pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
   const today = getTodayNepal(now);
+
+  // Rashifal and Panchang render the same 404 page as unknown routes
+  // when their indexing flag is disabled.
+  if ((cleanPath === '/rashifal' || cleanPath.startsWith('/rashifal/')) && !rashifalIndexingEnabled) {
+    return {
+      title: 'Page Not Found – Nepali Calendar | MitiPatro',
+      description: 'The requested Nepali calendar page was not found. Browse 2082–2083 BS calendars, Aaja Ko Miti, or the BS to AD converter.',
+      canonicalPath: cleanPath,
+      robots: 'noindex, follow',
+      isNotFound: true,
+      h1: 'This calendar route is not published',
+      breadcrumbs: [{ name: 'Home', path: '/' }],
+      faqs: [],
+      jsonLd: [],
+    };
+  }
+  if (cleanPath === '/panchang' && !panchangIndexingEnabled) {
+    return {
+      title: 'Page Not Found – Nepali Calendar | MitiPatro',
+      description: 'The requested Nepali calendar page was not found. Browse 2082–2083 BS calendars, Aaja Ko Miti, or the BS to AD converter.',
+      canonicalPath: cleanPath,
+      robots: 'noindex, follow',
+      isNotFound: true,
+      h1: 'This calendar route is not published',
+      breadcrumbs: [{ name: 'Home', path: '/' }],
+      faqs: [],
+      jsonLd: [],
+    };
+  }
 
   // 1. Home: /
   if (cleanPath === '/') {
@@ -498,6 +529,43 @@ function getRouteSeo(
     };
   }
 
+  // Festivals page: /festivals/:year
+  const festMatch = /^\/festivals\/(\d{4})$/.exec(cleanPath);
+  if (festMatch) {
+    const year = Number(festMatch[1]);
+    if ((PUBLISHED_BS_YEARS as readonly number[]).includes(year)) {
+      const isIndexable = (INDEXABLE_BS_YEARS as readonly number[]).includes(year);
+      const events = getEventsForYear(year);
+      const publicCount = events.filter((e) => e.isPublicHoliday).length;
+      const title = `Festivals & Events ${year} BS – Nepali Festival Calendar | MitiPatro`;
+      const description = `Complete festival and observance calendar for ${year} BS, with religious festivals, public holidays, cultural events, and international observances.`;
+      const breadcrumbs: BreadcrumbItem[] = [
+        { name: 'Home', path: '/' },
+        { name: `Festivals & Events ${year}`, path: `/festivals/${year}` },
+      ];
+      const faqs: FaqItem[] = [
+        {
+          question: `How many festivals and events are listed for ${year} BS?`,
+          answer: `MitiPatro currently lists ${events.length} festival and observance entries for ${year} BS, including ${publicCount} public holidays.`,
+        },
+        {
+          question: `Are festival dates on MitiPatro official?`,
+          answer: 'Festival dates are sourced from government notices, Panchanga calculations, and international observance calendars. Each entry shows its source and verification status.',
+        },
+      ];
+      return {
+        title,
+        description,
+        canonicalPath: `/festivals/${year}`,
+        robots: isIndexable ? 'index, follow' : 'noindex, follow',
+        h1: `Festivals & Events in Nepal – ${year} BS`,
+        breadcrumbs,
+        faqs,
+        jsonLd: buildJsonLd(baseUrl, breadcrumbs, faqs),
+      };
+    }
+  }
+
   // 8. Daily Rashifal (Horoscope): /rashifal or /rashifal/daily
   if (cleanPath === '/rashifal' || cleanPath === '/rashifal/daily') {
     const title = `आजको राशिफल – दैनिक राशिफल (Daily Nepali Rashifal) | MitiPatro`;
@@ -735,6 +803,7 @@ export function getSeoForRoute(
     now,
     converterToolsIndexingEnabled,
     panchangIndexingEnabled,
+    rashifalIndexingEnabled,
   );
   if (noindexSite) return { ...seo, robots: 'noindex, nofollow' };
   if (pathname === '/rashifal' || pathname.startsWith('/rashifal/')) {
@@ -765,6 +834,7 @@ export function generateSitemapPaths(
   for (const year of INDEXABLE_BS_YEARS) {
     paths.push(`/calendar/${year}`);
     paths.push(`/holidays/${year}`);
+    paths.push(`/festivals/${year}`);
     for (const m of BS_MONTHS) {
       paths.push(`/calendar/${year}/${m.slug}`);
     }

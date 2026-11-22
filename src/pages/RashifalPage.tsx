@@ -29,7 +29,7 @@ import type { FaqItem } from '../../lib/seo';
 import { AdSlot } from '../components/AdSlot';
 import { FaqSection } from '../components/FaqSection';
 
-const DAILY_TITLE_NE = 'दैनिक राशिफल (Daily Horoscope)';
+const DAILY_TITLE_NE = 'दैनिक राशिफल';
 const DAILY_TITLE_EN = 'Daily Horoscope';
 
 const DISCLAIMER_NE =
@@ -37,9 +37,10 @@ const DISCLAIMER_NE =
 const DISCLAIMER_EN =
   "This page is for entertainment and reference only. It is based on the Moon's sidereal position and makes no accuracy claim. Not a substitute for professional advice.";
 
-const RASHI_NAMES: readonly string[] = [
-  'mesha', 'vrisha', 'mithun', 'karkat', 'simha', 'kanya',
-  'tula', 'vrischik', 'dhanu', 'makar', 'kumbha', 'meen',
+const RASHI_LABELS: readonly string[] = [
+  'मेष (Aries)', 'वृष (Taurus)', 'मिथुन (Gemini)', 'कर्कट (Cancer)',
+  'सिंह (Leo)', 'कन्या (Virgo)', 'तुला (Libra)', 'वृश्चिक (Scorpio)',
+  'धनु (Sagittarius)', 'मकर (Capricorn)', 'कुम्भ (Aquarius)', 'मीन (Pisces)',
 ];
 
 export const RashifalPage: React.FC<{
@@ -175,7 +176,7 @@ export const RashifalPage: React.FC<{
           ({adInfo.year}-{String(adInfo.month).padStart(2, '0')}-{String(adInfo.day).padStart(2, '0')})
         </p>
         <p className="mt-1 text-xs text-stone-600">
-          चन्द्रमाको राशिः {RASHI_NAMES[moonRashiIndex]} (सूर्योदयमा)
+          चन्द्रमाको राशिः {RASHI_LABELS[moonRashiIndex]} (सूर्योदयमा)
         </p>
         {changesSignToday && nextChangeKathmandu && (
           <p className="mt-1 text-xs text-[#9A3412] font-medium">
@@ -207,9 +208,6 @@ export const RashifalPage: React.FC<{
                       {rashi.nameEn} · {rashi.englishSign}
                     </span>
                   </div>
-                  <span className="font-mono text-xs font-semibold text-stone-400">
-                    #{bsDay}
-                  </span>
                 </div>
                 <p className="mt-1 text-[11px] text-stone-400">
                   चन्द्रमाको स्थान: स्थान {position}
@@ -220,9 +218,6 @@ export const RashifalPage: React.FC<{
                 <div className="mt-4 rounded-lg border border-stone-200 bg-[#FBF9F5] p-4">
                   <p className="text-sm leading-relaxed text-stone-800">
                     {reading.textNe}
-                  </p>
-                  <p className="mt-2 text-[10px] text-stone-400 italic">
-                    स्रोतः {reading.source}
                   </p>
                 </div>
               ) : (

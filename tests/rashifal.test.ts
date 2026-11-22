@@ -23,9 +23,6 @@ import { computeRashifalEngine } from '../lib/rashifalEngine.js';
 const ORIGIN = 'https://mitipatro.com.np';
 const SAMPLE_NOW_MS = new Date('2026-11-14T06:15:00.000Z').getTime(); // Kartik 28, 2083 BS
 
-const DISCLAIMER_NE =
-  'यो पृष्ठ केवल मनोरञ्जन तथा सन्दर्भको लागि हो। यो चन्द्रमाको राशि स्थितिमा आधारित छ र कुनै सटीकता दाबी गर्दैन।';
-
 test('twelve Vedic Rashis are correctly defined in canonical order with accurate Nepali and English names', () => {
   assert.equal(RASHIS.length, 12, 'Must have exactly 12 Rashis');
 
@@ -294,12 +291,11 @@ test('sitemap includes daily, weekly, monthly, and all individual Rashi URLs', (
 });
 
 test('SSR renderToString produces full body HTML for daily Rashifal page', () => {
-  // Gate off by default -> sample content note
+  // Gate off by default -> 404 page (not published)
   const gateOffHtml = render('/rashifal', ORIGIN, SAMPLE_NOW_MS);
-  assert.ok(gateOffHtml.includes('नमुना सामग्री'), 'Missing sample content note when gate is off');
-  assert.ok(gateOffHtml.includes(DISCLAIMER_NE), 'Missing Nepali disclaimer when gate is off');
-  assert.ok(gateOffHtml.includes('entertainment and reference'), 'Missing English disclaimer when gate is off');
+  assert.ok(gateOffHtml.includes('This calendar route is not published'), 'Missing 404 heading when gate is off');
   assert.ok(!gateOffHtml.includes('मेष'), 'No rashi cards when gate is off');
+  assert.ok(!gateOffHtml.includes('दैनिक राशिफल'), 'No daily rashifal heading when gate is off');
 
   // Gate on -> daily readings shown
   const gateOnHtml = render('/rashifal', ORIGIN, SAMPLE_NOW_MS, false, false, '', '', false, true);

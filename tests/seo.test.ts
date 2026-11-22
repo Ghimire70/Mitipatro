@@ -199,7 +199,8 @@ test('Panchang defaults to noindex and excluded from the sitemap, and can be ena
   assert.ok(disabledSeo.title.length > 0);
   assert.ok(disabledSeo.description.length > 0);
   assert.ok(disabledSeo.h1.length > 0);
-  assert.ok(disabledSeo.jsonLd.length > 0);
+  assert.equal(disabledSeo.jsonLd.length, 0);
+  assert.equal(disabledSeo.isNotFound, true);
   assert.ok(!generateSitemapPaths().includes('/panchang'));
   assert.ok(!generateSitemapXml(ORIGIN, new Date(SAMPLE_NOW_MS)).includes(`/panchang`));
 
@@ -224,6 +225,56 @@ test('Panchang defaults to noindex and excluded from the sitemap, and can be ena
   assert.ok(visibleHome.includes('href="/panchang"'));
   assert.ok(visibleHome.includes('पञ्चाङ्ग'));
   assert.ok(visibleHome.includes('Panchang (पञ्चाङ्ग)'));
+});
+
+test('Rashifal routes return 404 when flag is off, render page when flag is on', () => {
+  const rashifalRoutes = ['/rashifal', '/rashifal/daily', '/rashifal/mesha', '/rashifal/weekly/mesha'];
+
+  // Flag off: isNotFound + noindex
+  for (const route of rashifalRoutes) {
+    const seo = getSeoForRoute(route, ORIGIN, new Date(SAMPLE_NOW_MS), false);
+    assert.equal(seo.isNotFound, true, `${route} should be isNotFound when flag is off`);
+    assert.equal(seo.robots, 'noindex, follow', `${route} should be noindex when flag is off`);
+  }
+
+  // Flag on: renders page + index
+  for (const route of rashifalRoutes) {
+    const seo = getSeoForRoute(route, ORIGIN, new Date(SAMPLE_NOW_MS), false, false, true);
+    assert.equal(seo.isNotFound, undefined, `${route} should not be isNotFound when flag is on`);
+    assert.equal(seo.robots, 'index, follow', `${route} should be indexable when flag is on`);
+  }
+
+  // SSR: flag off -> 404 page
+  const rashifalOffHtml = render('/rashifal', ORIGIN, SAMPLE_NOW_MS, false);
+  assert.ok(rashifalOffHtml.includes('This calendar route is not published'));
+  assert.ok(!rashifalOffHtml.includes('दैनिक राशिफल'));
+
+  // SSR: flag on -> rashifal page
+  const rashifalOnHtml = render('/rashifal', ORIGIN, SAMPLE_NOW_MS, false, false, '', '', false, true);
+  assert.ok(rashifalOnHtml.includes('दैनिक राशिफल'));
+  assert.ok(!rashifalOnHtml.includes('This calendar route is not published'));
+});
+
+test('Panchang returns 404 when flag is off, renders page when flag is on', () => {
+  // Flag off: isNotFound + noindex
+  const panchangOffSeo = getSeoForRoute('/panchang', ORIGIN, new Date(SAMPLE_NOW_MS), false);
+  assert.equal(panchangOffSeo.isNotFound, true);
+  assert.equal(panchangOffSeo.robots, 'noindex, follow');
+
+  // Flag on: renders page + index
+  const panchangOnSeo = getSeoForRoute('/panchang', ORIGIN, new Date(SAMPLE_NOW_MS), false, false, false, true);
+  assert.equal(panchangOnSeo.isNotFound, undefined);
+  assert.equal(panchangOnSeo.robots, 'index, follow');
+
+  // SSR: flag off -> 404 page
+  const panchangOffHtml = render('/panchang', ORIGIN, SAMPLE_NOW_MS, false);
+  assert.ok(panchangOffHtml.includes('This calendar route is not published'));
+  assert.ok(!panchangOffHtml.includes('पञ्चाङ्ग'));
+
+  // SSR: flag on -> panchang page
+  const panchangOnHtml = render('/panchang', ORIGIN, SAMPLE_NOW_MS, false, false, '', '', false, false, true);
+  assert.ok(panchangOnHtml.includes('पञ्चाङ्ग'));
+  assert.ok(!panchangOnHtml.includes('This calendar route is not published'));
 });
 
 test('ads stay disabled unless both the flag and AdSense client ID are configured', () => {

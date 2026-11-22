@@ -14,6 +14,7 @@ import { MonthPage } from './pages/MonthPage';
 import { ConverterPage } from './pages/ConverterPage';
 import { ConverterToolsPage } from './pages/ConverterToolsPage';
 import { HolidaysPage } from './pages/HolidaysPage';
+import { FestivalsPage } from './pages/FestivalsPage';
 import { StaticPages } from './pages/StaticPages';
 import { PanchangPage } from './pages/PanchangPage';
 import { RashifalPage } from './pages/RashifalPage';
@@ -102,6 +103,41 @@ export default function App({
 
   const renderPage = () => {
     const converterTool = getConverterToolSlug(currentPath);
+
+    // If SEO marks this route as not found (e.g. rashifal/panchang with gate off),
+    // render the same 404 page as unknown routes.
+    if (seo.isNotFound) {
+      return (
+        <div className="mx-auto max-w-2xl px-4 py-16 text-center sm:px-6">
+          <p className="text-xs font-semibold uppercase tracking-widest text-stone-500">
+            Page Not Found
+          </p>
+          <h1 className="mt-2 font-display text-3xl font-semibold text-stone-900">
+            This calendar route is not published
+          </h1>
+          <p className="mt-3 text-sm text-stone-600">
+            MitiPatro publishes full monthly and holiday pages for {PUBLISHED_BS_YEARS.join(', ')} BS, and supports date conversions from 2000–2090 BS.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <button
+              type="button"
+              onClick={() => navigate('/')}
+              className="rounded-md bg-[#9A3412] px-4 py-2 text-sm font-semibold text-white hover:bg-[#7C2D12]"
+            >
+              Go to Current Month ({CURRENT_BS_YEAR} BS)
+            </button>
+            <button
+              type="button"
+              onClick={() => navigate('/date-converter')}
+              className="rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-semibold text-stone-800 hover:bg-stone-50"
+            >
+              Open BS–AD Converter
+            </button>
+          </div>
+        </div>
+      );
+    }
+
     if (currentPath === '/') {
       return (
         <HomePage
@@ -234,7 +270,16 @@ export default function App({
       }
     }
 
-    // Fallback: clean 404 notice with quick links to valid intents
+    const festMatch = /^\/festivals\/(\d{4})$/.exec(currentPath);
+    if (festMatch) {
+      const year = Number(festMatch[1]);
+      if ((PUBLISHED_BS_YEARS as readonly number[]).includes(year)) {
+        return <FestivalsPage year={year} faqs={seo.faqs} onNavigate={navigate} />;
+      }
+    }
+
+    // All remaining routes have isNotFound=true from getSeoForRoute,
+    // handled by the early return at the top of renderPage().
     return (
       <div className="mx-auto max-w-2xl px-4 py-16 text-center sm:px-6">
         <p className="text-xs font-semibold uppercase tracking-widest text-stone-500">

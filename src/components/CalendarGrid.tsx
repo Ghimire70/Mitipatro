@@ -11,7 +11,7 @@ import {
   toDevanagariDigits,
   type CalendarCellData,
 } from '../../lib/bsConverter';
-import { getHolidaysForDate, getHolidaysForMonth } from '../../lib/holidays';
+import { getEventsForDate, getEventsForMonth, type EventEntry } from '../../lib/eventService';
 import { HolidayReferenceNote } from './HolidayReferenceNote';
 import { getDailyPanchanga } from '../../lib/astronomy/panchanga.js';
 
@@ -46,17 +46,17 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
 }) => {
   const today = useMemo(() => getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined), [nowMs]);
   const grid = useMemo(() => getBsMonthGrid(bsYear, bsMonth), [bsYear, bsMonth]);
-  const monthHolidays = useMemo(() => getHolidaysForMonth(bsYear, bsMonth), [bsYear, bsMonth]);
+  const monthEvents = useMemo(() => getEventsForMonth(bsYear, bsMonth), [bsYear, bsMonth]);
 
   // Build a map of bsDay -> holidays for fast lookup
-  const holidaysByDay = useMemo(() => {
+  const eventsByDay = useMemo(() => {
     const map = new Map<number, DayEvent[]>();
-    for (const h of monthHolidays) {
-      const existing = map.get(h.bsDay) ?? [];
-      map.set(h.bsDay, [...existing, { name: h.nameEn, isPublicHoliday: h.isPublicHoliday }]);
+    for (const e of monthEvents) {
+      const existing = map.get(e.bsDay) ?? [];
+      map.set(e.bsDay, [...existing, { name: e.nameEn, isPublicHoliday: e.isPublicHoliday }]);
     }
     return map;
-  }, [monthHolidays]);
+  }, [monthEvents]);
 
   // Build element info (tithi/nakshatra) for each day in the month
   const elementsByDay = useMemo(() => {
@@ -90,7 +90,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
 
   const selectedCell: CalendarCellData =
     grid.days.find((d) => d.bsDay === selectedDay) ?? grid.days[0];
-  const selectedHolidays = getHolidaysForDate(
+  const selectedEvents = getEventsForDate(
     selectedCell.bsYear,
     selectedCell.bsMonth,
     selectedCell.bsDay,
@@ -137,6 +137,9 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
           </div>
           <p className="mt-1 text-xs text-stone-500">
             {grid.adSpanLabel} · {grid.totalDays} days · {grid.monthMeta.seasonEn}
+          </p>
+          <p className="mt-0.5 text-[9px] font-semibold text-[#9A3412] uppercase tracking-tighter">
+            mitipatro
           </p>
         </div>
 
@@ -267,8 +270,8 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
           ))}
 
           {grid.days.map((cell) => {
-            const holidaysOnDay: DayEvent[] = holidaysByDay.get(cell.bsDay) ?? [];
-            const hasPublicHoliday = holidaysOnDay.some((h) => h.isPublicHoliday);
+            const eventsOnDay: DayEvent[] = eventsByDay.get(cell.bsDay) ?? [];
+            const hasPublicHoliday = eventsOnDay.some((h) => h.isPublicHoliday);
             const isToday =
               today.bs.year === cell.bsYear &&
               today.bs.month === cell.bsMonth &&
@@ -280,9 +283,9 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
             const elementInfo = elementsByDay.get(cell.bsDay);
 
             // Build event list for this day (up to 5 visible, rest collapsed)
-            const eventList = holidaysOnDay.map((h) => h.name);
-            const eventCount = holidaysOnDay.length;
-            const holidayNames = eventList.join(', ');
+            const eventList = eventsOnDay.map((h) => h.name);
+            const eventCount = eventsOnDay.length;
+            const eventNames = eventList.join(', ');
 
             return (
               <button
@@ -295,7 +298,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
                   `${cell.adMonthShort} ${cell.adDay}, ${cell.adYear}`,
                   WEEKDAYS[cell.weekday].en,
                   isToday ? 'Today' : '',
-                  holidayNames ? `Holiday: ${holidayNames}` : '',
+                  eventNames ? `Holiday: ${eventNames}` : '',
                 ].filter(Boolean).join(', ')}
                 onClick={() => setSelectedDay(cell.bsDay)}
                 className={`group relative flex flex-col justify-between p-2 sm:p-3 transition-colors duration-150 sm:min-h-[132px] sm:p-3 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-[#9A3412] ${
@@ -404,15 +407,13 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
 
         <div className="flex flex-col sm:flex-row sm:items-center gap-3 text-xs text-stone-600">
           <div>
-            {selectedHolidays.length > 0 ? (
+            {selectedEvents.length > 0 ? (
               <div className="space-y-1">
-                {selectedHolidays.map((h) => (
-                  <p key={h.id} className="font-medium text-[#9A3412]">
-                    {h.nameEn} ({h.nameNe}) · {h.type === 'women_only'
-                      ? 'Women-only Holiday'
-                      : h.isPublicHoliday
-                        ? 'Public Holiday'
-                        : 'Observance'}
+                {selectedEvents.map((e) => (
+                  <p key={e.id} className="font-medium text-[#9A3412]">
+                    {e.nameEn} ({e.nameNe}) · {e.isPublicHoliday
+                      ? 'Public Holiday'
+                      : 'Observance'}
                   </p>
                 ))}
               </div>
@@ -436,34 +437,34 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
         </div>
       </div>
 
-      {/* Month Holidays Summary Strip */}
-      {monthHolidays.length > 0 && (
+      {/* Month Events Summary Strip */}
+      {monthEvents.length > 0 && (
         <div className="border-t border-stone-200 px-4 py-4 sm:px-6">
           <h3 className="text-xs font-semibold uppercase tracking-widest text-stone-500">
-            Holidays &amp; Observances in {grid.monthMeta.en} {bsYear}
+            Events &amp; Observances in {grid.monthMeta.en} {bsYear}
           </h3>
           <div className="mt-2">
             <HolidayReferenceNote />
           </div>
           <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
-            {monthHolidays.map((h) => (
+            {monthEvents.map((e) => (
               <li
-                key={h.id}
+                key={e.id}
                 className="flex items-baseline justify-between gap-3 border-b border-stone-100 pb-2 text-sm last:border-b-0"
               >
                 <span className="text-stone-800">
                   <strong className="font-mono font-semibold tabular-nums text-[#9A3412]">
-                    {grid.monthMeta.en.slice(0, 3)} {h.bsDay}
+                    {grid.monthMeta.en.slice(0, 3)} {e.bsDay}
                   </strong>
                   {' · '}
-                  {h.nameEn}
-                  {h.isPublicHoliday ? (
+                  {e.nameEn}
+                  {e.isPublicHoliday ? (
                     <span className="text-xs text-[#9A3412]"> (Public Holiday)</span>
                   ) : (
                     <span className="text-xs text-stone-500"> (Observance)</span>
                   )}
                 </span>
-                <span className="shrink-0 text-xs text-stone-500">{h.nameNe}</span>
+                <span className="shrink-0 text-xs text-stone-500">{e.nameNe}</span>
               </li>
             ))}
           </ul>
