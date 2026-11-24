@@ -102,7 +102,9 @@ export const MonthPage: React.FC<MonthPageProps> = ({
         nowMs={nowMs}
         onJumpToToday={handleJumpToToday}
         onOpenHolidays={handleOpenDrawer}
+        onNavigate={onNavigate}
         monthSlug={grid.monthMeta.slug}
+        rashifalIndexingEnabled={rashifalIndexingEnabled}
       />
 
       <div className="print-hidden mt-6">

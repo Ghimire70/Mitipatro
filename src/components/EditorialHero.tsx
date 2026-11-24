@@ -10,6 +10,8 @@ interface EditorialHeroProps {
   onJumpToToday: () => void;
   onOpenHolidays: () => void;
   monthSlug: string;
+  onNavigate: (path: string) => void;
+  rashifalIndexingEnabled?: boolean;
 }
 
 export const EditorialHero: React.FC<EditorialHeroProps> = ({
@@ -18,7 +20,9 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
   nowMs,
   onJumpToToday,
   onOpenHolidays,
+  onNavigate,
   monthSlug,
+  rashifalIndexingEnabled = false,
 }) => {
   const [nepalTime, setNepalTime] = useState<string>('');
   const today = getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined);
@@ -50,6 +54,12 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
     id.unref?.();
     return () => clearInterval(id);
   }, []);
+
+  const handleLink = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    onNavigate(path);
+  };
 
   const monthMeta = BS_MONTHS[bsMonth - 1];
 
@@ -111,6 +121,16 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
               <Sparkles className="h-4 w-4 text-terracotta" aria-hidden="true" />
               2083 Public Holidays
             </button>
+            {rashifalIndexingEnabled && (
+              <a
+                href="/rashifal"
+                onClick={(e) => handleLink(e, '/rashifal')}
+                className="inline-flex min-h-[44px] items-center gap-2 rounded-md border border-terracotta bg-white px-5 py-2 text-sm font-semibold text-terracotta hover:bg-terracotta/5 hover:text-terracotta-hover transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta whitespace-nowrap shrink-0"
+              >
+                <Sparkles className="h-4 w-4 text-terracotta" aria-hidden="true" />
+                दैनिक राशिफल
+              </a>
+            )}
           </div>
         </div>
       </div>

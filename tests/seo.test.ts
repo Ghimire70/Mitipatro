@@ -136,7 +136,11 @@ test('Rashifal defaults to indexable and visible links, and can be disabled for 
 
   assert.equal(isRashifalIndexingEnabled({}), true);
   assert.equal(isRashifalIndexingEnabled({ RASHIFAL_INDEXING_ENABLED: 'true' }), true);
-  assert.equal(isRashifalIndexingEnabled({ RASHIFAL_INDEXING_ENABLED: 'yes' }), false);
+  assert.equal(isRashifalIndexingEnabled({ RASHIFAL_INDEXING_ENABLED: 'yes' }), true);
+  assert.equal(isRashifalIndexingEnabled({ RASHIFAL_INDEXING_ENABLED: 'false' }), false);
+  assert.equal(isRashifalIndexingEnabled({ RASHIFAL_INDEXING_ENABLED: '0' }), false);
+  assert.equal(isRashifalIndexingEnabled({ RASHIFAL_INDEXING_ENABLED: 'off' }), false);
+  assert.equal(isRashifalIndexingEnabled({ RASHIFAL_INDEXING_ENABLED: 'no' }), false);
 
   for (const route of rashifalRoutes) {
     assert.equal(
