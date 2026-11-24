@@ -21,6 +21,8 @@ export interface RashifalReading {
   source: string;
   approved: boolean;
   updatedAt?: string;
+  luckyColorNe?: string;
+  luckyNumber?: number | string;
 }
 
 // One approved editorial reading per position.
@@ -36,6 +38,8 @@ export const RASHIFAL_READINGS: RashifalReading[] = [
     source: "original-editorial",
     approved: true,
     updatedAt: "2026-11-21",
+    luckyColorNe: "रातो",
+    luckyNumber: 9,
   },
   {
     position: 1,
@@ -61,6 +65,8 @@ export const RASHIFAL_READINGS: RashifalReading[] = [
     source: "original-editorial",
     approved: true,
     updatedAt: "2026-11-21",
+    luckyColorNe: "सेतो",
+    luckyNumber: 6,
   },
   {
     position: 2,
@@ -86,6 +92,8 @@ export const RASHIFAL_READINGS: RashifalReading[] = [
     source: "original-editorial",
     approved: true,
     updatedAt: "2026-11-21",
+    luckyColorNe: "हरियो",
+    luckyNumber: 5,
   },
   {
     position: 3,
@@ -111,6 +119,8 @@ export const RASHIFAL_READINGS: RashifalReading[] = [
     source: "original-editorial",
     approved: true,
     updatedAt: "2026-11-21",
+    luckyColorNe: "दूधिया सेतो",
+    luckyNumber: 2,
   },
   {
     position: 4,
@@ -136,6 +146,8 @@ export const RASHIFAL_READINGS: RashifalReading[] = [
     source: "original-editorial",
     approved: true,
     updatedAt: "2026-11-21",
+    luckyColorNe: "पहेंलो",
+    luckyNumber: 1,
   },
   {
     position: 5,
@@ -161,6 +173,8 @@ export const RASHIFAL_READINGS: RashifalReading[] = [
     source: "original-editorial",
     approved: true,
     updatedAt: "2026-11-21",
+    luckyColorNe: "गाढा हरियो",
+    luckyNumber: 5,
   },
   {
     position: 6,
@@ -186,6 +200,8 @@ export const RASHIFAL_READINGS: RashifalReading[] = [
     source: "original-editorial",
     approved: true,
     updatedAt: "2026-11-21",
+    luckyColorNe: "गुलाबी",
+    luckyNumber: 7,
   },
   {
     position: 7,
@@ -211,6 +227,8 @@ export const RASHIFAL_READINGS: RashifalReading[] = [
     source: "original-editorial",
     approved: true,
     updatedAt: "2026-11-21",
+    luckyColorNe: "रातो वा मरुन",
+    luckyNumber: 9,
   },
   {
     position: 8,
@@ -236,6 +254,8 @@ export const RASHIFAL_READINGS: RashifalReading[] = [
     source: "original-editorial",
     approved: true,
     updatedAt: "2026-11-21",
+    luckyColorNe: "पहेंलो",
+    luckyNumber: 3,
   },
   {
     position: 9,
@@ -261,6 +281,8 @@ export const RASHIFAL_READINGS: RashifalReading[] = [
     source: "original-editorial",
     approved: true,
     updatedAt: "2026-11-21",
+    luckyColorNe: "नीलो",
+    luckyNumber: 8,
   },
   {
     position: 10,
@@ -286,6 +308,8 @@ export const RASHIFAL_READINGS: RashifalReading[] = [
     source: "original-editorial",
     approved: true,
     updatedAt: "2026-11-21",
+    luckyColorNe: "आसमानी नीलो",
+    luckyNumber: 8,
   },
   {
     position: 11,
@@ -311,6 +335,8 @@ export const RASHIFAL_READINGS: RashifalReading[] = [
     source: "original-editorial",
     approved: true,
     updatedAt: "2026-11-21",
+    luckyColorNe: "पहेंलो वा केसरिया",
+    luckyNumber: 3,
   },
   {
     position: 12,

@@ -219,6 +219,20 @@ export const RashifalPage: React.FC<{
                   <p className="text-sm leading-relaxed text-stone-800">
                     {reading.textNe}
                   </p>
+                  <div className="mt-3 flex items-center gap-4 text-xs">
+                    <span className="font-semibold text-stone-600">
+                      शुभ रङ्ग:
+                    </span>
+                    <span className="font-medium text-[#9A3412]">
+                      {reading.luckyColorNe ?? "—"}
+                    </span>
+                    <span className="font-semibold text-stone-600">
+                      शुभ अंक:
+                    </span>
+                    <span className="font-medium text-[#9A3412]">
+                      {reading.luckyNumber ?? "—"}
+                    </span>
+                  </div>
                 </div>
               ) : (
                 <div className="mt-4 rounded-lg border border-stone-200 bg-white p-4">

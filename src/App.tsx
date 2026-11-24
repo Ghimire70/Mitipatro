@@ -66,7 +66,22 @@ export default function App({
   const [currentPath, setCurrentPath] = useState<string>(() =>
     normalizePath(initialPath ?? (typeof window !== 'undefined' ? window.location.pathname : '/')),
   );
-  const [nowMs] = useState<number>(() => initialNowMs ?? Date.now());
+  const [nowMs, setNowMs] = useState<number>(() => initialNowMs ?? Date.now());
+
+  // Keep nowMs current across midnight so rashifal and date-sensitive pages
+  // update daily without requiring a page reload. Checks once per minute.
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const currentDate = new Date().toDateString();
+      const nowDate = new Date(nowMs).toDateString();
+      if (currentDate !== nowDate) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        setNowMs(Date.now());
+      }
+    }, 60000);
+    timer.unref?.();
+    return () => clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     const onPopState = () => {
