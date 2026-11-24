@@ -24,7 +24,7 @@ export const Footer: React.FC<FooterProps> = ({
   };
 
   return (
-    <footer className="print-hidden mt-16 border-t border-stone-200 bg-[#F3EFE6]/70">
+    <footer className="print-hidden mt-16 border-t border-terracotta/20 bg-[#F3EFE6]/70">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div className="md:col-span-2">

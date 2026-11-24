@@ -14,6 +14,7 @@ import {
 import { getEventsForDate, getEventsForMonth, type EventEntry } from '../../lib/eventService';
 import { HolidayReferenceNote } from './HolidayReferenceNote';
 import { getDailyPanchanga } from '../../lib/astronomy/panchanga.js';
+import { EditorialCalendarCell } from './EditorialCalendarCell';
 
 interface CalendarGridProps {
   bsYear: number;
@@ -277,100 +278,25 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
               today.bs.month === cell.bsMonth &&
               today.bs.day === cell.bsDay;
             const isSelected = selectedDay === cell.bsDay;
-            const isSaturday = cell.isSaturday;
 
             // Get element info (tithi/nakshatra) for this day
             const elementInfo = elementsByDay.get(cell.bsDay);
 
-            // Build event list for this day (up to 5 visible, rest collapsed)
-            const eventList = eventsOnDay.map((h) => h.name);
-            const eventCount = eventsOnDay.length;
-            const eventNames = eventList.join(', ');
+            const eventNames = eventsOnDay.map((h) => h.name);
 
             return (
-              <button
+              <EditorialCalendarCell
                 key={cell.bsDay}
-                type="button"
-                role="gridcell"
-                aria-selected={isSelected}
-                aria-label={[
-                  `${grid.monthMeta.en} ${cell.bsDay}, ${cell.bsYear} BS`,
-                  `${cell.adMonthShort} ${cell.adDay}, ${cell.adYear}`,
-                  WEEKDAYS[cell.weekday].en,
-                  isToday ? 'Today' : '',
-                  eventNames ? `Holiday: ${eventNames}` : '',
-                ].filter(Boolean).join(', ')}
-                onClick={() => setSelectedDay(cell.bsDay)}
-                className={`group relative flex flex-col justify-between p-2 sm:p-3 transition-colors duration-150 sm:min-h-[132px] sm:p-3 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-[#9A3412] ${
-                  isToday
-                    ? 'bg-[#9A3412]/10 ring-1 ring-inset ring-[#9A3412]'
-                    : isSelected
-                      ? 'bg-[#F3EFE6] ring-1 ring-inset ring-stone-400'
-                      : cell.isSaturday
-                        ? 'bg-stone-50/70 hover:bg-[#F3EFE6]/60'
-                        : 'bg-white hover:bg-[#FBF9F5]'
-                }`}
-              >
-                {/* BS Day Number (large, left) */}
-                <div className="flex items-start justify-between gap-1">
-                  <span
-                    className={`font-mono text-lg font-semibold leading-none tabular-nums sm:text-xl ${
-                      isToday || isSaturday || hasPublicHoliday ? 'text-[#9A3412]' : 'text-stone-900'
-                    }`}
-                  >
-                    {cell.bsDay}
-                  </span>
-                  <span className="text-[10px] font-medium leading-none text-stone-400 tabular-nums sm:text-xs">
-                    {cell.bsDayNe}
-                  </span>
-                </div>
-
-                {/* Element info under day number */}
-                <div className="mt-1 flex w-full flex-col gap-0.5">
-                  {/* Festivals / Events first (e.g. Chhath, Teej, Bhai Tika, Rakshyabandhan) */}
-                  {eventList.slice(0, 3).map((eventName, idx) => (
-                    <span
-                      key={idx}
-                      className={`text-[9px] leading-tight ${
-                        hasPublicHoliday ? 'font-semibold text-[#9A3412]' : 'text-stone-600'
-                      }`}
-                      title={eventName}
-                    >
-                      {eventName.length > 18 ? `${eventName.slice(0, 15)}…` : eventName}
-                    </span>
-                  ))}
-                  {eventCount > 5 && (
-                    <span className="text-[9px] font-medium text-stone-500">
-                      +{eventCount - 5} more
-                    </span>
-                  )}
-                  {eventList.length === 0 && cell.isSaturday && (
-                    <span className="text-[9px] text-stone-400 italic">
-                      Weekly rest
-                    </span>
-                  )}
-                  {/* Tithi info */}
-                  {elementInfo?.tithiName && (
-                    <span
-                      className={`text-[9px] leading-tight ${
-                        hasPublicHoliday ? 'font-semibold text-[#9A3412]' : 'text-stone-600'
-                      }`}
-                      title={`Tithi: ${elementInfo.tithiName} ${elementInfo.paksha}`}
-                    >
-                      {elementInfo.tithiName}
-                    </span>
-                  )}
-                </div>
-
-                {/* AD Date at bottom right */}
-                <div className="mt-auto flex w-full items-end justify-between pt-1">
-                  <span className="font-mono text-[10px] text-stone-500 tabular-nums sm:text-[11px]">
-                    {cell.adDay === 1 || cell.bsDay === 1
-                      ? `${cell.adMonthShort} ${cell.adDay}`
-                      : cell.adDay}
-                  </span>
-                </div>
-              </button>
+                cell={cell}
+                bsYear={bsYear}
+                bsMonth={bsMonth}
+                eventsOnDay={eventNames}
+                hasPublicHoliday={hasPublicHoliday}
+                isToday={isToday}
+                isSelected={isSelected}
+                elementInfo={elementInfo}
+                onSelect={(bsDay) => setSelectedDay(bsDay)}
+              />
             );
           })}
 

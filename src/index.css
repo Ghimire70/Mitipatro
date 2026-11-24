@@ -6,6 +6,13 @@
     "Plus Jakarta Sans", "Noto Sans Devanagari", system-ui, -apple-system,
     sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-terracotta: #9E2A0B;
+  --color-terracotta-hover: #7C2D12;
+  --color-terracotta-soft: #FDECE6;
+  --color-terracotta-border: #E7D5CF;
+  --color-ink: #1C1917;
+  --color-slatewarm: #6B645C;
 }
 
 @layer base {

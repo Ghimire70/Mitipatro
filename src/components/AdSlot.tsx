@@ -19,11 +19,11 @@ export const AdSlot: React.FC<AdSlotProps> = ({ variant, slotLabel = 'Advertisem
       ? 'min-h-[90px] w-full'
       : 'min-h-[250px] w-full';
 
-  return (
-    <aside
-      aria-label={slotLabel}
-      className={`${dimensions} flex flex-col items-center justify-center rounded-lg border border-stone-200/90 bg-[#F3EFE6]/50 px-4 py-3 text-center`}
-    >
+    return (
+      <aside
+        aria-label={slotLabel}
+        className={`${dimensions} flex flex-col items-center justify-center rounded-lg border border-terracotta/20 bg-[#F3EFE6]/50 px-4 py-3 text-center`}
+      >
       <span className="text-[11px] font-medium tracking-wide text-stone-400">
         {slotLabel}
       </span>
