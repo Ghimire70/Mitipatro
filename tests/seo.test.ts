@@ -123,7 +123,7 @@ test('converter tools default to noindex and enter the sitemap only when enabled
   assert.ok(toolRoutes.every((route) => !generateSitemapXml(ORIGIN).includes(`<loc>${ORIGIN}${route}</loc>`)));
 });
 
-test('Rashifal defaults to noindex and hidden links, and can be enabled for publication', () => {
+test('Rashifal defaults to indexable and visible links, and can be disabled for publication', () => {
   const rashifalRoutes = [
     '/rashifal',
     '/rashifal/daily',
@@ -134,7 +134,7 @@ test('Rashifal defaults to noindex and hidden links, and can be enabled for publ
     '/rashifal/monthly/mesha',
   ];
 
-  assert.equal(isRashifalIndexingEnabled({}), false);
+  assert.equal(isRashifalIndexingEnabled({}), true);
   assert.equal(isRashifalIndexingEnabled({ RASHIFAL_INDEXING_ENABLED: 'true' }), true);
   assert.equal(isRashifalIndexingEnabled({ RASHIFAL_INDEXING_ENABLED: 'yes' }), false);
 

@@ -253,7 +253,16 @@ async function startServer() {
         RASHIFAL_INDEXING_ENABLED,
         PANCHANG_INDEXING_ENABLED,
       );
-      res.status(rendered.status).set({ 'Content-Type': 'text/html; charset=utf-8' }).end(rendered.html);
+      const isRashifalRoute = req.path === '/rashifal' || req.path.startsWith('/rashifal/');
+      // Rashifal must never be served stale from a browser/CDN cache past
+      // 00:00 NPT; every request renders fresh with the current Kathmandu date.
+      const cacheControl = isRashifalRoute ? 'no-cache' : 'max-age=900, must-revalidate';
+      res.status(rendered.status)
+        .set({
+          'Content-Type': 'text/html; charset=utf-8',
+          'Cache-Control': cacheControl,
+        })
+        .end(rendered.html);
     } catch (err) {
       if (vite && err instanceof Error) {
         vite.ssrFixStacktrace(err);

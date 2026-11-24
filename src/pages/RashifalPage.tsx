@@ -10,8 +10,8 @@
 // SOURCES:
 //   - Astronomy Engine (VSOP87/ELP2000-82B) — named and opened.
 //   - Lahiri ayanamsha — named and opened (lib/astronomy/ayanamsha.ts).
-//   - Reading text: 'original-editorial' (supplied separately); all current
-//     entries are 'unsourced' placeholders marked 'SAMPLE, not for publication'.
+//   - Reading text: 'original-editorial' (supplied separately); all 12 positions
+//     have an approved variant "a" reading in lib/rashifalReadings.ts.
 //
 // DISCLAIMER: Entertainment and reference only. Based on the Moon's sidereal
 // position. No accuracy claim. Not a substitute for professional advice.
@@ -119,14 +119,12 @@ export const RashifalPage: React.FC<{
   // Build readings for all 12 rashis
   const readingsByRashi = useMemo(() => {
     const readings: Record<string, { reading: RashifalReading | null; position: number }> = {};
-    const bsOrdinal = new Date(
-      Date.UTC(adInfo.year, adInfo.month - 1, adInfo.day),
-    ).getUTCDay();
 
     for (const rashi of RASHIS) {
       const position = moonPositionFromSign(rashi.order - 1, moonRashiIndex);
-      const variantIndex = bsOrdinal % 3;
-      const variant: 'a' | 'b' | 'c' = variantIndex === 0 ? 'a' : variantIndex === 1 ? 'b' : 'c';
+      // Only approved editorial readings (variant "a") are published. Variants
+      // b/c are unpublished placeholders and must never blank out the page.
+      const variant: 'a' | 'b' | 'c' = 'a';
       const reading = RASHIFAL_READINGS.find(
         (r) => r.position === position && r.variant === variant,
       );

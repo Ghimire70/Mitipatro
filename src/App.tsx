@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { CURRENT_BS_YEAR, PUBLISHED_BS_YEARS } from '../lib/bsData';
-import { getBsMonthBySlug } from '../lib/bsConverter';
+import { getBsMonthBySlug, getTodayNepal } from '../lib/bsConverter';
 import { getSeoForRoute } from '../lib/seo';
 import type { ConverterToolSlug } from '../lib/converterTools';
 import { Header } from './components/Header';
@@ -68,20 +68,48 @@ export default function App({
   );
   const [nowMs, setNowMs] = useState<number>(() => initialNowMs ?? Date.now());
 
-  // Keep nowMs current across midnight so rashifal and date-sensitive pages
-  // update daily without requiring a page reload. Checks once per minute.
+  // Keep nowMs current at 00:00 Asia/Kathmandu (UTC+05:45, no DST) so rashifal
+  // and date-sensitive pages update at Nepal midnight regardless of visitor timezone.
+  // A precise timer fires at the next NPT midnight and re-arms daily; a 60s poll
+  // is a safety net for tabs that are backgrounded when midnight passes.
   useEffect(() => {
-    const timer = setInterval(() => {
-      const currentDate = new Date().toDateString();
-      const nowDate = new Date(nowMs).toDateString();
-      if (currentDate !== nowDate) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+    const KATHMANDU_OFFSET_MS = (5 * 3600 + 45 * 60) * 1000;
+
+    let pollTimer: ReturnType<typeof setInterval>;
+    let midnightTimer: ReturnType<typeof setTimeout>;
+
+    function scheduleNextMidnight() {
+      clearTimeout(midnightTimer);
+      const now = Date.now();
+      const nptMidnight = new Date(now + KATHMANDU_OFFSET_MS);
+      nptMidnight.setUTCHours(0, 0, 0, 0);
+      nptMidnight.setUTCDate(nptMidnight.getUTCDate() + 1); // next NPT midnight
+      const nextMidnightUtcMs = new Date(nptMidnight.getTime() - KATHMANDU_OFFSET_MS).getTime();
+      const delay = Math.max(nextMidnightUtcMs - now, 60_000);
+      midnightTimer = setTimeout(() => {
+        setNowMs(Date.now());
+        scheduleNextMidnight();
+      }, delay);
+    }
+
+    function tick() {
+      if (
+        getTodayNepal(new Date(Date.now())).bs.iso !==
+        getTodayNepal(new Date(nowMs)).bs.iso
+      ) {
         setNowMs(Date.now());
       }
-    }, 60000);
-    timer.unref?.();
-    return () => clearInterval(timer);
-  }, []);
+    }
+
+    tick();
+    pollTimer = setInterval(tick, 60_000);
+    scheduleNextMidnight();
+
+    return () => {
+      clearInterval(pollTimer);
+      clearTimeout(midnightTimer);
+    };
+  }, [nowMs]);
 
   useEffect(() => {
     const onPopState = () => {

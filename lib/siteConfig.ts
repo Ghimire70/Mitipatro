@@ -65,7 +65,9 @@ export function isConverterToolsIndexingEnabled(env: NodeJS.ProcessEnv = process
 }
 
 export function isRashifalIndexingEnabled(env: NodeJS.ProcessEnv = process.env): boolean {
-  return env.RASHIFAL_INDEXING_ENABLED?.trim().toLowerCase() === 'true';
+  const value = env.RASHIFAL_INDEXING_ENABLED;
+  // Rashifal is published by default. Opt out with RASHIFAL_INDEXING_ENABLED=false.
+  return value === undefined || value.trim().toLowerCase() === 'true';
 }
 
 export function isPanchangIndexingEnabled(env: NodeJS.ProcessEnv = process.env): boolean {
