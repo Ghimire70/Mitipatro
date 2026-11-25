@@ -1,0 +1,18 @@
+{
+  "intent": "rashifal",
+  "category": "rashifal-method",
+  "count": 1,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "7738bc779867a0761d032975a45b994cd93e89d4",
+      "question": "How is the daily rashifal calculated?",
+      "answer": "It is based on the Moon's sidereal position at sunrise in Kathmandu, using the Lahiri ayanamsha (Astronomy Engine VSOP87/ELP2000-82B pipeline).",
+      "intent": "rashifal",
+      "category": "rashifal-method",
+      "source": "editorial",
+      "generatedAt": "2026-11-25T04:19:58.773Z",
+      "verified": true
+    }
+  ]
+}

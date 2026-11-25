@@ -19,6 +19,16 @@ import { RASHIS, getRashiById } from './rashifal';
 export interface FaqItem {
   question: string;
   answer: string;
+  id?: string;
+  intent?: string;
+  category?: string;
+  source?: string;
+  bsYear?: number;
+  bsMonth?: number;
+  bsDay?: number;
+  adIso?: string;
+  generatedAt?: string;
+  verified?: boolean;
 }
 
 export interface BreadcrumbItem {
@@ -36,6 +46,58 @@ export interface PageSeoData {
   breadcrumbs: BreadcrumbItem[];
   faqs: FaqItem[];
   jsonLd: Record<string, unknown>[];
+}
+
+/** Maximum FAQPage JSON-LD entities per route (Google policy: keep it small). */
+export const MAX_FAQS_PER_PAGE = 10;
+
+export function selectTopFaqs(
+  allFaqs: readonly FaqItem[],
+  pathname: string,
+  limit: number = MAX_FAQS_PER_PAGE,
+): FaqItem[] {
+  const clean = pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
+  const lower = clean.toLowerCase();
+
+  const scored = allFaqs.map((faq) => {
+    let score = 0;
+    const pathTokens = lower.split(/[/\-]/);
+
+    // Intent matches route section
+    if (lower.includes('/holidays/') && faq.intent === 'holiday') score += 10;
+    if (lower.includes('/calendar/') && faq.intent === 'month') score += 10;
+    if (lower === '/aaja-ko-miti' && faq.intent === 'today') score += 10;
+    if (lower === '/' && faq.intent === 'today') score += 8;
+    if (lower.includes('/rashifal/') && faq.intent === 'rashifal') score += 10;
+    if (lower.includes('/date-converter') && faq.intent === 'converter') score += 10;
+    if (
+      (lower.includes('/holidays/') || lower.includes('/festivals/')) &&
+      faq.intent === 'tithi'
+    )
+      score += 6;
+
+    // Keyword overlap between path and question
+    for (const t of pathTokens) {
+      if (t.length > 2 && faq.question.toLowerCase().includes(t)) score += 2;
+    }
+
+    // Source preference: deterministic > editorial > others
+    const sourceRank: Record<string, number> = {
+      deterministic: 5,
+      editorial: 4,
+      gsc: 3,
+      autocomplete: 2,
+      trends: 1,
+    };
+    score += sourceRank[faq.source ?? ''] ?? 0;
+
+    return { faq, score };
+  });
+
+  scored.sort(
+    (a, b) => b.score - a.score || a.faq.question.localeCompare(b.faq.question),
+  );
+  return scored.slice(0, limit).map((s) => s.faq);
 }
 
 export function buildJsonLd(
@@ -451,6 +513,21 @@ function getRouteSeo(
         jsonLd: buildJsonLd(baseUrl, breadcrumbs, faqs),
       };
     }
+  }
+
+  // 7. FAQ hub: /faq (new pages default off — noindex, out of sitemap)
+  if (cleanPath === '/faq') {
+    return {
+      title: 'Frequently Asked Questions – Nepali Calendar | MitiPatro',
+      description: 'Verified answers about the Nepali (Bikram Sambat) calendar, dates, festivals, holidays, tithis, and rashifal — computed directly from MitiPatro&rsquo;s calendar engine.',
+      canonicalPath: '/faq',
+      robots: 'noindex, follow',
+      isNotFound: false,
+      h1: 'Frequently Asked Questions',
+      breadcrumbs: [{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq' }],
+      faqs: [],
+      jsonLd: buildJsonLd(baseUrl, [{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq' }], []),
+    };
   }
 
   // 7. Static compliance pages

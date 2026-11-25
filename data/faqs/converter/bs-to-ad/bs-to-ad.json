@@ -1,0 +1,64 @@
+{
+  "intent": "converter",
+  "category": "bs-to-ad",
+  "count": 4,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "59c57219c1786bc5c291bd3d14a68aa650a82602",
+      "question": "What is 1 Baisakh 2082 BS in AD?",
+      "answer": "1 Baisakh 2082 BS corresponds to April 14, 2025 (2025-04-14), Monday.",
+      "intent": "converter",
+      "category": "bs-to-ad",
+      "source": "deterministic",
+      "bsYear": 2082,
+      "bsMonth": 1,
+      "bsDay": 1,
+      "adIso": "2025-04-14",
+      "generatedAt": "2026-11-25T04:19:58.772Z",
+      "verified": true
+    },
+    {
+      "id": "68672f9880a49e2a80922b671e0f8e84796f02e5",
+      "question": "What is 1 Baisakh 2083 BS in AD?",
+      "answer": "1 Baisakh 2083 BS corresponds to April 14, 2026 (2026-04-14), Tuesday.",
+      "intent": "converter",
+      "category": "bs-to-ad",
+      "source": "deterministic",
+      "bsYear": 2083,
+      "bsMonth": 1,
+      "bsDay": 1,
+      "adIso": "2026-04-14",
+      "generatedAt": "2026-11-25T04:19:58.772Z",
+      "verified": true
+    },
+    {
+      "id": "dfd457a2338ce55869fee4aa88e08814ab5da581",
+      "question": "What is 29 Kartik 2083 BS in AD?",
+      "answer": "29 Kartik 2083 BS corresponds to November 15, 2026 (2026-11-15), Sunday.",
+      "intent": "converter",
+      "category": "bs-to-ad",
+      "source": "deterministic",
+      "bsYear": 2083,
+      "bsMonth": 7,
+      "bsDay": 29,
+      "adIso": "2026-11-15",
+      "generatedAt": "2026-11-25T04:19:58.772Z",
+      "verified": true
+    },
+    {
+      "id": "2c82aecdddffbabd5330b6893b678f6036b04960",
+      "question": "What is 30 Chaitra 2085 BS in AD?",
+      "answer": "30 Chaitra 2085 BS corresponds to April 13, 2029 (2029-04-13), Friday.",
+      "intent": "converter",
+      "category": "bs-to-ad",
+      "source": "deterministic",
+      "bsYear": 2085,
+      "bsMonth": 12,
+      "bsDay": 30,
+      "adIso": "2029-04-13",
+      "generatedAt": "2026-11-25T04:19:58.772Z",
+      "verified": true
+    }
+  ]
+}

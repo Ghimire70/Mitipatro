@@ -9,6 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "check:launch": "tsx scripts/check-launch.ts",
+    "sync:faqs": "tsx scripts/sync-search-faqs.ts",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts tests/*.test.tsx tests/astronomy/*.test.ts"

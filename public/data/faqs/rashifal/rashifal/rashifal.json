@@ -1,0 +1,468 @@
+{
+  "intent": "rashifal",
+  "category": "rashifal",
+  "count": 46,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "",
+      "question": "Dhanu राशिफल 2025",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Dhanu राशिफल 2026",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nepali new year 2083 rashifal",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nepali new year rashifal",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal baisakh",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal chaitra",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal converter",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal current week",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal falgun",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal falgun 2080",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal for week",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal friday",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal hamro",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal haru",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal of yesterday",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal pa",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal patra",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal patro",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal poush",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal push",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal yearly",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal yearly 2080",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal yearly nepali",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Tula राशिफल आज का",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Vrishabh राशिफल 2026",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "आज का राशिफल vrishabh",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "आज का राशिफल vrishchik rashi",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल dhanu",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल dhanu rashi",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल horoscope",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल kanya",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल kanya rashi",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल kumbh rashi",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल makar",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल masik rashifal",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल meen",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल meen rashi",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल mesh rashi",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल mithun rashi",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल tula",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल tula 2026",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल tula rashi",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल vrishabh",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "साप्ताहिक राशिफल dhanu",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "साप्ताहिक राशिफल dhanu 2026",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "साप्ताहिक राशिफल vrishabh",
+      "answer": "",
+      "intent": "rashifal",
+      "category": "rashifal",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    }
+  ]
+}

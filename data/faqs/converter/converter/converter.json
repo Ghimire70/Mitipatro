@@ -1,0 +1,938 @@
+{
+  "intent": "converter",
+  "category": "converter",
+  "count": 93,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "",
+      "question": "1997 ad to bs date converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "2011 ad to bs date converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad bs converter npm",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad bs convertor",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to ah converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs bulk converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs conversion",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs converter date",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs converter date of birth",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs converter excel",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs converter excel add in",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs converter formula",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs converter hamro patro",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs converter in excel",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs converter in excel formula",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs converter in google sheets",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs converter nepali",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs converter nepali calendar",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs converter online",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs converter rajan",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs date conversion",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs date converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs date converter excel",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs date converter in excel",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs date converter nepali",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs date converter nepali calendar",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to bs date converter online",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ad to convert bs",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Age converter ad to bs",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Age converter bs to ad",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "B.s to a.d date converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Be to ad convert",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bikram sambat calendar converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bikram sambat to gregorian calendar",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Birth date converter bs to ad",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Birthday converter bs to ad",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs convert to ad in nepali",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad bs to ad date converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad bulk converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad changer",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad conversion",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad converter app",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad converter date",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad converter excel",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad converter in excel",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad converter in excel nepali",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad converter nepal",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad converter nepali calendar",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad converter with day",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad convertor",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter 2078",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter age calculator",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter app",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter excel",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter hamro patro",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter in excel",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter nepali",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter nepali calendar",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter nepali calendar online",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter nepali online",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter online",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter online 2078",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter online excel",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter online free",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter online in nepali",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter online in nepali calendar",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad date converter online nepali calendar",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ad year converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to add converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to ads",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bs to usd converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bulk date converter ad to bs",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bulk date converter bs to ad",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Calendar converter ad to bs",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Calendar converter bs to ad",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Convert bikram sambat to ad",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Convert bs to ad",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Convert bs to as",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Converter bs to ad",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Date and time converter ad to bs",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Date converter bs to ad rajan",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Date converter from ad to bs",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Date converter from bs to ad",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Date converter in bs to ad",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Date of birth converter bs to ad online",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Dob converter ad to bs",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Free bs to ad date converter nepali",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Free date converter ad to bs",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nepali bs to ad converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nepali bs to english ad converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Sky date converter convert ad to bs & vice-versa",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Time converter bs to ad",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is ad converter",
+      "answer": "",
+      "intent": "converter",
+      "category": "converter",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "intent": "converter",
+  "category": "converter-method",
+  "count": 1,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "dd2c6a0d043de2a55b5819bd3b79cda20fe96612",
+      "question": "How does the BS to AD date converter work?",
+      "answer": "The converter uses the verified anchor 1 Baisakh 2000 BS = 14 April 1943 AD and counts exact days from that point using the stored Bikram Sambat month-length table.",
+      "intent": "converter",
+      "category": "converter-method",
+      "source": "editorial",
+      "generatedAt": "2026-11-25T04:19:58.773Z",
+      "verified": true
+    }
+  ]
+}

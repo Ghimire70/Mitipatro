@@ -18,6 +18,7 @@ import { FestivalsPage } from './pages/FestivalsPage';
 import { StaticPages } from './pages/StaticPages';
 import { PanchangPage } from './pages/PanchangPage';
 import { RashifalPage } from './pages/RashifalPage';
+import { FaqPage } from './pages/FaqPage';
 import { getRashiById } from '../lib/rashifal';
 
 function normalizePath(pathname: string): string {
@@ -323,6 +324,10 @@ export default function App({
       if ((PUBLISHED_BS_YEARS as readonly number[]).includes(year)) {
         return <FestivalsPage year={year} faqs={seo.faqs} onNavigate={navigate} />;
       }
+    }
+
+    if (currentPath === '/faq') {
+      return <FaqPage onNavigate={navigate} />;
     }
 
     // All remaining routes have isNotFound=true from getSeoForRoute,

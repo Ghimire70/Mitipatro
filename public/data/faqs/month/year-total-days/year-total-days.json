@@ -1,0 +1,52 @@
+{
+  "intent": "month",
+  "category": "year-total-days",
+  "count": 4,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "ca04e5025d62584d254231d40c366cf0afb3e908",
+      "question": "How many days are in Bikram Sambat 2082?",
+      "answer": "The Bikram Sambat year 2082 BS has 365 days across 12 solar months from Baisakh to Chaitra.",
+      "intent": "month",
+      "category": "year-total-days",
+      "source": "deterministic",
+      "bsYear": 2082,
+      "generatedAt": "2026-11-25T04:19:58.770Z",
+      "verified": true
+    },
+    {
+      "id": "94f80fd2d2a43205d185d717a2bee83edfe1cc54",
+      "question": "How many days are in Bikram Sambat 2083?",
+      "answer": "The Bikram Sambat year 2083 BS has 365 days across 12 solar months from Baisakh to Chaitra.",
+      "intent": "month",
+      "category": "year-total-days",
+      "source": "deterministic",
+      "bsYear": 2083,
+      "generatedAt": "2026-11-25T04:19:58.770Z",
+      "verified": true
+    },
+    {
+      "id": "161470264c0a9af6458255d15cb2417dfbcc7d43",
+      "question": "How many days are in Bikram Sambat 2084?",
+      "answer": "The Bikram Sambat year 2084 BS has 365 days across 12 solar months from Baisakh to Chaitra.",
+      "intent": "month",
+      "category": "year-total-days",
+      "source": "deterministic",
+      "bsYear": 2084,
+      "generatedAt": "2026-11-25T04:19:58.770Z",
+      "verified": true
+    },
+    {
+      "id": "3806f3e3639b69059dc686508483bf206a40eae3",
+      "question": "How many days are in Bikram Sambat 2085?",
+      "answer": "The Bikram Sambat year 2085 BS has 366 days across 12 solar months from Baisakh to Chaitra.",
+      "intent": "month",
+      "category": "year-total-days",
+      "source": "deterministic",
+      "bsYear": 2085,
+      "generatedAt": "2026-11-25T04:19:58.770Z",
+      "verified": true
+    }
+  ]
+}

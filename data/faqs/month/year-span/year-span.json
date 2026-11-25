@@ -1,0 +1,52 @@
+{
+  "intent": "month",
+  "category": "year-span",
+  "count": 4,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "5517557fe6dd6983833a8710baadb4e68bd5349a",
+      "question": "When does Nepali Year 2082 BS start and end in AD?",
+      "answer": "Baisakh 1, 2082 BS starts on Monday, April 14, 2025 (2025-04-14), and Chaitra 30, 2082 BS ends on Monday, April 13, 2026 (2026-04-13).",
+      "intent": "month",
+      "category": "year-span",
+      "source": "deterministic",
+      "bsYear": 2082,
+      "generatedAt": "2026-11-25T04:19:58.770Z",
+      "verified": true
+    },
+    {
+      "id": "332a2053b6f431639c524d75932d21ac4096a6a4",
+      "question": "When does Nepali Year 2083 BS start and end in AD?",
+      "answer": "Baisakh 1, 2083 BS starts on Tuesday, April 14, 2026 (2026-04-14), and Chaitra 30, 2083 BS ends on Tuesday, April 13, 2027 (2027-04-13).",
+      "intent": "month",
+      "category": "year-span",
+      "source": "deterministic",
+      "bsYear": 2083,
+      "generatedAt": "2026-11-25T04:19:58.770Z",
+      "verified": true
+    },
+    {
+      "id": "979232d74213e865ca2c6696d4a84746e488a3ba",
+      "question": "When does Nepali Year 2084 BS start and end in AD?",
+      "answer": "Baisakh 1, 2084 BS starts on Wednesday, April 14, 2027 (2027-04-14), and Chaitra 30, 2084 BS ends on Wednesday, April 12, 2028 (2028-04-12).",
+      "intent": "month",
+      "category": "year-span",
+      "source": "deterministic",
+      "bsYear": 2084,
+      "generatedAt": "2026-11-25T04:19:58.770Z",
+      "verified": true
+    },
+    {
+      "id": "8ff4d08a555533d9efdbe3d2ceb67f8dd7f51c51",
+      "question": "When does Nepali Year 2085 BS start and end in AD?",
+      "answer": "Baisakh 1, 2085 BS starts on Thursday, April 13, 2028 (2028-04-13), and Chaitra 30, 2085 BS ends on Friday, April 13, 2029 (2029-04-13).",
+      "intent": "month",
+      "category": "year-span",
+      "source": "deterministic",
+      "bsYear": 2085,
+      "generatedAt": "2026-11-25T04:19:58.770Z",
+      "verified": true
+    }
+  ]
+}

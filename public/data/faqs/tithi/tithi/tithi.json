@@ -1,0 +1,5048 @@
+{
+  "intent": "tithi",
+  "category": "tithi",
+  "count": 504,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "",
+      "question": "2020 purnima date list",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "2021 purnima date list",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "2025 purnima dates calendar",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "2026 purnima date list gujarati",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "2026 purnima dates gujarati",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "2026 purnima dates with day",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "2027 ekadashi date list",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "2027 purnima date list",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "2083 dashain and tihar date in nepali calendar with tithi",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "2083 dashain date in nepali calendar with tithi",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "2083 dashain date in nepali calendar with tithi pdf",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "2083 ko dashain date in nepali calendar with tithi",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "2083 tihar date in nepali calendar with tithi pdf",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bikram sambat 2056 calendar with tithi",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Buddha purnima date every year",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Buddha purnima date holiday",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Chand purnima date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi 20 december",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi 2080",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi birth date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi coming date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi confirm date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dashain",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date and time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date and time 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date and time august 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date and time july 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date and time october 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date and time september",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date and time september 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date april 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date aug",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date aug 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date august",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date august 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date august month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date bangla",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date bangladesh",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date baps",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date bataiye",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date batao",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date bengali",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date by iskcon",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date calendar",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date calendar 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date calendar 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date chart",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date chart 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date coming",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date current",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date dec",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date dec 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date december",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date december 2024",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date december 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date december 2025 time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date december 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date december month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date drik panchang",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date durga puja",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date feb 26",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date february",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date february 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date february 2027",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date for 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date for august",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date for august 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date for may 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date for september",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date for this month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date hindi",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date hindu calendar",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date in 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date in august",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date in august 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date in nepal",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date in november 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date in october",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date in october 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date in sep 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date in september",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date in september 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date in this month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date jan",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date jan 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date january",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date january 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date july",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date july 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date july 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date july 26",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date july month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date june",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date june 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date june 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date june month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date kab hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date kannada",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date kaun si hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date khatu shyam",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date ki",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date kobe",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date kya hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date last",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date latest",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date list",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date list 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date list 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date london",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date march",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date march 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date march 2026 iskcon",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date march 26",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date may",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date may 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date may 26",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date may month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date may month 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date near",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date next",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date next month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date nirjala",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date nov",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date nov 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date nov 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date november",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date november 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date november 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date now",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date oct",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date october",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date october 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date october 26",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date october month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date of 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date of august 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date of september",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date of september 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date of this month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date on august",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date panchang",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date pandharpur",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date parana time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date please",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date previous",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date recent",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date sep",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date sep 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date sept",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date september",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date september 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date september 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date september 26",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date september month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date sheet",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date sheet 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date this month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date this month 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date this week",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date this year",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date time 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date time 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date time hindi",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date tomorrow",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date uk",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date upcoming",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date usa",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date vrat",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date with time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date year 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates 2022 qatar",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates canada",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates germany",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates in november 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates in september 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates kolkata",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates new york",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates prokerala",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates uk 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates uk 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates usa 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates winnipeg",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates with parana time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi gai jatra",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi gas date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi gyaras 2026 date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi gyaras date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi gyaras date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi habba date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi habba date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi hai date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi hamro patro",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi holi date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi in nepal",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi in nepali",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi in nepali language",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi kab hai nepali",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi kaile",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi kathmandu",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi ki date bataen",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi kis date ki hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi kis date ko hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi kis date mein hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi kitni date ko hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi ko barta kasari basne",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi last date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi last date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi ma k garne",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi ma kati sute batti balne",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi mahatmya in nepali",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi mahatmya nepali",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi may 2026 dates iskcon",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi meaning in nepali",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi melaima",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi melari",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi nepali",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi nepali mein",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi pandaga date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi panduga date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi parana date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi puja date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi puja vidhi nepali",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi real date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi release date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi this month hamro patro",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi this month nepali",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi udyapan date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi upvas date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi upvas date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi upvas date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi vitthal date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi vrat date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi vrat date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi vrat date and time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi vrat date august 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi vrat date december 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi vrat date july 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi vrat date list 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi vrat date march 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi vrat date november 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi which date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi which date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi which date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi which date in july",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi which date this month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi yagya date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi yagya date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi yogini date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Elizabeth ekadashi release date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Feb purnima date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Google ekadashi date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guru purnima 2026 date quotes",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guru purnima date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guru purnima date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guru purnima date every year",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guru purnima date hindi",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guru purnima date this year",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guru purnima gujarati date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guru purnima in usa date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guru purnima quotes date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guru purnima utsav date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guru purnima which date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guruvayur ekadashi 2026 date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guruvayur ekadashi date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guruvayur ekadashi date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Guruvayur ekadashi date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Jan purnima date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Janai purnima date this year",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kojagiri purnima 2026 date quotes",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kumar purnima which date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Main ekadashi date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Next ekadashi date bengali calendar",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Next ekadashi date hindi",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Panchuka purnima date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Pandu purnima date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Paush purnima date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Paush purnima date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Paush purnima date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Paush purnima date 2027",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Pipal purnima date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Previous purnima date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima 2080 date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima birth date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima chad date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima chakraborty date of birth",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima dashain",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date 2023 gujarati calendar",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date 2025 bangladesh",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date 2026 bangladesh",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date 2026 calendar",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date 2026 gujarati calendar",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date after chhath puja",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date and time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date and time 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date and time 2026 july",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date and time august",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date and time august 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date and time in september 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date and time may 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date and time october",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date and time october 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date and time sep 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date and time september",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date and time this month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date april 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date aug 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date august",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date august 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date bangla",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date bangladesh",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date bataen",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date bataiye",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date bengali",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date calendar",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date coming",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date dec 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date december",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date december 2024",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date december 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date december 2025 time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date december 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date december month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date feb 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date feb 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date february",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date february 2023",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date february 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date february 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date for 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date for april 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date for this month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date guru purnima date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date hindi",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date hindu calendar",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in august",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in august 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in december 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in january 2027",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in july",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in july 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in may 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in nepal",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in november 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in october",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in october 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in september",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in september 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in this month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date jan 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date jan 2027",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date january",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date january 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date january 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date january 2027",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date july",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date july 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date july 2026 time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date june",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date june 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date kab hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date kab ki hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date kannada",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date ki hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date kobe",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date kolkata",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date kya hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date last",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date latest",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date list",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date list 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date list 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date march",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date march 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date march 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date march 26",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date may",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date may 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date may 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date may 2026 time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date may 26",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date may month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date may month 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date next",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date november 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date november 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date now",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date oct",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date october",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date october 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date october 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date of 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date of august 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date of birth",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date of july 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date of september",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date of september 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date of this month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date purnima",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date recent",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date sawan",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date sep",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date sep 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date sep 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date sept",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date september",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date september 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date september 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date september 26",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date start and end",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date this month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date this month 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date this week",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date this year",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date time 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date time august 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date time hindi",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date time july 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date time september",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date time september 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date tomorrow",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date upcoming",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date usa",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date vrat",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date when",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima dates",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima dates 2023 uk",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima dates 2025 usa",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima dates 2026 prokerala",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima dates 2026 uk",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima dates drik panchang",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima dates drik panchang 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima dates in 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima dates in 2026 january",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima dates in 2027",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima dates in year 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima dates usa 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima december date and time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima gaming date of birth",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima grahan date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima holi date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima ki date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima ki date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima ki date kya hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima ki raat date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima kis date hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima kis date ko hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima kitni date ki hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima kitni date ko hai",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima nepali date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima rajkumar date of birth",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima rakhi date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima rath date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima rath date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima rath yatra date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima release date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima start date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima vrat date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima vrat date and time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima vrat date and time 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima vrat date and time 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima vrat date april 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima vrat date december 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima vrat date january 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima vrat date may 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima vrat date october 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima which date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima which date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima which date this month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Quanti purnima",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rakhi purnima date this year",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rakhi purnima which date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rama ekadashi date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rama ekadashi date 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rama ekadashi date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rangbhari ekadashi date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rangbhari ekadashi date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Sharad purnima date hindi",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Sharad purnima date this year",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Sharad purnima date usa",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Sharad purnima garba date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Utpatika ekadashi",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Vaikuntha ekadashi date this year",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Vaikuntha ekadashi release date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Vaikuntha ekadashi which date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Vat purnima 2026 date goa",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Vat purnima date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Vat purnima upvas date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Welcome purnima release date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Yogini ekadashi date 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Yogini ekadashi date and time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Yogini ekadashi date and time 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Yogini ekadashi date july 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Yomari purnima date",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    }
+  ]
+}

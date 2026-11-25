@@ -1,0 +1,18 @@
+{
+  "intent": "converter",
+  "category": "converter-range",
+  "count": 1,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "b9e9ca5ef3956cb3831c638f9c50ee59101a64f9",
+      "question": "Which years does the BS to AD converter support?",
+      "answer": "The converter supports Bikram Sambat years 2000–2090 BS (April 14, 1943 AD to approximately April 13, 2034 AD).",
+      "intent": "converter",
+      "category": "converter-range",
+      "source": "editorial",
+      "generatedAt": "2026-11-25T04:19:58.773Z",
+      "verified": true
+    }
+  ]
+}

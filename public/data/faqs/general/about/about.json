@@ -1,0 +1,18 @@
+{
+  "intent": "general",
+  "category": "about",
+  "count": 1,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "3ee129494e746bc926d5c033c9f0ad507080e601",
+      "question": "What is MitiPatro?",
+      "answer": "MitiPatro is a Nepali (Bikram Sambat) calendar site that provides BS to AD date conversion, monthly calendars, holidays, festivals, and daily rashifal for Nepal.",
+      "intent": "general",
+      "category": "about",
+      "source": "editorial",
+      "generatedAt": "2026-11-25T04:20:28.105Z",
+      "verified": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "intent": "rashifal",
+  "category": "rashifal-update",
+  "count": 1,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "a877fef02f552fecee2ae29e9072fbadbe5eb167",
+      "question": "When does today’s Nepali rashifal update?",
+      "answer": "The daily rashifal is updated at midnight Nepal Standard Time (Asia/Kathmandu, UTC+05:45) with each new date and tithi.",
+      "intent": "rashifal",
+      "category": "rashifal-update",
+      "source": "editorial",
+      "bsYear": 2083,
+      "bsMonth": 8,
+      "bsDay": 9,
+      "generatedAt": "2026-11-25T04:19:58.773Z",
+      "verified": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "intent": "holiday",
+  "category": "saturday-rest-day",
+  "count": 1,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "88e5d4a5d37fa134362d8bfd9d2bfc629244dd63",
+      "question": "Are Saturdays public holidays in Nepal?",
+      "answer": "Saturday (शनिबार) is commonly observed as the weekly rest day in Nepal.",
+      "intent": "holiday",
+      "category": "saturday-rest-day",
+      "source": "editorial",
+      "generatedAt": "2026-11-25T04:19:58.772Z",
+      "verified": true
+    }
+  ]
+}

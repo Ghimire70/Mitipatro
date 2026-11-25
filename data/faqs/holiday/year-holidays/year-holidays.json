@@ -1,0 +1,52 @@
+{
+  "intent": "holiday",
+  "category": "year-holidays",
+  "count": 4,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "a46dd0d7234ae0d2ced8bf2d5b5a9faefdb0e829",
+      "question": "How many public holidays are listed for 2082 BS?",
+      "answer": "MitiPatro currently has 7 entries marked as public holidays for 2082 BS, excluding weekly Saturday observances.",
+      "intent": "holiday",
+      "category": "year-holidays",
+      "source": "deterministic",
+      "bsYear": 2082,
+      "generatedAt": "2026-11-25T04:19:58.770Z",
+      "verified": true
+    },
+    {
+      "id": "5db3b657f783d211163932ddc4415529f0dc64ef",
+      "question": "How many public holidays are listed for 2083 BS?",
+      "answer": "MitiPatro currently has 30 entries marked as public holidays for 2083 BS, excluding weekly Saturday observances.",
+      "intent": "holiday",
+      "category": "year-holidays",
+      "source": "deterministic",
+      "bsYear": 2083,
+      "generatedAt": "2026-11-25T04:19:58.770Z",
+      "verified": true
+    },
+    {
+      "id": "43e3667d4161426ed0edc0f798e5b1a5ec1a01c3",
+      "question": "How many public holidays are listed for 2084 BS?",
+      "answer": "MitiPatro currently has 7 entries marked as public holidays for 2084 BS, excluding weekly Saturday observances.",
+      "intent": "holiday",
+      "category": "year-holidays",
+      "source": "deterministic",
+      "bsYear": 2084,
+      "generatedAt": "2026-11-25T04:19:58.770Z",
+      "verified": true
+    },
+    {
+      "id": "adde6e15230674d47344c2bae9d781b3e19e1ea0",
+      "question": "How many public holidays are listed for 2085 BS?",
+      "answer": "MitiPatro currently has 4 entries marked as public holidays for 2085 BS, excluding weekly Saturday observances.",
+      "intent": "holiday",
+      "category": "year-holidays",
+      "source": "deterministic",
+      "bsYear": 2085,
+      "generatedAt": "2026-11-25T04:19:58.770Z",
+      "verified": true
+    }
+  ]
+}

@@ -1,0 +1,4038 @@
+{
+  "intent": "today",
+  "category": "today",
+  "count": 403,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "",
+      "question": "Aaja kina mitho bol xau",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aaja ko din k ho",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aaja ko din lyrics",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aaja ko din remix",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aaja ko kata xa",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aaja ko meethi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aaja ko meri baat sahi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aaja ko miti",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aaja ko miti in nepali",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aaja ko miti nepali",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aaja ko sait",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aaja ko tithi miti",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aaja ko vishwas ko mat",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aaja ko yo raat",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aaja mitra lyrics",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aajai vetiyo",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aajako mithun rashi nepali",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aajako miti in nepali today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Aquarius rashifal today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bikram sambat calendar today date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bikram sambat date today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Bikram sambat date today in nepali calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Dhanu rashifal today english",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date and time today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date time today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date today or tomorrow",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Gemini rashifal today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Goodlucktoday राशिफल 20 जनवरी 2026",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Google what is today's nepali date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Hey google what is today's nepali date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Is today a nepal holiday",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Jagbani rashifal today in punjabi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Jansatta rashifal today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kanya rashifal today amar ujala",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kanya rashifal today english",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din samma pani parxa today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Love rashifal today amar ujala",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Makar rashifal today youtube",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Meen rashifal today amar ujala",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Mesh rashifal today amar ujala",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Mesh rashifal today english",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nepal bikram sambat today in nepali calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nepal ma kati din pani parxa today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nepali date today gaya",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nepali date today gemini",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nepali date today jestha",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nepali new year date today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Pani kati din parxa today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date today time",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal for students today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal of today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today aaj tak",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today abp",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today amar ujala",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today anandabazar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today anandabazar patrika",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today aries",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today assamese",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today assamese 2026",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today astrosage",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today astroyogi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today bangla",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today bangladesh",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today bangladesh pratidin",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today bartaman patrika",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today bengali",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today bengali 2026",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today bengali anandabazar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today bengali bartaman",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today bengali tomorrow",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today brish",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today by shailendra pandey",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today canada",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today cancer",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today capricorn",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today career",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today chandra grahan",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today chart",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today dainik",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today dainik bhaskar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today dainik jagran",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today date birth",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today dhanu",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today dhanu rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today dharitri",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today divya bhaskar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today drik",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today drik panchang",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today education",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today eenadu",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today ekantipur",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today english",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today episode",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today for gemini",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today for kanya rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today for kumbh rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today for leo",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today for meen rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today for pisces",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today for scorpio",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today for students",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today for taurus",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today for vrishabha rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today ganesha speaks",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today ganesha speaks hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today gemini",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today gnt",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today gnt news",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today gnt news tula",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today gujarati",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today gujarati 2025",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today gujarati 2026",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today hamro patro",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today hindi 2025",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today hindi 2026",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today hindi all",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today hindi kumbh",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today hindi tula",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today hindustan",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today hindustan times",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today horoscope",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today in bengali",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today in english",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today in gujarati",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today in hindi 2026",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today in hindi weekly",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today in kannada",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today in marathi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today in nepali",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today in punjabi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today in punjabi name",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today in punjabi youtube",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today in punjabi youtube 2026",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today in telugu",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today jagbani",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today jagran",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today kannada",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today kantipur",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today kanya",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today kanya in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today kanya rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today kanya rashi nepali",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today kark",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today kark rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today karkat",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today kumbh",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today kumbh rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today kumbh rashi in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today kumbha",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today leo",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today leo in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today libra",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today libra in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today lion",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today live",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today live hindustan",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today love",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today love life",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today lucky number",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today makar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today makar rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today marathi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today meen",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today meen rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today mesh",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today mesh in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today mesh rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today mesh rashi nepali",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today mithun",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today mithun rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today monthly",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today name",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today navbharat",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today navbharat times",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today nbt",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today nepal",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today nepali",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today nepali 2080",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today nepali hamro patro",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today nepali mithun",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today nepali patro",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today news",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today news24",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today odia",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today of kanya",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today of kumbh",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today of makar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today of mithun rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today of tula",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today online khabar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today panchang",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today pandit shailendra pandey",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today patrika",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today pisces",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today prabhat khabar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today prokerala",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today prokerala hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today prothom alo",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today punjab kesari",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today punjabi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today rajasthan patrika",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today rashifal",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today sagittarius",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today sandesh",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today saptahik",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today saturday",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today scorpio",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today scorpio in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today september",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today september 2026",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today shailendra pandey",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today shailendra pandey ji",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today singh",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today singh rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today singh rashi in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today taurus",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today telugu",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today telugu 2025",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today telugu 2026",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today tomorrow",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today tomorrow in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today tula",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today tula 2025",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today tula in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today tula rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today tula rashi in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today varsh",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today video",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today virgo",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today vrish",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today vrish rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today vrishabh",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today vrishabh rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today vrishabha rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today vrishchik",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today vrishchik rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today webdunia",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today weekly",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today with name",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today yearly",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today yesterday",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rashifal today youtube",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Satik rashifal today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date ai",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date and festival",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date and time in kathmandu",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date and time now",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date and tithi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date and year",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date bc",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date converter",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date falgun",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date father's day",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date festival",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date gold price",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date google search",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date holi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date holiday",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date holiday or not",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date how much",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date in 2083",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date in gate",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date in vikram samvat",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date kati ho",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date kitna hai",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date kya hai",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date l",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date live",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date magh",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date mangsir",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date month year",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date of 2083",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date please",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date poush",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date raksha bandhan",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date rashifal",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date shrawan",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date tell me",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date tithi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date vikram samvat",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date with month",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date with tithi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date with year",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date world cup",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today nepali date world cup match",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal amar ujala 2025",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal amar ujala 2026",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal cancer in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal capricorn in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal chirag daruwalla",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal com",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal eenadu telugu",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal eisamay",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal gemini in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal hindi prokerala",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal in urdu",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal in usa",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal kark in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal kumbh amar ujala",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal kumbh rashi ka",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal naidunia",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal nepali tula",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal nilkantha",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal of kanya rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal update",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal vrishchik in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal with date of birth",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal with lucky number and colour",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal with shailendra pandey",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal yogi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today rashifal zee news",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today राशिफल bengali",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today राशिफल gujarati",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today राशिफल in",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today राशिफल in assamese",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today राशिफल in bengali",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today राशिफल in english",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today राशिफल in gujarati",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today राशिफल in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today राशिफल tula",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today राशिफल कन्या",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today राशिफल कुंभ",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Today's rashifal of kumbh rashi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Vrishchik rashifal today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What date is today in nepal as per nepali calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What date is today in nepal nepali calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What date is today in nepal nepali date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What date is today nepali date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What day is today in nepal date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What day is today in nepali date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is current nepali date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is date of nepal today in nepali calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is nepali date and month today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is nepali date of today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is nepali date today in nepal",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the current nepali date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date for today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today 2082",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today 2083",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today asar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today ashoj",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today baisakh",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today bhadra",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today full",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today gate",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today hamro patro",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today in bikram sambat",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today in bs",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today in bs in nepali calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today in english",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today in number",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today kartik",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today kati gate",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today month",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the nepali date today special",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the rashifal of today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the today nepal date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the today nepali date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is the today nepali date of nepal",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today date in nepal in nepali calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today date in nepali calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today date of nepali",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today date of nepali calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today nepal date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today nepali calendar date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today nepali date and time",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today nepali date in nepali calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today's date as per nepali calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today's date in nepal according to nepali calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today's date in nepal bs",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today's date in nepal calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today's date in nepal in nepali calendar",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today's nepali date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today's nepali date 2082",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today's nepali date 2083",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today's nepali date and day",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today's nepali date bs",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today's nepali date in bs",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today's nepali date in nepal",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What is today's nepali date in nepali",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What nepali date is it today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What nepali date us today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What was today nepali date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What's today's date in nepali",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "What's today's nepali date",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Www rashifal today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Www rashifal today's jagbani",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Yogesh rashifal today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल kanya rashi today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल mesh rashi today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल mithun today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल singh rashi today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल today 2025",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल today in hindi",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल tula rashi today",
+      "answer": "",
+      "intent": "today",
+      "category": "today",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    }
+  ]
+}

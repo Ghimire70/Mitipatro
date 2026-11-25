@@ -1,0 +1,18 @@
+{
+  "intent": "rashifal",
+  "category": "rashifal-12-rashis",
+  "count": 1,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "af38c563b76373fecb4be169df32d17f44c70183",
+      "question": "What are the 12 Nepali rashis (zodiac signs)?",
+      "answer": "The 12 Vedic rashis are: Mesha (Aries), Vrisha (Taurus), Mithun (Gemini), Karkat (Cancer), Simha (Leo), Kanya (Virgo), Tula (Libra), Vrischik (Scorpio), Dhanu (Sagittarius), Makar (Capricorn), Kumbha (Aquarius), Meen (Pisces). In Nepali: मेष, वृष, मिथुन, कर्कट, सिंह, कन्या, तुला, वृश्चिक, धनु, मकर, कुम्भ, मीन.",
+      "intent": "rashifal",
+      "category": "rashifal-12-rashis",
+      "source": "editorial",
+      "generatedAt": "2026-11-25T04:19:58.773Z",
+      "verified": true
+    }
+  ]
+}

@@ -1,0 +1,518 @@
+{
+  "intent": "month",
+  "category": "month",
+  "count": 51,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "",
+      "question": "1 barsa ma kati din hunxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "1 year ma kati din hunxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Barsa ma kati din hunxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din bite",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din bite chords",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din bite guitar lesson",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din bite kati raat haru lyrics",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din bite lyrics",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din bite raju lama",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din bite sugam pokhrel",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din bityo",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din kati raat",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din lagxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din lagxa in english",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din lagyo",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din lagyo lyrics",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din lagyo maya",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din lagyo maya pauna lai lyrics",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din ma bacha basxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din pani parxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din paxi pregnancy test garne",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati din samma pani parxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati dinato lyrics",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati dinato lyrics english",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Kati diner",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "License kati din ma aauxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Mama ko jutho kati din lagxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nepal ma kati din pani parxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nepal ma kati din paxi parxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nepali passport kati din ma aauxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nepali passport kati din ma banxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Nun kati din barne",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Pani kati din samma xa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Pani kati din xa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Passport banauna kati din lagxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Passport kati din ma aauxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Password kati din ma aauxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Period kati din hunxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Period kati din samma hunxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Police report kati din ma aauxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Pregnancy kati din ma thaha hunxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Pregnancy test kati din ma garne",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Rahiye latpat kati din meaning in hindi",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Sugam pokharel kati din bite",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Sugam pokharel kati din bite lyrics",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Sutak kati din lagxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "This month sankranti date",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "World cup aauna kati din xa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "World cup kati din hunxa",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "राशिफल monthly",
+      "answer": "",
+      "intent": "month",
+      "category": "month",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "verified": false
+    }
+  ]
+}

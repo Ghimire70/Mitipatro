@@ -1,0 +1,18 @@
+{
+  "intent": "rashifal",
+  "category": "rashifal-disclaimer",
+  "count": 1,
+  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "faqs": [
+    {
+      "id": "8ea94e32e272f9764da69ebfe9d13e1ddb602fd7",
+      "question": "Is MitiPatro rashifal an official astrological prediction?",
+      "answer": "No. The rashifal is for entertainment and reference only. It is based on the Moon’s sidereal position and makes no accuracy claim. Not a substitute for professional advice.",
+      "intent": "rashifal",
+      "category": "rashifal-disclaimer",
+      "source": "editorial",
+      "generatedAt": "2026-11-25T04:19:58.773Z",
+      "verified": true
+    }
+  ]
+}
