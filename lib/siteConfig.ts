@@ -88,6 +88,29 @@ export function getAdSettings(env: NodeJS.ProcessEnv = process.env): {
   };
 }
 
+export function getAdSenseSlotId(
+  variant: 'leaderboard' | 'rectangle',
+  env: NodeJS.ProcessEnv = process.env,
+): string {
+  const key = variant === 'leaderboard' ? 'ADSENSE_SLOT_LEADERBOARD' : 'ADSENSE_SLOT_RECTANGLE';
+  return env[key]?.trim() || '';
+}
+
+export function getAdSenseConfig(env: NodeJS.ProcessEnv = process.env): {
+  enabled: boolean;
+  clientId: string;
+  slotLeaderboard: string;
+  slotRectangle: string;
+} {
+  const adSettings = getAdSettings(env);
+  return {
+    enabled: adSettings.enabled,
+    clientId: adSettings.clientId,
+    slotLeaderboard: getAdSenseSlotId('leaderboard', env),
+    slotRectangle: getAdSenseSlotId('rectangle', env),
+  };
+}
+
 export function getGoogleSiteVerificationTag(pathname: string, value?: string): string {
   const token = value?.trim();
   if (pathname !== '/' || !token) return '';

@@ -7,6 +7,8 @@ import {
   getCanonicalHostRedirect,
   generateRobotsTxt,
   getAdSettings,
+  getAdSenseConfig,
+  getAdSenseSlotId,
   getGoogleSiteVerificationTag,
   getSiteUrl,
   isConverterToolsIndexingEnabled,
@@ -539,6 +541,47 @@ test("ads stay disabled unless both the flag and AdSense client ID are configure
     getAdSettings({ ADS_ENABLED: "true", ADSENSE_CLIENT_ID: " ca-pub-test " }),
     { enabled: true, clientId: "ca-pub-test" },
   );
+});
+
+test("getAdSenseConfig returns disabled when no client ID", () => {
+  assert.deepEqual(getAdSenseConfig({}), {
+    enabled: false,
+    clientId: "",
+    slotLeaderboard: "",
+    slotRectangle: "",
+  });
+});
+
+test("getAdSenseConfig reads slot IDs from env", () => {
+  assert.deepEqual(getAdSenseConfig({
+    ADS_ENABLED: "true",
+    ADSENSE_CLIENT_ID: "ca-pub-12345",
+    ADSENSE_SLOT_LEADERBOARD: "slot-lb",
+    ADSENSE_SLOT_RECTANGLE: "slot-rec",
+  }), {
+    enabled: true,
+    clientId: "ca-pub-12345",
+    slotLeaderboard: "slot-lb",
+    slotRectangle: "slot-rec",
+  });
+});
+
+test("getAdSenseSlotId returns leaderboard and rectangle slots", () => {
+  assert.equal(getAdSenseSlotId("leaderboard", { ADSENSE_SLOT_LEADERBOARD: "lb-1" }), "lb-1");
+  assert.equal(getAdSenseSlotId("rectangle", { ADSENSE_SLOT_RECTANGLE: "rec-1" }), "rec-1");
+  assert.equal(getAdSenseSlotId("leaderboard", {}), "");
+  assert.equal(getAdSenseSlotId("rectangle", {}), "");
+});
+
+test("AdSlot renders nothing when ads disabled", () => {
+  const html = render("/", ORIGIN, SAMPLE_NOW_MS, false, false, "");
+  assert.ok(!html.includes("adsbygoogle"), "AdSense script should not render when disabled");
+});
+
+test("AdSlot renders ins.adsbygoogle when ads enabled with client ID", () => {
+  const html = render("/", ORIGIN, SAMPLE_NOW_MS, false, true, "ca-pub-test", "", false, false, false, "slot-lb", "slot-rec");
+  assert.ok(html.includes('class="adsbygoogle"'), "AdSense ins element should render when enabled");
+  assert.ok(html.includes('data-ad-client="ca-pub-test"'), "data-ad-client should be present");
 });
 
 test("women-only holiday entries are not classified as general public holidays", () => {

@@ -25,6 +25,8 @@ const SITE_URL = getSiteUrl();
 const NOINDEX_SITE = isNoindexSiteEnabled();
 const AD_SETTINGS = getAdSettings();
 const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION?.trim() ?? '';
+const AD_SENSE_SLOT_LEADERBOARD = process.env.ADSENSE_SLOT_LEADERBOARD?.trim() ?? '';
+const AD_SENSE_SLOT_RECTANGLE = process.env.ADSENSE_SLOT_RECTANGLE?.trim() ?? '';
 const CONVERTER_TOOLS_INDEXING_ENABLED = isConverterToolsIndexingEnabled();
 const RASHIFAL_INDEXING_ENABLED = isRashifalIndexingEnabled();
 const PANCHANG_INDEXING_ENABLED = isPanchangIndexingEnabled();
@@ -212,6 +214,8 @@ async function startServer() {
         converterToolsIndexingEnabled: boolean,
         rashifalIndexingEnabled: boolean,
         panchangIndexingEnabled: boolean,
+        adSenseSlotLeaderboard: string,
+        adSenseSlotRectangle: string,
       ) => string;
 
       if (vite) {
@@ -238,6 +242,8 @@ async function startServer() {
         CONVERTER_TOOLS_INDEXING_ENABLED,
         RASHIFAL_INDEXING_ENABLED,
         PANCHANG_INDEXING_ENABLED,
+        AD_SENSE_SLOT_LEADERBOARD,
+        AD_SENSE_SLOT_RECTANGLE,
       );
       const rendered = injectRouteSeo(
         html,

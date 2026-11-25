@@ -45,6 +45,8 @@ export interface AppProps {
   noindexSite?: boolean;
   adsEnabled?: boolean;
   adsenseClientId?: string;
+  adSenseSlotLeaderboard?: string;
+  adSenseSlotRectangle?: string;
   googleSiteVerification?: string;
   converterToolsIndexingEnabled?: boolean;
   rashifalIndexingEnabled?: boolean;
@@ -58,6 +60,8 @@ export default function App({
   noindexSite = true,
   adsEnabled = false,
   adsenseClientId = '',
+  adSenseSlotLeaderboard = '',
+  adSenseSlotRectangle = '',
   googleSiteVerification = '',
   converterToolsIndexingEnabled = false,
   rashifalIndexingEnabled = false,
@@ -355,7 +359,7 @@ export default function App({
   };
 
   return (
-    <AdSettingsContext.Provider value={{ enabled: adsEnabled, clientId: adsenseClientId }}>
+    <AdSettingsContext.Provider value={{ enabled: adsEnabled, clientId: adsenseClientId, slotLeaderboard: adSenseSlotLeaderboard, slotRectangle: adSenseSlotRectangle }}>
       <div className="app-shell flex min-h-screen flex-col bg-[#FBF9F5] text-[#1C1917]">
         <SeoHeadSync
           seo={seo}
