@@ -115,6 +115,7 @@ export const StaticPages: React.FC<StaticPageProps> = ({
               The link opens your email app. MitiPatro does not receive or store
               a contact form. Response time is not guaranteed. reports are
               reviewed as time allows.
+              
             </p>
           </div>
         </div>
