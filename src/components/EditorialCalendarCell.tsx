@@ -18,7 +18,6 @@ interface EditorialCalendarCellProps {
     nakshatraName?: string;
   };
   onSelect: (bsDay: number) => void;
-  holidayFocus?: boolean;
 }
 
 export const EditorialCalendarCell: React.FC<EditorialCalendarCellProps> = ({
@@ -31,7 +30,6 @@ export const EditorialCalendarCell: React.FC<EditorialCalendarCellProps> = ({
   isSelected,
   elementInfo,
   onSelect,
-  holidayFocus = false,
 }) => {
   const { bsDay, bsDayNe, adDay, adMonthShort, weekday, isSaturday } = cell;
   const isFirstOfBsMonth = bsDay === 1;
@@ -39,7 +37,6 @@ export const EditorialCalendarCell: React.FC<EditorialCalendarCellProps> = ({
   const showAdLabel = isFirstOfBsMonth || isFirstOfAdMonth;
 
   const weekdayMeta = WEEKDAYS[weekday];
-  const isDimmed = holidayFocus && !hasPublicHoliday && !isSaturday;
 
   return (
     <button
@@ -58,13 +55,13 @@ export const EditorialCalendarCell: React.FC<EditorialCalendarCellProps> = ({
       onClick={() => onSelect(bsDay)}
       className={`group relative flex flex-col justify-between p-2 sm:p-3 transition-colors duration-150 sm:min-h-[140px] focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta ${
         isToday
-          ? 'bg-terracotta-soft ring-2 ring-inset ring-terracotta'
+          ? 'bg-terracotta-soft ring-1 ring-inset ring-terracotta'
           : isSelected
-            ? 'bg-sand/85 ring-2 ring-inset ring-ink/75'
+            ? 'bg-stone-100 ring-1 ring-inset ring-stone-400'
             : isSaturday
               ? 'bg-stone-50/60 hover:bg-stone-100'
               : 'bg-white hover:bg-stone-50/60'
-      }} ${isDimmed ? 'opacity-35' : 'opacity-100'}`}
+      }`}
     >
       {/* Cell header: BS numeral + Devanagari numeral */}
       <div className="flex items-start justify-between gap-1 mb-1">
@@ -84,7 +81,7 @@ export const EditorialCalendarCell: React.FC<EditorialCalendarCellProps> = ({
 
       {/* Today badge */}
       {isToday && (
-        <span className="absolute top-2 left-2 z-10 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-terracotta text-[10px] font-bold text-white shadow-xs ring-1 ring-inset ring-white pulse-today">
+        <span className="absolute top-2 left-2 z-10 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-terracotta text-[10px] font-bold text-white shadow-xs ring-1 ring-inset ring-white">
           <CalendarIcon className="h-3 w-3" aria-hidden="true" />
           आज
         </span>
@@ -131,22 +128,25 @@ export const EditorialCalendarCell: React.FC<EditorialCalendarCellProps> = ({
 
       {/* Hover panchanga tooltip */}
       {elementInfo && (
-        <div className="cell-tooltip absolute z-20 bottom-full left-1/2 -translate-x-1/2 mb-1.5 w-48 p-2.5 rounded-xl bg-ink text-white text-[11px] shadow-float hidden sm:block">
-          <div className="font-serif font-bold text-xs text-white">
-            {BS_MONTHS[bsMonth - 1].en} {bsDay}, {bsYear} BS
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none">
+          <div className="rounded-lg border border-stone-200 bg-white px-3 py-2.5 shadow-lg shadow-stone/10 text-xs">
+            <p className="font-bold text-ink">
+              {BS_MONTHS[bsMonth - 1].en} {bsDay}, {bsYear} BS
+            </p>
+            <p className="text-[10px] text-stone-600">
+              {adMonthShort} {adDay}, {cell.adYear} · {weekdayMeta.en}
+            </p>
+            <p className="mt-1 text-[10px] text-terracotta font-semibold">
+              Tithi: {elementInfo.tithiName}{' '}
+              {elementInfo.paksha ? `(${elementInfo.paksha})` : ''}
+            </p>
+            {elementInfo.nakshatraName && (
+              <p className="mt-0.5 text-[10px] text-stone-600">
+                Nakshatra: {elementInfo.nakshatraName}
+              </p>
+            )}
           </div>
-          <div className="text-white/75 mt-0.5">
-            {adMonthShort} {adDay}, {cell.adYear} · {weekdayMeta.en}
-          </div>
-          <div className="text-terracotta-border font-medium mt-1 pt-1 border-t border-white/15">
-            Tithi: {elementInfo.tithiName}{' '}
-            {elementInfo.paksha ? `(${elementInfo.paksha})` : ''}
-          </div>
-          {elementInfo.nakshatraName && (
-            <div className="mt-0.5 text-white/75 text-[10px]">
-              Nakshatra: {elementInfo.nakshatraName}
-            </div>
-          )}
+          <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0 border-t-4 border-t-stone-200 border-transparent" />
         </div>
       )}
     </button>
