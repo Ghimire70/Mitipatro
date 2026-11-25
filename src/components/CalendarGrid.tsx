@@ -84,6 +84,9 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
     today.bs.year === bsYear && today.bs.month === bsMonth ? today.bs.day : 1;
   const [selectedDay, setSelectedDay] = useState<number>(defaultSelectedDay);
 
+  // Holiday highlight filter
+  const [holidayFocus, setHolidayFocus] = useState(false);
+
   // Sync selected day if month/year changes externally
   React.useEffect(() => {
     setSelectedDay(today.bs.year === bsYear && today.bs.month === bsMonth ? today.bs.day : 1);
@@ -123,28 +126,41 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
   return (
     <section
       aria-label={`Print ${grid.monthMeta.en} ${bsYear} BS calendar`}
-      className={`print-month-page rounded-xl border border-stone-200 bg-white shadow-xs`}
+      className={`print-month-page rounded-xl border border-hairline bg-card shadow-editorial`}
     >
       {/* Top Month Toolbar */}
-      <div className="flex flex-col gap-4 border-b border-stone-200 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <div className="flex flex-col gap-4 border-b border-hairline px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
         <div>
           <div className="flex items-baseline gap-3">
-            <h2 className="font-display text-2xl font-semibold text-stone-900">
+            <h2 className="font-serif text-2xl font-bold tracking-tight text-ink">
               {grid.monthMeta.en} {bsYear}
             </h2>
-            <span className="font-display text-xl text-stone-600">
+            <span className="font-serif text-lg font-medium text-slatewarm">
               {grid.monthMeta.ne} {toDevanagariDigits(bsYear)}
             </span>
           </div>
-          <p className="mt-1 text-xs text-stone-500">
+          <p className="mt-1 text-xs text-slatewarm">
             {grid.adSpanLabel} · {grid.totalDays} days · {grid.monthMeta.seasonEn}
-          </p>
-          <p className="mt-0.5 text-[9px] font-semibold text-[#9A3412] uppercase tracking-tighter">
-            mitipatro
           </p>
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
+          {/* Holiday Highlight Filter Toggle */}
+          <button
+            type="button"
+            onClick={() => setHolidayFocus((prev) => !prev)}
+            aria-pressed={holidayFocus}
+            title="Highlight Public Holidays"
+            className={`px-3 py-2 text-xs font-medium rounded-lg border bg-paper text-slatewarm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 ${
+              holidayFocus
+                ? 'border-terracotta-border bg-terracotta-soft text-terracotta focus-visible:outline-terracotta'
+                : 'border-hairline hover:text-ink hover:bg-sand focus-visible:outline-terracotta'
+            }`}
+          >
+            <span className="w-2 h-2 rounded-full bg-terracotta"></span>
+            <span>Holidays</span>
+          </button>
+
           {showYearMonthControls && (
             <>
               <label htmlFor="cal-year-select" className="sr-only">
@@ -157,7 +173,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
                   const y = Number(e.target.value);
                   navigateTo(`/calendar/${y}/${grid.monthMeta.slug}`);
                 }}
-                className="h-10 rounded-md border border-stone-200 bg-[#FBF9F5] px-2.5 text-sm font-medium text-stone-800 focus-visible:outline-2 focus-visible:outline-[#9A3412]"
+                className="editorial-select h-10 px-3 text-xs sm:text-sm font-medium text-ink bg-card border border-hairline rounded-lg focus:outline-none focus:border-terracotta transition-colors whitespace-nowrap shrink-0"
               >
                 {PUBLISHED_BS_YEARS.map((y) => (
                   <option key={y} value={y}>
@@ -175,7 +191,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
                 onChange={(e) => {
                   navigateTo(`/calendar/${bsYear}/${e.target.value}`);
                 }}
-                className="h-10 rounded-md border border-stone-200 bg-[#FBF9F5] px-2.5 text-sm font-medium text-stone-800 focus-visible:outline-2 focus-visible:outline-[#9A3412]"
+                className="editorial-select h-10 px-3 text-xs sm:text-sm font-medium text-ink bg-card border border-hairline rounded-lg focus:outline-none focus:border-terracotta transition-colors whitespace-nowrap shrink-0"
               >
                 {BS_MONTHS.map((m) => (
                   <option key={m.slug} value={m.slug}>
@@ -186,21 +202,21 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
             </>
           )}
 
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1">
             {isPrevPublished && grid.prevMonth ? (
               <a
                 href={`/calendar/${grid.prevMonth.year}/${grid.prevMonth.slug}`}
                 onClick={(e) =>
                   handleLink(e, `/calendar/${grid.prevMonth!.year}/${grid.prevMonth!.slug}`)}
                 aria-label={`Previous month: ${grid.prevMonth.nameEn} ${grid.prevMonth.year}`}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-stone-200 bg-white text-stone-700 transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-[#9A3412]"
+                className="w-9 h-9 inline-flex items-center justify-center rounded-lg border border-hairline bg-card text-ink hover:bg-sand transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
               >
                 <ChevronLeft className="h-4 w-4" aria-hidden="true" />
               </a>
             ) : (
               <span
                 aria-disabled="true"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-stone-100 bg-stone-50 text-stone-300"
+                className="w-9 h-9 inline-flex items-center justify-center rounded-lg border border-stone-100 bg-stone-50 text-stone-300"
               >
                 <ChevronLeft className="h-4 w-4" aria-hidden="true" />
               </span>
@@ -212,14 +228,14 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
                 onClick={(e) =>
                   handleLink(e, `/calendar/${grid.nextMonth!.year}/${grid.nextMonth!.slug}`)}
                 aria-label={`Next month: ${grid.nextMonth.nameEn} ${grid.nextMonth.year}`}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-stone-200 bg-white text-stone-700 transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-[#9A3412]"
+                className="w-9 h-9 inline-flex items-center justify-center rounded-lg border border-hairline bg-card text-ink hover:bg-sand transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
               >
                 <ChevronRight className="h-4 w-4" aria-hidden="true" />
               </a>
             ) : (
               <span
                 aria-disabled="true"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-stone-100 bg-stone-50 text-stone-300"
+                className="w-9 h-9 inline-flex items-center justify-center rounded-lg border border-stone-100 bg-stone-50 text-stone-300"
               >
                 <ChevronRight className="h-4 w-4" aria-hidden="true" />
               </span>
@@ -229,7 +245,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
           {/* Print button */}
           <button
             onClick={() => window.print()}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-stone-200 bg-white text-stone-700 transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-[#9A3412]"
+            className="w-9 h-9 inline-flex items-center justify-center rounded-lg border border-hairline bg-card text-ink hover:bg-sand transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
             aria-label="Print calendar"
           >
             <Printer className="h-4 w-4" aria-hidden="true" />
@@ -242,31 +258,31 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
       <div role="grid" aria-label={`${grid.monthMeta.en} ${bsYear} days`}>
         <div
           role="row"
-          className="grid grid-cols-7 border-b border-stone-200 bg-[#F3EFE6]/60 text-center"
+          className="grid grid-cols-7 border-b border-hairline bg-sand/65 text-center py-2.5 text-[11px] sm:text-xs font-semibold tracking-wide"
         >
           {WEEKDAYS.map((wd) => (
             <div
               key={wd.index}
               role="columnheader"
               aria-label={wd.isHoliday ? `${wd.en} (Weekly Holiday)` : wd.en}
-              className={`py-2.5 text-xs font-semibold tracking-wide ${
-                wd.isHoliday ? 'text-[#9A3412]' : 'text-stone-600'
+              className={`text-center ${
+                wd.isHoliday ? 'text-terracotta' : 'text-slatewarm'
               }`}
             >
               <span className="block sm:inline">{wd.shortEn}</span>
-              <span className="hidden sm:inline text-stone-400"> · </span>
-              <span className="block sm:inline font-normal">{wd.shortNe}</span>
+              <span className="hidden sm:inline text-slatewarm/60"> · </span>
+              <span className="block sm:inline font-normal font-devanagari">{wd.shortNe}</span>
             </div>
           ))}
         </div>
 
         {/* Day Cells Grid */}
-        <div className="grid grid-cols-7 divide-x divide-y divide-stone-100 border-b border-stone-200">
+        <div className={`grid grid-cols-7 divide-x divide-y divide-hairline/80 border-b border-hairline ${holidayFocus ? '' : ''}`}>
           {Array.from({ length: grid.startWeekday }).map((_, idx) => (
             <div
               key={`empty-start-${idx}`}
               aria-hidden="true"
-              className="min-h-[96px] bg-stone-50/60 sm:min-h-[112px]"
+              className="min-h-[96px] bg-paper/45 p-2 sm:min-h-[112px]"
             />
           ))}
 
@@ -279,7 +295,6 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
               today.bs.day === cell.bsDay;
             const isSelected = selectedDay === cell.bsDay;
 
-            // Get element info (tithi/nakshatra) for this day
             const elementInfo = elementsByDay.get(cell.bsDay);
 
             const eventNames = eventsOnDay.map((h) => h.name);
@@ -296,6 +311,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
                 isSelected={isSelected}
                 elementInfo={elementInfo}
                 onSelect={(bsDay) => setSelectedDay(bsDay)}
+                holidayFocus={holidayFocus}
               />
             );
           })}
@@ -304,7 +320,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
             <div
               key={`empty-end-${idx}`}
               aria-hidden="true"
-              className="min-h-[96px] bg-stone-50/60 sm:min-h-[112px]"
+              className="min-h-[96px] bg-paper/45 p-2 sm:min-h-[112px]"
             />
           ))}
         </div>
@@ -313,10 +329,13 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
       {/* Selected Day Detail Bar */}
       <div
         aria-live="polite"
-        className="print-hidden flex flex-col gap-3 bg-[#FBF9F5] px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6"
+        className="print-hidden flex flex-col gap-3 bg-paper/80 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6"
       >
         <div className="flex items-start gap-3">
-          <CalendarIcon className="mt-0.5 h-5 w-5 shrink-0 text-[#9A3412]" aria-hidden="true" />
+          <div className="w-11 h-11 rounded-xl bg-terracotta text-white flex flex-col items-center justify-center shrink-0 shadow-xs ring-2 ring-inset ring-terracotta">
+            <span className="font-serif font-bold text-lg leading-none">{selectedCell.bsDay}</span>
+            <span className="font-devanagari text-[10px] opacity-90 mt-0.5">{selectedCell.bsDayNe}</span>
+          </div>
           <div>
             <p className="text-sm font-semibold text-stone-900">
               {grid.monthMeta.en} {selectedCell.bsDay}, {selectedCell.bsYear} BS{' '}
@@ -354,19 +373,28 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
             <a
               href="/rashifal"
               onClick={(e) => handleLink(e, '/rashifal')}
-              className="inline-flex items-center gap-1.5 font-semibold text-[#9A3412] hover:underline whitespace-nowrap self-start sm:self-auto sm:border-l sm:border-stone-200 sm:pl-3"
+              className="inline-flex min-h-[44px] items-center gap-1.5 font-semibold text-[#9A3412] hover:underline whitespace-nowrap shrink-0 self-start sm:self-auto sm:border-l sm:border-stone-200 sm:pl-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
             >
               <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
               राशिफल हेर्नुहोस्
             </a>
           )}
+
+          <a
+            href="/date-converter"
+            onClick={(e) => handleLink(e, '/date-converter')}
+            className="self-start sm:self-center text-xs font-semibold text-terracotta hover:text-terracotta-hover inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-card border border-hairline hover:border-terracotta-border transition-colors shrink-0 min-h-[44px] whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
+          >
+            <span>Open in Converter</span>
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
 
       {/* Month Events Summary Strip */}
       {monthEvents.length > 0 && (
-        <div className="border-t border-stone-200 px-4 py-4 sm:px-6">
-          <h3 className="text-xs font-semibold uppercase tracking-widest text-stone-500">
+        <div className="border-t border-hairline px-4 py-4 sm:px-6">
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-slatewarm">
             Events &amp; Observances in {grid.monthMeta.en} {bsYear}
           </h3>
           <div className="mt-2">

@@ -4,12 +4,14 @@ interface ToastBannerProps {
   message: string;
   visible: boolean;
   onClose?: () => void;
+  pulse?: boolean;
 }
 
 export const ToastBanner: React.FC<ToastBannerProps> = ({
   message,
   visible,
   onClose,
+  pulse = false,
 }) => {
   const [timer, setTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
 
@@ -31,7 +33,7 @@ export const ToastBanner: React.FC<ToastBannerProps> = ({
       aria-live="polite"
       className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50"
     >
-      <div className="flex items-center gap-3 rounded-lg border border-terracotta/30 bg-white/95 backdrop-blur px-5 py-3.5 shadow-xl shadow-terracotta/10 text-sm font-medium text-ink transition-opacity">
+      <div className={`flex items-center gap-3 rounded-lg border border-terracotta/30 bg-white/95 backdrop-blur px-5 py-3.5 shadow-xl shadow-terracotta/10 text-sm font-medium text-ink transition-opacity ${pulse ? 'animate-pulse' : ''}`}>
         <span className="h-5 w-5 rounded-full bg-terracotta text-white flex items-center justify-center text-[10px] font-bold">
           !
         </span>

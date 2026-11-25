@@ -62,9 +62,11 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
   };
 
   const monthMeta = BS_MONTHS[bsMonth - 1];
+  const refAdDate = bsToAd(bsYear, bsMonth, refDay);
+  const gregorianDate = `${refAdDate.monthShortEn} ${refAdDate.day}, ${refAdDate.year}`;
 
   return (
-    <header className="mb-6 border-b border-terracotta/20 bg-white/60 backdrop-blur-sm pb-6">
+    <header className="mb-6 border-b border-hairline bg-card/60 backdrop-blur-sm pb-6 sticky top-[56px] z-20">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between gap-4">
         <div className="flex flex-col gap-3 md:flex-row md:items-center gap-6">
           <div className="flex items-center gap-2 rounded-lg border border-terracotta/30 bg-terracotta/5 px-3 py-1">
@@ -78,61 +80,69 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
               ASIA/KATHMANDU (UTC+05:45)
             </span>
           </div>
-          <h1 className="font-display text-3xl font-bold tracking-tight text-ink md:text-4xl">
+          <h1 className="font-serif font-bold text-3xl sm:text-4xl leading-[1.08] tracking-tight text-ink">
             {monthMeta.en} {bsYear} Nepali Calendar<span className="text-terracotta"> ({monthMeta.ne})</span>
           </h1>
+          <p className="text-base sm:text-lg text-ink/90 font-normal leading-relaxed">
+            Today is{' '}
+            <span className="font-semibold text-terracotta whitespace-nowrap shrink-0">
+              {monthMeta.en} {refDay}, {bsYear} BS
+            </span>{' '}
+            <span className="font-devanagari text-slatewarm whitespace-nowrap shrink-0">
+              ({toDevanagariDigits(refDay)}, {toDevanagariDigits(bsYear)})
+            </span>{' '}
+            <span className="text-slatewarm mx-1">·</span>{' '}
+            <span className="font-medium text-ink whitespace-nowrap shrink-0">
+              {refWeekday}
+            </span>{' '}
+            <span className="font-devanagari text-slatewarm whitespace-nowrap shrink-0">
+              ({today.weekday.ne})
+            </span>
+          </p>
         </div>
 
-        <div className="flex flex-col gap-2 sm:flex-row items-end">
-          <div className="flex items-center gap-3 text-right">
-            <div className="flex flex-col items-end">
-              <p className="text-xs font-semibold text-slatewarm">
-                Bikram Sambat
-              </p>
-              <p className="font-display text-2xl font-bold text-ink">
-                {monthMeta.en} {toDevanagariDigits(refDay)},{' '}
-                {toDevanagariDigits(bsYear)}
-              </p>
-              <p className="text-sm font-medium text-stone-600">
-                {refWeekday} · {nepalTime}
-              </p>
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={onJumpToToday}
-              className={`inline-flex min-h-[44px] items-center gap-2 rounded-md px-5 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 ${
-                isCurrent
-                  ? 'bg-stone-900 text-white focus-visible:outline-stone-900'
-                  : 'bg-terracotta text-white focus-visible:outline-terracotta'
-              } hover:${
-                isCurrent ? 'bg-stone-800' : 'bg-terracotta-hover'
-              }`}
+        <div className="flex flex-col gap-3 sm:flex-row items-center gap-3 shrink-0 lg:w-56">
+          <button
+            type="button"
+            onClick={onJumpToToday}
+            className={`flex-1 lg:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-white rounded-xl shadow-sm transition-all active:scale-[0.99] whitespace-nowrap shrink-0 min-h-[44px] ${
+              isCurrent
+                ? 'bg-stone-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-900'
+                : 'bg-terracotta hover:bg-terracotta-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta'
+            }`}
+          >
+            <span>Jump to Today</span>
+            <span aria-hidden="true" className="text-base leading-none">↓</span>
+          </button>
+          <button
+            type="button"
+            onClick={onOpenHolidays}
+            className="flex-1 lg:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-ink bg-card hover:bg-sand border border-hairline rounded-xl transition-colors whitespace-nowrap shrink-0 min-h-[44px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
+          >
+            <Sparkles className="w-4 h-4 text-terracotta" aria-hidden="true" />
+            <span>2083 Public Holidays</span>
+          </button>
+          {rashifalIndexingEnabled && (
+            <a
+              href="/rashifal"
+              onClick={(e) => handleLink(e, '/rashifal')}
+              className="flex-1 lg:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-terracotta bg-card hover:bg-terracotta-soft border border-terracotta rounded-xl transition-colors whitespace-nowrap shrink-0 min-h-[44px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
             >
-              <Calendar className="h-4 w-4" aria-hidden="true" />
-              {isCurrent ? 'Already Today' : 'Jump to Today'}
-            </button>
-            <button
-              type="button"
-              onClick={onOpenHolidays}
-              className="inline-flex min-h-[44px] items-center gap-2 rounded-md border border-stone-200 bg-white px-5 py-2 text-sm font-semibold text-stone-700 hover:bg-stone-50 hover:text-stone-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
-            >
-              <Sparkles className="h-4 w-4 text-terracotta" aria-hidden="true" />
-              2083 Public Holidays
-            </button>
-            {rashifalIndexingEnabled && (
-              <a
-                href="/rashifal"
-                onClick={(e) => handleLink(e, '/rashifal')}
-                className="inline-flex min-h-[44px] items-center gap-2 rounded-md border border-terracotta bg-white px-5 py-2 text-sm font-semibold text-terracotta hover:bg-terracotta/5 hover:text-terracotta-hover transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta whitespace-nowrap shrink-0"
-              >
-                <Sparkles className="h-4 w-4 text-terracotta" aria-hidden="true" />
-                दैनिक राशिफल
-              </a>
-            )}
-          </div>
+              <Sparkles className="w-4 h-4 text-terracotta" aria-hidden="true" />
+              <span>दैनिक राशिफल</span>
+            </a>
+          )}
         </div>
+      </div>
+
+      <div className="mt-4 flex flex-wrap items-center gap-2 text-xs sm:text-sm text-slatewarm">
+        <svg className="w-4 h-4 text-slatewarm/80 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <polyline points="12 7 12 12 15 14" />
+        </svg>
+        <span>Gregorian: <strong className="font-medium text-ink whitespace-nowrap shrink-0">{gregorianDate}</strong></span>
+        <span aria-hidden="true">·</span>
+        <span>Nepal Time: <strong id="npt-clock" className="font-mono font-medium text-ink tabular-nums whitespace-nowrap shrink-0">{nepalTime}</strong></span>
       </div>
     </header>
   );

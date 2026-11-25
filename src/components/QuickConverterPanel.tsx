@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
-import { ArrowLeftRight, CalendarCheck } from 'lucide-react';
+import { ArrowLeftRight, CalendarCheck, Copy } from 'lucide-react';
 import {
   BS_MAX_YEAR,
   BS_MIN_YEAR,
@@ -51,15 +51,15 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
 
   const [mode, setMode] = useState<'bs-to-ad' | 'ad-to-bs'>('bs-to-ad');
 
-  // BS inputs
   const [bsYear, setBsYear] = useState<string>(String(today.bs.year));
   const [bsMonth, setBsMonth] = useState<string>(String(today.bs.month));
   const [bsDay, setBsDay] = useState<string>(String(today.bs.day));
 
-  // AD inputs
   const [adYear, setAdYear] = useState<string>(String(today.ad.year));
   const [adMonth, setAdMonth] = useState<string>(String(today.ad.month));
   const [adDay, setAdDay] = useState<string>(String(today.ad.day));
+
+  const [copyStatus, setCopyStatus] = useState<'idle' | 'copied'>('idle');
 
   const bsYearsList = useMemo(() => {
     const arr: number[] = [];
@@ -139,6 +139,7 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
     setAdYear(String(t.ad.year));
     setAdMonth(String(t.ad.month));
     setAdDay(String(t.ad.day));
+    setCopyStatus('idle');
   }, []);
 
   const selectedMonthMaxDays = useMemo(() => {
@@ -167,27 +168,53 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
     return null;
   }, [activeResult.ok, mode, bsYear, bsMonth, bsDay, activeResult.bs, today.bs]);
 
+  const primaryLabel = useMemo(() => {
+    if (!activeResult.ok) return '';
+    if (mode === 'bs-to-ad') {
+      return `${activeResult.ad!.weekdayEn}, ${activeResult.ad!.monthNameEn} ${activeResult.ad!.day}, ${activeResult.ad!.year}`;
+    }
+    return `${activeResult.bs!.monthNameEn} ${activeResult.bs!.day}, ${activeResult.bs!.year} (${activeResult.bs!.weekdayEn})`;
+  }, [activeResult.ok, mode, activeResult.ad, activeResult.bs]);
+
+  const secondaryLabel = useMemo(() => {
+    if (!activeResult.ok) return '';
+    if (mode === 'bs-to-ad') {
+      return `${activeResult.bs!.monthNameEn} ${toDevanagariDigits(activeResult.bs!.day)}, ${toDevanagariDigits(activeResult.bs!.year)} · ${activeResult.bs!.iso}`;
+    }
+    return `${activeResult.ad!.monthNameEn} ${activeResult.ad!.day}, ${activeResult.ad!.year} · ${activeResult.ad!.iso}`;
+  }, [activeResult.ok, mode, activeResult.ad, activeResult.bs]);
+
+  const handleCopy = useCallback(() => {
+    const text = mode === 'bs-to-ad'
+      ? `${primaryLabel.split(', ')[0]}, ${primaryLabel.split(', ').slice(1).join(', ')}`
+      : primaryLabel;
+    navigator.clipboard.writeText(text).then(() => {
+      setCopyStatus('copied');
+      setTimeout(() => setCopyStatus('idle'), 1500);
+    });
+  }, [mode, primaryLabel]);
+
   return (
     <section
       aria-label="BS to AD Date Converter"
-      className="rounded-xl border border-stone-200 bg-white p-5 shadow-xs sm:p-6"
+      className="rounded-xl border border-hairline bg-card shadow-editorial p-5 sm:p-6"
     >
-      <div className="flex flex-col gap-4 border-b border-stone-200 pb-4 sm:flex-row sm:items-center sm:justify-between">
-        {/* Mode segmented toggle (separate from Today reset) */}
+      <div className="flex flex-col gap-4 border-b border-hairline pb-4 sm:flex-row sm:items-center sm:justify-between">
+        {/* Mode segmented toggle */}
         <div
           role="tablist"
           aria-label="Conversion direction"
-          className="inline-flex rounded-lg bg-[#F3EFE6] p-1 shrink-0"
+          className="inline-flex rounded-xl bg-sand border border-hairline/70 p-1 shrink-0"
         >
           <button
             type="button"
             role="tab"
             aria-selected={mode === 'bs-to-ad'}
             onClick={() => setMode('bs-to-ad')}
-            className={`min-h-[40px] rounded-md px-3.5 py-1.5 text-xs font-semibold transition-colors whitespace-nowrap shrink-0 ${
+            className={`min-h-[44px] rounded-lg px-3.5 py-2 text-xs sm:text-sm font-semibold transition-colors whitespace-nowrap shrink-0 ${
               mode === 'bs-to-ad'
-                ? 'bg-white text-stone-900 shadow-xs'
-                : 'text-stone-600 hover:text-stone-900'
+                ? 'bg-card text-ink shadow-xs'
+                : 'text-slatewarm hover:text-ink'
             }`}
           >
             BS to AD
@@ -197,40 +224,40 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
             role="tab"
             aria-selected={mode === 'ad-to-bs'}
             onClick={() => setMode('ad-to-bs')}
-            className={`min-h-[40px] rounded-md px-3.5 py-1.5 text-xs font-semibold transition-colors whitespace-nowrap shrink-0 ${
+            className={`min-h-[44px] rounded-lg px-3.5 py-2 text-xs sm:text-sm font-semibold transition-colors whitespace-nowrap shrink-0 ${
               mode === 'ad-to-bs'
-                ? 'bg-white text-stone-900 shadow-xs'
-                : 'text-stone-600 hover:text-stone-900'
+                ? 'bg-card text-ink shadow-xs'
+                : 'text-slatewarm hover:text-ink'
             }`}
           >
             AD to BS
           </button>
         </div>
 
-        {/* Today reset button — separate action */}
+        {/* Today reset button */}
         <button
           type="button"
           onClick={resetToToday}
-          className="inline-flex min-h-[40px] items-center gap-1.5 rounded-md border border-stone-200 bg-[#FBF9F5] px-3 py-1.5 text-xs font-medium text-stone-700 hover:bg-stone-100 whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
+          className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-hairline bg-paper px-3 py-2 text-xs sm:text-sm font-medium text-stone-700 hover:bg-sand whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
         >
           <CalendarCheck className="h-3.5 w-3.5 text-terracotta" aria-hidden="true" />
-          <span>Today (NPT)</span>
+          <span>Reset Today</span>
         </button>
       </div>
 
-      {/* Form inputs */}
-      <div className={`mt-5 grid gap-3.5 ${mode === 'bs-to-ad' ? 'grid-cols-1 sm:grid-cols-3' : 'grid-cols-1 sm:grid-cols-3'}`}>
+      {/* Form inputs — 3-col grid */}
+      <div className={`mt-6 grid gap-2.5 ${mode === 'bs-to-ad' ? 'grid-cols-1 lg:grid-cols-12' : 'grid-cols-1 lg:grid-cols-12'}`}>
         {/* Year */}
-        <div>
-          <label htmlFor={`conv-${mode}-year`} className="block text-xs font-medium text-stone-600">
-            {mode === 'bs-to-ad' ? 'BS Year (2000–2090)' : 'AD Year (1943–2034)'}
+        <div className="col-span-1 lg:col-span-4">
+          <label htmlFor={`conv-${mode}-year`} className="block text-[11px] font-medium text-slatewarm mb-1.5">
+            {mode === 'bs-to-ad' ? 'BS Year' : 'AD Year'}
           </label>
           {mode === 'bs-to-ad' ? (
             <select
               id="conv-bs-year"
               value={bsYear}
               onChange={(e) => setBsYear(e.target.value)}
-              className="mt-1.5 h-11 w-full rounded-md border border-stone-300 bg-white px-2.5 font-mono text-sm text-stone-900 focus:border-terracotta focus:outline-none"
+              className="editorial-select w-full h-10 px-2.5 text-sm font-medium text-ink bg-card border border-hairline rounded-xl focus:outline-none focus:border-terracotta transition-colors"
             >
               {bsYearsList.map((y) => (
                 <option key={y} value={y}>
@@ -246,14 +273,14 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
               max={2034}
               value={adYear}
               onChange={(e) => setAdYear(e.target.value)}
-              className="mt-1.5 h-11 w-full rounded-md border border-stone-300 bg-white px-3 font-mono text-sm text-stone-900 tabular-nums focus:border-terracotta focus:outline-none"
+              className="w-full h-10 px-2.5 text-sm font-medium text-ink text-center bg-card border border-hairline rounded-xl focus:outline-none focus:border-terracotta transition-colors"
             />
           )}
         </div>
 
-        {/* Month — full width dropdown, no clipping */}
-        <div className="col-span-1 sm:col-span-1">
-          <label htmlFor={`conv-${mode}-month`} className="block text-xs font-medium text-stone-600">
+        {/* Month */}
+        <div className="col-span-1 lg:col-span-5">
+          <label htmlFor={`conv-${mode}-month`} className="block text-[11px] font-medium text-slatewarm mb-1.5">
             Month
           </label>
           {mode === 'bs-to-ad' ? (
@@ -261,7 +288,7 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
               id="conv-bs-month"
               value={bsMonth}
               onChange={(e) => setBsMonth(e.target.value)}
-              className="mt-1.5 h-11 w-full rounded-md border border-stone-300 bg-white px-2.5 text-sm text-stone-900 focus:border-terracotta focus:outline-none"
+              className="editorial-select w-full h-10 px-2.5 text-sm font-medium text-ink bg-card border border-hairline rounded-xl focus:outline-none focus:border-terracotta transition-colors"
             >
               {BS_MONTHS.map((m) => (
                 <option key={m.index} value={m.index}>
@@ -274,7 +301,7 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
               id="conv-ad-month"
               value={adMonth}
               onChange={(e) => setAdMonth(e.target.value)}
-              className="mt-1.5 h-11 w-full rounded-md border border-stone-300 bg-white px-2.5 text-sm text-stone-900 focus:border-terracotta focus:outline-none"
+              className="editorial-select w-full h-10 px-2.5 text-sm font-medium text-ink bg-card border border-hairline rounded-xl focus:outline-none focus:border-terracotta transition-colors"
             >
               {[
                 'January', 'February', 'March', 'April', 'May', 'June',
@@ -289,38 +316,39 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
         </div>
 
         {/* Day */}
-        <div>
-          <label htmlFor={`conv-${mode}-day`} className="block text-xs font-medium text-stone-600">
-            {mode === 'bs-to-ad' ? `BS Day (1–${selectedMonthMaxDays})` : 'AD Day (1–31)'}
+        <div className="col-span-1 lg:col-span-3">
+          <label htmlFor={`conv-${mode}-day`} className="block text-[11px] font-medium text-slatewarm mb-1.5">
+            {mode === 'bs-to-ad' ? `Day` : `Day`}
           </label>
           <input
             id={`conv-${mode}-day`}
             type="number"
             min={1}
-            max={mode === 'bs-to-ad' ? 32 : 31}
+            max={mode === 'bs-to-ad' ? selectedMonthMaxDays : 31}
             value={mode === 'bs-to-ad' ? bsDay : adDay}
             onChange={(e) =>
               mode === 'bs-to-ad' ? setBsDay(e.target.value) : setAdDay(e.target.value)
             }
-            className="mt-1.5 h-11 w-full rounded-md border border-stone-300 bg-white px-3 font-mono text-sm text-stone-900 tabular-nums focus:border-terracotta focus:outline-none"
+            className="w-full h-10 px-2.5 text-sm font-medium text-ink text-center bg-card border border-hairline rounded-xl focus:outline-none focus:border-terracotta transition-colors"
           />
         </div>
       </div>
 
-      {/* Centered swap control between inputs and output */}
-      <div className="mt-4 flex items-center justify-center">
+      {/* Centered swap control */}
+      <div className="relative flex items-center justify-center py-2">
+        <div className="w-full border-t border-hairline" />
         <button
           type="button"
           onClick={() => setMode(mode === 'bs-to-ad' ? 'ad-to-bs' : 'bs-to-ad')}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-200 bg-white text-stone-700 hover:bg-stone-100 hover:text-stone-900 focus:outline-2 focus:outline-offset-1 focus:outline-terracotta transition-colors"
+          className="absolute inline-flex items-center justify-center w-9 h-9 rounded-full bg-card border border-hairline text-ink hover:text-terracotta hover:border-terracotta-border shadow-xs transition-all active:rotate-180"
           aria-label="Swap conversion direction"
         >
-          <ArrowLeftRight className="h-5 w-5 text-terracotta" aria-hidden="true" />
+          <ArrowLeftRight className="w-4 h-4 text-terracotta" aria-hidden="true" />
         </button>
       </div>
 
       {/* Output or validation error */}
-      <div className="mt-6 border-t border-stone-200 pt-5" aria-live="polite">
+      <div className="mt-6 border-t border-hairline pt-5" aria-live="polite">
         {!activeResult.ok ? (
           <div
             role="alert"
@@ -334,23 +362,29 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
             <span>{activeResult.error}</span>
           </div>
         ) : (
-          <div className="rounded-lg bg-[#FBF9F5] p-4 sm:p-5">
+          <div className="rounded-xl bg-paper border border-hairline p-4 sm:p-5">
             <div className="flex flex-col gap-4">
               <div>
-                <p className="text-xs font-medium tracking-wide text-stone-500 uppercase">
-                  {mode === 'bs-to-ad'
-                    ? 'Gregorian (AD) Equivalent'
-                    : 'Bikram Sambat (BS) Equivalent'}
+                <div className="flex items-center justify-between gap-2">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-slatewarm">
+                    {mode === 'bs-to-ad'
+                      ? 'GREGORIAN (AD) EQUIVALENT'
+                      : 'BIKRAM SAMBAT (BS) EQUIVALENT'}
+                  </p>
+                  <button
+                    type="button"
+                    onClick={handleCopy}
+                    className={`inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-semibold text-slatewarm hover:text-ink bg-card border border-hairline rounded-md transition-colors whitespace-nowrap shrink-0 min-h-[8px]`}
+                  >
+                    <Copy className="w-3.5 h-3.5" aria-hidden="true" />
+                    <span>{copyStatus === 'copied' ? 'Copied!' : 'Copy'}</span>
+                  </button>
+                </div>
+                <p className="mt-1 font-serif font-bold text-2xl sm:text-[1.65rem] leading-[1.2] text-ink whitespace-normal break-words">
+                  {primaryLabel}
                 </p>
-                <p className="mt-1 font-display text-2xl font-bold text-ink">
-                  {mode === 'bs-to-ad'
-                    ? `${activeResult.ad!.weekdayEn}, ${activeResult.ad!.monthNameEn} ${activeResult.ad!.day}, ${activeResult.ad!.year}`
-                    : `${activeResult.bs!.monthNameEn} ${activeResult.bs!.day}, ${activeResult.bs!.year} (${activeResult.bs!.weekdayEn})`}
-                </p>
-                <p className="mt-1 text-sm text-stone-600">
-                  {mode === 'bs-to-ad'
-                    ? `BS: ${activeResult.bs!.monthNameEn} ${toDevanagariDigits(activeResult.bs!.day)}, ${toDevanagariDigits(activeResult.bs!.year)} · ${activeResult.bs!.iso}`
-                    : `AD: ${activeResult.ad!.monthNameEn} ${activeResult.ad!.day}, ${activeResult.ad!.year} · ${activeResult.ad!.iso}`}
+                <p className="mt-2 text-xs text-slatewarm font-devanagari">
+                  {secondaryLabel}
                 </p>
                 {relativeBadge && (
                   <p className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-terracotta-soft px-3 py-1 text-[10px] font-bold text-terracotta">
@@ -359,16 +393,8 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
                 )}
               </div>
 
-              <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-stone-200 pt-3">
-                <button
-                  type="button"
-                  onClick={() => setMode(mode === 'bs-to-ad' ? 'ad-to-bs' : 'bs-to-ad')}
-                  className="inline-flex min-h-[36px] items-center gap-2 rounded-md border border-stone-200 bg-white px-3 py-1 text-xs font-semibold text-stone-800 hover:bg-stone-50 whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-terracotta"
-                >
-                  <ArrowLeftRight className="h-3.5 w-3.5 text-terracotta" aria-hidden="true" />
-                  <span>Swap Direction</span>
-                </button>
-
+              <div className="mt-4 border-t border-hairline/80 pt-2 flex items-center justify-between text-[11px] text-slatewarm">
+                <span id="conv-relative-badge">{relativeBadge || ''}</span>
                 {onNavigate && activeResult.bs && activeResult.bs.year >= 2082 && activeResult.bs.year <= 2085 && (
                   <a
                     href={`/calendar/${activeResult.bs.year}/${activeResult.bs.monthSlug}`}
@@ -376,9 +402,9 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
                       e.preventDefault();
                       onNavigate(`/calendar/${activeResult.bs!.year}/${activeResult.bs!.monthSlug}`);
                     }}
-                    className="inline-flex min-h-[36px] items-center gap-2 rounded-md bg-terracotta px-3 py-1 text-xs font-semibold text-white hover:bg-terracotta-hover whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-terracotta"
+                    className="font-semibold text-terracotta hover:underline"
                   >
-                    <span>View {activeResult.bs!.monthNameEn} {activeResult.bs!.year} →</span>
+                    View {activeResult.bs!.monthNameEn} {activeResult.bs!.year} →
                   </a>
                 )}
               </div>

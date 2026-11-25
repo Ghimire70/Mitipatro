@@ -44,8 +44,8 @@ export const HolidaysDrawer: React.FC<HolidaysDrawerProps> = ({
         className="absolute inset-0 bg-ink/40 backdrop-blur-sm transition-opacity"
         onClick={onClose}
       />
-      <div className="absolute inset-y-0 right-0 w-full max-w-md bg-white border-l border-stone-200 shadow-2xl transform transition-transform duration-300 translate-x-full sm:translate-x-0">
-        <div className="flex items-center justify-between px-6 py-5 border-b border-stone-200">
+      <div className="absolute inset-y-0 right-0 w-full max-w-md bg-paper border-l border-hairline shadow-float transform transition-transform duration-300 translate-x-full sm:translate-x-0">
+        <div className="flex items-center justify-between px-6 py-5 border-b border-hairline bg-card">
           <h2 className="font-display text-lg font-bold text-ink">
             Public Holidays &mdash; {monthMeta.en} {bsYear} BS
           </h2>
@@ -75,7 +75,7 @@ export const HolidaysDrawer: React.FC<HolidaysDrawerProps> = ({
                     onClick={() =>
                       handleSelect(h.bsYear, h.bsMonth, h.bsDay)
                     }
-                    className="group flex items-center gap-4 px-4 py-3.5 rounded-xl cursor-pointer hover:bg-stone-50 hover:border-terracotta/20 border border-transparent transition-colors"
+                    className="group flex items-center gap-4 px-4 py-3.5 rounded-xl cursor-pointer hover:bg-sand border border-transparent transition-colors"
                   >
                     <div className="flex flex-col items-center gap-1 shrink-0">
                       <span className="w-8 h-8 rounded-lg bg-terracotta-soft border border-terracotta-border text-terracotta flex flex-col items-center justify-center font-serif font-bold text-sm leading-none">
@@ -106,7 +106,7 @@ export const HolidaysDrawer: React.FC<HolidaysDrawerProps> = ({
           )}
         </div>
 
-        <div className="px-6 py-3 border-t border-stone-200 bg-stone-50/50 text-center">
+        <div className="px-6 py-3 border-t border-hairline bg-card text-center">
           <p className="text-[10px] font-semibold text-stone-400 uppercase tracking-tighter">
             Holiday dates are for reference. Confirm with official notices.
           </p>
