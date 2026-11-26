@@ -19,6 +19,7 @@ import { StaticPages } from './pages/StaticPages';
 import { PanchangPage } from './pages/PanchangPage';
 import { RashifalPage } from './pages/RashifalPage';
 import { FaqPage } from './pages/FaqPage';
+import { PrintCalendarPage } from './pages/PrintCalendarPage';
 import { getRashiById } from '../lib/rashifal';
 
 function normalizePath(pathname: string): string {
@@ -328,6 +329,9 @@ export default function App({
 
     if (currentPath === '/faq') {
       return <FaqPage onNavigate={navigate} />;
+    }
+    if (currentPath === '/print-nepali-calendar') {
+      return <PrintCalendarPage faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} />;
     }
 
     // All remaining routes have isNotFound=true from getSeoForRoute,

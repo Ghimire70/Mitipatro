@@ -23,6 +23,7 @@ interface CalendarGridProps {
   onNavigate?: (path: string) => void;
   showYearMonthControls?: boolean;
   rashifalIndexingEnabled?: boolean;
+  printPreview?: boolean;
 }
 
 interface DayEvent {
@@ -44,6 +45,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
   onNavigate,
   showYearMonthControls = true,
   rashifalIndexingEnabled = false,
+  printPreview = false,
 }) => {
   const today = useMemo(() => getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined), [nowMs]);
   const grid = useMemo(() => getBsMonthGrid(bsYear, bsMonth), [bsYear, bsMonth]);

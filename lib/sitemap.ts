@@ -25,8 +25,8 @@ export function generateSitemapXml(
   )
     .map((route) => {
       const priority =
-        route === '/' ? '1.0' : route === '/aaja-ko-miti' || route === '/date-converter' ? '0.9' : '0.8';
-      const changefreq = route === '/' || route === '/aaja-ko-miti' ? 'daily' : 'monthly';
+        route === '/' ? '1.0' : route === '/aaja-ko-miti' || route === '/date-converter' || route === '/print-nepali-calendar' ? '0.9' : '0.8';
+      const changefreq = route === '/' || route === '/aaja-ko-miti' || route === '/print-nepali-calendar' ? 'daily' : 'monthly';
       return `  <url>\n    <loc>${escapeXml(buildCanonicalUrl(route, siteUrl))}</loc>\n    <lastmod>${todayIso}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
     })
     .join('\n');

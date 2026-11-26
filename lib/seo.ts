@@ -851,6 +851,54 @@ function getRouteSeo(
     }
   }
 
+  // Print Nepali Calendar page: /print-nepali-calendar
+  if (cleanPath === '/print-nepali-calendar') {
+    const today = getTodayNepal(now);
+    const currentYear = today.bs.year;
+    const title = `Print Nepali Calendar ${currentYear} BS – Free Printable Monthly Calendars | MitiPatro`;
+    const description = `Print free Nepali calendar ${currentYear} BS (${currentYear + 57}–${currentYear + 58} AD) with all 12 months. Each printable page shows Bikram Sambat dates, Gregorian equivalents, Saturdays, and public holidays. Optimized for A4 printing.`;
+    const breadcrumbs: BreadcrumbItem[] = [
+      { name: 'Home', path: '/' },
+      { name: 'Print Nepali Calendar', path: '/print-nepali-calendar' },
+    ];
+    const faqs: FaqItem[] = [
+      {
+        question: 'How do I print a Nepali calendar from this page?',
+        answer: 'Click the "Print Calendar" button for any month, or use your browser\'s print function (Ctrl+P / Cmd+P). The pages are optimized for A4 paper with clean layouts showing BS dates, AD equivalents, and holidays.',
+      },
+      {
+        question: 'Which Nepali calendar years are available for printing?',
+        answer: `Currently ${currentYear} BS and ${currentYear - 1} BS monthly calendars are available. Each month can be printed individually or you can print the full year overview.`,
+      },
+      {
+        question: 'Do the printable calendars include public holidays?',
+        answer: 'Yes, each monthly calendar marks public holidays and Saturdays. Holiday names appear in both English and Nepali. Verify official holiday dates with Government of Nepal notices.',
+      },
+      {
+        question: 'Can I print the calendar in Nepali (Devanagari) script?',
+        answer: 'Yes, the calendars display month names, day names, and holiday names in both English and Devanagari (Nepali) script. Numbers can be shown in Arabic or Devanagari digits.',
+      },
+    ];
+    return {
+      title,
+      description,
+      canonicalPath: '/print-nepali-calendar',
+      robots: 'index, follow',
+      h1: `Print Nepali Calendar ${currentYear} BS – Free Printable Monthly Calendars`,
+      breadcrumbs,
+      faqs,
+      jsonLd: buildJsonLd(baseUrl, breadcrumbs, faqs, [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: `Print Nepali Calendar ${currentYear} BS`,
+          description: `Free printable Nepali (Bikram Sambat) calendar for ${currentYear} BS with all 12 months, holidays, and Gregorian date equivalents.`,
+          url: `${baseUrl.replace(/\/+$/, '')}/print-nepali-calendar`,
+        },
+      ]),
+    };
+  }
+
   // Fallback for unknown routes (404)
   return {
     title: 'Page Not Found – Nepali Calendar | MitiPatro',
@@ -901,6 +949,7 @@ export function generateSitemapPaths(
     '/',
     '/aaja-ko-miti',
     '/date-converter',
+    '/print-nepali-calendar',
     '/about',
     '/contact',
     '/privacy',
