@@ -2,7 +2,7 @@
   "intent": "holiday",
   "category": "saturday-rest-day",
   "count": 1,
-  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "generatedAt": "2026-11-27T03:40:10.213Z",
   "faqs": [
     {
       "id": "88e5d4a5d37fa134362d8bfd9d2bfc629244dd63",
@@ -11,7 +11,7 @@
       "intent": "holiday",
       "category": "saturday-rest-day",
       "source": "editorial",
-      "generatedAt": "2026-11-25T04:19:58.772Z",
+      "generatedAt": "2026-11-27T03:39:57.023Z",
       "verified": true
     }
   ]

@@ -2,7 +2,7 @@
   "intent": "rashifal",
   "category": "rashifal-update",
   "count": 1,
-  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "generatedAt": "2026-11-27T03:40:10.213Z",
   "faqs": [
     {
       "id": "a877fef02f552fecee2ae29e9072fbadbe5eb167",
@@ -13,8 +13,8 @@
       "source": "editorial",
       "bsYear": 2083,
       "bsMonth": 8,
-      "bsDay": 9,
-      "generatedAt": "2026-11-25T04:19:58.773Z",
+      "bsDay": 11,
+      "generatedAt": "2026-11-27T03:39:57.023Z",
       "verified": true
     }
   ]

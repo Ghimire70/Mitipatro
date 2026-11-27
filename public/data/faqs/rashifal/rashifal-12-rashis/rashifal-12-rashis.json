@@ -2,7 +2,7 @@
   "intent": "rashifal",
   "category": "rashifal-12-rashis",
   "count": 1,
-  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "generatedAt": "2026-11-27T03:40:10.213Z",
   "faqs": [
     {
       "id": "af38c563b76373fecb4be169df32d17f44c70183",
@@ -11,7 +11,7 @@
       "intent": "rashifal",
       "category": "rashifal-12-rashis",
       "source": "editorial",
-      "generatedAt": "2026-11-25T04:19:58.773Z",
+      "generatedAt": "2026-11-27T03:39:57.023Z",
       "verified": true
     }
   ]

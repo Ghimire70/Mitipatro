@@ -1,8 +1,8 @@
 {
   "intent": "tithi",
   "category": "tithi",
-  "count": 504,
-  "generatedAt": "2026-11-25T04:20:28.132Z",
+  "count": 507,
+  "generatedAt": "2026-11-27T03:40:10.213Z",
   "faqs": [
     {
       "id": "",
@@ -11,7 +11,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -21,7 +21,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -31,7 +31,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -41,7 +41,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -51,7 +51,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -61,7 +61,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -71,7 +71,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -81,7 +81,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -91,7 +91,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -101,7 +101,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -111,7 +111,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -121,7 +121,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -131,7 +131,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -141,7 +141,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -151,7 +151,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -161,7 +161,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Buddha purnima date this year",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -171,7 +181,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -181,7 +191,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -191,7 +201,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -201,7 +211,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -211,7 +221,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -221,7 +231,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -231,7 +241,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -241,7 +251,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -251,7 +261,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -261,7 +271,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date after diwali 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -271,7 +291,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -281,7 +301,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -291,17 +311,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
       "id": "",
-      "question": "Ekadashi date and time july 2026",
+      "question": "Ekadashi date and time november 2026",
       "answer": "",
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -311,17 +331,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Ekadashi date and time september",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -331,7 +341,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -341,7 +351,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -351,17 +361,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Ekadashi date aug 2026",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -371,7 +371,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -381,17 +381,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Ekadashi date august month",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -401,7 +391,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -411,7 +401,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -421,7 +411,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -431,7 +421,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -441,7 +431,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -451,7 +441,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -461,7 +451,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -471,7 +461,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -481,7 +471,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -491,7 +481,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -501,7 +491,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -511,7 +501,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -521,7 +511,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -531,7 +521,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -541,7 +531,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -551,7 +541,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -561,7 +551,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -571,7 +561,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -581,7 +571,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -591,7 +581,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -601,7 +591,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -611,7 +601,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -621,7 +611,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -631,7 +621,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -641,7 +631,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -651,7 +641,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -661,7 +651,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -671,7 +661,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -681,27 +671,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Ekadashi date for august",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Ekadashi date for august 2026",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -711,7 +681,27 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date for november 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date for october 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -721,7 +711,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -731,7 +721,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -741,7 +731,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -751,7 +741,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -761,7 +751,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -771,17 +761,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
       "id": "",
-      "question": "Ekadashi date in august 2026",
+      "question": "Ekadashi date in december 2026",
       "answer": "",
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -791,7 +781,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date in november",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -801,7 +801,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -811,7 +811,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -821,17 +821,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Ekadashi date in sep 2026",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -841,7 +831,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -851,7 +841,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -861,7 +851,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -871,7 +861,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -881,7 +871,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date jan 2027",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -891,7 +891,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -901,7 +901,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -911,7 +911,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -921,7 +921,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -931,17 +931,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Ekadashi date july 26",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -951,7 +941,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -961,7 +951,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -971,7 +961,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -981,7 +971,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -991,7 +981,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1001,7 +991,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1011,7 +1001,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1021,7 +1011,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1031,7 +1021,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1041,7 +1031,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1051,7 +1041,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1061,7 +1051,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1071,7 +1061,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1081,7 +1071,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1091,7 +1081,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1101,7 +1091,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1111,7 +1101,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1121,7 +1111,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1131,7 +1121,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1141,7 +1131,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1151,7 +1141,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1161,7 +1151,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1171,7 +1161,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1181,7 +1171,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1191,7 +1181,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1201,7 +1191,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1211,7 +1201,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1221,7 +1211,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1231,7 +1221,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1241,7 +1231,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1251,7 +1241,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1261,7 +1251,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1271,7 +1261,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1281,7 +1271,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1291,7 +1281,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1301,7 +1291,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1311,7 +1301,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1321,7 +1311,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date november 25",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1331,7 +1331,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1341,7 +1341,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1351,7 +1351,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1361,17 +1361,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Ekadashi date october 26",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1381,7 +1371,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1391,7 +1381,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1401,7 +1391,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date of november 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1411,7 +1411,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1421,7 +1421,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1431,17 +1431,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
       "id": "",
-      "question": "Ekadashi date on august",
+      "question": "Ekadashi date on november",
       "answer": "",
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1451,7 +1451,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1461,7 +1461,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1471,7 +1471,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1481,7 +1481,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1491,7 +1491,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1501,7 +1501,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1511,7 +1511,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1521,7 +1521,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1531,7 +1531,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1541,7 +1541,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1551,7 +1551,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1561,7 +1561,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1571,7 +1571,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1581,7 +1581,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1591,7 +1591,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1601,7 +1601,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1611,7 +1611,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1621,7 +1621,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1631,7 +1631,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1641,7 +1641,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1651,7 +1651,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1661,7 +1661,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1671,7 +1671,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1681,17 +1681,27 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
       "id": "",
-      "question": "Ekadashi date tomorrow",
+      "question": "Ekadashi date time november",
       "answer": "",
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi date time october 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1701,7 +1711,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1711,7 +1721,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1721,7 +1731,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1731,7 +1741,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1741,7 +1751,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1751,7 +1761,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1761,7 +1771,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1771,7 +1781,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1781,7 +1791,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1791,17 +1801,27 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
       "id": "",
-      "question": "Ekadashi dates in november 2026",
+      "question": "Ekadashi dates in december 2026",
       "answer": "",
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Ekadashi dates in october",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1811,7 +1831,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1821,7 +1841,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1831,7 +1851,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1841,7 +1861,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1851,7 +1871,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1861,7 +1881,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1871,7 +1891,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1881,7 +1901,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1891,7 +1911,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1901,7 +1921,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1911,7 +1931,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1921,7 +1941,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1931,7 +1951,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1941,7 +1961,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1951,7 +1971,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1961,7 +1981,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1971,7 +1991,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1981,7 +2001,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -1991,7 +2011,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2001,7 +2021,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2011,7 +2031,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2021,7 +2041,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2031,7 +2051,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2041,7 +2061,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2051,7 +2071,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2061,7 +2081,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2071,7 +2091,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2081,7 +2101,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2091,7 +2111,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2101,7 +2121,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2111,7 +2131,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2121,7 +2141,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2131,7 +2151,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2141,7 +2161,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2151,7 +2171,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2161,7 +2181,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2171,7 +2191,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2181,7 +2201,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2191,7 +2211,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2201,7 +2221,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2211,7 +2231,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2221,7 +2241,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2231,7 +2251,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2241,7 +2261,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2251,7 +2271,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2261,7 +2281,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2271,7 +2291,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2281,7 +2301,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2291,7 +2311,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2301,7 +2321,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2311,7 +2331,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2321,7 +2341,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2331,7 +2351,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2341,7 +2361,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2351,7 +2371,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2361,7 +2381,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2371,7 +2391,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2381,7 +2401,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2391,7 +2411,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2401,7 +2421,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2411,7 +2431,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2421,7 +2441,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2431,7 +2451,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2441,7 +2461,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2451,7 +2471,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2461,7 +2481,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2471,7 +2491,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2481,7 +2501,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2491,7 +2511,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2501,7 +2521,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2511,7 +2531,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2521,7 +2541,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2531,7 +2551,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2541,7 +2561,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2551,7 +2571,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2561,7 +2581,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2571,7 +2591,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2581,7 +2601,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2591,7 +2611,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2601,7 +2621,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2611,7 +2631,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2621,7 +2641,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2631,7 +2651,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2641,7 +2661,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2651,7 +2671,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2661,7 +2681,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2671,7 +2691,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2681,7 +2701,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2691,7 +2711,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2701,7 +2721,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2711,7 +2731,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2721,7 +2741,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2731,7 +2751,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2741,7 +2761,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2751,7 +2771,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2761,7 +2781,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2771,7 +2791,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2781,7 +2801,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2791,7 +2811,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2801,7 +2821,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2811,7 +2831,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2821,7 +2841,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2831,7 +2851,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2841,7 +2861,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2851,7 +2871,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2861,7 +2881,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2871,7 +2891,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2881,7 +2901,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2891,7 +2911,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2901,7 +2921,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2911,7 +2931,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2921,7 +2941,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2931,7 +2951,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2941,7 +2961,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2951,7 +2971,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2961,7 +2981,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2971,7 +2991,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2981,7 +3001,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -2991,7 +3011,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3001,7 +3021,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3011,7 +3031,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3021,7 +3041,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3031,17 +3051,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Purnima date and time 2026 july",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3051,7 +3061,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3061,7 +3071,27 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date and time in november 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date and time in october 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3071,47 +3101,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
       "id": "",
-      "question": "Purnima date and time may 2026",
+      "question": "Purnima date and time oct 2026",
       "answer": "",
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Purnima date and time october",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Purnima date and time october 2026",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Purnima date and time sep 2026",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3121,17 +3121,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Purnima date and time this month",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3141,17 +3131,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Purnima date aug 2026",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3161,7 +3141,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3171,7 +3151,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3181,7 +3161,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3191,7 +3171,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3201,7 +3181,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3211,7 +3191,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3221,7 +3201,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3231,7 +3211,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3241,7 +3221,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3251,7 +3231,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3261,7 +3241,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3271,7 +3251,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3281,7 +3261,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3291,7 +3271,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3301,7 +3281,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3311,7 +3291,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3321,7 +3301,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3331,7 +3311,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3341,7 +3321,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3351,7 +3331,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3361,7 +3341,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3371,7 +3351,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3381,7 +3361,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3391,7 +3371,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3401,7 +3381,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3411,7 +3391,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3421,7 +3401,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3431,7 +3411,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3441,17 +3421,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Purnima date in august",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3461,7 +3431,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3471,7 +3441,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3481,17 +3451,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Purnima date in july",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3501,17 +3461,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Purnima date in may 2026",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3521,7 +3471,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in november",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3531,7 +3491,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date in oct 2026",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3541,7 +3511,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3551,7 +3521,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3561,7 +3531,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3571,7 +3541,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3581,7 +3551,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3591,7 +3561,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3601,7 +3571,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3611,7 +3581,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3621,7 +3591,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3631,7 +3601,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3641,7 +3611,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3651,7 +3621,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3661,17 +3631,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Purnima date july 2026 time",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3681,7 +3641,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date june 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3691,7 +3661,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3701,7 +3671,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3711,7 +3681,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3721,7 +3691,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3731,7 +3701,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3741,7 +3711,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3751,7 +3721,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3761,7 +3731,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3771,7 +3741,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3781,7 +3751,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3791,7 +3761,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3801,7 +3771,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3811,7 +3781,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3821,7 +3791,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3831,7 +3801,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3841,7 +3811,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3851,7 +3821,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3861,7 +3831,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3871,7 +3841,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3881,7 +3851,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3891,7 +3861,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3901,7 +3871,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3911,7 +3881,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3921,7 +3891,37 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date near",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date nearby",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date nearest",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3931,7 +3931,57 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date next month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date nov",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date nov 2025",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date november",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date november 2024",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3941,7 +3991,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3951,7 +4001,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3961,7 +4011,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3971,7 +4021,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3981,7 +4031,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -3991,7 +4041,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4001,7 +4051,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima date october month",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4011,7 +4071,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4021,27 +4081,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
       "id": "",
-      "question": "Purnima date of birth",
+      "question": "Purnima date of november 2026",
       "answer": "",
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Purnima date of july 2026",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4051,7 +4101,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4061,7 +4111,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4071,7 +4121,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4081,7 +4131,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4091,7 +4141,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4101,7 +4151,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4111,7 +4161,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4121,7 +4171,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4131,7 +4181,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4141,7 +4191,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4151,7 +4201,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4161,7 +4211,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4171,7 +4221,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4181,7 +4231,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4191,7 +4241,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4201,7 +4251,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4211,7 +4261,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4221,7 +4271,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4231,7 +4281,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4241,7 +4291,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4251,7 +4301,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4261,7 +4311,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4271,27 +4321,27 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
       "id": "",
-      "question": "Purnima date time july 2026",
+      "question": "Purnima date time may 2026",
       "answer": "",
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
       "id": "",
-      "question": "Purnima date time september",
+      "question": "Purnima date time october 2026",
       "answer": "",
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4301,17 +4351,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Purnima date tomorrow",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4321,7 +4361,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4331,7 +4371,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4341,7 +4381,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4351,7 +4391,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4361,7 +4401,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4371,7 +4411,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4381,7 +4421,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4391,7 +4431,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4401,7 +4441,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4411,7 +4451,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4421,7 +4461,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4431,17 +4471,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Purnima dates in 2026 january",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4451,7 +4481,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4461,7 +4491,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4471,7 +4501,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4481,7 +4511,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4491,7 +4521,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4501,7 +4531,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4511,7 +4541,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4521,7 +4551,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4531,7 +4561,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4541,7 +4571,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4551,7 +4581,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4561,7 +4591,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4571,7 +4601,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4581,7 +4611,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4591,7 +4621,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4601,7 +4631,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4611,7 +4641,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4621,7 +4651,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4631,7 +4661,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4641,7 +4671,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4651,7 +4681,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4661,7 +4691,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4671,7 +4701,17 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
+      "verified": false
+    },
+    {
+      "id": "",
+      "question": "Purnima start date and time",
+      "answer": "",
+      "intent": "tithi",
+      "category": "tithi",
+      "source": "autocomplete",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4681,7 +4721,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4691,7 +4731,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4701,7 +4741,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4711,7 +4751,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4721,7 +4761,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4731,7 +4771,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4741,7 +4781,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4751,7 +4791,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4761,7 +4801,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4771,7 +4811,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4781,7 +4821,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4791,7 +4831,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4801,7 +4841,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4811,7 +4851,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4821,7 +4861,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4831,7 +4871,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4841,7 +4881,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4851,7 +4891,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4861,7 +4901,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4871,7 +4911,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4881,7 +4921,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4891,7 +4931,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4901,7 +4941,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4911,7 +4951,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4921,7 +4961,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4931,7 +4971,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4941,17 +4981,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
-      "verified": false
-    },
-    {
-      "id": "",
-      "question": "Vaikuntha ekadashi which date",
-      "answer": "",
-      "intent": "tithi",
-      "category": "tithi",
-      "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4961,7 +4991,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4971,7 +5001,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4981,7 +5011,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -4991,7 +5021,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -5001,7 +5031,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -5011,7 +5041,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -5021,7 +5051,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -5031,7 +5061,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     },
     {
@@ -5041,7 +5071,7 @@
       "intent": "tithi",
       "category": "tithi",
       "source": "autocomplete",
-      "generatedAt": "2026-11-25T04:18:44.408Z",
+      "generatedAt": "2026-11-27T03:39:14.136Z",
       "verified": false
     }
   ]
