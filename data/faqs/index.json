@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "generatedAt": "2026-11-27T03:40:10.213Z",
+  "generatedAt": "2026-11-27T10:36:25.591Z",
   "totalCount": 2078,
   "shards": [
     {
@@ -8,203 +8,203 @@
       "intent": "converter",
       "category": "ad-to-bs",
       "count": 3,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/converter/bs-to-ad/bs-to-ad.json",
       "intent": "converter",
       "category": "bs-to-ad",
       "count": 4,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/converter/converter-method/converter-method.json",
       "intent": "converter",
       "category": "converter-method",
       "count": 1,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/converter/converter-range/converter-range.json",
       "intent": "converter",
       "category": "converter-range",
       "count": 1,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/converter/converter/converter.json",
       "intent": "converter",
       "category": "converter",
       "count": 93,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/general/about/about.json",
       "intent": "general",
       "category": "about",
       "count": 1,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/general/calendar-system/calendar-system.json",
       "intent": "general",
       "category": "calendar-system",
       "count": 1,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/general/search-demand/search-demand.json",
       "intent": "general",
       "category": "search-demand",
       "count": 313,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/holiday/holiday-date/holiday-date.json",
       "intent": "holiday",
       "category": "holiday-date",
       "count": 53,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/holiday/holiday-public-status/holiday-public-status.json",
       "intent": "holiday",
       "category": "holiday-public-status",
       "count": 48,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/holiday/holiday/holiday.json",
       "intent": "holiday",
       "category": "holiday",
       "count": 154,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/holiday/saturday-rest-day/saturday-rest-day.json",
       "intent": "holiday",
       "category": "saturday-rest-day",
       "count": 1,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/holiday/year-holidays/year-holidays.json",
       "intent": "holiday",
       "category": "year-holidays",
       "count": 4,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/month/month-dates/month-dates.json",
       "intent": "month",
       "category": "month-dates",
       "count": 48,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/month/month-days/month-days.json",
       "intent": "month",
       "category": "month-days",
       "count": 48,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/month/month-holidays/month-holidays.json",
       "intent": "month",
       "category": "month-holidays",
       "count": 48,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/month/month-start-weekday/month-start-weekday.json",
       "intent": "month",
       "category": "month-start-weekday",
       "count": 48,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/month/month/month.json",
       "intent": "month",
       "category": "month",
       "count": 52,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/month/year-span/year-span.json",
       "intent": "month",
       "category": "year-span",
       "count": 4,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/month/year-total-days/year-total-days.json",
       "intent": "month",
       "category": "year-total-days",
       "count": 4,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/rashifal/rashifal-12-rashis/rashifal-12-rashis.json",
       "intent": "rashifal",
       "category": "rashifal-12-rashis",
       "count": 1,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/rashifal/rashifal-disclaimer/rashifal-disclaimer.json",
       "intent": "rashifal",
       "category": "rashifal-disclaimer",
       "count": 1,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/rashifal/rashifal-method/rashifal-method.json",
       "intent": "rashifal",
       "category": "rashifal-method",
       "count": 1,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/rashifal/rashifal-update/rashifal-update.json",
       "intent": "rashifal",
       "category": "rashifal-update",
       "count": 1,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/rashifal/rashifal/rashifal.json",
       "intent": "rashifal",
       "category": "rashifal",
       "count": 46,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/tithi/tithi-date/tithi-date.json",
       "intent": "tithi",
       "category": "tithi-date",
       "count": 188,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/tithi/tithi/tithi.json",
       "intent": "tithi",
       "category": "tithi",
       "count": 507,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/today/today-date/today-date.json",
       "intent": "today",
       "category": "today-date",
       "count": 4,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     },
     {
       "path": "/data/faqs/today/today/today.json",
       "intent": "today",
       "category": "today",
       "count": 400,
-      "generatedAt": "2026-11-27T03:40:10.213Z"
+      "generatedAt": "2026-11-27T10:36:25.591Z"
     }
   ]
 }

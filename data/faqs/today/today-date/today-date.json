@@ -2,7 +2,7 @@
   "intent": "today",
   "category": "today-date",
   "count": 4,
-  "generatedAt": "2026-11-27T03:40:10.213Z",
+  "generatedAt": "2026-11-27T10:36:25.591Z",
   "faqs": [
     {
       "id": "f7641386050e8b617d3476183701736d8fa34f7c",
@@ -15,7 +15,7 @@
       "bsMonth": 8,
       "bsDay": 11,
       "adIso": "2026-11-27",
-      "generatedAt": "2026-11-27T03:39:57.019Z",
+      "generatedAt": "2026-11-27T10:36:00.312Z",
       "verified": true
     },
     {
@@ -29,7 +29,7 @@
       "bsMonth": 8,
       "bsDay": 11,
       "adIso": "2026-11-27",
-      "generatedAt": "2026-11-27T03:39:57.019Z",
+      "generatedAt": "2026-11-27T10:36:00.312Z",
       "verified": true
     },
     {
@@ -43,7 +43,7 @@
       "bsMonth": 8,
       "bsDay": 11,
       "adIso": "2026-11-27",
-      "generatedAt": "2026-11-27T03:39:57.019Z",
+      "generatedAt": "2026-11-27T10:36:00.312Z",
       "verified": true
     },
     {
@@ -53,7 +53,7 @@
       "intent": "today",
       "category": "today-date",
       "source": "editorial",
-      "generatedAt": "2026-11-27T03:39:57.019Z",
+      "generatedAt": "2026-11-27T10:36:00.312Z",
       "verified": true
     }
   ]

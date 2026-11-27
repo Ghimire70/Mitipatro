@@ -2,7 +2,7 @@
   "intent": "converter",
   "category": "ad-to-bs",
   "count": 3,
-  "generatedAt": "2026-11-27T03:40:10.213Z",
+  "generatedAt": "2026-11-27T10:36:25.591Z",
   "faqs": [
     {
       "id": "d71014a286d61acf41ac18b89afcd56a911219ad",
@@ -15,7 +15,7 @@
       "bsMonth": 1,
       "bsDay": 1,
       "adIso": "2026-04-14",
-      "generatedAt": "2026-11-27T03:39:57.023Z",
+      "generatedAt": "2026-11-27T10:36:00.320Z",
       "verified": true
     },
     {
@@ -29,7 +29,7 @@
       "bsMonth": 7,
       "bsDay": 4,
       "adIso": "2026-10-21",
-      "generatedAt": "2026-11-27T03:39:57.023Z",
+      "generatedAt": "2026-11-27T10:36:00.320Z",
       "verified": true
     },
     {
@@ -43,7 +43,7 @@
       "bsMonth": 7,
       "bsDay": 23,
       "adIso": "2026-11-09",
-      "generatedAt": "2026-11-27T03:39:57.023Z",
+      "generatedAt": "2026-11-27T10:36:00.320Z",
       "verified": true
     }
   ]

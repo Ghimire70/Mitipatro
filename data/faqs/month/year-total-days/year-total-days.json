@@ -2,7 +2,7 @@
   "intent": "month",
   "category": "year-total-days",
   "count": 4,
-  "generatedAt": "2026-11-27T03:40:10.213Z",
+  "generatedAt": "2026-11-27T10:36:25.591Z",
   "faqs": [
     {
       "id": "ca04e5025d62584d254231d40c366cf0afb3e908",
@@ -12,7 +12,7 @@
       "category": "year-total-days",
       "source": "deterministic",
       "bsYear": 2082,
-      "generatedAt": "2026-11-27T03:39:57.022Z",
+      "generatedAt": "2026-11-27T10:36:00.318Z",
       "verified": true
     },
     {
@@ -23,7 +23,7 @@
       "category": "year-total-days",
       "source": "deterministic",
       "bsYear": 2083,
-      "generatedAt": "2026-11-27T03:39:57.022Z",
+      "generatedAt": "2026-11-27T10:36:00.318Z",
       "verified": true
     },
     {
@@ -34,7 +34,7 @@
       "category": "year-total-days",
       "source": "deterministic",
       "bsYear": 2084,
-      "generatedAt": "2026-11-27T03:39:57.022Z",
+      "generatedAt": "2026-11-27T10:36:00.318Z",
       "verified": true
     },
     {
@@ -45,7 +45,7 @@
       "category": "year-total-days",
       "source": "deterministic",
       "bsYear": 2085,
-      "generatedAt": "2026-11-27T03:39:57.022Z",
+      "generatedAt": "2026-11-27T10:36:00.318Z",
       "verified": true
     }
   ]

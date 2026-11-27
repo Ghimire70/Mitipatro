@@ -2,7 +2,7 @@
   "intent": "converter",
   "category": "converter-range",
   "count": 1,
-  "generatedAt": "2026-11-27T03:40:10.213Z",
+  "generatedAt": "2026-11-27T10:36:25.591Z",
   "faqs": [
     {
       "id": "b9e9ca5ef3956cb3831c638f9c50ee59101a64f9",
@@ -11,7 +11,7 @@
       "intent": "converter",
       "category": "converter-range",
       "source": "editorial",
-      "generatedAt": "2026-11-27T03:39:57.023Z",
+      "generatedAt": "2026-11-27T10:36:00.320Z",
       "verified": true
     }
   ]
