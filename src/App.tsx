@@ -20,6 +20,7 @@ import { PanchangPage } from './pages/PanchangPage';
 import { RashifalPage } from './pages/RashifalPage';
 import { FaqPage } from './pages/FaqPage';
 import { PrintCalendarPage } from './pages/PrintCalendarPage';
+import { KundaliPage } from './pages/KundaliPage';
 import { getRashiById } from '../lib/rashifal';
 
 function normalizePath(pathname: string): string {
@@ -53,6 +54,7 @@ export interface AppProps {
   converterToolsIndexingEnabled?: boolean;
   rashifalIndexingEnabled?: boolean;
   panchangIndexingEnabled?: boolean;
+  jyotishIndexingEnabled?: boolean;
 }
 
 export default function App({
@@ -68,6 +70,7 @@ export default function App({
   converterToolsIndexingEnabled = false,
   rashifalIndexingEnabled = false,
   panchangIndexingEnabled = false,
+  jyotishIndexingEnabled = false,
 }: AppProps = {}) {
   const [currentPath, setCurrentPath] = useState<string>(() =>
     normalizePath(initialPath ?? (typeof window !== 'undefined' ? window.location.pathname : '/')),
@@ -146,8 +149,9 @@ export default function App({
       converterToolsIndexingEnabled,
       rashifalIndexingEnabled,
       panchangIndexingEnabled,
+      jyotishIndexingEnabled,
     ),
-    [currentPath, baseUrl, referenceDate, noindexSite, converterToolsIndexingEnabled, rashifalIndexingEnabled, panchangIndexingEnabled],
+    [currentPath, baseUrl, referenceDate, noindexSite, converterToolsIndexingEnabled, rashifalIndexingEnabled, panchangIndexingEnabled, jyotishIndexingEnabled],
   );
 
   const renderPage = () => {
@@ -218,6 +222,9 @@ export default function App({
           onNavigate={navigate}
         />
       );
+    }
+    if (currentPath === '/kundali') {
+      return <KundaliPage onNavigate={navigate} />;
     }
     if (currentPath === '/rashifal' || currentPath === '/rashifal/daily') {
       return <RashifalPage faqs={seo.faqs} nowMs={nowMs} onNavigate={navigate} rashifalIndexingEnabled={rashifalIndexingEnabled} />;

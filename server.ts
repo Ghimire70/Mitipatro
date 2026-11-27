@@ -17,6 +17,7 @@ import {
   isNoindexSiteEnabled,
   isRashifalIndexingEnabled,
   isPanchangIndexingEnabled,
+  isJyotishIndexingEnabled,
 } from './lib/siteConfig';
 
 const PORT = 3000;
@@ -30,6 +31,7 @@ const AD_SENSE_SLOT_RECTANGLE = process.env.ADSENSE_SLOT_RECTANGLE?.trim() ?? ''
 const CONVERTER_TOOLS_INDEXING_ENABLED = isConverterToolsIndexingEnabled();
 const RASHIFAL_INDEXING_ENABLED = isRashifalIndexingEnabled();
 const PANCHANG_INDEXING_ENABLED = isPanchangIndexingEnabled();
+const JYOTISH_INDEXING_ENABLED = isJyotishIndexingEnabled();
 
 function escapeHtml(str: string): string {
   return str
@@ -52,6 +54,7 @@ function injectRouteSeo(
   converterToolsIndexingEnabled: boolean,
   rashifalIndexingEnabled: boolean,
   panchangIndexingEnabled: boolean,
+  jyotishIndexingEnabled: boolean,
 ): { html: string; status: number } {
   const seo = getSeoForRoute(
     pathname,
@@ -61,6 +64,7 @@ function injectRouteSeo(
     converterToolsIndexingEnabled,
     rashifalIndexingEnabled,
     panchangIndexingEnabled,
+    jyotishIndexingEnabled,
   );
   const canonicalUrl = buildCanonicalUrl(seo.canonicalPath, origin);
   const jsonLdScripts = seo.jsonLd
@@ -88,6 +92,7 @@ function injectRouteSeo(
     converterToolsIndexingEnabled,
     rashifalIndexingEnabled,
     panchangIndexingEnabled,
+    jyotishIndexingEnabled,
   }).replace(/</g, '\\u003c');
 
   const finalHtml = html
@@ -179,6 +184,7 @@ async function startServer() {
         CONVERTER_TOOLS_INDEXING_ENABLED,
         RASHIFAL_INDEXING_ENABLED,
         PANCHANG_INDEXING_ENABLED,
+        JYOTISH_INDEXING_ENABLED,
       ));
   });
 
@@ -214,6 +220,7 @@ async function startServer() {
         converterToolsIndexingEnabled: boolean,
         rashifalIndexingEnabled: boolean,
         panchangIndexingEnabled: boolean,
+        jyotishIndexingEnabled: boolean,
         adSenseSlotLeaderboard: string,
         adSenseSlotRectangle: string,
       ) => string;
@@ -242,6 +249,7 @@ async function startServer() {
         CONVERTER_TOOLS_INDEXING_ENABLED,
         RASHIFAL_INDEXING_ENABLED,
         PANCHANG_INDEXING_ENABLED,
+        JYOTISH_INDEXING_ENABLED,
         AD_SENSE_SLOT_LEADERBOARD,
         AD_SENSE_SLOT_RECTANGLE,
       );
@@ -258,6 +266,7 @@ async function startServer() {
         CONVERTER_TOOLS_INDEXING_ENABLED,
         RASHIFAL_INDEXING_ENABLED,
         PANCHANG_INDEXING_ENABLED,
+        JYOTISH_INDEXING_ENABLED,
       );
       const isRashifalRoute = req.path === '/rashifal' || req.path.startsWith('/rashifal/');
       // Rashifal must never be served stale from a browser/CDN cache past

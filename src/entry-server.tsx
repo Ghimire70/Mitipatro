@@ -12,6 +12,7 @@ export function render(
   converterToolsIndexingEnabled = false,
   rashifalIndexingEnabled = false,
   panchangIndexingEnabled = false,
+  jyotishIndexingEnabled = false,
   adSenseSlotLeaderboard = '',
   adSenseSlotRectangle = '',
 ): string {
@@ -29,6 +30,7 @@ export function render(
       converterToolsIndexingEnabled={converterToolsIndexingEnabled}
       rashifalIndexingEnabled={rashifalIndexingEnabled}
       panchangIndexingEnabled={panchangIndexingEnabled}
+      jyotishIndexingEnabled={jyotishIndexingEnabled}
     />,
   ).replace(/</g, '\\u003c');
 }

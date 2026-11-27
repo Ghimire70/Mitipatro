@@ -16,12 +16,14 @@ export function generateSitemapXml(
   converterToolsIndexingEnabled = false,
   rashifalIndexingEnabled = false,
   panchangIndexingEnabled = false,
+  jyotishIndexingEnabled = false,
 ): string {
   const todayIso = now.toISOString().split('T')[0];
   const urls = generateSitemapPaths(
     converterToolsIndexingEnabled,
     rashifalIndexingEnabled,
     panchangIndexingEnabled,
+    jyotishIndexingEnabled,
   )
     .map((route) => {
       const priority =

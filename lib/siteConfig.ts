@@ -77,6 +77,10 @@ export function isPanchangIndexingEnabled(env: NodeJS.ProcessEnv = process.env):
   return env.PANCHANG_INDEXING_ENABLED?.trim().toLowerCase() === 'true';
 }
 
+export function isJyotishIndexingEnabled(env: NodeJS.ProcessEnv = process.env): boolean {
+  return env.JYOTISH_INDEXING_ENABLED?.trim().toLowerCase() === 'true';
+}
+
 export function getAdSettings(env: NodeJS.ProcessEnv = process.env): {
   enabled: boolean;
   clientId: string;
