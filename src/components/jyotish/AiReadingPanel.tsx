@@ -3,6 +3,7 @@ import { AlertCircle, Loader2, RefreshCw, Sparkles } from 'lucide-react';
 import type { JyotishClientChart } from '../../../lib/jyotish/client.js';
 import type { BirthDetails } from '../../../lib/jyotish/types.js';
 import { useJyotishReading } from '../../../hooks/useJyotishReading.js';
+import { useLocale } from '../../../contexts/LocaleContext';
 
 export interface GrahaDignityBadge {
   graha: string;
@@ -39,12 +40,13 @@ export const AiReadingPanel: React.FC<AiReadingPanelProps> = ({
   grahaDignities = [],
   sadeSatiStatus,
 }) => {
+  const { locale, t } = useLocale();
   const {
     fullReading,
     loading,
     error,
     generateReading,
-  } = useJyotishReading({ birthDetails, chart, language });
+  } = useJyotishReading({ birthDetails, chart, language: locale, locale });
 
   return (
     <section
@@ -56,14 +58,14 @@ export const AiReadingPanel: React.FC<AiReadingPanelProps> = ({
           <div className="flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-[#9A3412]" aria-hidden="true" />
             <p className="text-xs font-semibold uppercase tracking-widest text-[#9A3412]">
-              AI Jyotish Reading
+              {t('jyotish.aiTitle')}
             </p>
           </div>
           <h2
             id="ai-jyotish-reading-heading"
             className="mt-1 font-display text-2xl font-semibold tracking-tight text-stone-900"
           >
-            Traditional chart guidance
+            {t('jyotish.traditionalGuidance')}
           </h2>
         </div>
         <button
@@ -77,7 +79,7 @@ export const AiReadingPanel: React.FC<AiReadingPanelProps> = ({
           ) : (
             <Sparkles className="h-4 w-4" aria-hidden="true" />
           )}
-          <span>{fullReading ? 'Regenerate reading' : 'Generate AI Jyotish Reading'}</span>
+          <span>{fullReading ? t('jyotish.regenerate') : t('kundali.generateReading')}</span>
         </button>
       </div>
 
@@ -97,13 +99,13 @@ export const AiReadingPanel: React.FC<AiReadingPanelProps> = ({
             className="inline-flex min-h-[40px] items-center justify-center gap-2 self-start rounded-md border border-[#B91C1C]/30 bg-white px-3 py-1.5 text-xs font-semibold text-[#991B1B] hover:bg-[#FEF2F2]"
           >
             <RefreshCw className="h-3.5 w-3.5" aria-hidden="true" />
-            Retry
+            {t('jyotish.retry')}
           </button>
         </div>
       )}
 
       {loading && (
-        <div className="mt-5 grid gap-4" aria-label="Loading AI Jyotish reading" aria-busy="true">
+        <div className="mt-5 grid gap-4" aria-label={t('jyotish.loading')} aria-busy="true">
           {[1, 2, 3, 4].map((item) => (
             <div key={item} className="animate-pulse rounded-lg border border-stone-200 p-5">
               <div className="h-5 w-40 rounded bg-stone-200" />
@@ -121,7 +123,7 @@ export const AiReadingPanel: React.FC<AiReadingPanelProps> = ({
           {(fullReading.detectedYogas.length > 0 ||
             grahaDignities.length > 0 ||
             sadeSatiStatus) && (
-            <div className="flex flex-wrap gap-2" aria-label="Deterministic chart indicators">
+            <div className="flex flex-wrap gap-2" aria-label={t('jyotish.chartIndicators')}>
               {fullReading.detectedYogas.map((yoga) => (
                 <span
                   key={yoga}
@@ -146,29 +148,29 @@ export const AiReadingPanel: React.FC<AiReadingPanelProps> = ({
                       : 'border-stone-200 bg-stone-50 text-stone-700'
                   }`}
                 >
-                  Sade Sati: {sadeSatiStatus.isActive
+                  {t('jyotish.sadeSati')}: {sadeSatiStatus.isActive
                     ? `${sadeSatiStatus.phase} phase`
-                    : 'not active'} · Saturn in {sadeSatiStatus.currentSaturnRashiName}
+                    : t('jyotish.notActive')} · Saturn in {sadeSatiStatus.currentSaturnRashiName}
                 </span>
               )}
             </div>
           )}
 
           <div className="grid gap-4">
-            <ReadingSection title="Overview">{fullReading.overview}</ReadingSection>
-            <ReadingSection title="Personality & Lagna">
+            <ReadingSection title={t('jyotish.overview')}>{fullReading.overview}</ReadingSection>
+            <ReadingSection title={t('jyotish.personality')}>
               {fullReading.personalityAndStrengths}
             </ReadingSection>
-            <ReadingSection title="Career & Finance">
+            <ReadingSection title={t('jyotish.career')}>
               {fullReading.careerAndWealth}
             </ReadingSection>
-            <ReadingSection title="Relationships & Family">
+            <ReadingSection title={t('jyotish.relationships')}>
               {fullReading.relationshipsAndFamily}
             </ReadingSection>
-            <ReadingSection title="Current Dasha & Transit Insights">
+            <ReadingSection title={t('jyotish.dashaTransit')}>
               {fullReading.currentDashaGuidance}
             </ReadingSection>
-            <ReadingSection title="Remedies & Guidance">
+            <ReadingSection title={t('jyotish.remedies')}>
               {fullReading.practicalRemedies.length > 0 ? (
                 <ul className="list-disc space-y-1 pl-5">
                   {fullReading.practicalRemedies.map((remedy, index) => (
@@ -176,7 +178,7 @@ export const AiReadingPanel: React.FC<AiReadingPanelProps> = ({
                   ))}
                 </ul>
               ) : (
-                <p>No specific remedies were returned.</p>
+                <p>{t('jyotish.noRemedies')}</p>
               )}
             </ReadingSection>
           </div>
@@ -184,8 +186,7 @@ export const AiReadingPanel: React.FC<AiReadingPanelProps> = ({
       )}
 
       <footer className="mt-6 border-t border-stone-200 pt-4 text-xs leading-5 text-stone-500">
-        Traditional Vedic guidance for education and reflection only. It is not a prediction,
-        medical advice, or a substitute for professional judgment.
+        {t('jyotish.disclaimer')}
       </footer>
     </section>
   );

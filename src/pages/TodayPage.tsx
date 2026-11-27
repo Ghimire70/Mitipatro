@@ -6,6 +6,7 @@ import type { FaqItem } from '../../lib/seo';
 import { AdSlot } from '../components/AdSlot';
 import { FaqSection } from '../components/FaqSection';
 import { HolidayReferenceNote } from '../components/HolidayReferenceNote';
+import { useLocale } from '../../contexts/LocaleContext';
 
 interface TodayPageProps {
   faqs: FaqItem[];
@@ -20,6 +21,7 @@ export const TodayPage: React.FC<TodayPageProps> = ({
   onNavigate,
   rashifalIndexingEnabled = false,
 }) => {
+  const { locale, t } = useLocale();
   const [today, setToday] = useState(() => getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined));
 
   useEffect(() => {
@@ -45,14 +47,14 @@ export const TodayPage: React.FC<TodayPageProps> = ({
           Home
         </a>
         <span className="mx-2">/</span>
-        <span className="text-stone-800">Aaja Ko Miti</span>
+        <span className="text-stone-800">{t('routes.todayTitle')}</span>
       </nav>
 
       <h1 className="mt-4 font-display text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl">
-        Aaja Ko Miti — {today.bs.formattedEn}
+        {t('routes.todayTitle')} — {locale === 'ne' ? today.bs.formattedNe : today.bs.formattedEn}
       </h1>
       <p className="mt-2 max-w-2xl text-sm leading-relaxed text-stone-600">
-        Today&rsquo;s Nepali date is calculated using Nepal Standard Time (Asia/Kathmandu, UTC+05:45), wherever you access the site.
+        {t('routes.todaySubtitle')}
       </p>
 
       {/* Primary Today Card */}

@@ -12,9 +12,9 @@ export function render(
   converterToolsIndexingEnabled = false,
   rashifalIndexingEnabled = false,
   panchangIndexingEnabled = false,
-  jyotishIndexingEnabled = false,
   adSenseSlotLeaderboard = '',
   adSenseSlotRectangle = '',
+  jyotishIndexingEnabled = false,
 ): string {
   return renderToString(
     <App

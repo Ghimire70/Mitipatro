@@ -220,9 +220,9 @@ async function startServer() {
         converterToolsIndexingEnabled: boolean,
         rashifalIndexingEnabled: boolean,
         panchangIndexingEnabled: boolean,
-        jyotishIndexingEnabled: boolean,
         adSenseSlotLeaderboard: string,
         adSenseSlotRectangle: string,
+        jyotishIndexingEnabled: boolean,
       ) => string;
 
       if (vite) {
@@ -249,9 +249,9 @@ async function startServer() {
         CONVERTER_TOOLS_INDEXING_ENABLED,
         RASHIFAL_INDEXING_ENABLED,
         PANCHANG_INDEXING_ENABLED,
-        JYOTISH_INDEXING_ENABLED,
         AD_SENSE_SLOT_LEADERBOARD,
         AD_SENSE_SLOT_RECTANGLE,
+        JYOTISH_INDEXING_ENABLED,
       );
       const rendered = injectRouteSeo(
         html,

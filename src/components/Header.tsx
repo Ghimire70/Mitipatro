@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { CURRENT_BS_YEAR } from '../../lib/bsData';
+import { useLocale } from '../../contexts/LocaleContext';
+import { formatLocaleNumber } from '../../lib/i18n/format';
 
 interface HeaderProps {
   currentPath: string;
@@ -16,15 +18,16 @@ export const Header: React.FC<HeaderProps> = ({
   panchangIndexingEnabled = false,
 }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { locale, toggleLocale, t } = useLocale();
 
   const navLinks = [
-    { label: 'Today', path: '/aaja-ko-miti' },
-    { label: `Calendar ${CURRENT_BS_YEAR}`, path: `/calendar/${CURRENT_BS_YEAR}` },
-    { label: 'Holidays', path: `/holidays/${CURRENT_BS_YEAR}` },
-    ...(rashifalIndexingEnabled ? [{ label: 'Rashifal', path: '/rashifal' }] : []),
-    ...(panchangIndexingEnabled ? [{ label: 'Panchang', path: '/panchang' }] : []),
-    { label: 'About', path: '/about' },
-    { label: 'Contact', path: '/contact' },
+    { label: t('navigation.today'), path: '/aaja-ko-miti' },
+    { label: `${t('navigation.calendar')} ${formatLocaleNumber(CURRENT_BS_YEAR, locale, { useGrouping: false })}`, path: `/calendar/${CURRENT_BS_YEAR}` },
+    { label: t('navigation.holidays'), path: `/holidays/${CURRENT_BS_YEAR}` },
+    ...(rashifalIndexingEnabled ? [{ label: t('navigation.rashifal'), path: '/rashifal' }] : []),
+    ...(panchangIndexingEnabled ? [{ label: t('navigation.panchang'), path: '/panchang' }] : []),
+    { label: t('navigation.about'), path: '/about' },
+    { label: t('navigation.contact'), path: '/contact' },
   ];
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
@@ -54,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Zone 2: Centered nav links */}
         <nav
           aria-label="Primary navigation"
-          className="hidden md:flex items-center gap-7 text-sm font-medium text-slatewarm whitespace-nowrap shrink-0"
+          className="hidden md:flex items-center gap-3 text-sm font-medium text-slatewarm whitespace-nowrap shrink-0 lg:gap-5"
         >
           {navLinks.map((item) => {
             const isActive =
@@ -82,18 +85,26 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center gap-2.5 shrink-0">
           <button
             type="button"
+            onClick={toggleLocale}
+            aria-label={locale === 'en' ? 'Switch to Nepali' : 'Switch to English'}
+            className="inline-flex min-h-[44px] items-center justify-center rounded-lg border border-hairline bg-card px-3 py-2 text-xs font-semibold text-ink hover:bg-sand transition-colors"
+          >
+            {locale === 'en' ? 'EN | नेपाली' : 'नेपाली | EN'}
+          </button>
+          <button
+            type="button"
             onClick={() => setMobileOpen(true)}
             aria-label="Open Holidays drawer"
             className="md:hidden px-3 py-2 text-xs font-medium text-ink bg-card border border-hairline rounded-lg hover:bg-sand transition-colors min-h-[44px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
           >
-            Holidays
+            {t('navigation.holidays')}
           </button>
           <a
             href="/date-converter"
             onClick={(e) => handleLinkClick(e, '/date-converter')}
             className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs sm:text-sm font-semibold text-white bg-terracotta hover:bg-terracotta-hover rounded-lg shadow-sm transition-all active:scale-[0.99] whitespace-nowrap shrink-0 min-h-[44px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
           >
-            BS–AD Converter
+            {t('navigation.dateConverter')}
           </a>
         </div>
       </div>
@@ -120,7 +131,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={(e) => handleLinkClick(e, '/date-converter')}
               className="mt-2 flex min-h-[44px] items-center justify-center rounded-lg bg-terracotta px-4 py-2 text-sm font-semibold text-white hover:bg-terracotta-hover transition-colors"
             >
-              BS–AD Date Converter
+              {t('navigation.dateConverter')}
             </a>
           </div>
           <button

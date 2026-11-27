@@ -7,6 +7,7 @@ import type { FaqItem } from '../../lib/seo';
 import { CalendarGrid } from '../components/CalendarGrid';
 import { AdSlot } from '../components/AdSlot';
 import { FaqSection } from '../components/FaqSection';
+import { useLocale } from '../../contexts/LocaleContext';
 import { HolidayReferenceNote } from '../components/HolidayReferenceNote';
 import { EditorialHero } from '../components/EditorialHero';
 import { HolidaysDrawer } from '../components/HolidaysDrawer';
@@ -30,6 +31,7 @@ export const MonthPage: React.FC<MonthPageProps> = ({
   onNavigate,
   rashifalIndexingEnabled = false,
 }) => {
+  const { locale, t } = useLocale();
   const grid = useMemo(() => getBsMonthGrid(year, month), [year, month]);
   const firstAd = useMemo(() => bsToAd(year, month, 1), [year, month]);
   const lastAd = useMemo(() => bsToAd(year, month, grid.totalDays), [year, month, grid.totalDays]);
@@ -48,16 +50,20 @@ export const MonthPage: React.FC<MonthPageProps> = ({
   const handleJumpToToday = () => {
     const t = getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined);
     if (t.bs.year === year && t.bs.month === month) {
-      setToastMessage('Already viewing today');
+      setToastMessage(locale === 'ne' ? 'पहिले नै आजको मिति हेर्दै हुनुहुन्छ' : 'Already viewing today');
     } else {
       onNavigate(`/calendar/${t.bs.year}/${t.bs.monthSlug}`);
-      setToastMessage(`Jumped to ${t.bs.monthNameEn} ${t.bs.day}, ${t.bs.year} BS`);
+      setToastMessage(locale === 'ne'
+        ? `${t.bs.monthNameNe} ${toDevanagariDigits(t.bs.day)}, ${toDevanagariDigits(t.bs.year)} वि.सं.मा जानुभयो`
+        : `Jumped to ${t.bs.monthNameEn} ${t.bs.day}, ${t.bs.year} BS`);
     }
   };
 
   const handleSelectDate = (bsYear: number, bsMonth: number, bsDay: number) => {
     const monthMeta = getBsMonthGrid(bsYear, bsMonth).monthMeta;
-    setToastMessage(`Selected ${bsDay} ${monthMeta.en}, ${bsYear} BS`);
+    setToastMessage(locale === 'ne'
+      ? `${monthMeta.ne} ${toDevanagariDigits(bsDay)}, ${toDevanagariDigits(bsYear)} वि.सं. छानियो`
+      : `Selected ${bsDay} ${monthMeta.en}, ${bsYear} BS`);
   };
 
   const handleCloseDrawer = () => setDrawerOpen(false);
@@ -79,7 +85,7 @@ export const MonthPage: React.FC<MonthPageProps> = ({
 
       <nav aria-label="Breadcrumb" className="print-hidden text-xs text-stone-500">
         <a href="/" onClick={(e) => handleLink(e, '/')} className="hover:text-[#9A3412] hover:underline">
-          Home
+          {t('routes.home')}
         </a>
         <span className="mx-2">/</span>
         <a
@@ -87,7 +93,7 @@ export const MonthPage: React.FC<MonthPageProps> = ({
           onClick={(e) => handleLink(e, `/calendar/${year}`)}
           className="hover:text-[#9A3412] hover:underline"
         >
-          Calendar {year}
+          {t('navigation.calendar')} {year}
         </a>
         <span className="mx-2">/</span>
         <span className="text-stone-800">

@@ -8,6 +8,7 @@ import {
   type JyotishClientChart,
 } from '../lib/jyotish/client.js';
 import type { BirthDetails } from '../lib/jyotish/types.js';
+import type { Locale } from '../lib/i18n/types.js';
 
 export interface JyotishQaPair {
   question: string;
@@ -18,6 +19,7 @@ interface UseJyotishReadingOptions {
   birthDetails: BirthDetails | null;
   chart?: JyotishClientChart;
   language?: string;
+  locale?: Locale;
 }
 
 interface UseJyotishReadingResult {
@@ -41,7 +43,7 @@ function normalizedDate(birthDetails: BirthDetails): string {
   return `${String(date.year).padStart(4, '0')}-${String(date.month).padStart(2, '0')}-${String(date.day).padStart(2, '0')}`;
 }
 
-export function getJyotishCacheKey(birthDetails: BirthDetails): string {
+export function getJyotishCacheKey(birthDetails: BirthDetails, locale: Locale = 'en'): string {
   const lat = birthDetails.location.latitude.toFixed(6);
   const lon = birthDetails.location.longitude.toFixed(6);
   const timezone = (birthDetails.timeZone || birthDetails.location.timezone).trim();
@@ -51,6 +53,7 @@ export function getJyotishCacheKey(birthDetails: BirthDetails): string {
     lat,
     lon,
     timezone,
+    locale,
   ].join('|');
 }
 
@@ -72,10 +75,11 @@ export function useJyotishReading({
   birthDetails,
   chart,
   language = 'en',
+  locale,
 }: UseJyotishReadingOptions): UseJyotishReadingResult {
   const cacheKey = useMemo(
-    () => (birthDetails ? getJyotishCacheKey(birthDetails) : null),
-    [birthDetails],
+    () => (birthDetails ? getJyotishCacheKey(birthDetails, locale ?? 'en') : null),
+    [birthDetails, locale],
   );
   const cacheStorageKey = cacheKey ? getCacheStorageKey(cacheKey) : null;
 
@@ -118,6 +122,7 @@ export function useJyotishReading({
         birthDetails,
         chart,
         language,
+        locale,
       });
       setFullReading(result);
       if (cacheStorageKey && typeof window !== 'undefined') {
@@ -136,7 +141,7 @@ export function useJyotishReading({
     } finally {
       setLoading(false);
     }
-  }, [birthDetails, chart, language, cacheStorageKey]);
+  }, [birthDetails, chart, language, locale, cacheStorageKey]);
 
   const reset = useCallback(() => {
     setFullReading(null);
@@ -174,6 +179,7 @@ export function useJyotishReading({
         birthDetails,
         chart,
         language,
+        locale,
         question: trimmedQuestion,
       });
       setHistory((current) => [
@@ -189,7 +195,7 @@ export function useJyotishReading({
     } finally {
       setAsking(false);
     }
-  }, [birthDetails, chart, language]);
+  }, [birthDetails, chart, language, locale]);
 
   return {
     fullReading,

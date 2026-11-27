@@ -59,6 +59,7 @@ interface ApiRequestBody {
   chart?: ClientChart;
   mode?: string;
   language?: string;
+  locale?: 'en' | 'ne';
   question?: string;
 }
 
@@ -405,7 +406,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     return;
   }
 
-  const { birthDetails, chart, mode, language = 'en', question } = body;
+  const { birthDetails, chart, mode, question } = body;
+  const language = body.locale ?? body.language ?? 'en';
 
   // Validate mode
   const modeValidation = validateMode(mode);

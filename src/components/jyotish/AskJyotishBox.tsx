@@ -3,19 +3,14 @@ import { Loader2, MessageCircle, Send } from 'lucide-react';
 import type { JyotishClientChart } from '../../../lib/jyotish/client.js';
 import type { BirthDetails } from '../../../lib/jyotish/types.js';
 import { useJyotishReading } from '../../../hooks/useJyotishReading.js';
+import { useLocale } from '../../../contexts/LocaleContext';
+import { formatLocaleNumber } from '../../../lib/i18n/format';
 
 export interface AskJyotishBoxProps {
   birthDetails: BirthDetails | null;
   chart?: JyotishClientChart;
   language?: string;
 }
-
-const STARTER_QUESTIONS = [
-  'What does my current Dasha indicate?',
-  'What are my strongest career indicators?',
-  'How should I approach relationships and family?',
-  'What guidance does Sade Sati offer me now?',
-] as const;
 
 const MAX_QUESTION_LENGTH = 500;
 
@@ -25,12 +20,19 @@ export const AskJyotishBox: React.FC<AskJyotishBoxProps> = ({
   language = 'en',
 }) => {
   const [question, setQuestion] = useState('');
+  const { locale, t } = useLocale();
+  const starterQuestions = [
+    t('jyotish.starterDasha'),
+    t('jyotish.starterCareer'),
+    t('jyotish.starterRelationships'),
+    t('jyotish.starterSadeSati'),
+  ];
   const {
     history,
     asking,
     askError,
     submitQuestion,
-  } = useJyotishReading({ birthDetails, chart, language });
+  } = useJyotishReading({ birthDetails, chart, language: locale, locale });
 
   const submit = () => {
     if (!asking) {
@@ -49,12 +51,12 @@ export const AskJyotishBox: React.FC<AskJyotishBoxProps> = ({
           id="ask-jyotish-heading"
           className="font-display text-xl font-semibold text-stone-900"
         >
-          Ask Jyotish
+          {t('kundali.askJyotish')}
         </h2>
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-2" aria-label="Suggested questions">
-        {STARTER_QUESTIONS.map((starter) => (
+      <div className="mt-4 flex flex-wrap gap-2" aria-label={t('jyotish.suggestedQuestions')}>
+        {starterQuestions.map((starter) => (
           <button
             key={starter}
             type="button"
@@ -69,7 +71,7 @@ export const AskJyotishBox: React.FC<AskJyotishBoxProps> = ({
 
       <div className="mt-4">
         <label htmlFor="jyotish-question" className="sr-only">
-          Ask a Jyotish question
+          {t('jyotish.questionLabel')}
         </label>
         <textarea
           id="jyotish-question"
@@ -83,12 +85,12 @@ export const AskJyotishBox: React.FC<AskJyotishBoxProps> = ({
           }}
           maxLength={MAX_QUESTION_LENGTH}
           rows={3}
-          placeholder="Ask about a chart theme, Dasha, transit, house, or graha..."
+          placeholder={t('jyotish.questionPlaceholder')}
           className="w-full resize-y rounded-lg border border-stone-300 bg-white px-3 py-2.5 text-sm leading-6 text-stone-900 placeholder:text-stone-400 focus:border-[#9A3412] focus:outline-none"
         />
         <div className="mt-2 flex items-center justify-between gap-3">
           <span className="text-xs tabular-nums text-stone-500">
-            {question.length}/{MAX_QUESTION_LENGTH}
+            {formatLocaleNumber(question.length, locale)}/{formatLocaleNumber(MAX_QUESTION_LENGTH, locale)}
           </span>
           <button
             type="button"
@@ -101,7 +103,7 @@ export const AskJyotishBox: React.FC<AskJyotishBoxProps> = ({
             ) : (
               <Send className="h-4 w-4" aria-hidden="true" />
             )}
-            {asking ? 'Asking...' : 'Submit'}
+            {asking ? t('loadingStates.asking') : t('common.submit')}
           </button>
         </div>
       </div>
@@ -123,11 +125,11 @@ export const AskJyotishBox: React.FC<AskJyotishBoxProps> = ({
               className="rounded-lg border border-stone-200 bg-[#FBF9F5] p-4"
             >
               <p className="text-xs font-semibold uppercase tracking-wide text-stone-500">
-                Question
+                {locale === 'ne' ? 'प्रश्न' : 'Question'}
               </p>
               <p className="mt-1 text-sm font-medium text-stone-900">{item.question}</p>
               <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-[#9A3412]">
-                Answer
+                {t('jyotish.answerLabel')}
               </p>
               <p className="mt-1 text-sm leading-7 text-stone-700">{item.answer.answer}</p>
 
@@ -139,7 +141,7 @@ export const AskJyotishBox: React.FC<AskJyotishBoxProps> = ({
                       key={`house-${house}`}
                       className="rounded-full border border-stone-200 bg-white px-2.5 py-1 text-xs font-medium text-stone-700"
                     >
-                      House {house}
+                      {t('jyotish.house')} {formatLocaleNumber(house, locale)}
                     </span>
                   ))}
                   {item.answer.relevantDashas.map((graha) => (
@@ -147,7 +149,7 @@ export const AskJyotishBox: React.FC<AskJyotishBoxProps> = ({
                       key={`graha-${graha}`}
                       className="rounded-full border border-[#9A3412]/20 bg-[#FDF7F2] px-2.5 py-1 text-xs font-semibold text-[#7C2D12]"
                     >
-                      Graha: {graha}
+                      {t('jyotish.graha')}: {graha}
                     </span>
                   ))}
                 </div>

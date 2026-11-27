@@ -10,6 +10,8 @@ import { buildInterpreterContext } from '../../lib/jyotish/interpreter-context.j
 import type { JyotishClientChart } from '../../lib/jyotish/client.js';
 import { AiReadingPanel } from '../components/jyotish/AiReadingPanel.js';
 import { AskJyotishBox } from '../components/jyotish/AskJyotishBox.js';
+import { useLocale } from '../../contexts/LocaleContext';
+import { formatLocaleNumber } from '../../lib/i18n/format';
 
 interface KundaliPageProps {
   onNavigate?: (path: string) => void;
@@ -20,11 +22,17 @@ const RASHI_NAMES = [
   'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces',
 ];
 
+const RASHI_NAMES_NE = [
+  'मेष', 'वृष', 'मिथुन', 'कर्कट', 'सिंह', 'कन्या',
+  'तुला', 'वृश्चिक', 'धनु', 'मकर', 'कुम्भ', 'मीन',
+];
+
 function formatAngle(value: number): string {
   return `${value.toFixed(2)}°`;
 }
 
 export const KundaliPage: React.FC<KundaliPageProps> = () => {
+  const { locale, t } = useLocale();
   const [adDate, setAdDate] = useState('2000-01-01');
   const [birthTime, setBirthTime] = useState('06:00');
   const [locationName, setLocationName] = useState('Kathmandu');
@@ -44,7 +52,7 @@ export const KundaliPage: React.FC<KundaliPageProps> = () => {
     setError(null);
     const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(adDate);
     if (!match || !/^([01]\d|2[0-3]):[0-5]\d$/.test(birthTime)) {
-      setError('Enter a valid birth date and time in 24-hour format.');
+      setError(t('errors.invalidBirthDetails'));
       return;
     }
 
@@ -76,7 +84,7 @@ export const KundaliPage: React.FC<KundaliPageProps> = () => {
         },
       });
     } catch (caught) {
-      setError(caught instanceof Error ? caught.message : 'Could not calculate the chart.');
+      setError(caught instanceof Error ? caught.message : t('errors.chartCalculationFailed'));
     }
   };
 
@@ -97,21 +105,20 @@ export const KundaliPage: React.FC<KundaliPageProps> = () => {
           id="kundali-heading"
           className="mt-2 font-display text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl"
         >
-          Nepali Kundali &amp; Birth Chart
+          {t('kundali.title')}
         </h1>
         <p className="mt-2 max-w-3xl text-sm leading-6 text-stone-600">
-          Enter birth details to calculate the Lagna, whole-sign houses, planetary placements,
-          Vimshottari dasha, and deterministic chart indicators.
+          {t('kundali.subtitle')}
         </p>
       </section>
 
       <section className="mt-8 rounded-xl border border-stone-200 bg-white p-5 shadow-xs sm:p-6">
-        <h2 className="font-display text-xl font-semibold text-stone-900">Birth details</h2>
+        <h2 className="font-display text-xl font-semibold text-stone-900">{t('kundali.birthDetails')}</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <label htmlFor="kundali-date" className="block text-xs font-medium text-stone-600">
               <Calendar className="mr-1 inline h-3.5 w-3.5" aria-hidden="true" />
-              Birth date (AD)
+              {t('kundali.birthDate')} (AD)
             </label>
             <input
               id="kundali-date"
@@ -124,7 +131,7 @@ export const KundaliPage: React.FC<KundaliPageProps> = () => {
           <div>
             <label htmlFor="kundali-time" className="block text-xs font-medium text-stone-600">
               <Clock className="mr-1 inline h-3.5 w-3.5" aria-hidden="true" />
-              Birth time
+              {t('kundali.birthTime')}
             </label>
             <input
               id="kundali-time"
@@ -137,7 +144,7 @@ export const KundaliPage: React.FC<KundaliPageProps> = () => {
           <div className="sm:col-span-2 lg:col-span-1">
             <label htmlFor="kundali-location" className="block text-xs font-medium text-stone-600">
               <MapPin className="mr-1 inline h-3.5 w-3.5" aria-hidden="true" />
-              Birth place
+              {t('kundali.birthPlace')}
             </label>
             <select
               id="kundali-location"
@@ -162,37 +169,37 @@ export const KundaliPage: React.FC<KundaliPageProps> = () => {
           onClick={calculateChart}
           className="mt-5 inline-flex min-h-[44px] items-center justify-center rounded-md bg-[#9A3412] px-4 py-2 text-sm font-semibold text-white hover:bg-[#7C2D12]"
         >
-          Calculate Kundali
+          {t('kundali.calculate')}
         </button>
       </section>
 
       {chart && context && (
         <div className="mt-8 space-y-8">
           <section className="rounded-xl border border-stone-200 bg-white p-5 shadow-xs sm:p-6">
-            <h2 className="font-display text-xl font-semibold text-stone-900">Chart summary</h2>
+            <h2 className="font-display text-xl font-semibold text-stone-900">{t('kundali.chartSummary')}</h2>
             <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <div className="rounded-lg border border-stone-200 bg-[#FBF9F5] p-4">
-                <p className="text-xs text-stone-500">Lagna</p>
+                <p className="text-xs text-stone-500">{t('kundali.lagna')}</p>
                 <p className="mt-1 font-display text-lg font-semibold text-stone-900">
-                  {chart.result.houses.lagnaRashiName} · {RASHI_NAMES[chart.result.houses.lagnaRashiIndex]}
+                  {chart.result.houses.lagnaRashiName} · {(locale === 'ne' ? RASHI_NAMES_NE : RASHI_NAMES)[chart.result.houses.lagnaRashiIndex]}
                 </p>
               </div>
               <div className="rounded-lg border border-stone-200 bg-[#FBF9F5] p-4">
-                <p className="text-xs text-stone-500">Ayanamsha</p>
+                <p className="text-xs text-stone-500">{t('kundali.ayanamsha')}</p>
                 <p className="mt-1 font-display text-lg font-semibold text-stone-900">
                   Lahiri {formatAngle(chart.result.ayanamshaDegrees)}
                 </p>
               </div>
               <div className="rounded-lg border border-stone-200 bg-[#FBF9F5] p-4">
-                <p className="text-xs text-stone-500">Mahadasha</p>
+                <p className="text-xs text-stone-500">{t('kundali.mahadasha')}</p>
                 <p className="mt-1 font-display text-lg font-semibold text-stone-900">
-                  {chart.result.currentMahadasha?.graha ?? 'Unavailable'}
+                  {chart.result.currentMahadasha?.graha ?? t('dasha.unavailable')}
                 </p>
               </div>
               <div className="rounded-lg border border-stone-200 bg-[#FBF9F5] p-4">
-                <p className="text-xs text-stone-500">Antardasha</p>
+                <p className="text-xs text-stone-500">{t('kundali.antardasha')}</p>
                 <p className="mt-1 font-display text-lg font-semibold text-stone-900">
-                  {chart.result.currentAntardasha?.graha ?? 'Unavailable'}
+                  {chart.result.currentAntardasha?.graha ?? t('dasha.unavailable')}
                 </p>
               </div>
             </div>
@@ -201,10 +208,10 @@ export const KundaliPage: React.FC<KundaliPageProps> = () => {
               <table className="w-full min-w-[520px] text-left text-sm">
                 <thead className="border-b border-stone-200 text-xs uppercase tracking-wide text-stone-500">
                   <tr>
-                    <th className="py-2 pr-4">Graha</th>
-                    <th className="py-2 pr-4">Rashi</th>
-                    <th className="py-2 pr-4">House</th>
-                    <th className="py-2">Nakshatra</th>
+                    <th className="py-2 pr-4">{t('kundali.graha')}</th>
+                    <th className="py-2 pr-4">{t('kundali.rashi')}</th>
+                    <th className="py-2 pr-4">{t('kundali.house')}</th>
+                    <th className="py-2">{t('kundali.nakshatra')}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -213,10 +220,10 @@ export const KundaliPage: React.FC<KundaliPageProps> = () => {
                       <td className="py-3 pr-4 font-medium text-stone-900">{planet.graha}</td>
                       <td className="py-3 pr-4 text-stone-700">{planet.rashiName}</td>
                       <td className="py-3 pr-4 text-stone-700">
-                        {chart.result.houses.rashiToHouse[planet.rashiIndex]}
+                        {formatLocaleNumber(chart.result.houses.rashiToHouse[planet.rashiIndex], locale)}
                       </td>
                       <td className="py-3 text-stone-700">
-                        {planet.nakshatraName} (Pada {planet.pada})
+                        {planet.nakshatraName} ({t('kundali.pada')} {formatLocaleNumber(planet.pada, locale)})
                       </td>
                     </tr>
                   ))}
@@ -229,6 +236,7 @@ export const KundaliPage: React.FC<KundaliPageProps> = () => {
             <AiReadingPanel
               birthDetails={chart.birthDetails}
               chart={chart.clientChart}
+              language={locale}
               grahaDignities={context.grahaDignities.map((dignity) => ({
                 graha: dignity.graha,
                 rashiName: dignity.rashiName,
@@ -239,6 +247,7 @@ export const KundaliPage: React.FC<KundaliPageProps> = () => {
             <AskJyotishBox
               birthDetails={chart.birthDetails}
               chart={chart.clientChart}
+              language={locale}
             />
           </div>
         </div>

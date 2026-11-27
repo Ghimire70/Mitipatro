@@ -22,6 +22,7 @@ import { FaqPage } from './pages/FaqPage';
 import { PrintCalendarPage } from './pages/PrintCalendarPage';
 import { KundaliPage } from './pages/KundaliPage';
 import { getRashiById } from '../lib/rashifal';
+import { LocaleProvider } from '../contexts/LocaleContext';
 
 function normalizePath(pathname: string): string {
   if (!pathname || pathname === '/') return '/';
@@ -375,8 +376,9 @@ export default function App({
   };
 
   return (
-    <AdSettingsContext.Provider value={{ enabled: adsEnabled, clientId: adsenseClientId, slotLeaderboard: adSenseSlotLeaderboard, slotRectangle: adSenseSlotRectangle }}>
-      <div className="app-shell flex min-h-screen flex-col bg-[#FBF9F5] text-[#1C1917]">
+    <LocaleProvider>
+      <AdSettingsContext.Provider value={{ enabled: adsEnabled, clientId: adsenseClientId, slotLeaderboard: adSenseSlotLeaderboard, slotRectangle: adSenseSlotRectangle }}>
+        <div className="app-shell flex min-h-screen flex-col bg-[#FBF9F5] text-[#1C1917]">
         <SeoHeadSync
           seo={seo}
           baseUrl={baseUrl}
@@ -403,7 +405,8 @@ export default function App({
           rashifalIndexingEnabled={rashifalIndexingEnabled}
           panchangIndexingEnabled={panchangIndexingEnabled}
         />
-      </div>
-    </AdSettingsContext.Provider>
+        </div>
+      </AdSettingsContext.Provider>
+    </LocaleProvider>
   );
 }

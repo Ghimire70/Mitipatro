@@ -1,4 +1,5 @@
 import type { BirthDetails } from './types.js';
+import type { Locale } from '../i18n/types.js';
 
 export interface JyotishClientChart {
   lagnaRashiIndex?: number;
@@ -12,6 +13,7 @@ export interface JyotishRequestBase {
   birthDetails: BirthDetails;
   chart?: JyotishClientChart;
   language?: string;
+  locale?: Locale;
 }
 
 export interface FullReadingRequest extends JyotishRequestBase {
