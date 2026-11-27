@@ -59,7 +59,7 @@ export default function App({
   initialPath,
   initialOrigin,
   initialNowMs,
-  noindexSite = true,
+  noindexSite = false,
   adsEnabled = false,
   adsenseClientId = '',
   adSenseSlotLeaderboard = '',

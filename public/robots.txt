@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mitipatro.nepsof.com/sitemap.xml
