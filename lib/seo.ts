@@ -922,6 +922,10 @@ export function getSeoForRoute(
   rashifalIndexingEnabled = false,
   panchangIndexingEnabled = false,
 ): PageSeoData {
+  // Normalize /today alias to /aaja-ko-miti for SEO (same page, canonical URL)
+  if (pathname === '/today') {
+    pathname = '/aaja-ko-miti';
+  }
   const seo = getRouteSeo(
     pathname,
     baseUrl,

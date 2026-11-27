@@ -197,7 +197,7 @@ export default function App({
         />
       );
     }
-    if (currentPath === '/aaja-ko-miti') {
+    if (currentPath === '/aaja-ko-miti' || currentPath === '/today') {
       return (
         <TodayPage
           faqs={seo.faqs}
