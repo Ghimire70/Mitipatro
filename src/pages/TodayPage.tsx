@@ -6,6 +6,8 @@ import type { FaqItem } from '../../lib/seo';
 import { AdSlot } from '../components/AdSlot';
 import { FaqSection } from '../components/FaqSection';
 import { HolidayReferenceNote } from '../components/HolidayReferenceNote';
+import { useLocale } from '../../contexts/LocaleContext';
+import { formatLocaleNumber } from '../../lib/i18n/format';
 
 interface TodayPageProps {
   faqs: FaqItem[];
@@ -20,6 +22,7 @@ export const TodayPage: React.FC<TodayPageProps> = ({
   onNavigate,
   rashifalIndexingEnabled = false,
 }) => {
+  const { locale, t } = useLocale();
   const [today, setToday] = useState(() => getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined));
 
   useEffect(() => {
@@ -45,14 +48,14 @@ export const TodayPage: React.FC<TodayPageProps> = ({
           Home
         </a>
         <span className="mx-2">/</span>
-        <span className="text-stone-800">Aaja Ko Miti</span>
+        <span className="text-stone-800">{t('routes.todayTitle')}</span>
       </nav>
 
       <h1 className="mt-4 font-display text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl">
-        Aaja Ko Miti — {today.bs.formattedEn}
+        {t('routes.todayTitle')} — {locale === 'ne' ? today.bs.formattedNe : today.bs.formattedEn}
       </h1>
       <p className="mt-2 max-w-2xl text-sm leading-relaxed text-stone-600">
-        Today&rsquo;s Nepali date is calculated using Nepal Standard Time (Asia/Kathmandu, UTC+05:45), wherever you access the site.
+        {t('routes.todaySubtitle')}
       </p>
 
       {/* Primary Today Card */}
@@ -63,22 +66,21 @@ export const TodayPage: React.FC<TodayPageProps> = ({
         <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-[#9A3412]">
-              Bikram Sambat (Nepali Date)
+              {locale === 'ne' ? 'बिक्रम सम्बत (नेपाली मिति)' : 'Bikram Sambat (Nepali Date)'}
             </p>
             <p className="mt-2 font-display text-4xl font-bold text-stone-900 sm:text-5xl">
-              {today.bs.monthNameNe} {toDevanagariDigits(today.bs.day)}, {toDevanagariDigits(today.bs.year)}
-            </p>
-            <p className="mt-2 text-xl font-medium text-stone-700">
-              {today.bs.monthNameEn} {today.bs.day}, {today.bs.year} BS
+              {locale === 'ne'
+                ? `${today.bs.monthNameNe} ${toDevanagariDigits(today.bs.day)}, ${toDevanagariDigits(today.bs.year)} वि.सं.`
+                : `${today.bs.monthNameEn} ${formatLocaleNumber(today.bs.day, locale)}, ${formatLocaleNumber(today.bs.year, locale)} BS`}
             </p>
             <p className="mt-1 text-base text-stone-600">
-              {today.weekday.en} · {today.weekday.ne}
+              {locale === 'ne' ? today.weekday.ne : today.weekday.en}
             </p>
           </div>
 
           <div className="border-t border-stone-200 pt-6 sm:border-t-0 sm:border-l sm:pl-8 sm:pt-0">
             <p className="text-xs font-semibold uppercase tracking-widest text-stone-500">
-              Gregorian (AD) &amp; Nepal Time
+              {locale === 'ne' ? 'ग्रेगोरियन (ई.सं.) र नेपाल समय' : 'Gregorian (AD) &amp; Nepal Time'}
             </p>
             <p className="mt-2 font-mono text-2xl font-semibold text-stone-900 tabular-nums">
               {today.ad.formattedEn}
@@ -88,7 +90,9 @@ export const TodayPage: React.FC<TodayPageProps> = ({
               <span>{today.nepalTime} NPT (UTC+05:45)</span>
             </p>
             <p className="mt-2 font-mono text-xs text-stone-500 tabular-nums">
-              BS ISO: {today.bs.iso} · AD ISO: {today.ad.iso}
+              {locale === 'ne'
+                ? `वि.सं. आइएसओ: ${today.bs.iso} · ई.सं. आइएसओ: ${today.ad.iso}`
+                : `BS ISO: ${today.bs.iso} · AD ISO: ${today.ad.iso}`}
             </p>
           </div>
         </div>
@@ -100,11 +104,17 @@ export const TodayPage: React.FC<TodayPageProps> = ({
               <div className="space-y-1">
                 {holidaysToday.map((h) => (
                   <p key={h.id} className="text-sm font-semibold text-[#9A3412]">
-                    {h.nameEn} ({h.nameNe}) — {h.type === 'women_only'
-                      ? 'Women-only Holiday'
-                      : h.isPublicHoliday
-                        ? 'Listed as a Public Holiday'
-                        : 'Observance'}
+                    {locale === 'ne' ? h.nameNe : h.nameEn} — {locale === 'ne'
+                      ? h.type === 'women_only'
+                        ? 'केवल महिलाका लागि बिदा'
+                        : h.isPublicHoliday
+                          ? 'सार्वजनिक बिदा सूचीबद्ध'
+                          : 'अवलोकन'
+                      : h.type === 'women_only'
+                        ? 'Women-only Holiday'
+                        : h.isPublicHoliday
+                          ? 'Listed as a Public Holiday'
+                          : 'Observance'}
                   </p>
                 ))}
               </div>
@@ -112,11 +122,11 @@ export const TodayPage: React.FC<TodayPageProps> = ({
             </div>
           ) : today.weekday.isHoliday ? (
             <p className="text-sm font-semibold text-[#9A3412]">
-              Saturday is commonly observed as the weekly rest day (शनिबार).
+              {t('calendar.weeklyRest')}
             </p>
           ) : (
             <p className="text-sm text-stone-600">
-              No holiday is listed in our calendar for this day.
+              {t('calendar.noHolidayListed')}
             </p>
           )}
         </div>
@@ -128,7 +138,9 @@ export const TodayPage: React.FC<TodayPageProps> = ({
             className="inline-flex min-h-[44px] items-center gap-2 rounded-md bg-[#9A3412] px-4 py-2 text-sm font-semibold text-white hover:bg-[#7C2D12]"
           >
             <Calendar className="h-4 w-4" aria-hidden="true" />
-            Open {today.bs.monthNameEn} {today.bs.year} Calendar
+            {locale === 'ne'
+              ? `खोल्नुहोस् ${today.bs.monthNameNe} ${formatLocaleNumber(today.bs.year, locale)} वि.सं. पात्रो`
+              : `Open ${today.bs.monthNameEn} ${formatLocaleNumber(today.bs.year, locale)} Calendar`}
           </a>
           {rashifalIndexingEnabled && (
             <a
@@ -145,7 +157,7 @@ export const TodayPage: React.FC<TodayPageProps> = ({
             onClick={(e) => handleLink(e, '/date-converter')}
             className="inline-flex min-h-[44px] items-center gap-2 rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-semibold text-stone-800 hover:bg-stone-50"
           >
-            Convert Another Date
+            {locale === 'ne' ? 'अर्को मिति रूपान्तरण गर्नुहोस्' : 'Convert Another Date'}
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </a>
         </div>

@@ -2,6 +2,8 @@ import React from 'react';
 import { Calendar as CalendarIcon } from 'lucide-react';
 import { BS_MONTHS, WEEKDAYS } from '../../lib/bsData';
 import type { CalendarCellData } from '../../lib/bsConverter';
+import { useLocale } from '../../contexts/LocaleContext';
+import { formatLocaleNumber } from '../../lib/i18n/format';
 
 interface EditorialCalendarCellProps {
   cell: CalendarCellData;
@@ -31,6 +33,7 @@ export const EditorialCalendarCell: React.FC<EditorialCalendarCellProps> = ({
   elementInfo,
   onSelect,
 }) => {
+  const { locale, t } = useLocale();
   const { bsDay, bsDayNe, adDay, adMonthShort, weekday, isSaturday } = cell;
   const isFirstOfBsMonth = bsDay === 1;
   const isFirstOfAdMonth = adDay === 1;
@@ -45,10 +48,10 @@ export const EditorialCalendarCell: React.FC<EditorialCalendarCellProps> = ({
       aria-selected={isSelected}
       aria-label={
         [
-          `${BS_MONTHS[bsMonth - 1].en} ${bsDay}, ${bsYear} BS`,
-          `${adMonthShort} ${adDay}, ${cell.adYear}`,
-          weekdayMeta.en,
-          isToday ? 'Today' : '',
+          `${BS_MONTHS[bsMonth - 1][locale === 'ne' ? 'ne' : 'en']} ${formatLocaleNumber(bsDay, locale)}, ${formatLocaleNumber(bsYear, locale)} ${locale === 'ne' ? 'वि.सं.' : 'BS'}`,
+          `${adMonthShort} ${formatLocaleNumber(adDay, locale)}, ${formatLocaleNumber(cell.adYear, locale)}`,
+          weekdayMeta[locale === 'ne' ? 'ne' : 'en'],
+          isToday ? (locale === 'ne' ? 'आज' : 'Today') : '',
           eventsOnDay.length > 0 ? `Holiday: ${eventsOnDay.join(', ')}` : '',
         ].filter(Boolean).join(', ')
       }
@@ -101,7 +104,7 @@ export const EditorialCalendarCell: React.FC<EditorialCalendarCellProps> = ({
           </span>
         ))}
         {eventsOnDay.length === 0 && isSaturday && (
-          <span className="text-stone-400 italic">Weekly rest</span>
+          <span className="text-stone-400 italic">{t('calendar.weeklyRest')}</span>
         )}
       </div>
 
@@ -109,7 +112,7 @@ export const EditorialCalendarCell: React.FC<EditorialCalendarCellProps> = ({
       {elementInfo?.tithiName && (
         <span
           className="mt-0.5 text-[9px] leading-tight text-stone-600"
-          title={`Tithi: ${elementInfo.tithiName} ${elementInfo.paksha}`}
+          title={`${locale === 'ne' ? 'तिथि' : 'Tithi'}: ${elementInfo.tithiName} ${elementInfo.paksha ? `(${elementInfo.paksha})` : ''}`}
         >
           {elementInfo.tithiName}
         </span>
@@ -131,18 +134,18 @@ export const EditorialCalendarCell: React.FC<EditorialCalendarCellProps> = ({
         <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none">
           <div className="rounded-lg border border-stone-200 bg-white px-3 py-2.5 shadow-lg shadow-stone/10 text-xs">
             <p className="font-bold text-ink">
-              {BS_MONTHS[bsMonth - 1].en} {bsDay}, {bsYear} BS
+              {BS_MONTHS[bsMonth - 1][locale === 'ne' ? 'ne' : 'en']} {formatLocaleNumber(bsDay, locale)}, {formatLocaleNumber(bsYear, locale)} ${locale === 'ne' ? 'वि.सं.' : 'BS'}
             </p>
             <p className="text-[10px] text-stone-600">
-              {adMonthShort} {adDay}, {cell.adYear} · {weekdayMeta.en}
+              {adMonthShort} ${formatLocaleNumber(adDay, locale)}, ${formatLocaleNumber(cell.adYear, locale)} · ${weekdayMeta[locale === 'ne' ? 'ne' : 'en']}
             </p>
             <p className="mt-1 text-[10px] text-terracotta font-semibold">
-              Tithi: {elementInfo.tithiName}{' '}
+              {locale === 'ne' ? 'तिथि' : 'Tithi'}: {elementInfo.tithiName}{' '}
               {elementInfo.paksha ? `(${elementInfo.paksha})` : ''}
             </p>
             {elementInfo.nakshatraName && (
               <p className="mt-0.5 text-[10px] text-stone-600">
-                Nakshatra: {elementInfo.nakshatraName}
+                {locale === 'ne' ? 'नक्षत्र' : 'Nakshatra'}: {elementInfo.nakshatraName}
               </p>
             )}
           </div>

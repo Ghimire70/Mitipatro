@@ -1,17 +1,14 @@
 import React, { useMemo, useState } from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import {
-  RASHIS,
-  getRashiById,
-  type RashiId,
-  type RashiMeta,
-} from '../../lib/rashifal';
+import { useLocale } from '../../contexts/LocaleContext';
+import { RASHIS, getRashiById, type RashiId, type RashiMeta, type HoroscopeRecord } from '../../lib/rashifal';
 import {
   computeRashifalEngine,
   moonPositionFromSign,
 } from '../../lib/rashifalEngine.js';
 import { RASHIFAL_READINGS, type RashifalReading } from '../../lib/rashifalReadings.js';
 import { getTodayNepal } from '../../lib/bsConverter.js';
+
 
 interface RasifalSectionProps {
   nowMs?: number;

@@ -4,6 +4,8 @@ import type { FaqItem } from '../../lib/seo';
 import { DateConverter } from '../components/DateConverter';
 import { AdSlot } from '../components/AdSlot';
 import { FaqSection } from '../components/FaqSection';
+import { useLocale } from '../../contexts/LocaleContext';
+import { formatLocaleNumber } from '../../lib/i18n/format';
 
 interface ConverterPageProps {
   faqs: FaqItem[];
@@ -22,6 +24,8 @@ const REFERENCE_ANCHORS = [
 ];
 
 export const ConverterPage: React.FC<ConverterPageProps> = ({ faqs, nowMs, onNavigate }) => {
+  const { locale } = useLocale();
+  const { t } = useLocale();
   const handleLink = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
@@ -32,17 +36,17 @@ export const ConverterPage: React.FC<ConverterPageProps> = ({ faqs, nowMs, onNav
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <nav aria-label="Breadcrumb" className="text-xs text-stone-500">
         <a href="/" onClick={(e) => handleLink(e, '/')} className="hover:text-[#9A3412] hover:underline">
-          Home
+          {t('routes.home')}
         </a>
         <span className="mx-2">/</span>
-        <span className="text-stone-800">BS to AD Date Converter</span>
+        <span className="text-stone-800">{t('navigation.dateConverter')}</span>
       </nav>
 
       <h1 className="mt-4 font-display text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl">
-        BS to AD &amp; AD to BS Date Converter
+        {t('routes.converterTitle')}
       </h1>
       <p className="mt-2 max-w-2xl text-sm leading-relaxed text-stone-600">
-        Convert Bikram Sambat (BS) dates in the supported range, 2000-2090 BS, to Gregorian (AD), or convert dates in the corresponding AD range to Nepali dates with Devanagari formatting.
+        {t('routes.converterSubtitle')}
       </p>
 
       <div className="mt-6">
@@ -51,7 +55,7 @@ export const ConverterPage: React.FC<ConverterPageProps> = ({ faqs, nowMs, onNav
 
       <section aria-labelledby="more-bs-tools" className="mt-8">
         <h2 id="more-bs-tools" className="font-display text-xl font-semibold text-stone-900">
-          More BS date tools
+          {t('routes.moreTools')}
         </h2>
         <div className="mt-3 grid gap-3 sm:grid-cols-3">
           {[
@@ -91,7 +95,7 @@ export const ConverterPage: React.FC<ConverterPageProps> = ({ faqs, nowMs, onNav
       {/* Reference Table */}
       <section aria-labelledby="anchor-table-heading" className="mt-10">
         <h2 id="anchor-table-heading" className="font-display text-2xl font-semibold text-stone-900">
-          Nepali New Year (1 Baisakh) Reference Dates
+          {t('routes.referenceDates')}
         </h2>
         <p className="mt-2 text-sm text-stone-600">
           Conversions use a stored table of BS month lengths and count days from the 1 Baisakh 2000 BS (April 14, 1943 AD) anchor. Tests cover selected published date pairs and conversion round trips within the supported range.
@@ -101,10 +105,10 @@ export const ConverterPage: React.FC<ConverterPageProps> = ({ faqs, nowMs, onNav
           <table className="w-full text-left text-sm">
             <thead className="border-b border-stone-200 bg-[#F3EFE6]/60 text-xs font-semibold uppercase tracking-wider text-stone-600">
               <tr>
-                <th className="px-4 py-3">BS Date</th>
-                <th className="px-4 py-3">Gregorian (AD)</th>
-                <th className="px-4 py-3">Weekday</th>
-                <th className="px-4 py-3">Notes</th>
+                <th className="px-4 py-3">{locale === 'ne' ? 'वि.सं. मिति' : 'BS Date'}</th>
+                <th className="px-4 py-3">{locale === 'ne' ? 'ग्रेगोरियन (ई.सं.)' : 'Gregorian (AD)'}</th>
+                <th className="px-4 py-3">{locale === 'ne' ? 'सप्ताहको दिन' : 'Weekday'}</th>
+                <th className="px-4 py-3">{locale === 'ne' ? 'टिप्पणी' : 'Notes'}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-stone-100">
@@ -113,7 +117,7 @@ export const ConverterPage: React.FC<ConverterPageProps> = ({ faqs, nowMs, onNav
                 return (
                   <tr key={row.bsYear} className="hover:bg-[#FBF9F5]">
                     <td className="px-4 py-3 font-mono font-semibold text-stone-900 tabular-nums">
-                      1 Baisakh {row.bsYear}
+                      1 {locale === 'ne' ? 'वैशाख' : 'Baisakh'} {formatLocaleNumber(row.bsYear, locale)}
                     </td>
                     <td className="px-4 py-3 font-mono text-stone-700 tabular-nums">
                       {ad.formattedEn}

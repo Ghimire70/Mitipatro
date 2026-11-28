@@ -28,6 +28,8 @@ import { bsToAd, getTodayNepal } from '../../lib/bsConverter.js';
 import type { FaqItem } from '../../lib/seo';
 import { AdSlot } from '../components/AdSlot';
 import { FaqSection } from '../components/FaqSection';
+import { useLocale } from '../../contexts/LocaleContext';
+import { formatLocaleNumber } from '../../lib/i18n/format';
 
 const DAILY_TITLE_NE = 'दैनिक राशिफल';
 const DAILY_TITLE_EN = 'Daily Horoscope';
@@ -49,6 +51,7 @@ export const RashifalPage: React.FC<{
   onNavigate: (path: string) => void;
   rashifalIndexingEnabled?: boolean;
 }> = ({ faqs, nowMs, onNavigate, rashifalIndexingEnabled = false }) => {
+  const { locale, t } = useLocale();
   const today = useMemo(
     () => getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined),
     [nowMs],
@@ -69,18 +72,18 @@ export const RashifalPage: React.FC<{
                 }}
                 className="hover:text-[#9A3412] hover:underline"
               >
-                क्यालेन्डर गृहपृष्ठ
+                {t('routes.home')}
               </a>
             </li>
           </ol>
         </nav>
         <h1 className="font-display text-3xl font-bold text-stone-900 mt-6 mb-4">
-          {DAILY_TITLE_NE} ({DAILY_TITLE_EN})
+          {locale === 'ne' ? `${DAILY_TITLE_NE}` : `${DAILY_TITLE_EN}`}
         </h1>
         <div className="rounded-xl border border-stone-200 bg-amber-50 p-6 shadow-xs">
           <Compass className="mx-auto h-10 w-10 text-amber-400" aria-hidden="true" />
           <h2 className="mt-3 font-display text-xl font-semibold text-stone-900">
-            नमुना सामग्री (Sample Content)
+            {t('routes.rashifalSampleTitle')}
           </h2>
           <p className="mt-2 text-sm text-stone-700 max-w-xl mx-auto">
             दैनिक राशिफल सामग्री हाल उपलब्ध छैन। राशिफल प्रकाशित गर्नको लागि
@@ -155,7 +158,7 @@ export const RashifalPage: React.FC<{
               }}
               className="hover:text-[#9A3412] hover:underline"
             >
-              क्यालेन्डर गृहपृष्ठ
+              {t('routes.home')}
             </a>
           </li>
           <li>
@@ -167,23 +170,28 @@ export const RashifalPage: React.FC<{
       {/* Page Header */}
       <div className="mt-6 mb-6">
         <h1 className="font-display text-3xl font-bold text-stone-900">
-          {DAILY_TITLE_NE} ({DAILY_TITLE_EN})
+          {locale === 'ne' ? `${DAILY_TITLE_NE}` : `${DAILY_TITLE_EN}`}
         </h1>
         <p className="mt-2 text-sm text-stone-600">
-          मंसिर {bsDay}, {bsYear} वि.सं.
+          {locale === 'ne'
+            ? `${today.bs.monthNameNe} ${formatLocaleNumber(bsDay, locale)}, ${formatLocaleNumber(bsYear, locale)} वि.सं.`
+            : `${today.bs.monthNameEn} ${bsDay}, ${bsYear} BS`}
           ({adInfo.year}-{String(adInfo.month).padStart(2, '0')}-{String(adInfo.day).padStart(2, '0')})
         </p>
         <p className="mt-1 text-xs text-stone-600">
-          चन्द्रमाको राशिः {RASHI_LABELS[moonRashiIndex]} (सूर्योदयमा)
+          {locale === 'ne'
+            ? `चन्द्रमाको राशि: ${RASHI_LABELS[moonRashiIndex]} (सूर्योदयमा)`
+            : `Moon sign: ${RASHIS[moonRashiIndex]?.nameEn ?? RASHI_LABELS[moonRashiIndex]} (sunrise)`}
         </p>
         {changesSignToday && nextChangeKathmandu && (
           <p className="mt-1 text-xs text-[#9A3412] font-medium">
-            चन्द्रमाको राशि परिवर्तन आज: {nextChangeKathmandu}
+            {locale === 'ne'
+              ? `चन्द्रमाको राशि परिवर्तन आज: ${nextChangeKathmandu}`
+              : `Moon sign changes today: ${nextChangeKathmandu}`}
           </p>
         )}
         <div className="mt-4 rounded-lg border border-stone-200 bg-stone-50 p-3">
-          <p className="text-xs text-stone-600">{DISCLAIMER_NE}</p>
-          <p className="text-xs text-stone-600">{DISCLAIMER_EN}</p>
+          <p className="text-xs text-stone-600">{locale === 'ne' ? DISCLAIMER_NE : DISCLAIMER_EN}</p>
         </div>
       </div>
 

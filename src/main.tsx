@@ -38,6 +38,7 @@ const appElement = (
     converterToolsIndexingEnabled={ssrData?.converterToolsIndexingEnabled}
     rashifalIndexingEnabled={rashifalIndexingEnabled}
     panchangIndexingEnabled={ssrData?.panchangIndexingEnabled}
+    jyotishIndexingEnabled={ssrData?.jyotishIndexingEnabled}
   />
 );
 

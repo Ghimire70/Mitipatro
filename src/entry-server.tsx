@@ -14,6 +14,7 @@ export function render(
   panchangIndexingEnabled = false,
   adSenseSlotLeaderboard = '',
   adSenseSlotRectangle = '',
+  jyotishIndexingEnabled = false,
 ): string {
   return renderToString(
     <App
@@ -29,6 +30,7 @@ export function render(
       converterToolsIndexingEnabled={converterToolsIndexingEnabled}
       rashifalIndexingEnabled={rashifalIndexingEnabled}
       panchangIndexingEnabled={panchangIndexingEnabled}
+      jyotishIndexingEnabled={jyotishIndexingEnabled}
     />,
   ).replace(/</g, '\\u003c');
 }

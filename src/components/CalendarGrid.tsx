@@ -15,6 +15,8 @@ import { getEventsForDate, getEventsForMonth, type EventEntry } from '../../lib/
 import { HolidayReferenceNote } from './HolidayReferenceNote';
 import { getDailyPanchanga } from '../../lib/astronomy/panchanga.js';
 import { EditorialCalendarCell } from './EditorialCalendarCell';
+import { useLocale } from '../../contexts/LocaleContext';
+import { formatLocaleNumber } from '../../lib/i18n/format';
 
 interface CalendarGridProps {
   bsYear: number;
@@ -48,6 +50,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
   printPreview = false,
 }) => {
   const today = useMemo(() => getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined), [nowMs]);
+  const { locale, t } = useLocale();
   const grid = useMemo(() => getBsMonthGrid(bsYear, bsMonth), [bsYear, bsMonth]);
   const monthEvents = useMemo(() => getEventsForMonth(bsYear, bsMonth), [bsYear, bsMonth]);
 
@@ -132,14 +135,20 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
         <div>
           <div className="flex items-baseline gap-3">
             <h2 className="font-display text-2xl font-semibold text-stone-900">
-              {grid.monthMeta.en} {bsYear}
+              {locale === 'ne'
+                ? `${grid.monthMeta.ne} ${formatLocaleNumber(bsYear, locale)} वि.सं.`
+                : `${grid.monthMeta.en} ${formatLocaleNumber(bsYear, locale)} BS`}
             </h2>
             <span className="font-display text-xl text-stone-600">
-              {grid.monthMeta.ne} {toDevanagariDigits(bsYear)}
+              {locale === 'ne'
+                ? `${grid.monthMeta.en} ${formatLocaleNumber(bsYear, locale)} BS`
+                : `${grid.monthMeta.ne} ${formatLocaleNumber(bsYear, locale)} वि.सं.`}
             </span>
           </div>
           <p className="mt-1 text-xs text-stone-500">
-            {grid.adSpanLabel} · {grid.totalDays} days · {grid.monthMeta.seasonEn}
+            {locale === 'ne'
+              ? `${grid.adSpanLabel} · ${formatLocaleNumber(grid.totalDays, locale)} दिन · ${grid.monthMeta.seasonNe}`
+              : `${grid.adSpanLabel} · ${formatLocaleNumber(grid.totalDays, locale)} days · ${grid.monthMeta.seasonEn}`}
           </p>
           <p className="mt-0.5 text-[9px] font-semibold text-[#9A3412] uppercase tracking-tighter">
             mitipatro
@@ -150,7 +159,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
           {showYearMonthControls && (
             <>
               <label htmlFor="cal-year-select" className="sr-only">
-                Select BS Year
+                {t('calendar.bsYearSelect')}
               </label>
               <select
                 id="cal-year-select"
@@ -169,7 +178,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
               </select>
 
               <label htmlFor="cal-month-select" className="sr-only">
-                Select BS Month
+                {t('calendar.bsMonthSelect')}
               </label>
               <select
                 id="cal-month-select"
@@ -181,7 +190,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
               >
                 {BS_MONTHS.map((m) => (
                   <option key={m.slug} value={m.slug}>
-                    {m.en} ({m.ne})
+                    {locale === 'ne' ? m.ne : m.en}
                   </option>
                 ))}
               </select>
@@ -194,7 +203,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
                 href={`/calendar/${grid.prevMonth.year}/${grid.prevMonth.slug}`}
                 onClick={(e) =>
                   handleLink(e, `/calendar/${grid.prevMonth!.year}/${grid.prevMonth!.slug}`)}
-                aria-label={`Previous month: ${grid.prevMonth.nameEn} ${grid.prevMonth.year}`}
+                aria-label={locale === 'ne' ? `अघिल्लो महिना: ${grid.prevMonth.nameEn} ${formatLocaleNumber(grid.prevMonth.year, locale)}` : `Previous month: ${grid.prevMonth.nameEn} ${formatLocaleNumber(grid.prevMonth.year, locale)}`}
                 className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-stone-200 bg-white text-stone-700 transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-[#9A3412]"
               >
                 <ChevronLeft className="h-4 w-4" aria-hidden="true" />
@@ -213,7 +222,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
                 href={`/calendar/${grid.nextMonth.year}/${grid.nextMonth.slug}`}
                 onClick={(e) =>
                   handleLink(e, `/calendar/${grid.nextMonth!.year}/${grid.nextMonth!.slug}`)}
-                aria-label={`Next month: ${grid.nextMonth.nameEn} ${grid.nextMonth.year}`}
+                aria-label={locale === 'ne' ? `अर्को महिना: ${grid.nextMonth.nameEn} ${formatLocaleNumber(grid.nextMonth.year, locale)}` : `Next month: ${grid.nextMonth.nameEn} ${formatLocaleNumber(grid.nextMonth.year, locale)}`}
                 className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-stone-200 bg-white text-stone-700 transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-[#9A3412]"
               >
                 <ChevronRight className="h-4 w-4" aria-hidden="true" />
@@ -232,10 +241,10 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
           <button
             onClick={() => window.print()}
             className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-stone-200 bg-white text-stone-700 transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-[#9A3412]"
-            aria-label="Print calendar"
+            aria-label={t('calendar.printCalendar')}
           >
             <Printer className="h-4 w-4" aria-hidden="true" />
-            <span className="sr-only">Print calendar</span>
+            <span className="sr-only">{t('calendar.printCalendar')}</span>
           </button>
         </div>
       </div>
@@ -250,14 +259,16 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
             <div
               key={wd.index}
               role="columnheader"
-              aria-label={wd.isHoliday ? `${wd.en} (Weekly Holiday)` : wd.en}
+              aria-label={locale === 'ne' ? wd.ne : wd.en}
               className={`py-2.5 text-xs font-semibold tracking-wide ${
                 wd.isHoliday ? 'text-[#9A3412]' : 'text-stone-600'
               }`}
             >
-              <span className="block sm:inline">{wd.shortEn}</span>
-              <span className="hidden sm:inline text-stone-400"> · </span>
-              <span className="block sm:inline font-normal">{wd.shortNe}</span>
+              {locale === 'ne' ? (
+                <span className="block sm:inline">{wd.shortNe}</span>
+              ) : (
+                <span className="block sm:inline">{wd.shortEn}</span>
+              )}
             </div>
           ))}
         </div>
@@ -321,14 +332,14 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
           <CalendarIcon className="mt-0.5 h-5 w-5 shrink-0 text-[#9A3412]" aria-hidden="true" />
           <div>
             <p className="text-sm font-semibold text-stone-900">
-              {grid.monthMeta.en} {selectedCell.bsDay}, {selectedCell.bsYear} BS{' '}
-              <span className="font-normal text-stone-600">
-                ({grid.monthMeta.ne} {selectedCell.bsDayNe}, {toDevanagariDigits(selectedCell.bsYear)})
-              </span>
+              {locale === 'ne'
+                ? `${grid.monthMeta.ne} ${formatLocaleNumber(selectedCell.bsDay, locale)}, ${formatLocaleNumber(selectedCell.bsYear, locale)} वि.सं.`
+                : `${grid.monthMeta.en} ${formatLocaleNumber(selectedCell.bsDay, locale)}, ${formatLocaleNumber(selectedCell.bsYear, locale)} BS`}
             </p>
             <p className="mt-0.5 text-xs text-stone-600">
-              {selectedWeekday.en} ({selectedWeekday.ne}) · Gregorian: {selectedCell.adMonthShort}{' '}
-              {selectedCell.adDay}, {selectedCell.adYear} ({selectedCell.adIso})
+              {locale === 'ne'
+                ? `${selectedWeekday.ne} · ग्रेगोरियन: ${selectedCell.adMonthShort} ${formatLocaleNumber(selectedCell.adDay, locale)}, ${formatLocaleNumber(selectedCell.adYear, locale)} (${selectedCell.adIso})`
+                : `${selectedWeekday.en} · Gregorian: ${selectedCell.adMonthShort} ${formatLocaleNumber(selectedCell.adDay, locale)}, ${formatLocaleNumber(selectedCell.adYear, locale)} (${selectedCell.adIso})`}
             </p>
           </div>
         </div>
@@ -339,16 +350,20 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
               <div className="space-y-1">
                 {selectedEvents.map((e) => (
                   <p key={e.id} className="font-medium text-[#9A3412]">
-                    {e.nameEn} ({e.nameNe}) · {e.isPublicHoliday
-                      ? 'Public Holiday'
-                      : 'Observance'}
+                    {locale === 'ne' ? e.nameNe : e.nameEn} {locale === 'ne' ? '' : `(${e.nameNe})`} · {locale === 'ne'
+                      ? e.isPublicHoliday
+                        ? 'सार्वजनिक बिदा'
+                        : 'अवलोकन'
+                      : e.isPublicHoliday
+                        ? 'Public Holiday'
+                        : 'Observance'}
                   </p>
                 ))}
               </div>
             ) : selectedCell.isSaturday ? (
-              <p className="font-medium text-[#9A3412]">Saturday is commonly observed as the weekly rest day.</p>
+              <p className="font-medium text-[#9A3412]">{t('calendar.weeklyRest')}</p>
             ) : (
-              <p className="text-stone-500">No holiday is listed in our calendar for this day.</p>
+              <p className="text-stone-500">{t('calendar.noHolidayListed')}</p>
             )}
           </div>
 
@@ -369,7 +384,9 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
       {monthEvents.length > 0 && (
         <div className="border-t border-stone-200 px-4 py-4 sm:px-6">
           <h3 className="text-xs font-semibold uppercase tracking-widest text-stone-500">
-            Events &amp; Observances in {grid.monthMeta.en} {bsYear}
+            {locale === 'ne'
+              ? `${grid.monthMeta.ne} ${formatLocaleNumber(bsYear, locale)} वि.सं.मा कार्यक्रम र अवलोकन`
+              : `Events & Observances in ${grid.monthMeta.en} ${formatLocaleNumber(bsYear, locale)}`}
           </h3>
           <div className="mt-2">
             <HolidayReferenceNote />
@@ -382,17 +399,23 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
               >
                 <span className="text-stone-800">
                   <strong className="font-mono font-semibold tabular-nums text-[#9A3412]">
-                    {grid.monthMeta.en.slice(0, 3)} {e.bsDay}
+                    {locale === 'ne' ? grid.monthMeta.ne : grid.monthMeta.en.slice(0, 3)} {formatLocaleNumber(e.bsDay, locale)}
                   </strong>
                   {' · '}
-                  {e.nameEn}
+                  {locale === 'ne' ? e.nameNe : e.nameEn}
                   {e.isPublicHoliday ? (
-                    <span className="text-xs text-[#9A3412]"> (Public Holiday)</span>
+                    <span className="text-xs text-[#9A3412]">
+                      {locale === 'ne' ? ' (सार्वजनिक बिदा)' : ' (Public Holiday)'}
+                    </span>
                   ) : (
-                    <span className="text-xs text-stone-500"> (Observance)</span>
+                    <span className="text-xs text-stone-500">
+                      {locale === 'ne' ? ' (अवलोकन)' : ' (Observance)'}
+                    </span>
                   )}
                 </span>
-                <span className="shrink-0 text-xs text-stone-500">{e.nameNe}</span>
+                <span className="shrink-0 text-xs text-stone-500">
+                  {locale === 'ne' ? e.nameEn : e.nameNe}
+                </span>
               </li>
             ))}
           </ul>

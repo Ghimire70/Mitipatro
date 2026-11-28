@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocale } from '../../contexts/LocaleContext';
 
 const CONTACT_EMAIL = "utsavghimire34@gmail.com";
 
@@ -11,6 +12,7 @@ export const StaticPages: React.FC<StaticPageProps> = ({
   page,
   onNavigate,
 }) => {
+  const { locale, t } = useLocale();
   const handleLink = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
@@ -25,10 +27,14 @@ export const StaticPages: React.FC<StaticPageProps> = ({
           onClick={(e) => handleLink(e, "/")}
           className="hover:text-[#9A3412] hover:underline"
         >
-          Home
+          {t('staticPages.breadcrumbHome')}
         </a>
         <span className="mx-2">/</span>
-        <span className="capitalize text-stone-800">{page}</span>
+        <span className="capitalize text-stone-800">
+          {locale === 'ne'
+            ? page === 'about' ? 'बारे' : page === 'contact' ? 'सम्पर्क' : page === 'privacy' ? 'गोपनीयता' : 'प्रयोग सर्तहरू'
+            : page}
+        </span>
       </nav>
 
       {page === "about" && (
@@ -37,56 +43,43 @@ export const StaticPages: React.FC<StaticPageProps> = ({
             About MitiPatro &amp; Calendar Methodology
           </h1>
           <p className="text-base leading-relaxed">
-            MitiPatro is an independent Nepali calendar for looking up Bikram
-            Sambat (BS) dates, their Gregorian (AD) equivalents, monthly
-            calendar grids, and listed festivals and holidays. It supports BS
-            and AD date conversion from 2000 through 2090 BS and presents dates
-            in English and Devanagari.
+            {locale === 'ne' ? t('staticPages.aboutSection1') : t('staticPages.aboutSection1')}
+          </p>
+          <h2 className="font-display text-2xl font-semibold text-stone-900">
+            {locale === 'ne' ? 'पात्रो तथ्यांक र रूपान्तरण विधि' : 'Calendar Data and Conversion Method'}
+          </h2>
+          <p className="text-sm leading-relaxed">
+            {locale === 'ne'
+              ? `साइटले समर्थित प्रत्येक वर्षको बारह वि.सं. महिनाको लम्बाइको सङ्ग्रहित तालिका प्रयोग गर्दछ। रूपान्तरण सन्दर्भ मिति <strong>१ वैशाख २००० वि.सं. = १४ अप्रिल १९४३ ई.सं.</strong> बाट दिनहरू गणना गर्दछ; यो दोहोर्याउने लीप-वर्ष नियमबाट मितिहरू अनुमान गर्दैन वा पात्रो तथ्यांक लाइव सेवा प्राप्त गर्दैन।`
+              : `The site uses a stored table of the twelve BS month lengths for each supported year. Conversion counts days from the reference date <strong>1 Baisakh 2000 BS = 14 April 1943 AD</strong>; it does not estimate dates from a repeating leap-year rule or fetch calendar data from a live service.`}
+          </p>
+          <p className="text-sm leading-relaxed">
+            {locale === 'ne'
+              ? `वि.सं. महिना-लम्बाइ तालिका पात्रो तथ्यांकसँगै सङ्ग्रहित छ; रूपान्तरण कड माथिको सन्दर्भबाट दिनहरू गणना गर्दछ। तथ्यांक नोटहरूमा <code>nepali-date-converter</code>, <code>bikram-sambat</code>, र <code>@sbmdkl/nepali-date-converter</code> तुलना सन्दर्भको रूपमा सूचीबद्ध छन्।`
+              : `The BS month-length table is stored with the calendar data; the conversion code counts from the anchor above instead of fetching dates from a live service. The data notes list <code>nepali-date-converter</code>, <code>bikram-sambat</code>, and <code>@sbmdkl/nepali-date-converter</code> as comparison references.`}
           </p>
 
           <h2 className="font-display text-2xl font-semibold text-stone-900">
-            Calendar Data and Conversion Method
+            {locale === 'ne' ? 'मितिहरू कसरी जाँच गरिन्छ' : 'How Dates Are Checked'}
           </h2>
           <p className="text-sm leading-relaxed">
-            The site uses a stored table of the twelve BS month lengths for each
-            supported year. Conversion counts days from the reference date{" "}
-            <strong>1 Baisakh 2000 BS = 14 April 1943 AD</strong>; it does not
-            estimate dates from a repeating leap-year rule or fetch calendar
-            data from a live service.
+            {locale === 'ne'
+              ? `स्वचालित परीक्षणहरूले सन्दर्भ, चयनित मिति जोडीहरू, नमुना राउन्ड ट्रिपहरू र बिदा प्रविष्टिहरूको लागि सङ्ग्रहित ई.सं. समकक्षहरूको विरुद्ध रूपान्तरणकको जाँच गर्छन्। यी जाँचहरूले आन्तरिक एकरूपता देखाउँछन्; तिनीहरूले प्रत्येक महिना लम्बाइ वा बिदाको स्रोत शुद्धता स्थापना गर्दैनन्।`
+              : `Automated tests check the converter against the anchor, selected date pairs, sampled round trips, and stored AD equivalents for holiday entries. These checks show internal consistency; they do not establish the source accuracy of every month length or holiday.`}
           </p>
           <p className="text-sm leading-relaxed">
-            The BS month-length table is stored with the calendar data; the
-            conversion code counts from the anchor above instead of fetching
-            dates from a live service. The data notes list{" "}
-            <code>nepali-date-converter</code>, <code>bikram-sambat</code>, and{" "}
-            <code>@sbmdkl/nepali-date-converter</code> as comparison references.
+            {locale === 'ne'
+              ? `बिदा रेकर्डहरूमा हाल खाली स्रोत क्षेत्रहरू छन्, त्यसैले कुनै प्रति-प्रविष्टि उद्धरण दिइएको छैन। मितिहरू क्षेत्र अनुसार वा प्रकाशनपछि परिवर्तन हुन सक्छन्। महत्त्वपूर्ण बिदाहरूको लागि सान्दर्भिक सरकारी सूचनासँग पुष्टि गर्नुहोस्। त्रुटि रिपोर्ट गर्न, वि.सं. मिति, देखाइएको ई.सं. मिति, बिदाको नाम, पृष्ठ URL, र स्रोत लिंक वा सन्दर्भ समावेश गर्नुहोस् जब उपलब्ध छ।`
+              : `Holiday records currently have empty source fields, so no per-entry citation is provided. Dates may also vary by region or change after publication. Confirm important holidays with the relevant government notice. To report an error, email the BS date, the displayed AD date, the holiday name, page URL, and a source link or reference when available.`}
           </p>
 
           <h2 className="font-display text-2xl font-semibold text-stone-900">
-            How Dates Are Checked
+            {locale === 'ne' ? 'नेपाल समय' : 'Nepal Time'}
           </h2>
           <p className="text-sm leading-relaxed">
-            Automated tests check the converter against the anchor, selected
-            date pairs, sampled round trips, and stored AD equivalents for
-            holiday entries. These checks show internal consistency; they do not
-            establish the source accuracy of every month length or holiday.
-          </p>
-          <p className="text-sm leading-relaxed">
-            Holiday records currently have empty source fields, so no per-entry
-            citation is provided. Dates may also vary by region or change after
-            publication. Confirm important holidays with the relevant government
-            notice. To report an error, email the BS date, the displayed AD
-            date, the holiday name, page URL, and a source link or reference
-            when available.
-          </p>
-
-          <h2 className="font-display text-2xl font-semibold text-stone-900">
-            Nepal Time
-          </h2>
-          <p className="text-sm leading-relaxed">
-            The Aaja Ko Miti page determines today using the Asia/Kathmandu
-            timezone (Nepal Standard Time, UTC+05:45), rather than the
-            device&rsquo;s local timezone.
+            {locale === 'ne'
+              ? `आजको मिति पृष्ठले आज काठमाडौं समयक्षेत्र (नेपाल मानक समय, UTC+०५:४५) प्रयोग गरेर निर्धारण गर्दछ, उपकरणको स्थानीय समयको सट्टा।`
+              : `The Aaja Ko Miti page determines today using the Asia/Kathmandu timezone (Nepal Standard Time, UTC+05:45), rather than the device&rsquo;s local timezone.`}
           </p>
         </div>
       )}

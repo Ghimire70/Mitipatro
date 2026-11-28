@@ -15,6 +15,8 @@ import {
   validateBsDate,
 } from '../../lib/bsConverter';
 import { CalendarCellData } from '../../lib/bsConverter';
+import { useLocale } from '../../contexts/LocaleContext';
+import { formatLocaleNumber } from '../../lib/i18n/format';
 
 interface QuickConverterPanelProps {
   nowMs?: number;
@@ -48,6 +50,7 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
   onNavigate,
 }) => {
   const today = useMemo(() => getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined), [nowMs]);
+  const { locale } = useLocale();
 
   const [mode, setMode] = useState<'bs-to-ad' | 'ad-to-bs'>('bs-to-ad');
 
@@ -171,17 +174,25 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
   const primaryLabel = useMemo(() => {
     if (!activeResult.ok) return '';
     if (mode === 'bs-to-ad') {
-      return `${activeResult.ad!.weekdayEn}, ${activeResult.ad!.monthNameEn} ${activeResult.ad!.day}, ${activeResult.ad!.year}`;
+      return locale === 'ne'
+        ? `${activeResult.ad!.weekdayEn}, ${formatLocaleNumber(activeResult.ad!.day, locale)} ${activeResult.ad!.monthNameEn}, ${formatLocaleNumber(activeResult.ad!.year, locale)}`
+        : `${activeResult.ad!.weekdayEn}, ${activeResult.ad!.monthNameEn} ${activeResult.ad!.day}, ${activeResult.ad!.year}`;
     }
-    return `${activeResult.bs!.monthNameEn} ${activeResult.bs!.day}, ${activeResult.bs!.year} (${activeResult.bs!.weekdayEn})`;
+    return locale === 'ne'
+      ? `${activeResult.bs!.monthNameEn} ${formatLocaleNumber(activeResult.bs!.day, locale)}, ${formatLocaleNumber(activeResult.bs!.year, locale)} (${activeResult.bs!.weekdayEn})`
+      : `${activeResult.bs!.monthNameEn} ${activeResult.bs!.day}, ${activeResult.bs!.year} (${activeResult.bs!.weekdayEn})`;
   }, [activeResult.ok, mode, activeResult.ad, activeResult.bs]);
 
   const secondaryLabel = useMemo(() => {
     if (!activeResult.ok) return '';
     if (mode === 'bs-to-ad') {
-      return `${activeResult.bs!.monthNameEn} ${toDevanagariDigits(activeResult.bs!.day)}, ${toDevanagariDigits(activeResult.bs!.year)} · ${activeResult.bs!.iso}`;
+      return locale === 'ne'
+        ? `${activeResult.bs!.monthNameEn} ${toDevanagariDigits(activeResult.bs!.day)}, ${toDevanagariDigits(activeResult.bs!.year)} · ${activeResult.bs!.iso}`
+        : `${activeResult.bs!.monthNameEn} ${activeResult.bs!.day}, ${activeResult.bs!.year} · ${activeResult.bs!.iso}`;
     }
-    return `${activeResult.ad!.monthNameEn} ${activeResult.ad!.day}, ${activeResult.ad!.year} · ${activeResult.ad!.iso}`;
+    return locale === 'ne'
+      ? `${activeResult.ad!.monthNameEn} ${formatLocaleNumber(activeResult.ad!.day, locale)}, ${formatLocaleNumber(activeResult.ad!.year, locale)} · ${activeResult.ad!.iso}`
+      : `${activeResult.ad!.monthNameEn} ${activeResult.ad!.day}, ${activeResult.ad!.year} · ${activeResult.ad!.iso}`;
   }, [activeResult.ok, mode, activeResult.ad, activeResult.bs]);
 
   const handleCopy = useCallback(() => {
@@ -217,7 +228,7 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
                 : 'text-slatewarm hover:text-ink'
             }`}
           >
-            BS to AD
+            {locale === 'ne' ? 'वि.सं.–ई.सं.' : 'BS to AD'}
           </button>
           <button
             type="button"
@@ -230,7 +241,7 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
                 : 'text-slatewarm hover:text-ink'
             }`}
           >
-            AD to BS
+            {locale === 'ne' ? 'ई.सं.–वि.सं.' : 'AD to BS'}
           </button>
         </div>
 
@@ -241,7 +252,7 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
           className="inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-hairline bg-paper px-3 py-2 text-xs sm:text-sm font-medium text-stone-700 hover:bg-sand whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
         >
           <CalendarCheck className="h-3.5 w-3.5 text-terracotta" aria-hidden="true" />
-          <span>Reset Today</span>
+          <span>{locale === 'ne' ? 'आज रीसेट गर्नुहोस्' : 'Reset Today'}</span>
         </button>
       </div>
 
@@ -250,7 +261,13 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
         {/* Year */}
         <div className="col-span-1 lg:col-span-4">
           <label htmlFor={`conv-${mode}-year`} className="block text-[11px] font-medium text-slatewarm mb-1.5">
-            {mode === 'bs-to-ad' ? 'BS Year' : 'AD Year'}
+            {locale === 'ne'
+              ? mode === 'bs-to-ad'
+                ? 'वि.सं. वर्ष'
+                : 'ई.सं. वर्ष'
+              : mode === 'bs-to-ad'
+                ? 'BS Year'
+                : 'AD Year'}
           </label>
           {mode === 'bs-to-ad' ? (
             <select
@@ -281,7 +298,7 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
         {/* Month */}
         <div className="col-span-1 lg:col-span-5">
           <label htmlFor={`conv-${mode}-month`} className="block text-[11px] font-medium text-slatewarm mb-1.5">
-            Month
+            {locale === 'ne' ? 'महिना' : 'Month'}
           </label>
           {mode === 'bs-to-ad' ? (
             <select
@@ -292,7 +309,7 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
             >
               {BS_MONTHS.map((m) => (
                 <option key={m.index} value={m.index}>
-                  {m.en} ({m.ne})
+                  {locale === 'ne' ? m.ne : m.en}
                 </option>
               ))}
             </select>
@@ -318,7 +335,7 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
         {/* Day */}
         <div className="col-span-1 lg:col-span-3">
           <label htmlFor={`conv-${mode}-day`} className="block text-[11px] font-medium text-slatewarm mb-1.5">
-            {mode === 'bs-to-ad' ? `Day` : `Day`}
+            {locale === 'ne' ? 'तिथि' : 'Day'}
           </label>
           <input
             id={`conv-${mode}-day`}
@@ -377,7 +394,7 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
                     className={`inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-semibold text-slatewarm hover:text-ink bg-card border border-hairline rounded-md transition-colors whitespace-nowrap shrink-0 min-h-[8px]`}
                   >
                     <Copy className="w-3.5 h-3.5" aria-hidden="true" />
-                    <span>{copyStatus === 'copied' ? 'Copied!' : 'Copy'}</span>
+                    <span>{copyStatus === 'copied' ? (locale === 'ne' ? 'कपी भयो!' : 'Copied!') : (locale === 'ne' ? 'कपी गर्नुहोस्' : 'Copy')}</span>
                   </button>
                 </div>
                 <p className="mt-1 font-serif font-bold text-2xl sm:text-[1.65rem] leading-[1.2] text-ink whitespace-normal break-words">
@@ -404,7 +421,7 @@ export const QuickConverterPanel: React.FC<QuickConverterPanelProps> = ({
                     }}
                     className="font-semibold text-terracotta hover:underline"
                   >
-                    View {activeResult.bs!.monthNameEn} {activeResult.bs!.year} →
+                    {locale === 'ne' ? `${activeResult.bs!.monthNameEn} ${formatLocaleNumber(activeResult.bs!.year, locale)} वि.सं. हेर्नुहोस् →` : `View ${activeResult.bs!.monthNameEn} ${formatLocaleNumber(activeResult.bs!.year, locale)} →`}
                   </a>
                 )}
               </div>

@@ -147,6 +147,7 @@ function getRouteSeo(
   converterToolsIndexingEnabled: boolean,
   panchangIndexingEnabled = false,
   rashifalIndexingEnabled = false,
+  jyotishIndexingEnabled = false,
 ): PageSeoData {
   const cleanPath = pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
   const today = getTodayNepal(now);
@@ -177,6 +178,28 @@ function getRouteSeo(
       breadcrumbs: [{ name: 'Home', path: '/' }],
       faqs: [],
       jsonLd: [],
+    };
+  }
+  if (cleanPath === '/kundali') {
+    const breadcrumbs: BreadcrumbItem[] = [
+      { name: 'Home', path: '/' },
+      { name: 'Kundali', path: '/kundali' },
+    ];
+    const faqs: FaqItem[] = [
+      {
+        question: 'Kundali birth chart calculation uses which timezone?',
+        answer: 'The Kundali page accepts an IANA timezone and defaults to Asia/Kathmandu. Birth-place coordinates affect the ascendant and chart calculation.',
+      },
+    ];
+    return {
+      title: 'Nepali Kundali & Birth Chart | MitiPatro',
+      description: 'Create a Lahiri sidereal Kundali chart and explore deterministic placements with optional AI Jyotish guidance.',
+      canonicalPath: '/kundali',
+      robots: jyotishIndexingEnabled ? 'index, follow' : 'noindex, follow',
+      h1: 'Nepali Kundali & Birth Chart',
+      breadcrumbs,
+      faqs,
+      jsonLd: buildJsonLd(baseUrl, breadcrumbs, faqs),
     };
   }
 
@@ -921,6 +944,7 @@ export function getSeoForRoute(
   converterToolsIndexingEnabled = false,
   rashifalIndexingEnabled = false,
   panchangIndexingEnabled = false,
+  jyotishIndexingEnabled = false,
 ): PageSeoData {
   // Normalize /today alias to /aaja-ko-miti for SEO (same page, canonical URL)
   if (pathname === '/today') {
@@ -933,6 +957,7 @@ export function getSeoForRoute(
     converterToolsIndexingEnabled,
     panchangIndexingEnabled,
     rashifalIndexingEnabled,
+    jyotishIndexingEnabled,
   );
   if (noindexSite) return { ...seo, robots: 'noindex, nofollow' };
   if (pathname === '/rashifal' || pathname.startsWith('/rashifal/')) {
@@ -941,6 +966,9 @@ export function getSeoForRoute(
   if (pathname === '/panchang') {
     return { ...seo, robots: panchangIndexingEnabled ? seo.robots : 'noindex, follow' };
   }
+  if (pathname === '/kundali') {
+    return { ...seo, robots: jyotishIndexingEnabled ? seo.robots : 'noindex, follow' };
+  }
   return seo;
 }
 
@@ -948,6 +976,7 @@ export function generateSitemapPaths(
   converterToolsIndexingEnabled = false,
   rashifalIndexingEnabled = false,
   panchangIndexingEnabled = false,
+  jyotishIndexingEnabled = false,
 ): string[] {
   const paths = [
     '/',
@@ -973,6 +1002,11 @@ export function generateSitemapPaths(
   // Panchang page: indexed only when explicitly enabled.
   if (panchangIndexingEnabled) {
     paths.push('/panchang');
+  }
+
+  // Kundali/Jyotish page: indexed only when explicitly enabled.
+  if (jyotishIndexingEnabled) {
+    paths.push('/kundali');
   }
 
   if (converterToolsIndexingEnabled) {
