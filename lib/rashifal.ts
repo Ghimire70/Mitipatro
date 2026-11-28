@@ -1,4 +1,4 @@
-import { getTodayNepal, bsToAd, toDevanagariDigits } from './bsConverter';
+﻿import { getTodayNepal, bsToAd, toDevanagariDigits } from './bsConverter';
 import { BS_MONTHS } from './bsData';
 
 export type RashiId =
@@ -1361,3 +1361,4 @@ export function getTodayNepalBsDate(nowMs?: number): string {
   const today = getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined);
   return today.bs.iso;
 }
+

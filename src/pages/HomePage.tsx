@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+﻿import React, { useMemo } from 'react';
 import { ArrowRight, Clock } from 'lucide-react';
 import { BS_MONTHS, CURRENT_BS_YEAR, PUBLISHED_BS_YEARS, WEEKDAYS } from '../../lib/bsData';
 import { bsToAd, getTodayNepal, toDevanagariDigits } from '../../lib/bsConverter';
