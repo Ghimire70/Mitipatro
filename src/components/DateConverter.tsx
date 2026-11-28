@@ -14,6 +14,8 @@ import {
   validateAdDate,
   validateBsDate,
 } from '../../lib/bsConverter';
+import { useLocale } from '../../contexts/LocaleContext';
+import { formatLocaleNumber } from '../../lib/i18n/format';
 
 interface DateConverterProps {
   compact?: boolean;
@@ -27,6 +29,7 @@ export const DateConverter: React.FC<DateConverterProps> = ({
   onNavigate,
 }) => {
   const today = useMemo(() => getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined), [nowMs]);
+  const { locale } = useLocale();
   const [mode, setMode] = useState<'bs-to-ad' | 'ad-to-bs'>('bs-to-ad');
 
   // BS inputs
@@ -125,7 +128,7 @@ export const DateConverter: React.FC<DateConverterProps> = ({
                 : 'text-stone-600 hover:text-stone-900'
             }`}
           >
-            BS to AD
+            {locale === 'ne' ? 'वि.सं.–ई.सं.' : 'BS to AD'}
           </button>
           <button
             type="button"
@@ -138,7 +141,7 @@ export const DateConverter: React.FC<DateConverterProps> = ({
                 : 'text-stone-600 hover:text-stone-900'
             }`}
           >
-            AD to BS
+            {locale === 'ne' ? 'ई.सं.–वि.सं.' : 'AD to BS'}
           </button>
         </div>
 
@@ -148,7 +151,7 @@ export const DateConverter: React.FC<DateConverterProps> = ({
           className="inline-flex min-h-[40px] items-center gap-1.5 self-start rounded-md border border-stone-200 bg-[#FBF9F5] px-3 py-1.5 text-xs font-medium text-stone-700 hover:bg-stone-100 whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-[#9A3412] sm:self-auto"
         >
           <CalendarCheck className="h-3.5 w-3.5 text-[#9A3412]" aria-hidden="true" />
-          <span>{compact ? 'Today (NPT)' : 'Today (Nepal Time)'}</span>
+          <span>{locale === 'ne' ? 'आज (नेपाल समय)' : compact ? 'Today (NPT)' : 'Today (Nepal Time)'}</span>
         </button>
       </div>
 
@@ -157,7 +160,7 @@ export const DateConverter: React.FC<DateConverterProps> = ({
         <div className={`mt-5 grid gap-3.5 ${compact ? 'grid-cols-2' : 'grid-cols-1 sm:grid-cols-3'}`}>
           <div>
             <label htmlFor="conv-bs-year" className="block text-xs font-medium text-stone-600">
-              BS Year (2000–2090)
+              {locale === 'ne' ? 'वि.सं. वर्ष (२०००–२०९०)' : 'BS Year (2000–2090)'}
             </label>
             <select
               id="conv-bs-year"
@@ -175,7 +178,7 @@ export const DateConverter: React.FC<DateConverterProps> = ({
 
           <div className={compact ? 'col-span-2 order-first' : ''}>
             <label htmlFor="conv-bs-month" className="block text-xs font-medium text-stone-600">
-              BS Month
+              {locale === 'ne' ? 'वि.सं. महिना' : 'BS Month'}
             </label>
             <select
               id="conv-bs-month"
@@ -185,7 +188,7 @@ export const DateConverter: React.FC<DateConverterProps> = ({
             >
               {BS_MONTHS.map((m) => (
                 <option key={m.index} value={m.index}>
-                  {m.index}. {m.en} ({m.ne})
+                  {m.index}. {locale === 'ne' ? m.ne : m.en}
                 </option>
               ))}
             </select>
@@ -193,7 +196,7 @@ export const DateConverter: React.FC<DateConverterProps> = ({
 
           <div>
             <label htmlFor="conv-bs-day" className="block text-xs font-medium text-stone-600">
-              BS Day (1–{selectedMonthMaxDays})
+              {locale === 'ne' ? `वि.सं. तिथि (1–${formatLocaleNumber(selectedMonthMaxDays, locale)})` : `BS Day (1–${formatLocaleNumber(selectedMonthMaxDays, locale)})`}
             </label>
             <input
               id="conv-bs-day"
@@ -210,7 +213,7 @@ export const DateConverter: React.FC<DateConverterProps> = ({
         <div className={`mt-5 grid gap-3.5 ${compact ? 'grid-cols-2' : 'grid-cols-1 sm:grid-cols-3'}`}>
           <div>
             <label htmlFor="conv-ad-year" className="block text-xs font-medium text-stone-600">
-              AD Year (1943–2034)
+              {locale === 'ne' ? 'ई.सं. वर्ष (१९४३–२०३४)' : 'AD Year (1943–2034)'}
             </label>
             <input
               id="conv-ad-year"
@@ -225,7 +228,7 @@ export const DateConverter: React.FC<DateConverterProps> = ({
 
           <div className={compact ? 'col-span-2 order-first' : ''}>
             <label htmlFor="conv-ad-month" className="block text-xs font-medium text-stone-600">
-              AD Month
+              {locale === 'ne' ? 'ई.सं. महिना' : 'AD Month'}
             </label>
             <select
               id="conv-ad-month"
@@ -246,7 +249,7 @@ export const DateConverter: React.FC<DateConverterProps> = ({
 
           <div>
             <label htmlFor="conv-ad-day" className="block text-xs font-medium text-stone-600">
-              AD Day (1–31)
+              {locale === 'ne' ? `ई.सं. तिथि (1–${formatLocaleNumber(31, locale)})` : `AD Day (1–${formatLocaleNumber(31, locale)})`}
             </label>
             <input
               id="conv-ad-day"
@@ -276,7 +279,13 @@ export const DateConverter: React.FC<DateConverterProps> = ({
             <div className={`flex flex-col gap-4 ${compact ? '' : 'sm:flex-row sm:items-center sm:justify-between'}`}>
               <div>
                 <p className="text-xs font-medium tracking-wide text-stone-500">
-                  {mode === 'bs-to-ad' ? 'Gregorian (AD) Equivalent' : 'Bikram Sambat (BS) Equivalent'}
+                  {locale === 'ne'
+                    ? mode === 'bs-to-ad'
+                      ? 'ग्रेगोरियन (ई.सं.) समकक्ष'
+                      : 'बिक्रम सम्बत (वि.सं.) समकक्ष'
+                    : mode === 'bs-to-ad'
+                      ? 'Gregorian (AD) Equivalent'
+                      : 'Bikram Sambat (BS) Equivalent'}
                 </p>
                 <p className="mt-1 font-display text-2xl font-semibold text-stone-900">
                   {mode === 'bs-to-ad'
@@ -297,18 +306,18 @@ export const DateConverter: React.FC<DateConverterProps> = ({
                 className="inline-flex min-h-[40px] items-center gap-2 self-start rounded-md border border-stone-300 bg-white px-3.5 py-2 text-xs font-semibold text-stone-800 hover:bg-stone-50 whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-[#9A3412]"
               >
                 <ArrowLeftRight className="h-3.5 w-3.5 text-[#9A3412]" aria-hidden="true" />
-                <span>Swap Direction</span>
+                <span>{locale === 'ne' ? 'दिशा परिवर्तन गर्नुहोस्' : 'Swap Direction'}</span>
               </button>
             </div>
 
             {!compact && onNavigate && (
               <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-stone-200 pt-3 text-xs text-stone-600">
                 <span>
-                  BS ISO: <strong className="font-mono tabular-nums">{activeResult.bs.iso}</strong>
+                  {locale === 'ne' ? 'वि.सं. आइएसओ:' : 'BS ISO:'} <strong className="font-mono tabular-nums">{activeResult.bs.iso}</strong>
                 </span>
                 <span aria-hidden="true">·</span>
                 <span>
-                  AD ISO: <strong className="font-mono tabular-nums">{activeResult.ad.iso}</strong>
+                  {locale === 'ne' ? 'ई.सं. आइएसओ:' : 'AD ISO:'} <strong className="font-mono tabular-nums">{activeResult.ad.iso}</strong>
                 </span>
                 <span aria-hidden="true">·</span>
                 {activeResult.bs.year >= 2082 && activeResult.bs.year <= 2085 && (

@@ -176,4 +176,96 @@ export interface LocaleDictionary {
       enemy: string;
     };
   };
+  calendar: {
+    monthTitle: (params: { month: string; year: number }) => string;
+    months: {
+      en: string[];
+      ne: string[];
+    };
+    weekdays: {
+      en: string[];
+      shortEn: string[];
+      ne: string[];
+      shortNe: string[];
+    };
+    tithi: {
+      names: {
+        en: string[];
+        ne: string[];
+      };
+      paksha: {
+        shukla: string;
+        krishna: string;
+      };
+    };
+    nakshatra: {
+      names: {
+        en: string[];
+        ne: string[];
+      };
+    };
+    today: string;
+    weeklyRest: string;
+    noHolidayListed: string;
+    eventsAndObservances: string;
+    bsMonthSelect: string;
+    bsYearSelect: string;
+    quickConverter: string;
+    fullTool: string;
+    upcomingHolidays: string;
+    allHolidays: string;
+    browseYears: string;
+    faqsHeading: string;
+    printCalendar: string;
+    openMonthlyCalendars: string;
+  };
+  holidayType: {
+    national: string;
+    cultural: string;
+    civic: string;
+    regional: string;
+    women: string;
+    women_only: string;
+  };
+  converter: {
+    bsYear: string;
+    adYear: string;
+    bsMonth: string;
+    adMonth: string;
+    bsDay: string;
+    adDay: string;
+    bsToAd: string;
+    adToBs: string;
+    today: string;
+    swapDirection: string;
+    gregorianEquivalent: string;
+    bikramSambatEquivalent: string;
+    bsIso: string;
+    adIso: string;
+    viewCalendar: string;
+    relativeBadge: string;
+    invalidBsDate: string;
+    invalidAdDate: string;
+  };
+  staticPages: {
+    about: string;
+    contact: string;
+    privacy: string;
+    terms: string;
+    aboutTitle: string;
+    contactTitle: string;
+    privacyTitle: string;
+    termsTitle: string;
+    breadcrumbHome: string;
+    aboutSection1: string;
+    aboutSection2: string;
+    aboutSection3: string;
+    aboutSection4: string;
+    contactSection1: string;
+    privacySection1: string;
+    privacySection2: string;
+    privacySection3: string;
+    privacySection4: string;
+    termsSection1: string;
+  };
 }

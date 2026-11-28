@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Calendar, Clock, Sparkles } from 'lucide-react';
 import { getTodayNepal, bsToAd, toDevanagariDigits } from '../../lib/bsConverter';
 import { BS_MONTHS } from '../../lib/bsData';
+import { useLocale } from '../../contexts/LocaleContext';
+import { formatLocaleNumber } from '../../lib/i18n/format';
 
 interface EditorialHeroProps {
   bsYear: number;
@@ -26,6 +28,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
 }) => {
   const [nepalTime, setNepalTime] = useState<string>('');
   const today = getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined);
+  const { locale } = useLocale();
   const isCurrent = today.bs.year === bsYear && today.bs.month === bsMonth;
   const refDay = isCurrent ? today.bs.day : 1;
   const refWeekday = isCurrent
@@ -71,29 +74,33 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
         <div className="flex flex-col gap-3 md:flex-row md:items-center gap-6">
           <div className="flex items-center gap-2 rounded-lg border border-terracotta/30 bg-terracotta/5 px-3 py-1">
             <span className="text-[10px] font-bold tracking-wider text-terracotta uppercase">
-              AAJA KO MITI
+              {locale === 'ne' ? 'आजको मिति' : 'AAJA KO MITI'}
             </span>
             <span className="text-[10px] font-semibold text-stone-400">
               ·
             </span>
             <span className="text-[10px] font-semibold text-slatewarm">
-              ASIA/KATHMANDU (UTC+05:45)
+              {locale === 'ne' ? 'एशिया/काठमाडौं (UTC+०५:४५)' : 'ASIA/KATHMANDU (UTC+05:45)'}
             </span>
           </div>
           <h1 className="font-serif font-bold text-3xl sm:text-4xl leading-[1.08] tracking-tight text-ink">
-            {monthMeta.en} {bsYear} Nepali Calendar<span className="text-terracotta"> ({monthMeta.ne})</span>
+            {locale === 'ne'
+              ? `${monthMeta.ne} ${formatLocaleNumber(bsYear, locale)} वि.सं. पात्रो`
+              : `${monthMeta.en} ${formatLocaleNumber(bsYear, locale)} Nepali Calendar`}
           </h1>
           <p className="text-base sm:text-lg text-ink/90 font-normal leading-relaxed">
-            Today is{' '}
+            {locale === 'ne' ? 'आज हो' : 'Today is'}{' '}
             <span className="font-semibold text-terracotta whitespace-nowrap shrink-0">
-              {monthMeta.en} {refDay}, {bsYear} BS
+              {locale === 'ne'
+                ? `${monthMeta.ne} ${toDevanagariDigits(refDay)}, ${toDevanagariDigits(bsYear)} वि.सं.`
+                : `${monthMeta.en} ${formatLocaleNumber(refDay, locale)}, ${formatLocaleNumber(bsYear, locale)} BS`}
             </span>{' '}
             <span className="font-devanagari text-slatewarm whitespace-nowrap shrink-0">
-              ({toDevanagariDigits(refDay)}, {toDevanagariDigits(bsYear)})
+              ({locale === 'ne' ? toDevanagariDigits(refDay) : formatLocaleNumber(refDay, locale)}, {locale === 'ne' ? toDevanagariDigits(bsYear) : formatLocaleNumber(bsYear, locale)})
             </span>{' '}
             <span className="text-slatewarm mx-1">·</span>{' '}
             <span className="font-medium text-ink whitespace-nowrap shrink-0">
-              {refWeekday}
+              {locale === 'ne' ? today.weekday.ne : refWeekday}
             </span>{' '}
             <span className="font-devanagari text-slatewarm whitespace-nowrap shrink-0">
               ({today.weekday.ne})
@@ -111,7 +118,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
                 : 'bg-terracotta hover:bg-terracotta-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta'
             }`}
           >
-            <span>Jump to Today</span>
+            <span>{locale === 'ne' ? 'आजमा जानुहोस्' : 'Jump to Today'}</span>
             <span aria-hidden="true" className="text-base leading-none">↓</span>
           </button>
           <button
@@ -120,7 +127,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
             className="flex-1 lg:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-ink bg-card hover:bg-sand border border-hairline rounded-xl transition-colors whitespace-nowrap shrink-0 min-h-[44px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
           >
             <Sparkles className="w-4 h-4 text-terracotta" aria-hidden="true" />
-            <span>2083 Public Holidays</span>
+            <span>{locale === 'ne' ? `${formatLocaleNumber(bsYear, locale)} वि.सं. सार्वजनिक बिदा` : `${formatLocaleNumber(bsYear, locale)} Public Holidays`}</span>
           </button>
           {rashifalIndexingEnabled && (
             <a
@@ -140,9 +147,9 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
           <circle cx="12" cy="12" r="9" />
           <polyline points="12 7 12 12 15 14" />
         </svg>
-        <span>Gregorian: <strong className="font-medium text-ink whitespace-nowrap shrink-0">{gregorianDate}</strong></span>
+        <span>{locale === 'ne' ? 'ग्रेगोरियन:' : 'Gregorian:'} <strong className="font-medium text-ink whitespace-nowrap shrink-0">{gregorianDate}</strong></span>
         <span aria-hidden="true">·</span>
-        <span>Nepal Time: <strong id="npt-clock" className="font-mono font-medium text-ink tabular-nums whitespace-nowrap shrink-0">{nepalTime}</strong></span>
+        <span>{locale === 'ne' ? 'नेपाल समय:' : 'Nepal Time:'} <strong id="npt-clock" className="font-mono font-medium text-ink tabular-nums whitespace-nowrap shrink-0">{nepalTime}</strong></span>
       </div>
     </header>
   );

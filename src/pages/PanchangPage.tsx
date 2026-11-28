@@ -4,6 +4,7 @@ import {
   adToBs,
   getTodayNepal,
   validateAdDate,
+  toDevanagariDigits,
 } from '../../lib/bsConverter';
 import type { FaqItem } from '../../lib/seo';
 import {
@@ -11,6 +12,8 @@ import {
   type DailyPanchanga,
 } from '../../lib/astronomy/panchanga.js';
 import { FaqSection } from '../components/FaqSection';
+import { useLocale } from '../../contexts/LocaleContext';
+import { formatLocaleNumber } from '../../lib/i18n/format';
 
 interface PanchangPageProps {
   faqs?: FaqItem[];
@@ -56,6 +59,7 @@ export const PanchangPage: React.FC<PanchangPageProps> = ({
   nowMs,
   onNavigate,
 }) => {
+  const { locale, t } = useLocale();
   const today = useMemo(
     () => getTodayNepal(nowMs !== undefined ? new Date(nowMs) : undefined),
     [nowMs],
@@ -158,15 +162,15 @@ export const PanchangPage: React.FC<PanchangPageProps> = ({
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-xs font-medium tracking-wide text-stone-500">
-              नेपाली पात्रो &middot; Asia/Kathmandu (UTC+05:45)
+              {locale === 'ne' ? 'नेपाली पात्रो · एशिया/काठमाडौं (UTC+०५:४५)' : 'Nepali Panchang · Asia/Kathmandu (UTC+05:45)'}
             </p>
             <h1 id="panchang-heading" className="mt-2 font-display text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl">
-              नेपाली पात्रो – दैनिक पञ्चाङ्ग (Daily Panchang)
+              {locale === 'ne' ? 'नेपाली पात्रो – दैनिक पञ्चाङ्ग' : 'Nepali Panchang – Daily Panchang'}
             </h1>
             <p className="mt-1.5 text-lg text-stone-700">
               {bsDate
-                ? `${bsDate.formattedEn} (${bsDate.formattedNe}) &middot; ${bsDate.weekdayEn} (${bsDate.weekdayNe})`
-                : `अमान्य मिति`}
+                ? `${locale === 'ne' ? bsDate.formattedNe : bsDate.formattedEn} &middot; ${locale === 'ne' ? bsDate.weekdayNe : bsDate.weekdayEn}`
+                : locale === 'ne' ? 'अमान्य मिति' : 'Invalid date'}
               &nbsp;({String(adYear).padStart(4, '0')}-${String(adMonth).padStart(2, '0')}-${String(adDay).padStart(2, '0')})
             </p>
             <p className="mt-1 flex items-center gap-2 text-sm text-stone-500">
@@ -191,12 +195,12 @@ export const PanchangPage: React.FC<PanchangPageProps> = ({
       <section aria-labelledby="panchang-date-heading" className="mt-8">
         <div className="rounded-xl border border-stone-200 bg-white p-5 sm:p-6 shadow-xs">
           <h2 id="panchang-date-heading" className="font-display text-lg font-semibold text-stone-900">
-            मिति छान्नुहोस् (Select Date)
+            {locale === 'ne' ? 'मिति छान्नुहोस्' : 'Select Date'}
           </h2>
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
             <div>
               <label htmlFor="panchang-ad-year" className="block text-xs font-medium text-stone-600">
-                वर्ष (Year)
+                {locale === 'ne' ? 'वर्ष' : 'Year'}
               </label>
               <input
                 id="panchang-ad-year"
@@ -210,7 +214,7 @@ export const PanchangPage: React.FC<PanchangPageProps> = ({
             </div>
             <div>
               <label htmlFor="panchang-ad-month" className="block text-xs font-medium text-stone-600">
-                महिना (Month 1–12)
+                {locale === 'ne' ? 'महिना' : 'Month'}
               </label>
               <input
                 id="panchang-ad-month"
@@ -224,7 +228,7 @@ export const PanchangPage: React.FC<PanchangPageProps> = ({
             </div>
             <div>
               <label htmlFor="panchang-ad-day" className="block text-xs font-medium text-stone-600">
-                दिन (Day 1–31)
+                {locale === 'ne' ? 'दिन' : 'Day'}
               </label>
               <input
                 id="panchang-ad-day"
@@ -243,7 +247,7 @@ export const PanchangPage: React.FC<PanchangPageProps> = ({
               className="mt-4 flex items-start gap-2.5 rounded-lg border border-[#B91C1C]/30 bg-[#FEF2F2] px-4 py-3 text-sm text-[#991B1B]"
             >
               <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
-              <span>{check.error ?? 'अमान्य ग्रेगोरियन मिति।'}</span>
+              <span>{check.error ?? (locale === 'ne' ? 'अमान्य ग्रेगोरियन मिति।' : 'Invalid Gregorian date.')}</span>
             </div>
           )}
         </div>
@@ -254,53 +258,61 @@ export const PanchangPage: React.FC<PanchangPageProps> = ({
         <section aria-labelledby="panchang-results-heading" className="mt-8">
           <div className="rounded-xl border border-stone-200 bg-white p-5 sm:p-6 shadow-xs">
             <h2 id="panchang-results-heading" className="font-display text-lg font-semibold text-stone-900">
-              सूर्योदयको समयमा प्रभावी तत्व (Elements at Sunrise)
+              {locale === 'ne' ? 'सूर्योदयको समयमा प्रभावी तत्व' : 'Elements at Sunrise'}
             </h2>
             <p className="mt-2 text-sm text-stone-600">
-              काठमाडौंको सूर्योदय: <strong>{formatKathmanduTime(panchanga.sunrise.kathmanduDisplay)}</strong>
-              &nbsp;·&nbsp; सूर्यास्त: <strong>{formatKathmanduTime(panchanga.sunset.kathmanduDisplay)}</strong>
+              {locale === 'ne' ? 'काठमाडौंको सूर्योदय:' : 'Kathmandu Sunrise:'} <strong>{formatKathmanduTime(panchanga.sunrise.kathmanduDisplay)}</strong>
+              &nbsp;·&nbsp; {locale === 'ne' ? 'काठमाडौंको सूर्यास्त:' : 'Kathmandu Sunset:'} <strong>{formatKathmanduTime(panchanga.sunset.kathmanduDisplay)}</strong>
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {elementCard(
-                'सूर्योदय (Sunrise)',
+                locale === 'ne' ? 'सूर्योदय' : 'Sunrise',
                 <Sun className="h-5 w-5 text-[#9A3412]" aria-hidden="true" />,
                 formatKathmanduTime(panchanga.sunrise.kathmanduDisplay),
-                'काठमाडौं समय',
+                locale === 'ne' ? 'काठमाडौं समय' : 'Kathmandu Time',
                 null,
               )}
               {elementCard(
-                'सूर्यास्त (Sunset)',
+                locale === 'ne' ? 'सूर्यास्त' : 'Sunset',
                 <Moon className="h-5 w-5 text-stone-500" aria-hidden="true" />,
                 formatKathmanduTime(panchanga.sunset.kathmanduDisplay),
-                'काठमाडौं समय',
+                locale === 'ne' ? 'काठमाडौं समय' : 'Kathmandu Time',
                 null,
               )}
               {elementCard(
-                'तिथि (Tithi)',
+                locale === 'ne' ? 'तिथि' : 'Tithi',
                 <Calendar className="h-5 w-5 text-stone-500" aria-hidden="true" />,
                 `${panchanga.tithi.name} (${panchanga.tithi.paksha})`,
-                `तिथि नम्बर ${panchanga.tithi.tithiNumber} · अन्त्य: ${formatKathmanduTime(panchanga.tithi.end?.kathmanduDisplay)} · अर्को: ${panchanga.tithi.nextName}`,
+                locale === 'ne'
+                  ? `तिथि नम्बर ${panchanga.tithi.tithiNumber} · अन्त्य: ${formatKathmanduTime(panchanga.tithi.end?.kathmanduDisplay)} · अर्को: ${panchanga.tithi.nextName}`
+                  : `Tithi Number ${panchanga.tithi.tithiNumber} · End: ${formatKathmanduTime(panchanga.tithi.end?.kathmanduDisplay)} · Next: ${panchanga.tithi.nextName}`,
                 nearSunriseNote(panchanga.tithi),
               )}
               {elementCard(
-                'नक्षत्र (Nakshatra)',
+                locale === 'ne' ? 'नक्षत्र' : 'Nakshatra',
                 <Star className="h-5 w-5 text-amber-500" aria-hidden="true" />,
-                `${panchanga.nakshatra.name} (पाद ${panchanga.nakshatra.pada})`,
-                `अन्त्य: ${formatKathmanduTime(panchanga.nakshatra.end?.kathmanduDisplay)} · अर्को: ${panchanga.nakshatra.nextName}`,
+                `${panchanga.nakshatra.name} (${locale === 'ne' ? 'पाद' : 'Pada'} ${panchanga.nakshatra.pada})`,
+                locale === 'ne'
+                  ? `अन्त्य: ${formatKathmanduTime(panchanga.nakshatra.end?.kathmanduDisplay)} · अर्को: ${panchanga.nakshatra.nextName}`
+                  : `End: ${formatKathmanduTime(panchanga.nakshatra.end?.kathmanduDisplay)} · Next: ${panchanga.nakshatra.nextName}`,
                 nearSunriseNote(panchanga.nakshatra),
               )}
               {elementCard(
-                'योग (Yoga)',
+                locale === 'ne' ? 'योग' : 'Yoga',
                 <Star className="h-5 w-5 text-violet-500" aria-hidden="true" />,
                 panchanga.yoga.name,
-                `अन्त्य: ${formatKathmanduTime(panchanga.yoga.end?.kathmanduDisplay)} · अर्को: ${panchanga.yoga.nextName}`,
+                locale === 'ne'
+                  ? `अन्त्य: ${formatKathmanduTime(panchanga.yoga.end?.kathmanduDisplay)} · अर्को: ${panchanga.yoga.nextName}`
+                  : `End: ${formatKathmanduTime(panchanga.yoga.end?.kathmanduDisplay)} · Next: ${panchanga.yoga.nextName}`,
                 nearSunriseNote(panchanga.yoga),
               )}
               {elementCard(
-                'करण (Karana)',
+                locale === 'ne' ? 'करण' : 'Karana',
                 <Calendar className="h-5 w-5 text-stone-500" aria-hidden="true" />,
                 panchanga.karana.name,
-                `अन्त्य: ${formatKathmanduTime(panchanga.karana.end?.kathmanduDisplay)} · अर्को: ${panchanga.karana.nextName}`,
+                locale === 'ne'
+                  ? `अन्त्य: ${formatKathmanduTime(panchanga.karana.end?.kathmanduDisplay)} · अर्को: ${panchanga.karana.nextName}`
+                  : `End: ${formatKathmanduTime(panchanga.karana.end?.kathmanduDisplay)} · Next: ${panchanga.karana.nextName}`,
                 nearSunriseNote(panchanga.karana),
               )}
             </div>
@@ -309,7 +321,7 @@ export const PanchangPage: React.FC<PanchangPageProps> = ({
       ) : (
         <div className="mt-8 rounded-xl border border-stone-200 bg-white p-6 sm:p-8 shadow-xs text-center">
           <p className="text-sm text-stone-600">
-            {calculation.error ?? 'मिति छान्नुहोस् र पञ्चाङ्ग हेर्नुहोस्।'}
+            {calculation.error ?? (locale === 'ne' ? 'मिति छान्नुहोस् र पञ्चाङ्ग हेर्नुहोस्।' : 'Please select a date and view the panchang.')}
           </p>
         </div>
       )}
@@ -317,15 +329,15 @@ export const PanchangPage: React.FC<PanchangPageProps> = ({
       <section aria-labelledby="panchang-disclaimer-heading" className="mt-12">
         <div className="rounded-xl border border-[#9A3412]/30 bg-[#FDF7F2] p-5 sm:p-6">
           <h2 id="panchang-disclaimer-heading" className="font-display text-lg font-semibold text-[#7C2D12]">
-            महत्त्वपूर्ण सूचना (Important Disclaimer)
+            {locale === 'ne' ? 'महत्त्वपूर्ण सूचना' : 'Important Disclaimer'}
           </h2>
           <p className="mt-2 text-sm text-stone-700 leading-relaxed">
-            Computed values, not Nepal&apos;s official patro. Cross-checked against one website only. Please confirm with an official patro.
+{locale === 'ne' ? 'गणना गरिएका मानहरू, नेपालको आधिकारिक पात्रो होइन। एक वेबसाइटसँग क्रस-चेक गरिएको छ। कृपया आधिकारिक पात्रोसँग पुष्टि गर्नुहोस्।' : 'Computed values, not Nepal&apos;s official patro. Cross-checked against one website only. Please confirm with an official patro.'}
           </p>
         </div>
       </section>
 
-      <FaqSection heading="सोधेका जिज्ञासा (Frequently Asked Questions)" faqs={passedFaqs ?? DEFAULT_FAQS} />
+      <FaqSection heading={locale === 'ne' ? 'सोधेका जिज्ञासा' : t('calendar.faqsHeading')} faqs={passedFaqs ?? DEFAULT_FAQS} />
     </div>
   );
 };

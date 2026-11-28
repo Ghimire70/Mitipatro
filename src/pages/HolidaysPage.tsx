@@ -6,6 +6,8 @@ import type { FaqItem } from '../../lib/seo';
 import { AdSlot } from '../components/AdSlot';
 import { FaqSection } from '../components/FaqSection';
 import { HolidayReferenceNote } from '../components/HolidayReferenceNote';
+import { useLocale } from '../../contexts/LocaleContext';
+import { formatLocaleNumber } from '../../lib/i18n/format';
 
 interface HolidaysPageProps {
   year: number;
@@ -13,16 +15,26 @@ interface HolidaysPageProps {
   onNavigate: (path: string) => void;
 }
 
-const TYPE_LABEL: Record<HolidayType, string> = {
+const TYPE_LABEL_EN: Record<HolidayType, string> = {
   national: 'National Festival',
   cultural: 'Cultural',
   civic: 'Civic Day',
   regional: 'Regional',
-  women: 'Women’s Holiday',
+  women: "Women's Holiday",
   women_only: 'Women-only Holiday',
 };
 
+const TYPE_LABEL_NE: Record<HolidayType, string> = {
+  national: 'राष्ट्रिय पर्व',
+  cultural: 'सांस्कृतिक',
+  civic: 'नागरिक दिवस',
+  regional: 'क्षेत्रीय',
+  women: 'महिलाका लागि बिदा',
+  women_only: 'केवल महिलाका लागि बिदा',
+};
+
 export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNavigate }) => {
+  const { locale, t } = useLocale();
   const [filter, setFilter] = useState<'all' | 'public' | 'observance'>('all');
   const allHolidays = useMemo(() => getHolidaysForYear(year), [year]);
 
@@ -47,16 +59,20 @@ export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNaviga
           Home
         </a>
         <span className="mx-2">/</span>
-        <span className="text-stone-800">Public Holidays {year} BS</span>
+        <span className="text-stone-800">
+          {locale === 'ne' ? `${formatLocaleNumber(year, locale)} वि.सं. सार्वजनिक बिदा` : `Public Holidays ${formatLocaleNumber(year, locale)} BS`}
+        </span>
       </nav>
 
       <div className="mt-4 flex flex-col gap-4 border-b border-stone-200 pb-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h1 className="font-display text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl">
-            Holidays and Observances in Nepal – {year} BS
+            {locale === 'ne' ? `नेपालमा बिदा र अवलोकन – ${formatLocaleNumber(year, locale)} वि.सं.` : `Holidays and Observances in Nepal – ${formatLocaleNumber(year, locale)} BS`}
           </h1>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-stone-600">
-            Bikram Sambat {year} ({toDevanagariDigits(year)}) holiday and observance entries with Gregorian (AD) dates generated using the supported conversion table. Showing {publicCount} entries marked as public holidays.
+            {locale === 'ne'
+              ? `बिक्रम सम्बत ${formatLocaleNumber(year, locale)} को बिदा र अवलोकनका प्रविष्टिहरू, समर्थित रूपान्तरण तालिका प्रयोग गरिएको ग्रेगोरियन (ई.सं.) मितिसहित। ${formatLocaleNumber(publicCount, locale)} प्रविष्टिहरू सार्वजनिक बिदाको रूपमा चिह्नित गरिएको छ।`
+              : `Bikram Sambat ${formatLocaleNumber(year, locale)} holiday and observance entries with Gregorian (AD) dates generated using the supported conversion table. Showing ${formatLocaleNumber(publicCount, locale)} entries marked as public holidays.`}
           </p>
           <div className="mt-3">
             <HolidayReferenceNote />
@@ -76,7 +92,7 @@ export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNaviga
                   : 'border-stone-200 bg-white text-stone-700 hover:bg-stone-100'
               }`}
             >
-              {yr} BS
+              {locale === 'ne' ? `${formatLocaleNumber(yr, locale)} वि.सं.` : `${formatLocaleNumber(yr, locale)} BS`}
             </a>
           ))}
         </div>
@@ -84,7 +100,7 @@ export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNaviga
 
       {year > 2083 && (
         <div className="mt-6 rounded-lg border border-stone-200 bg-[#F3EFE6]/70 px-4 py-3 text-sm text-stone-700">
-          Note: Only some fixed-date observances are currently listed for {year} BS. Lunar festival entries (Dashain, Tihar, Lhosar, Shivaratri, Holi) are not currently included.
+          Note: Only some fixed-date observances are currently listed for {formatLocaleNumber(year, locale)} BS. Lunar festival entries (Dashain, Tihar, Lhosar, Shivaratri, Holi) are not currently included.
         </div>
       )}
 
@@ -108,7 +124,7 @@ export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNaviga
               filter === 'all' ? 'bg-white text-stone-900 shadow-xs' : 'text-stone-600 hover:text-stone-900'
             }`}
           >
-            All ({allHolidays.length})
+            {locale === 'ne' ? `सबै (${formatLocaleNumber(allHolidays.length, locale)})` : `All (${formatLocaleNumber(allHolidays.length, locale)})`}
           </button>
           <button
             type="button"
@@ -119,7 +135,7 @@ export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNaviga
               filter === 'public' ? 'bg-white text-stone-900 shadow-xs' : 'text-stone-600 hover:text-stone-900'
             }`}
           >
-            Public Holidays ({publicCount})
+            {locale === 'ne' ? `सार्वजनिक बिदा (${formatLocaleNumber(publicCount, locale)})` : `Public Holidays (${formatLocaleNumber(publicCount, locale)})`}
           </button>
           <button
             type="button"
@@ -132,7 +148,7 @@ export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNaviga
                 : 'text-stone-600 hover:text-stone-900'
             }`}
           >
-            Observances ({allHolidays.length - publicCount})
+            {locale === 'ne' ? `अवलोकन (${formatLocaleNumber(allHolidays.length - publicCount, locale)})` : `Observances (${formatLocaleNumber(allHolidays.length - publicCount, locale)})`}
           </button>
         </div>
 
@@ -141,7 +157,7 @@ export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNaviga
           onClick={(e) => handleLink(e, `/calendar/${year}`)}
           className="text-xs font-semibold text-[#9A3412] hover:underline"
         >
-          Open {year} BS Monthly Calendars →
+          {locale === 'ne' ? `खोल्नुहोस् ${formatLocaleNumber(year, locale)} वि.सं. मासिक पात्रो →` : `Open ${formatLocaleNumber(year, locale)} BS Monthly Calendars →`}
         </a>
       </div>
 
@@ -149,17 +165,17 @@ export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNaviga
       <div className="mt-4 overflow-x-auto rounded-xl border border-stone-200 bg-white">
         {filteredHolidays.length === 0 ? (
           <p className="px-6 py-8 text-center text-sm text-stone-500">
-            No records match the selected filter for {year} BS.
+            No records match the selected filter for {formatLocaleNumber(year, locale)} BS.
           </p>
         ) : (
           <table className="w-full text-left text-sm">
             <thead className="border-b border-stone-200 bg-[#F3EFE6]/60 text-xs font-semibold uppercase tracking-wider text-stone-600">
               <tr>
-                <th className="px-4 py-3">BS Date</th>
-                <th className="px-4 py-3">AD Date</th>
-                <th className="px-4 py-3">Holiday / Festival</th>
-                <th className="px-4 py-3">Category</th>
-                <th className="px-4 py-3">Status</th>
+                <th className="px-4 py-3">{locale === 'ne' ? 'वि.सं. मिति' : 'BS Date'}</th>
+                <th className="px-4 py-3">{locale === 'ne' ? 'ई.सं. मिति' : 'AD Date'}</th>
+                <th className="px-4 py-3">{locale === 'ne' ? 'बिदा / पर्व' : 'Holiday / Festival'}</th>
+                <th className="px-4 py-3">{locale === 'ne' ? 'श्रेणी' : 'Category'}</th>
+                <th className="px-4 py-3">{locale === 'ne' ? 'अवस्था' : 'Status'}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-stone-100">
@@ -174,10 +190,10 @@ export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNaviga
                         onClick={(e) => handleLink(e, `/calendar/${h.bsYear}/${mMeta.slug}`)}
                         className="font-mono font-semibold text-[#9A3412] hover:underline tabular-nums"
                       >
-                        {mMeta.en} {h.bsDay}, {h.bsYear}
+                        {locale === 'ne' ? mMeta.ne : mMeta.en} {formatLocaleNumber(h.bsDay, locale)}, {formatLocaleNumber(h.bsYear, locale)}
                       </a>
                       <div className="text-xs text-stone-500">
-                        {mMeta.ne} {toDevanagariDigits(h.bsDay)}
+                        {locale === 'ne' ? mMeta.ne : mMeta.en} {locale === 'ne' ? toDevanagariDigits(h.bsDay) : formatLocaleNumber(h.bsDay, locale)}
                       </div>
                     </td>
                     <td className="px-4 py-3.5 whitespace-nowrap font-mono text-xs text-stone-700 tabular-nums">
@@ -185,20 +201,26 @@ export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNaviga
                       <div className="text-stone-500">{ad.weekdayEn}</div>
                     </td>
                     <td className="px-4 py-3.5">
-                      <div className="font-semibold text-stone-900">{h.nameEn}</div>
-                      <div className="text-xs text-stone-600">{h.nameNe}</div>
+                      <div className="font-semibold text-stone-900">{locale === 'ne' ? h.nameNe : h.nameEn}</div>
+                      <div className="text-xs text-stone-600">{locale === 'ne' ? h.nameEn : h.nameNe}</div>
                       {h.noteEn && <div className="mt-0.5 text-xs text-stone-500">{h.noteEn}</div>}
                     </td>
                     <td className="px-4 py-3.5 text-xs text-stone-600 whitespace-nowrap">
-                      {TYPE_LABEL[h.type]}
+                      {locale === 'ne' ? TYPE_LABEL_NE[h.type] : TYPE_LABEL_EN[h.type]}
                     </td>
                     <td className="px-4 py-3.5 text-xs whitespace-nowrap">
                       {h.type === 'women_only' ? (
-                        <span className="font-semibold text-stone-700">Women-only Holiday</span>
+                        <span className="font-semibold text-stone-700">
+                          {locale === 'ne' ? 'केवल महिलाका लागि बिदा' : 'Women-only Holiday'}
+                        </span>
                       ) : h.isPublicHoliday ? (
-                        <span className="font-semibold text-[#9A3412]">Public Holiday</span>
+                        <span className="font-semibold text-[#9A3412]">
+                          {locale === 'ne' ? 'सार्वजनिक बिदा' : 'Public Holiday'}
+                        </span>
                       ) : (
-                        <span className="text-stone-500">Observance</span>
+                        <span className="text-stone-500">
+                          {locale === 'ne' ? 'अवलोकन' : 'Observance'}
+                        </span>
                       )}
                     </td>
                   </tr>
@@ -209,7 +231,7 @@ export const HolidaysPage: React.FC<HolidaysPageProps> = ({ year, faqs, onNaviga
         )}
       </div>
 
-      <FaqSection faqs={faqs} />
+      <FaqSection heading={t('calendar.faqsHeading')} faqs={faqs} />
     </div>
   );
 };

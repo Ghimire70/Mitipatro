@@ -5,6 +5,7 @@ import { DateConverter } from '../components/DateConverter';
 import { AdSlot } from '../components/AdSlot';
 import { FaqSection } from '../components/FaqSection';
 import { useLocale } from '../../contexts/LocaleContext';
+import { formatLocaleNumber } from '../../lib/i18n/format';
 
 interface ConverterPageProps {
   faqs: FaqItem[];
@@ -23,6 +24,7 @@ const REFERENCE_ANCHORS = [
 ];
 
 export const ConverterPage: React.FC<ConverterPageProps> = ({ faqs, nowMs, onNavigate }) => {
+  const { locale } = useLocale();
   const { t } = useLocale();
   const handleLink = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
@@ -103,10 +105,10 @@ export const ConverterPage: React.FC<ConverterPageProps> = ({ faqs, nowMs, onNav
           <table className="w-full text-left text-sm">
             <thead className="border-b border-stone-200 bg-[#F3EFE6]/60 text-xs font-semibold uppercase tracking-wider text-stone-600">
               <tr>
-                <th className="px-4 py-3">BS Date</th>
-                <th className="px-4 py-3">Gregorian (AD)</th>
-                <th className="px-4 py-3">Weekday</th>
-                <th className="px-4 py-3">Notes</th>
+                <th className="px-4 py-3">{locale === 'ne' ? 'वि.सं. मिति' : 'BS Date'}</th>
+                <th className="px-4 py-3">{locale === 'ne' ? 'ग्रेगोरियन (ई.सं.)' : 'Gregorian (AD)'}</th>
+                <th className="px-4 py-3">{locale === 'ne' ? 'सप्ताहको दिन' : 'Weekday'}</th>
+                <th className="px-4 py-3">{locale === 'ne' ? 'टिप्पणी' : 'Notes'}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-stone-100">
@@ -115,7 +117,7 @@ export const ConverterPage: React.FC<ConverterPageProps> = ({ faqs, nowMs, onNav
                 return (
                   <tr key={row.bsYear} className="hover:bg-[#FBF9F5]">
                     <td className="px-4 py-3 font-mono font-semibold text-stone-900 tabular-nums">
-                      1 Baisakh {row.bsYear}
+                      1 {locale === 'ne' ? 'वैशाख' : 'Baisakh'} {formatLocaleNumber(row.bsYear, locale)}
                     </td>
                     <td className="px-4 py-3 font-mono text-stone-700 tabular-nums">
                       {ad.formattedEn}
