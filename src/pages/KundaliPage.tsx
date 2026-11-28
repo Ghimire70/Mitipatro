@@ -10,8 +10,12 @@ import { buildInterpreterContext } from '../../lib/jyotish/interpreter-context.j
 import type { JyotishClientChart } from '../../lib/jyotish/client.js';
 import { AiReadingPanel } from '../components/jyotish/AiReadingPanel.js';
 import { AskJyotishBox } from '../components/jyotish/AskJyotishBox.js';
+import { MultiDashaTabs } from '../components/jyotish/MultiDashaTabs.js';
+import { PlanetaryPositionsTable } from '../components/jyotish/PlanetaryPositionsTable.js';
 import { useLocale } from '../../contexts/LocaleContext';
 import { formatLocaleNumber } from '../../lib/i18n/format';
+import { useJyotishReading } from '../../hooks/useJyotishReading.js';
+import type { InterpreterContext } from '../../lib/jyotish/interpreter-context.js';
 
 interface KundaliPageProps {
   onNavigate?: (path: string) => void;
@@ -91,6 +95,17 @@ export const KundaliPage: React.FC<KundaliPageProps> = () => {
   const context = chart
     ? buildInterpreterContext(chart.result)
     : null;
+
+  const { submitQuestion: submitPlanetaryQuestion, asking: planetaryAsking } = useJyotishReading({
+    birthDetails: chart?.birthDetails ?? null,
+    chart: chart?.clientChart,
+    language: locale,
+    locale,
+  });
+
+  const handleAskAboutPlanet = (question: string) => {
+    void submitPlanetaryQuestion(question);
+  };
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
@@ -204,33 +219,22 @@ export const KundaliPage: React.FC<KundaliPageProps> = () => {
               </div>
             </div>
 
-            <div className="mt-6 overflow-x-auto">
-              <table className="w-full min-w-[520px] text-left text-sm">
-                <thead className="border-b border-stone-200 text-xs uppercase tracking-wide text-stone-500">
-                  <tr>
-                    <th className="py-2 pr-4">{t('kundali.graha')}</th>
-                    <th className="py-2 pr-4">{t('kundali.rashi')}</th>
-                    <th className="py-2 pr-4">{t('kundali.house')}</th>
-                    <th className="py-2">{t('kundali.nakshatra')}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {chart.result.planets.map((planet) => (
-                    <tr key={planet.graha} className="border-b border-stone-100 last:border-0">
-                      <td className="py-3 pr-4 font-medium text-stone-900">{planet.graha}</td>
-                      <td className="py-3 pr-4 text-stone-700">{planet.rashiName}</td>
-                      <td className="py-3 pr-4 text-stone-700">
-                        {formatLocaleNumber(chart.result.houses.rashiToHouse[planet.rashiIndex], locale)}
-                      </td>
-                      <td className="py-3 text-stone-700">
-                        {planet.nakshatraName} ({t('kundali.pada')} {formatLocaleNumber(planet.pada, locale)})
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <PlanetaryPositionsTable
+              planets={chart.result.planets}
+              houses={chart.result.houses}
+              dignities={context.grahaDignities}
+              language={locale}
+              onAskQuestion={handleAskAboutPlanet}
+            />
           </section>
+
+          <MultiDashaTabs
+            chart={chart.result}
+            context={context}
+            birthDetails={chart.birthDetails}
+            clientChart={chart.clientChart}
+            language={locale}
+          />
 
           <div className="grid gap-8 lg:grid-cols-2">
             <AiReadingPanel

@@ -126,4 +126,54 @@ export interface LocaleDictionary {
     starterSadeSati: string;
     questionPlaceholder: string;
   };
+  multiDasha: {
+    title: string;
+    subtitle: string;
+    tabs: {
+      vimshottari: string;
+      yogini: string;
+      tribhagi: string;
+    };
+    mahadasha: string;
+    antardasha: string;
+    pratyantardasha: string;
+    active: string;
+    notAvailable: string;
+    startDate: string;
+    endDate: string;
+    bsDate: string;
+    adDate: string;
+    shloka: string;
+    plainSummary: string;
+    toggleView: string;
+    askAI: string;
+    asking: string;
+    notImplemented: string;
+  };
+  planetaryTable: {
+    title: string;
+    subtitle: string;
+    columns: {
+      graha: string;
+      rashi: string;
+      degree: string;
+      nakshatra: string;
+      pada: string;
+      house: string;
+      dignity: string;
+    };
+    lagna: string;
+    retrograde: string;
+    combust: string;
+    askAboutPlanet: string;
+    dignity: {
+      exalted: string;
+      debilitated: string;
+      own_sign: string;
+      moolatrikona: string;
+      friendly: string;
+      neutral: string;
+      enemy: string;
+    };
+  };
 }
