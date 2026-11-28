@@ -3,7 +3,7 @@ import { Calendar, Clock, Sparkles } from 'lucide-react';
 import { getTodayNepal, bsToAd, toDevanagariDigits } from '../../lib/bsConverter';
 import { BS_MONTHS } from '../../lib/bsData';
 import { useLocale } from '../../contexts/LocaleContext';
-import { formatLocaleNumber } from '../../lib/i18n/format';
+import { formatLocaleYear, formatLocaleNumber } from '../../lib/i18n/format';
 
 interface EditorialHeroProps {
   bsYear: number;
@@ -85,18 +85,18 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
           </div>
           <h1 className="font-serif font-bold text-3xl sm:text-4xl leading-[1.08] tracking-tight text-ink">
             {locale === 'ne'
-              ? `${monthMeta.ne} ${formatLocaleNumber(bsYear, locale)} वि.सं. पात्रो`
-              : `${monthMeta.en} ${formatLocaleNumber(bsYear, locale)} Nepali Calendar`}
+              ? `${monthMeta.ne} ${formatLocaleYear(bsYear, locale)} वि.सं. पात्रो`
+              : `${monthMeta.en} ${formatLocaleYear(bsYear, locale)} Nepali Calendar`}
           </h1>
           <p className="text-base sm:text-lg text-ink/90 font-normal leading-relaxed">
             {locale === 'ne' ? 'आज हो' : 'Today is'}{' '}
             <span className="font-semibold text-terracotta whitespace-nowrap shrink-0">
               {locale === 'ne'
-                ? `${monthMeta.ne} ${toDevanagariDigits(refDay)}, ${toDevanagariDigits(bsYear)} वि.सं.`
-                : `${monthMeta.en} ${formatLocaleNumber(refDay, locale)}, ${formatLocaleNumber(bsYear, locale)} BS`}
+                ? `${monthMeta.ne} ${toDevanagariDigits(refDay)}, ${formatLocaleYear(bsYear, locale)} वि.सं.`
+                : `${monthMeta.en} ${formatLocaleNumber(refDay, locale)}, ${formatLocaleYear(bsYear, locale)} BS`}
             </span>{' '}
             <span className="font-devanagari text-slatewarm whitespace-nowrap shrink-0">
-              ({locale === 'ne' ? toDevanagariDigits(refDay) : formatLocaleNumber(refDay, locale)}, {locale === 'ne' ? toDevanagariDigits(bsYear) : formatLocaleNumber(bsYear, locale)})
+              ({locale === 'ne' ? toDevanagariDigits(refDay) : formatLocaleNumber(refDay, locale)}, {formatLocaleYear(bsYear, locale)})
             </span>{' '}
             <span className="text-slatewarm mx-1">·</span>{' '}
             <span className="font-medium text-ink whitespace-nowrap shrink-0">
@@ -127,7 +127,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
             className="flex-1 lg:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-ink bg-card hover:bg-sand border border-hairline rounded-xl transition-colors whitespace-nowrap shrink-0 min-h-[44px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
           >
             <Sparkles className="w-4 h-4 text-terracotta" aria-hidden="true" />
-            <span>{locale === 'ne' ? `${formatLocaleNumber(bsYear, locale)} वि.सं. सार्वजनिक बिदा` : `${formatLocaleNumber(bsYear, locale)} Public Holidays`}</span>
+            <span>{locale === 'ne' ? `${formatLocaleYear(bsYear, locale)} वि.सं. सार्वजनिक बिदा` : `${formatLocaleYear(bsYear, locale)} Public Holidays`}</span>
           </button>
           {rashifalIndexingEnabled && (
             <a

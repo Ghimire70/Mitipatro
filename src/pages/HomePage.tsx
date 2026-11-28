@@ -11,7 +11,7 @@ import { FaqSection } from '../components/FaqSection';
 import { HolidayReferenceNote } from '../components/HolidayReferenceNote';
 import { RasifalSection } from '../components/RasifalSection';
 import { useLocale } from '../../contexts/LocaleContext';
-import { formatLocaleNumber } from '../../lib/i18n/format';
+import { formatLocaleYear, formatLocaleNumber } from '../../lib/i18n/format';
 
 interface HomePageProps {
   faqs: FaqItem[];

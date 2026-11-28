@@ -16,7 +16,7 @@ import { HolidayReferenceNote } from './HolidayReferenceNote';
 import { getDailyPanchanga } from '../../lib/astronomy/panchanga.js';
 import { EditorialCalendarCell } from './EditorialCalendarCell';
 import { useLocale } from '../../contexts/LocaleContext';
-import { formatLocaleNumber } from '../../lib/i18n/format';
+import { formatLocaleYear, formatLocaleNumber } from '../../lib/i18n/format';
 
 interface CalendarGridProps {
   bsYear: number;

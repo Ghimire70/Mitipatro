@@ -3,7 +3,7 @@ import { Calendar as CalendarIcon } from 'lucide-react';
 import { BS_MONTHS, WEEKDAYS } from '../../lib/bsData';
 import type { CalendarCellData } from '../../lib/bsConverter';
 import { useLocale } from '../../contexts/LocaleContext';
-import { formatLocaleNumber } from '../../lib/i18n/format';
+import { formatLocaleNumber, formatLocaleYear } from '../../lib/i18n/format';
 
 interface EditorialCalendarCellProps {
   cell: CalendarCellData;
@@ -48,8 +48,8 @@ export const EditorialCalendarCell: React.FC<EditorialCalendarCellProps> = ({
       aria-selected={isSelected}
       aria-label={
         [
-          `${BS_MONTHS[bsMonth - 1][locale === 'ne' ? 'ne' : 'en']} ${formatLocaleNumber(bsDay, locale)}, ${formatLocaleNumber(bsYear, locale)} ${locale === 'ne' ? 'वि.सं.' : 'BS'}`,
-          `${adMonthShort} ${formatLocaleNumber(adDay, locale)}, ${formatLocaleNumber(cell.adYear, locale)}`,
+          `${BS_MONTHS[bsMonth - 1][locale === 'ne' ? 'ne' : 'en']} ${formatLocaleNumber(bsDay, locale)}, ${formatLocaleYear(bsYear, locale)} ${locale === 'ne' ? 'वि.सं.' : 'BS'}`,
+          `${adMonthShort} ${formatLocaleNumber(adDay, locale)}, ${formatLocaleYear(cell.adYear, locale)}`,
           weekdayMeta[locale === 'ne' ? 'ne' : 'en'],
           isToday ? (locale === 'ne' ? 'आज' : 'Today') : '',
           eventsOnDay.length > 0 ? `Holiday: ${eventsOnDay.join(', ')}` : '',
@@ -134,10 +134,10 @@ export const EditorialCalendarCell: React.FC<EditorialCalendarCellProps> = ({
         <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none">
           <div className="rounded-lg border border-stone-200 bg-white px-3 py-2.5 shadow-lg shadow-stone/10 text-xs">
             <p className="font-bold text-ink">
-              {BS_MONTHS[bsMonth - 1][locale === 'ne' ? 'ne' : 'en']} {formatLocaleNumber(bsDay, locale)}, {formatLocaleNumber(bsYear, locale)} ${locale === 'ne' ? 'वि.सं.' : 'BS'}
+              {BS_MONTHS[bsMonth - 1][locale === 'ne' ? 'ne' : 'en']} {formatLocaleNumber(bsDay, locale)}, {formatLocaleYear(bsYear, locale)} {locale === 'ne' ? 'वि.सं.' : 'BS'}
             </p>
             <p className="text-[10px] text-stone-600">
-              {adMonthShort} ${formatLocaleNumber(adDay, locale)}, ${formatLocaleNumber(cell.adYear, locale)} · ${weekdayMeta[locale === 'ne' ? 'ne' : 'en']}
+              {adMonthShort} {formatLocaleNumber(adDay, locale)}, {formatLocaleYear(cell.adYear, locale)} · {weekdayMeta[locale === 'ne' ? 'ne' : 'en']}
             </p>
             <p className="mt-1 text-[10px] text-terracotta font-semibold">
               {locale === 'ne' ? 'तिथि' : 'Tithi'}: {elementInfo.tithiName}{' '}

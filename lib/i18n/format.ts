@@ -13,7 +13,7 @@ export function formatNumber(
 ): string {
   if (locale === 'ne') {
     const formatted = new Intl.NumberFormat('ne-NP', {
-      useGrouping: true,
+      useGrouping: false,
       ...options,
     }).format(value);
     return formatted.replace(/[\d]/g, (digit) => {
@@ -21,7 +21,7 @@ export function formatNumber(
       return devanagari[Number(digit)] ?? digit;
     });
   }
-  return new Intl.NumberFormat('en-US', options).format(value);
+  return new Intl.NumberFormat('en-US', { useGrouping: false, ...options }).format(value);
 }
 
 export function formatLocaleNumber(
