@@ -32,6 +32,13 @@ export function formatLocaleNumber(
   return formatNumber(value, locale, options);
 }
 
+/** Format a year without thousands separators for display in headings/labels.
+ * Unlike formatLocaleNumber, this never adds grouping commas. */
+export function formatLocaleYear(value: number, locale: Locale): string {
+  if (locale === 'ne') return toDevanagariDigits(value);
+  return String(value);
+}
+
 export function formatLocaleDate(
   date: Date,
   locale: Locale,

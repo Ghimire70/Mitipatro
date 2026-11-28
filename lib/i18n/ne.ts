@@ -1,5 +1,5 @@
-import type { LocaleDictionary } from './types.js';
-import { formatLocaleNumber } from './format.js';
+﻿import type { LocaleDictionary } from './types.js';
+import { formatLocaleYear } from './format.js';
 
 export const ne: LocaleDictionary = {
   common: {
@@ -178,7 +178,7 @@ export const ne: LocaleDictionary = {
     },
   },
   calendar: {
-    monthTitle: ({ month, year }) => `${month} ${formatLocaleNumber(year, 'ne')} वि.सं.`,
+    monthTitle: ({ month, year }) => `${month} ${formatLocaleYear(year, 'ne')} वि.सं.`,
     months: {
       en: [
         'Baisakh', 'Jestha', 'Ashad', 'Shrawan', 'Bhadra', 'Ashwin',
